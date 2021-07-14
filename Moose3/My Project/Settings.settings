@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=inpyugamsvm01\nuna_dev;Initial Catalog=Moose;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="IRMADataStoreReferencePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://irma.nps.gov/DataStore/Reference/Profile/2</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

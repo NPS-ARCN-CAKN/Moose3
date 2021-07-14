@@ -38,8 +38,9 @@ Partial Class Form1
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
         Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
-        Me.ListBoxControl1 = New DevExpress.XtraEditors.ListBoxControl()
+        Me.SurveysListBoxControl = New DevExpress.XtraEditors.ListBoxControl()
         Me.SurveyVGridControl = New DevExpress.XtraVerticalGrid.VGridControl()
+        Me.AbstractRepositoryItemMemoEdit = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
         Me.rowSurveyName = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
         Me.rowYear = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
         Me.rowNetwork = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
@@ -160,9 +161,43 @@ Partial Class Form1
         Me.colRecordInsertedBy2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colValidatedDate2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colValidatedBy2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.SurveyGridControl = New DevExpress.XtraGrid.GridControl()
+        Me.SurveyGridView = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colSurveyName3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colYear = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNetwork = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colPark = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colSeason = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colStartDate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colEndDate = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colAreaSurveyed_mi = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colAverageSearchEffort = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colMethodology = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colProtocolVersion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colProtocolReferenceCode = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colPersonnel = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colReportReferenceCode = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colReportLink = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDeliverablesDatasetReferenceCode = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDataSource = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDataResourcesDirectory = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colAbstract = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colSummary = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDatasetProcessingSteps = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colComments3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colRecordInsertedDate3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colRecordInsertedBy3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colValidatedDate3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colValidatedBy3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.AbstractRepositoryItemMemoEdit = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
+        Me.SurveyContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.OpenReportReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenReportLinkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenDeliverablesReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenProtocolReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HeaderPanel = New System.Windows.Forms.Panel()
+        Me.HeaderLabel = New System.Windows.Forms.Label()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,8 +207,9 @@ Partial Class Form1
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DockPanel1.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
-        CType(Me.ListBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainXtraTabControl.SuspendLayout()
         Me.SurveyDetailsXtraTabPage.SuspendLayout()
@@ -192,12 +228,16 @@ Partial Class Form1
         CType(Me.GridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResultsSplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ResultsSplitContainer3.Panel1.SuspendLayout()
+        Me.ResultsSplitContainer3.Panel2.SuspendLayout()
         Me.ResultsSplitContainer3.SuspendLayout()
         CType(Me.ResultsGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SurveyGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SurveyGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SurveyContextMenuStrip.SuspendLayout()
+        Me.HeaderPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -279,28 +319,29 @@ Partial Class Form1
         '
         'DockPanel1_Container
         '
-        Me.DockPanel1_Container.Controls.Add(Me.ListBoxControl1)
+        Me.DockPanel1_Container.Controls.Add(Me.SurveysListBoxControl)
         Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 26)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
         Me.DockPanel1_Container.Size = New System.Drawing.Size(365, 757)
         Me.DockPanel1_Container.TabIndex = 0
         '
-        'ListBoxControl1
+        'SurveysListBoxControl
         '
-        Me.ListBoxControl1.DataSource = Me.GSPE_SurveysBindingSource
-        Me.ListBoxControl1.DisplayMember = "SurveyName"
-        Me.ListBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBoxControl1.Location = New System.Drawing.Point(0, 0)
-        Me.ListBoxControl1.Name = "ListBoxControl1"
-        Me.ListBoxControl1.Size = New System.Drawing.Size(365, 757)
-        Me.ListBoxControl1.SortOrder = System.Windows.Forms.SortOrder.Descending
-        Me.ListBoxControl1.TabIndex = 0
-        Me.ListBoxControl1.ValueMember = "SurveyName"
+        Me.SurveysListBoxControl.DataSource = Me.GSPE_SurveysBindingSource
+        Me.SurveysListBoxControl.DisplayMember = "SurveyName"
+        Me.SurveysListBoxControl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 0)
+        Me.SurveysListBoxControl.Name = "SurveysListBoxControl"
+        Me.SurveysListBoxControl.Size = New System.Drawing.Size(365, 757)
+        Me.SurveysListBoxControl.SortOrder = System.Windows.Forms.SortOrder.Descending
+        Me.SurveysListBoxControl.TabIndex = 0
+        Me.SurveysListBoxControl.ValueMember = "SurveyName"
         '
         'SurveyVGridControl
         '
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.SizeNS
+        Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
+        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
         Me.SurveyVGridControl.CustomizationFormBounds = New System.Drawing.Rectangle(457, 176, 214, 258)
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
@@ -311,8 +352,12 @@ Partial Class Form1
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowSeason, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowMethodology, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowPersonnel, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 761)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 722)
         Me.SurveyVGridControl.TabIndex = 1
+        '
+        'AbstractRepositoryItemMemoEdit
+        '
+        Me.AbstractRepositoryItemMemoEdit.Name = "AbstractRepositoryItemMemoEdit"
         '
         'rowSurveyName
         '
@@ -370,6 +415,7 @@ Partial Class Form1
         '
         'rowMethodology
         '
+        Me.rowMethodology.Height = 16
         Me.rowMethodology.Name = "rowMethodology"
         Me.rowMethodology.Properties.Caption = "Methodology"
         Me.rowMethodology.Properties.FieldName = "Methodology"
@@ -485,10 +531,10 @@ Partial Class Form1
         'MainXtraTabControl
         '
         Me.MainXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainXtraTabControl.Location = New System.Drawing.Point(372, 0)
+        Me.MainXtraTabControl.Location = New System.Drawing.Point(372, 39)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(812, 786)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(812, 747)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage})
         '
@@ -496,7 +542,7 @@ Partial Class Form1
         '
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyVGridControl)
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
-        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(810, 761)
+        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(810, 722)
         Me.SurveyDetailsXtraTabPage.Text = "Survey details"
         '
         'ResultsXtraTabPage
@@ -504,7 +550,7 @@ Partial Class Form1
         Me.ResultsXtraTabPage.Controls.Add(Me.ResultsSplitContainer)
         Me.ResultsXtraTabPage.Controls.Add(Me.GridControl1)
         Me.ResultsXtraTabPage.Name = "ResultsXtraTabPage"
-        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(810, 761)
+        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(810, 722)
         Me.ResultsXtraTabPage.Text = "Results"
         '
         'ResultsSplitContainer
@@ -521,8 +567,8 @@ Partial Class Form1
         'ResultsSplitContainer.Panel2
         '
         Me.ResultsSplitContainer.Panel2.Controls.Add(Me.ResultsSplitContainer2)
-        Me.ResultsSplitContainer.Size = New System.Drawing.Size(810, 761)
-        Me.ResultsSplitContainer.SplitterDistance = 124
+        Me.ResultsSplitContainer.Size = New System.Drawing.Size(810, 722)
+        Me.ResultsSplitContainer.SplitterDistance = 117
         Me.ResultsSplitContainer.TabIndex = 1
         '
         'PopulationGridControl
@@ -532,7 +578,7 @@ Partial Class Form1
         Me.PopulationGridControl.Location = New System.Drawing.Point(0, 0)
         Me.PopulationGridControl.MainView = Me.GridView2
         Me.PopulationGridControl.Name = "PopulationGridControl"
-        Me.PopulationGridControl.Size = New System.Drawing.Size(810, 124)
+        Me.PopulationGridControl.Size = New System.Drawing.Size(810, 117)
         Me.PopulationGridControl.TabIndex = 0
         Me.PopulationGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -753,8 +799,8 @@ Partial Class Form1
         'ResultsSplitContainer2.Panel2
         '
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsSplitContainer3)
-        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(810, 633)
-        Me.ResultsSplitContainer2.SplitterDistance = 124
+        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(810, 601)
+        Me.ResultsSplitContainer2.SplitterDistance = 117
         Me.ResultsSplitContainer2.TabIndex = 0
         '
         'DensityGridControl
@@ -764,7 +810,7 @@ Partial Class Form1
         Me.DensityGridControl.Location = New System.Drawing.Point(0, 0)
         Me.DensityGridControl.MainView = Me.GridView3
         Me.DensityGridControl.Name = "DensityGridControl"
-        Me.DensityGridControl.Size = New System.Drawing.Size(810, 124)
+        Me.DensityGridControl.Size = New System.Drawing.Size(810, 117)
         Me.DensityGridControl.TabIndex = 0
         Me.DensityGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -883,8 +929,12 @@ Partial Class Form1
         'ResultsSplitContainer3.Panel1
         '
         Me.ResultsSplitContainer3.Panel1.Controls.Add(Me.ResultsGridControl)
-        Me.ResultsSplitContainer3.Size = New System.Drawing.Size(810, 505)
-        Me.ResultsSplitContainer3.SplitterDistance = 270
+        '
+        'ResultsSplitContainer3.Panel2
+        '
+        Me.ResultsSplitContainer3.Panel2.Controls.Add(Me.SurveyGridControl)
+        Me.ResultsSplitContainer3.Size = New System.Drawing.Size(810, 480)
+        Me.ResultsSplitContainer3.SplitterDistance = 256
         Me.ResultsSplitContainer3.TabIndex = 0
         '
         'ResultsGridControl
@@ -894,7 +944,7 @@ Partial Class Form1
         Me.ResultsGridControl.Location = New System.Drawing.Point(0, 0)
         Me.ResultsGridControl.MainView = Me.GridView4
         Me.ResultsGridControl.Name = "ResultsGridControl"
-        Me.ResultsGridControl.Size = New System.Drawing.Size(810, 270)
+        Me.ResultsGridControl.Size = New System.Drawing.Size(810, 256)
         Me.ResultsGridControl.TabIndex = 0
         Me.ResultsGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
         '
@@ -1185,6 +1235,206 @@ Partial Class Form1
         Me.colValidatedBy2.Visible = True
         Me.colValidatedBy2.VisibleIndex = 39
         '
+        'SurveyGridControl
+        '
+        Me.SurveyGridControl.DataSource = Me.GSPE_SurveysBindingSource
+        Me.SurveyGridControl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SurveyGridControl.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyGridControl.MainView = Me.SurveyGridView
+        Me.SurveyGridControl.Name = "SurveyGridControl"
+        Me.SurveyGridControl.Size = New System.Drawing.Size(810, 220)
+        Me.SurveyGridControl.TabIndex = 0
+        Me.SurveyGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.SurveyGridView})
+        '
+        'SurveyGridView
+        '
+        Me.SurveyGridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSurveyName3, Me.colYear, Me.colNetwork, Me.colPark, Me.colSeason, Me.colStartDate, Me.colEndDate, Me.colAreaSurveyed_mi, Me.colAverageSearchEffort, Me.colMethodology, Me.colProtocolVersion, Me.colProtocolReferenceCode, Me.colPersonnel, Me.colReportReferenceCode, Me.colReportLink, Me.colDeliverablesDatasetReferenceCode, Me.colDataSource, Me.colDataResourcesDirectory, Me.colAbstract, Me.colSummary, Me.colDatasetProcessingSteps, Me.colComments3, Me.colRecordInsertedDate3, Me.colRecordInsertedBy3, Me.colValidatedDate3, Me.colValidatedBy3})
+        Me.SurveyGridView.GridControl = Me.SurveyGridControl
+        Me.SurveyGridView.Name = "SurveyGridView"
+        Me.SurveyGridView.OptionsView.ShowGroupPanel = False
+        '
+        'colSurveyName3
+        '
+        Me.colSurveyName3.FieldName = "SurveyName"
+        Me.colSurveyName3.Name = "colSurveyName3"
+        Me.colSurveyName3.Visible = True
+        Me.colSurveyName3.VisibleIndex = 0
+        '
+        'colYear
+        '
+        Me.colYear.FieldName = "Year"
+        Me.colYear.Name = "colYear"
+        Me.colYear.Visible = True
+        Me.colYear.VisibleIndex = 1
+        '
+        'colNetwork
+        '
+        Me.colNetwork.FieldName = "Network"
+        Me.colNetwork.Name = "colNetwork"
+        Me.colNetwork.Visible = True
+        Me.colNetwork.VisibleIndex = 2
+        '
+        'colPark
+        '
+        Me.colPark.FieldName = "Park"
+        Me.colPark.Name = "colPark"
+        Me.colPark.Visible = True
+        Me.colPark.VisibleIndex = 3
+        '
+        'colSeason
+        '
+        Me.colSeason.FieldName = "Season"
+        Me.colSeason.Name = "colSeason"
+        Me.colSeason.Visible = True
+        Me.colSeason.VisibleIndex = 4
+        '
+        'colStartDate
+        '
+        Me.colStartDate.FieldName = "StartDate"
+        Me.colStartDate.Name = "colStartDate"
+        Me.colStartDate.Visible = True
+        Me.colStartDate.VisibleIndex = 5
+        '
+        'colEndDate
+        '
+        Me.colEndDate.FieldName = "EndDate"
+        Me.colEndDate.Name = "colEndDate"
+        Me.colEndDate.Visible = True
+        Me.colEndDate.VisibleIndex = 6
+        '
+        'colAreaSurveyed_mi
+        '
+        Me.colAreaSurveyed_mi.FieldName = "AreaSurveyed_mi"
+        Me.colAreaSurveyed_mi.Name = "colAreaSurveyed_mi"
+        Me.colAreaSurveyed_mi.Visible = True
+        Me.colAreaSurveyed_mi.VisibleIndex = 7
+        '
+        'colAverageSearchEffort
+        '
+        Me.colAverageSearchEffort.FieldName = "AverageSearchEffort"
+        Me.colAverageSearchEffort.Name = "colAverageSearchEffort"
+        Me.colAverageSearchEffort.Visible = True
+        Me.colAverageSearchEffort.VisibleIndex = 8
+        '
+        'colMethodology
+        '
+        Me.colMethodology.FieldName = "Methodology"
+        Me.colMethodology.Name = "colMethodology"
+        Me.colMethodology.Visible = True
+        Me.colMethodology.VisibleIndex = 9
+        '
+        'colProtocolVersion
+        '
+        Me.colProtocolVersion.FieldName = "ProtocolVersion"
+        Me.colProtocolVersion.Name = "colProtocolVersion"
+        Me.colProtocolVersion.Visible = True
+        Me.colProtocolVersion.VisibleIndex = 10
+        '
+        'colProtocolReferenceCode
+        '
+        Me.colProtocolReferenceCode.FieldName = "ProtocolReferenceCode"
+        Me.colProtocolReferenceCode.Name = "colProtocolReferenceCode"
+        Me.colProtocolReferenceCode.Visible = True
+        Me.colProtocolReferenceCode.VisibleIndex = 11
+        '
+        'colPersonnel
+        '
+        Me.colPersonnel.FieldName = "Personnel"
+        Me.colPersonnel.Name = "colPersonnel"
+        Me.colPersonnel.Visible = True
+        Me.colPersonnel.VisibleIndex = 12
+        '
+        'colReportReferenceCode
+        '
+        Me.colReportReferenceCode.FieldName = "ReportReferenceCode"
+        Me.colReportReferenceCode.Name = "colReportReferenceCode"
+        Me.colReportReferenceCode.Visible = True
+        Me.colReportReferenceCode.VisibleIndex = 13
+        '
+        'colReportLink
+        '
+        Me.colReportLink.FieldName = "ReportLink"
+        Me.colReportLink.Name = "colReportLink"
+        Me.colReportLink.Visible = True
+        Me.colReportLink.VisibleIndex = 14
+        '
+        'colDeliverablesDatasetReferenceCode
+        '
+        Me.colDeliverablesDatasetReferenceCode.FieldName = "DeliverablesDatasetReferenceCode"
+        Me.colDeliverablesDatasetReferenceCode.Name = "colDeliverablesDatasetReferenceCode"
+        Me.colDeliverablesDatasetReferenceCode.Visible = True
+        Me.colDeliverablesDatasetReferenceCode.VisibleIndex = 15
+        '
+        'colDataSource
+        '
+        Me.colDataSource.FieldName = "DataSource"
+        Me.colDataSource.Name = "colDataSource"
+        Me.colDataSource.Visible = True
+        Me.colDataSource.VisibleIndex = 16
+        '
+        'colDataResourcesDirectory
+        '
+        Me.colDataResourcesDirectory.FieldName = "DataResourcesDirectory"
+        Me.colDataResourcesDirectory.Name = "colDataResourcesDirectory"
+        Me.colDataResourcesDirectory.Visible = True
+        Me.colDataResourcesDirectory.VisibleIndex = 17
+        '
+        'colAbstract
+        '
+        Me.colAbstract.FieldName = "Abstract"
+        Me.colAbstract.Name = "colAbstract"
+        Me.colAbstract.Visible = True
+        Me.colAbstract.VisibleIndex = 18
+        '
+        'colSummary
+        '
+        Me.colSummary.FieldName = "Summary"
+        Me.colSummary.Name = "colSummary"
+        Me.colSummary.Visible = True
+        Me.colSummary.VisibleIndex = 19
+        '
+        'colDatasetProcessingSteps
+        '
+        Me.colDatasetProcessingSteps.FieldName = "DatasetProcessingSteps"
+        Me.colDatasetProcessingSteps.Name = "colDatasetProcessingSteps"
+        Me.colDatasetProcessingSteps.Visible = True
+        Me.colDatasetProcessingSteps.VisibleIndex = 20
+        '
+        'colComments3
+        '
+        Me.colComments3.FieldName = "Comments"
+        Me.colComments3.Name = "colComments3"
+        Me.colComments3.Visible = True
+        Me.colComments3.VisibleIndex = 21
+        '
+        'colRecordInsertedDate3
+        '
+        Me.colRecordInsertedDate3.FieldName = "RecordInsertedDate"
+        Me.colRecordInsertedDate3.Name = "colRecordInsertedDate3"
+        Me.colRecordInsertedDate3.Visible = True
+        Me.colRecordInsertedDate3.VisibleIndex = 22
+        '
+        'colRecordInsertedBy3
+        '
+        Me.colRecordInsertedBy3.FieldName = "RecordInsertedBy"
+        Me.colRecordInsertedBy3.Name = "colRecordInsertedBy3"
+        Me.colRecordInsertedBy3.Visible = True
+        Me.colRecordInsertedBy3.VisibleIndex = 23
+        '
+        'colValidatedDate3
+        '
+        Me.colValidatedDate3.FieldName = "ValidatedDate"
+        Me.colValidatedDate3.Name = "colValidatedDate3"
+        Me.colValidatedDate3.Visible = True
+        Me.colValidatedDate3.VisibleIndex = 24
+        '
+        'colValidatedBy3
+        '
+        Me.colValidatedBy3.FieldName = "ValidatedBy"
+        Me.colValidatedBy3.Name = "colValidatedBy3"
+        Me.colValidatedBy3.Visible = True
+        Me.colValidatedBy3.VisibleIndex = 25
+        '
         'GridControl1
         '
         Me.GridControl1.Location = New System.Drawing.Point(78, 34)
@@ -1199,9 +1449,57 @@ Partial Class Form1
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         '
-        'AbstractRepositoryItemMemoEdit
+        'SurveyContextMenuStrip
         '
-        Me.AbstractRepositoryItemMemoEdit.Name = "AbstractRepositoryItemMemoEdit"
+        Me.SurveyContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenReportReferenceToolStripMenuItem, Me.OpenReportLinkToolStripMenuItem, Me.OpenDeliverablesReferenceToolStripMenuItem, Me.OpenProtocolReferenceToolStripMenuItem})
+        Me.SurveyContextMenuStrip.Name = "SurveyContextMenuStrip"
+        Me.SurveyContextMenuStrip.Size = New System.Drawing.Size(230, 92)
+        '
+        'OpenReportReferenceToolStripMenuItem
+        '
+        Me.OpenReportReferenceToolStripMenuItem.Name = "OpenReportReferenceToolStripMenuItem"
+        Me.OpenReportReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenReportReferenceToolStripMenuItem.Text = "Open report reference..."
+        '
+        'OpenReportLinkToolStripMenuItem
+        '
+        Me.OpenReportLinkToolStripMenuItem.Name = "OpenReportLinkToolStripMenuItem"
+        Me.OpenReportLinkToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenReportLinkToolStripMenuItem.Text = "Open report link..."
+        '
+        'OpenDeliverablesReferenceToolStripMenuItem
+        '
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Name = "OpenDeliverablesReferenceToolStripMenuItem"
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Text = "Open deliverables reference..."
+        '
+        'OpenProtocolReferenceToolStripMenuItem
+        '
+        Me.OpenProtocolReferenceToolStripMenuItem.Name = "OpenProtocolReferenceToolStripMenuItem"
+        Me.OpenProtocolReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenProtocolReferenceToolStripMenuItem.Text = "Open protocol reference..."
+        '
+        'HeaderPanel
+        '
+        Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
+        Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.HeaderPanel.Location = New System.Drawing.Point(372, 0)
+        Me.HeaderPanel.Name = "HeaderPanel"
+        Me.HeaderPanel.Size = New System.Drawing.Size(812, 39)
+        Me.HeaderPanel.TabIndex = 2
+        '
+        'HeaderLabel
+        '
+        Me.HeaderLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HeaderLabel.AutoEllipsis = True
+        Me.HeaderLabel.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HeaderLabel.Location = New System.Drawing.Point(6, 9)
+        Me.HeaderLabel.Name = "HeaderLabel"
+        Me.HeaderLabel.Size = New System.Drawing.Size(803, 23)
+        Me.HeaderLabel.TabIndex = 0
+        Me.HeaderLabel.Text = "Label1"
         '
         'Form1
         '
@@ -1209,6 +1507,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 786)
         Me.Controls.Add(Me.MainXtraTabControl)
+        Me.Controls.Add(Me.HeaderPanel)
         Me.Controls.Add(Me.DockPanel1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1221,8 +1520,9 @@ Partial Class Form1
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DockPanel1.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
-        CType(Me.ListBoxControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainXtraTabControl.ResumeLayout(False)
         Me.SurveyDetailsXtraTabPage.ResumeLayout(False)
@@ -1240,13 +1540,17 @@ Partial Class Form1
         CType(Me.DensityGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer3.Panel1.ResumeLayout(False)
+        Me.ResultsSplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.ResultsSplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer3.ResumeLayout(False)
         CType(Me.ResultsGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SurveyGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SurveyGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SurveyContextMenuStrip.ResumeLayout(False)
+        Me.HeaderPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1266,7 +1570,7 @@ Partial Class Form1
     Friend WithEvents DockManager1 As DevExpress.XtraBars.Docking.DockManager
     Friend WithEvents DockPanel1 As DevExpress.XtraBars.Docking.DockPanel
     Friend WithEvents DockPanel1_Container As DevExpress.XtraBars.Docking.ControlContainer
-    Friend WithEvents ListBoxControl1 As DevExpress.XtraEditors.ListBoxControl
+    Friend WithEvents SurveysListBoxControl As DevExpress.XtraEditors.ListBoxControl
     Friend WithEvents MainXtraTabControl As DevExpress.XtraTab.XtraTabControl
     Friend WithEvents SurveyDetailsXtraTabPage As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents SurveyVGridControl As DevExpress.XtraVerticalGrid.VGridControl
@@ -1391,4 +1695,39 @@ Partial Class Form1
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents AbstractRepositoryItemMemoEdit As DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit
+    Friend WithEvents SurveyGridControl As DevExpress.XtraGrid.GridControl
+    Friend WithEvents SurveyGridView As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents colSurveyName3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colYear As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colNetwork As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colPark As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colSeason As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colStartDate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colEndDate As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colAreaSurveyed_mi As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colAverageSearchEffort As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colMethodology As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colProtocolVersion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colProtocolReferenceCode As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colPersonnel As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colReportReferenceCode As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colReportLink As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDeliverablesDatasetReferenceCode As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDataSource As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDataResourcesDirectory As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colAbstract As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colSummary As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colDatasetProcessingSteps As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colComments3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colRecordInsertedDate3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colRecordInsertedBy3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colValidatedDate3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colValidatedBy3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents SurveyContextMenuStrip As ContextMenuStrip
+    Friend WithEvents OpenReportReferenceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenReportLinkToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenDeliverablesReferenceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenProtocolReferenceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HeaderPanel As Panel
+    Friend WithEvents HeaderLabel As Label
 End Class

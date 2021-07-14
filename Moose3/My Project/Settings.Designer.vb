@@ -64,6 +64,18 @@ Namespace My
                 Return CType(Me("MooseConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://irma.nps.gov/DataStore/Reference/Profile/2")>  _
+        Public Property IRMADataStoreReferencePrefix() As String
+            Get
+                Return CType(Me("IRMADataStoreReferencePrefix"),String)
+            End Get
+            Set
+                Me("IRMADataStoreReferencePrefix") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

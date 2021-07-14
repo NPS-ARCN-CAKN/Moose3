@@ -2,6 +2,8 @@
 Imports DevExpress.XtraEditors.Repository
 Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
+Imports DevExpress.XtraVerticalGrid
 
 Public Class Form1
 
@@ -30,7 +32,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub SetUpGridControl(GC As GridControl)
+    Private Sub SetUpGridControl(GC As GridControl, ShowFooter As Boolean)
         GC.UseEmbeddedNavigator = True
         Dim GV As GridView = TryCast(GC.MainView, GridView)
         GV.OptionsBehavior.AllowAddRows = True
@@ -39,8 +41,45 @@ Public Class Form1
         GV.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom
         GV.OptionsView.BestFitMode = GridBestFitMode.Fast
         GV.OptionsView.ColumnAutoWidth = False
-        GV.OptionsView.ShowFooter = True
+        GV.OptionsView.ShowFooter = ShowFooter
     End Sub
+
+    Private Sub AskToSaveDataset()
+        Try
+            If Me.MooseDataSet.HasChanges = True Then
+                If MsgBox("Save?", MsgBoxStyle.YesNo, "Save?") = MsgBoxResult.Yes Then
+                    SaveDataset()
+                End If
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Accesses the IRMA reference code in the SurveyVGridControl in ReferenceCodeColumnName and attempts to open the Data Store reference
+    ''' </summary>
+    ''' <param name="ReferenceCodeColumnName">Name of the column containing the Data Store reference code.</param>
+    Private Sub OpenSurveyIRMAReference(ReferenceCodeColumnName As String)
+        Try
+            Dim RefCode As Integer = CInt(Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord))
+            If RefCode > 0 Then
+                Dim URL As String = My.Settings.IRMADataStoreReferencePrefix & RefCode
+                Process.Start(URL)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+
+
+
+
+
+
+
 
 
 
@@ -53,9 +92,9 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDataset()
-        SetUpGridControl(Me.PopulationGridControl)
-        SetUpGridControl(Me.DensityGridControl)
-        SetUpGridControl(Me.ResultsGridControl)
+        SetUpGridControl(Me.PopulationGridControl, False)
+        SetUpGridControl(Me.DensityGridControl, False)
+        SetUpGridControl(Me.ResultsGridControl, False)
 
 
         'Create a RepositoryItemMemoEdit editor to handle the Summary data field
@@ -70,5 +109,70 @@ Public Class Form1
         rowSummary.Properties.RowEdit = SummaryMemoEdit 'Set rowSummary's row editor to SummaryMemoEdit
 
 
+    End Sub
+
+
+
+    Private Sub SurveyVGridControl_FocusedRecordCellChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.IndexChangedEventArgs) Handles SurveyVGridControl.FocusedRecordCellChanged
+
+    End Sub
+
+    Private Sub SurveyVGridControl_DoubleClick(sender As Object, e As EventArgs) Handles SurveyVGridControl.DoubleClick
+        Dim VG As VGridControl = TryCast(sender, VGridControl)
+        If Not VG Is Nothing Then
+            Dim RefCode As String = GetVGridControlCellValue(VG, "ReportReferenceCode")
+            Debug.Print(RefCode)
+        Else
+            Debug.Print("VGridControl is nothing")
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Returns the value of the specified column in a VGridControl
+    ''' </summary>
+    ''' <param name="VG">VGRidControl.</param>
+    ''' <param name="ColumnName">Column name of the data to retrieve.</param>
+    ''' <returns>String.</returns>
+    Private Function GetVGridControlCellValue(VG As VGridControl, ColumnName As String) As String
+        Dim ReturnValue As String = "" 'The value to be returned
+        If ColumnName.Trim.Length > 0 Then 'Make sure we have a non-zero length ColumnName
+            Try
+                'See if the cell is DBNull
+                If Not IsDBNull(VG.GetCellValue(ColumnName, VG.FocusedRecord)) Then
+                    'Set the return value to the focused record's cell value
+                    ReturnValue = VG.GetCellValue(ColumnName, VG.FocusedRecord)
+                Else
+                    ReturnValue = "The value of " & ColumnName & " is DBNULL."
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+            End Try
+        End If
+        Return ReturnValue
+    End Function
+
+    Private Sub OpenReportReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportReferenceToolStripMenuItem.Click
+        OpenSurveyIRMAReference("ReportReferenceCode")
+    End Sub
+
+    Private Sub OpenReportLinkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportLinkToolStripMenuItem.Click
+        Try
+            Dim RefCode As Integer = CInt(Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord))
+            Process.Start(My.Settings.IRMADataStoreReferencePrefix & RefCode)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub OpenDeliverablesReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenDeliverablesReferenceToolStripMenuItem.Click
+        OpenSurveyIRMAReference("DeliverablesDatasetReferenceCode")
+    End Sub
+
+    Private Sub OpenProtocolReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenProtocolReferenceToolStripMenuItem.Click
+        OpenSurveyIRMAReference("ProtocolReferenceCode")
+    End Sub
+
+    Private Sub ListBoxControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SurveysListBoxControl.SelectedIndexChanged
+        Me.HeaderLabel.Text = Me.SurveysListBoxControl.Text
     End Sub
 End Class
