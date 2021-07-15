@@ -24,6 +24,9 @@ Public Class Form1
     Private Sub SaveDataset()
         Try
             Me.Validate()
+            Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
+            Me.GSPE_DensityEstimatesBindingSource.EndEdit()
+            Me.GSPE_ResultsBindingSource.EndEdit()
             Me.GSPE_SurveysBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.MooseDataSet)
         Catch ex As Exception
@@ -113,9 +116,7 @@ Public Class Form1
 
 
 
-    Private Sub SurveyVGridControl_FocusedRecordCellChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.IndexChangedEventArgs) Handles SurveyVGridControl.FocusedRecordCellChanged
 
-    End Sub
 
     Private Sub SurveyVGridControl_DoubleClick(sender As Object, e As EventArgs) Handles SurveyVGridControl.DoubleClick
         Dim VG As VGridControl = TryCast(sender, VGridControl)
@@ -155,14 +156,7 @@ Public Class Form1
         OpenSurveyIRMAReference("ReportReferenceCode")
     End Sub
 
-    Private Sub OpenReportLinkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportLinkToolStripMenuItem.Click
-        Try
-            Dim RefCode As Integer = CInt(Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord))
-            Process.Start(My.Settings.IRMADataStoreReferencePrefix & RefCode)
-        Catch ex As Exception
-            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
-        End Try
-    End Sub
+
 
     Private Sub OpenDeliverablesReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenDeliverablesReferenceToolStripMenuItem.Click
         OpenSurveyIRMAReference("DeliverablesDatasetReferenceCode")
@@ -174,5 +168,35 @@ Public Class Form1
 
     Private Sub ListBoxControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SurveysListBoxControl.SelectedIndexChanged
         Me.HeaderLabel.Text = Me.SurveysListBoxControl.Text
+    End Sub
+    Private Sub OpenReportLinkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportLinkToolStripMenuItem.Click
+        Try
+            Dim ReportLink As String = Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord)
+            Process.Start(ReportLink)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub OpenDataDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenDataDirectoryToolStripMenuItem.Click
+        Try
+            Dim DataDirectoryPath As String = Me.SurveyVGridControl.GetCellValue("DataResourcesDirectory", Me.SurveyVGridControl.FocusedRecord)
+            Process.Start(DataDirectoryPath)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        AskToSaveDataset()
+    End Sub
+
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+        AskToSaveDataset()
+    End Sub
+
+    Private Sub LoadDatasetToolStripButton_Click(sender As Object, e As EventArgs) Handles LoadDatasetToolStripButton.Click
+        AskToSaveDataset()
+        LoadDataset()
     End Sub
 End Class

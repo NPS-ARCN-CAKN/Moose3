@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MooseDataSet = New Moose3.MooseDataSet()
         Me.GSPE_SurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GSPE_SurveysTableAdapter = New Moose3.MooseDataSetTableAdapters.GSPE_SurveysTableAdapter()
@@ -40,6 +41,11 @@ Partial Class Form1
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SurveysListBoxControl = New DevExpress.XtraEditors.ListBoxControl()
         Me.SurveyVGridControl = New DevExpress.XtraVerticalGrid.VGridControl()
+        Me.SurveyContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.OpenReportReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenReportLinkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenDeliverablesReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenProtocolReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbstractRepositoryItemMemoEdit = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
         Me.rowSurveyName = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
         Me.rowYear = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
@@ -156,6 +162,8 @@ Partial Class Form1
         Me.colSubAreaAverageSearchEffort = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colMethodologyUsed = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colResultsSource = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ResultsSourceLinkGridColumn = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ResultsSourceLinkRepositoryItemHyperLinkEdit = New DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit()
         Me.colComments2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRecordInsertedDate2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRecordInsertedBy2 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -191,13 +199,14 @@ Partial Class Form1
         Me.colValidatedBy3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.SurveyContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.OpenReportReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenReportLinkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenDeliverablesReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenProtocolReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HeaderPanel = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
+        Me.OpenDataDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LoadDatasetToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,6 +218,7 @@ Partial Class Form1
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SurveyContextMenuStrip.SuspendLayout()
         CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainXtraTabControl.SuspendLayout()
@@ -232,12 +242,13 @@ Partial Class Form1
         Me.ResultsSplitContainer3.SuspendLayout()
         CType(Me.ResultsGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ResultsSourceLinkRepositoryItemHyperLinkEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SurveyGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SurveyGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SurveyContextMenuStrip.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -352,8 +363,38 @@ Partial Class Form1
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowSeason, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowMethodology, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowPersonnel, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 722)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 736)
         Me.SurveyVGridControl.TabIndex = 1
+        '
+        'SurveyContextMenuStrip
+        '
+        Me.SurveyContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenReportReferenceToolStripMenuItem, Me.OpenReportLinkToolStripMenuItem, Me.OpenDeliverablesReferenceToolStripMenuItem, Me.OpenProtocolReferenceToolStripMenuItem, Me.OpenDataDirectoryToolStripMenuItem})
+        Me.SurveyContextMenuStrip.Name = "SurveyContextMenuStrip"
+        Me.SurveyContextMenuStrip.Size = New System.Drawing.Size(230, 114)
+        '
+        'OpenReportReferenceToolStripMenuItem
+        '
+        Me.OpenReportReferenceToolStripMenuItem.Name = "OpenReportReferenceToolStripMenuItem"
+        Me.OpenReportReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenReportReferenceToolStripMenuItem.Text = "Open report reference..."
+        '
+        'OpenReportLinkToolStripMenuItem
+        '
+        Me.OpenReportLinkToolStripMenuItem.Name = "OpenReportLinkToolStripMenuItem"
+        Me.OpenReportLinkToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenReportLinkToolStripMenuItem.Text = "Open report link..."
+        '
+        'OpenDeliverablesReferenceToolStripMenuItem
+        '
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Name = "OpenDeliverablesReferenceToolStripMenuItem"
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Text = "Open deliverables reference..."
+        '
+        'OpenProtocolReferenceToolStripMenuItem
+        '
+        Me.OpenProtocolReferenceToolStripMenuItem.Name = "OpenProtocolReferenceToolStripMenuItem"
+        Me.OpenProtocolReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenProtocolReferenceToolStripMenuItem.Text = "Open protocol reference..."
         '
         'AbstractRepositoryItemMemoEdit
         '
@@ -531,10 +572,10 @@ Partial Class Form1
         'MainXtraTabControl
         '
         Me.MainXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainXtraTabControl.Location = New System.Drawing.Point(372, 39)
+        Me.MainXtraTabControl.Location = New System.Drawing.Point(372, 25)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(812, 747)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(812, 761)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage})
         '
@@ -542,7 +583,7 @@ Partial Class Form1
         '
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyVGridControl)
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
-        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(810, 722)
+        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(810, 736)
         Me.SurveyDetailsXtraTabPage.Text = "Survey details"
         '
         'ResultsXtraTabPage
@@ -800,7 +841,7 @@ Partial Class Form1
         '
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsSplitContainer3)
         Me.ResultsSplitContainer2.Size = New System.Drawing.Size(810, 601)
-        Me.ResultsSplitContainer2.SplitterDistance = 117
+        Me.ResultsSplitContainer2.SplitterDistance = 116
         Me.ResultsSplitContainer2.TabIndex = 0
         '
         'DensityGridControl
@@ -810,7 +851,7 @@ Partial Class Form1
         Me.DensityGridControl.Location = New System.Drawing.Point(0, 0)
         Me.DensityGridControl.MainView = Me.GridView3
         Me.DensityGridControl.Name = "DensityGridControl"
-        Me.DensityGridControl.Size = New System.Drawing.Size(810, 117)
+        Me.DensityGridControl.Size = New System.Drawing.Size(810, 116)
         Me.DensityGridControl.TabIndex = 0
         Me.DensityGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -933,7 +974,7 @@ Partial Class Form1
         'ResultsSplitContainer3.Panel2
         '
         Me.ResultsSplitContainer3.Panel2.Controls.Add(Me.SurveyGridControl)
-        Me.ResultsSplitContainer3.Size = New System.Drawing.Size(810, 480)
+        Me.ResultsSplitContainer3.Size = New System.Drawing.Size(810, 481)
         Me.ResultsSplitContainer3.SplitterDistance = 256
         Me.ResultsSplitContainer3.TabIndex = 0
         '
@@ -944,13 +985,14 @@ Partial Class Form1
         Me.ResultsGridControl.Location = New System.Drawing.Point(0, 0)
         Me.ResultsGridControl.MainView = Me.GridView4
         Me.ResultsGridControl.Name = "ResultsGridControl"
+        Me.ResultsGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.ResultsSourceLinkRepositoryItemHyperLinkEdit})
         Me.ResultsGridControl.Size = New System.Drawing.Size(810, 256)
         Me.ResultsGridControl.TabIndex = 0
         Me.ResultsGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
         '
         'GridView4
         '
-        Me.GridView4.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSurveyName2, Me.colParkSubArea2, Me.colBullCowRatio, Me.colCalfCowRatio, Me.colCalfAdultRatio, Me.colADULT, Me.colBULL_30_40, Me.colBULL_30_50, Me.colBULL_30_60, Me.colBULL_41_50, Me.colBULL_ALL, Me.colBULL_GT_50, Me.colBULL_GT_60, Me.colBULL_GTE_50, Me.colBULL_LT_30, Me.colBULL_LT_50, Me.colCALF, Me.colCOW, Me.colCOW_W_0, Me.colCOW_W_1, Me.colCOW_W_2, Me.colCOW_W_3, Me.colLG_BULL, Me.colMED_BULL, Me.colMED_L_BULL, Me.colSM_BULL, Me.colUNKNOWN, Me.colYBULL_ALL, Me.colYBULL_GTSF, Me.colYBULL_SF, Me.colMOOSE, Me.colSubAreaSurveyed_SqMi, Me.colSubAreaAverageSearchEffort, Me.colMethodologyUsed, Me.colResultsSource, Me.colComments2, Me.colRecordInsertedDate2, Me.colRecordInsertedBy2, Me.colValidatedDate2, Me.colValidatedBy2})
+        Me.GridView4.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSurveyName2, Me.colParkSubArea2, Me.colBullCowRatio, Me.colCalfCowRatio, Me.colCalfAdultRatio, Me.colADULT, Me.colBULL_30_40, Me.colBULL_30_50, Me.colBULL_30_60, Me.colBULL_41_50, Me.colBULL_ALL, Me.colBULL_GT_50, Me.colBULL_GT_60, Me.colBULL_GTE_50, Me.colBULL_LT_30, Me.colBULL_LT_50, Me.colCALF, Me.colCOW, Me.colCOW_W_0, Me.colCOW_W_1, Me.colCOW_W_2, Me.colCOW_W_3, Me.colLG_BULL, Me.colMED_BULL, Me.colMED_L_BULL, Me.colSM_BULL, Me.colUNKNOWN, Me.colYBULL_ALL, Me.colYBULL_GTSF, Me.colYBULL_SF, Me.colMOOSE, Me.colSubAreaSurveyed_SqMi, Me.colSubAreaAverageSearchEffort, Me.colMethodologyUsed, Me.colResultsSource, Me.ResultsSourceLinkGridColumn, Me.colComments2, Me.colRecordInsertedDate2, Me.colRecordInsertedBy2, Me.colValidatedDate2, Me.colValidatedBy2})
         Me.GridView4.GridControl = Me.ResultsGridControl
         Me.GridView4.Name = "GridView4"
         Me.GridView4.OptionsView.ShowGroupPanel = False
@@ -1200,6 +1242,20 @@ Partial Class Form1
         Me.colResultsSource.Visible = True
         Me.colResultsSource.VisibleIndex = 34
         '
+        'ResultsSourceLinkGridColumn
+        '
+        Me.ResultsSourceLinkGridColumn.Caption = "ResultsSourceLink"
+        Me.ResultsSourceLinkGridColumn.ColumnEdit = Me.ResultsSourceLinkRepositoryItemHyperLinkEdit
+        Me.ResultsSourceLinkGridColumn.FieldName = "ResultsSourceLink"
+        Me.ResultsSourceLinkGridColumn.Name = "ResultsSourceLinkGridColumn"
+        Me.ResultsSourceLinkGridColumn.Visible = True
+        Me.ResultsSourceLinkGridColumn.VisibleIndex = 40
+        '
+        'ResultsSourceLinkRepositoryItemHyperLinkEdit
+        '
+        Me.ResultsSourceLinkRepositoryItemHyperLinkEdit.AutoHeight = False
+        Me.ResultsSourceLinkRepositoryItemHyperLinkEdit.Name = "ResultsSourceLinkRepositoryItemHyperLinkEdit"
+        '
         'colComments2
         '
         Me.colComments2.FieldName = "Comments"
@@ -1242,7 +1298,7 @@ Partial Class Form1
         Me.SurveyGridControl.Location = New System.Drawing.Point(0, 0)
         Me.SurveyGridControl.MainView = Me.SurveyGridView
         Me.SurveyGridControl.Name = "SurveyGridControl"
-        Me.SurveyGridControl.Size = New System.Drawing.Size(810, 220)
+        Me.SurveyGridControl.Size = New System.Drawing.Size(810, 221)
         Me.SurveyGridControl.TabIndex = 0
         Me.SurveyGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.SurveyGridView})
         '
@@ -1449,41 +1505,11 @@ Partial Class Form1
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         '
-        'SurveyContextMenuStrip
-        '
-        Me.SurveyContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenReportReferenceToolStripMenuItem, Me.OpenReportLinkToolStripMenuItem, Me.OpenDeliverablesReferenceToolStripMenuItem, Me.OpenProtocolReferenceToolStripMenuItem})
-        Me.SurveyContextMenuStrip.Name = "SurveyContextMenuStrip"
-        Me.SurveyContextMenuStrip.Size = New System.Drawing.Size(230, 92)
-        '
-        'OpenReportReferenceToolStripMenuItem
-        '
-        Me.OpenReportReferenceToolStripMenuItem.Name = "OpenReportReferenceToolStripMenuItem"
-        Me.OpenReportReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
-        Me.OpenReportReferenceToolStripMenuItem.Text = "Open report reference..."
-        '
-        'OpenReportLinkToolStripMenuItem
-        '
-        Me.OpenReportLinkToolStripMenuItem.Name = "OpenReportLinkToolStripMenuItem"
-        Me.OpenReportLinkToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
-        Me.OpenReportLinkToolStripMenuItem.Text = "Open report link..."
-        '
-        'OpenDeliverablesReferenceToolStripMenuItem
-        '
-        Me.OpenDeliverablesReferenceToolStripMenuItem.Name = "OpenDeliverablesReferenceToolStripMenuItem"
-        Me.OpenDeliverablesReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
-        Me.OpenDeliverablesReferenceToolStripMenuItem.Text = "Open deliverables reference..."
-        '
-        'OpenProtocolReferenceToolStripMenuItem
-        '
-        Me.OpenProtocolReferenceToolStripMenuItem.Name = "OpenProtocolReferenceToolStripMenuItem"
-        Me.OpenProtocolReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
-        Me.OpenProtocolReferenceToolStripMenuItem.Text = "Open protocol reference..."
-        '
         'HeaderPanel
         '
         Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.HeaderPanel.Location = New System.Drawing.Point(372, 0)
+        Me.HeaderPanel.Location = New System.Drawing.Point(372, 25)
         Me.HeaderPanel.Name = "HeaderPanel"
         Me.HeaderPanel.Size = New System.Drawing.Size(812, 39)
         Me.HeaderPanel.TabIndex = 2
@@ -1501,13 +1527,57 @@ Partial Class Form1
         Me.HeaderLabel.TabIndex = 0
         Me.HeaderLabel.Text = "Label1"
         '
+        'OpenDataDirectoryToolStripMenuItem
+        '
+        Me.OpenDataDirectoryToolStripMenuItem.Name = "OpenDataDirectoryToolStripMenuItem"
+        Me.OpenDataDirectoryToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenDataDirectoryToolStripMenuItem.Text = "Open data directory..."
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2})
+        Me.ToolStrip1.Location = New System.Drawing.Point(372, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(812, 25)
+        Me.ToolStrip1.TabIndex = 4
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(35, 22)
+        Me.SaveToolStripButton.Text = "Save"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'LoadDatasetToolStripButton
+        '
+        Me.LoadDatasetToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
+        Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
+        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(180, 22)
+        Me.LoadDatasetToolStripButton.Text = "Load moose monitoring dataset"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1184, 786)
-        Me.Controls.Add(Me.MainXtraTabControl)
         Me.Controls.Add(Me.HeaderPanel)
+        Me.Controls.Add(Me.MainXtraTabControl)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.DockPanel1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1522,6 +1592,7 @@ Partial Class Form1
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SurveyContextMenuStrip.ResumeLayout(False)
         CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainXtraTabControl.ResumeLayout(False)
@@ -1545,13 +1616,16 @@ Partial Class Form1
         Me.ResultsSplitContainer3.ResumeLayout(False)
         CType(Me.ResultsGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ResultsSourceLinkRepositoryItemHyperLinkEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SurveyGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SurveyGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SurveyContextMenuStrip.ResumeLayout(False)
         Me.HeaderPanel.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -1730,4 +1804,12 @@ Partial Class Form1
     Friend WithEvents OpenProtocolReferenceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HeaderPanel As Panel
     Friend WithEvents HeaderLabel As Label
+    Friend WithEvents ResultsSourceLinkGridColumn As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents ResultsSourceLinkRepositoryItemHyperLinkEdit As DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit
+    Friend WithEvents OpenDataDirectoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents SaveToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents LoadDatasetToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
 End Class
