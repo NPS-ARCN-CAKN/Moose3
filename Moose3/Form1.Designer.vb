@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
@@ -86,6 +85,7 @@ Partial Class Form1
         Dim DataSourceColumnBinding60 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim DataSourceColumnBinding61 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim DataSourceColumnBinding62 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MooseDataSet = New Moose3.MooseDataSet()
         Me.GSPE_SurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GSPE_SurveysTableAdapter = New Moose3.MooseDataSetTableAdapters.GSPE_SurveysTableAdapter()
@@ -263,13 +263,6 @@ Partial Class Form1
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GSPEDeliverableXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
-        Me.HeaderPanel = New System.Windows.Forms.Panel()
-        Me.HeaderLabel = New System.Windows.Forms.Label()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.LoadDatasetToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.GSPEGridControl = New DevExpress.XtraGrid.GridControl()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colPark1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -402,6 +395,14 @@ Partial Class Form1
         Me.fieldComments = New DevExpress.XtraPivotGrid.PivotGridField()
         Me.fieldSourceFilename = New DevExpress.XtraPivotGrid.PivotGridField()
         Me.fieldCertificationLevel = New DevExpress.XtraPivotGrid.PivotGridField()
+        Me.HeaderPanel = New System.Windows.Forms.Panel()
+        Me.HeaderLabel = New System.Windows.Forms.Label()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LoadDatasetToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.colPopulationSourceLink = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -443,12 +444,12 @@ Partial Class Form1
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GSPEDeliverableXtraTabPage.SuspendLayout()
-        Me.HeaderPanel.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
         CType(Me.GSPEGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GSPEPivotXtraTabPage.SuspendLayout()
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.HeaderPanel.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -840,7 +841,7 @@ Partial Class Form1
         '
         'PopEstGridView
         '
-        Me.PopEstGridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSurveyName, Me.colParkSubArea, Me.colAnalysis_Column, Me.colStrata, Me.colConfidence, Me.colPopulation_Estimate, Me.colStandard_Error, Me.colLower_Limit, Me.colUpper_Limit, Me.colProportion_of_Mean, Me.colStrata_Column, Me.colAnalysis_Area, Me.colCounted_Column, Me.colUnit_Area_Column, Me.colSurveyArea, Me.colSampledArea, Me.colIntensity, Me.colRelativePrecision, Me.colSightabilityCorrectionFactor, Me.colDensity, Me.colComments, Me.colReportDate, Me.colAnalysisPerformedBy, Me.colPopulationEstimateSource, Me.colRecordInsertedDate, Me.colRecordInsertedBy, Me.colValidatedDate, Me.colValidatedBy})
+        Me.PopEstGridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colSurveyName, Me.colParkSubArea, Me.colAnalysis_Column, Me.colStrata, Me.colConfidence, Me.colPopulation_Estimate, Me.colStandard_Error, Me.colLower_Limit, Me.colUpper_Limit, Me.colProportion_of_Mean, Me.colStrata_Column, Me.colAnalysis_Area, Me.colCounted_Column, Me.colUnit_Area_Column, Me.colSurveyArea, Me.colSampledArea, Me.colIntensity, Me.colRelativePrecision, Me.colSightabilityCorrectionFactor, Me.colDensity, Me.colComments, Me.colReportDate, Me.colAnalysisPerformedBy, Me.colPopulationEstimateSource, Me.colPopulationSourceLink, Me.colRecordInsertedDate, Me.colRecordInsertedBy, Me.colValidatedDate, Me.colValidatedBy})
         Me.PopEstGridView.GridControl = Me.PopulationGridControl
         Me.PopEstGridView.Name = "PopEstGridView"
         Me.PopEstGridView.OptionsView.ShowGroupPanel = False
@@ -1727,65 +1728,6 @@ Partial Class Form1
         Me.GSPEDeliverableXtraTabPage.Name = "GSPEDeliverableXtraTabPage"
         Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(810, 694)
         Me.GSPEDeliverableXtraTabPage.Text = "GSPE data deliverable"
-        '
-        'HeaderPanel
-        '
-        Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
-        Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.HeaderPanel.Location = New System.Drawing.Point(372, 25)
-        Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(812, 39)
-        Me.HeaderPanel.TabIndex = 2
-        '
-        'HeaderLabel
-        '
-        Me.HeaderLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.HeaderLabel.AutoEllipsis = True
-        Me.HeaderLabel.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HeaderLabel.Location = New System.Drawing.Point(6, 9)
-        Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(803, 23)
-        Me.HeaderLabel.TabIndex = 0
-        Me.HeaderLabel.Text = "Label1"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2})
-        Me.ToolStrip1.Location = New System.Drawing.Point(372, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(812, 25)
-        Me.ToolStrip1.TabIndex = 4
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(35, 22)
-        Me.SaveToolStripButton.Text = "Save"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'LoadDatasetToolStripButton
-        '
-        Me.LoadDatasetToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
-        Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
-        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(180, 22)
-        Me.LoadDatasetToolStripButton.Text = "Load moose monitoring dataset"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'GSPEGridControl
         '
@@ -2781,6 +2723,73 @@ Partial Class Form1
         Me.fieldCertificationLevel.DataBinding = DataSourceColumnBinding62
         Me.fieldCertificationLevel.Name = "fieldCertificationLevel"
         '
+        'HeaderPanel
+        '
+        Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
+        Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.HeaderPanel.Location = New System.Drawing.Point(372, 25)
+        Me.HeaderPanel.Name = "HeaderPanel"
+        Me.HeaderPanel.Size = New System.Drawing.Size(812, 39)
+        Me.HeaderPanel.TabIndex = 2
+        '
+        'HeaderLabel
+        '
+        Me.HeaderLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.HeaderLabel.AutoEllipsis = True
+        Me.HeaderLabel.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HeaderLabel.Location = New System.Drawing.Point(6, 9)
+        Me.HeaderLabel.Name = "HeaderLabel"
+        Me.HeaderLabel.Size = New System.Drawing.Size(803, 23)
+        Me.HeaderLabel.TabIndex = 0
+        Me.HeaderLabel.Text = "Label1"
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2})
+        Me.ToolStrip1.Location = New System.Drawing.Point(372, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(812, 25)
+        Me.ToolStrip1.TabIndex = 4
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(35, 22)
+        Me.SaveToolStripButton.Text = "Save"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'LoadDatasetToolStripButton
+        '
+        Me.LoadDatasetToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
+        Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
+        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(180, 22)
+        Me.LoadDatasetToolStripButton.Text = "Load moose monitoring dataset"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'colPopulationSourceLink
+        '
+        Me.colPopulationSourceLink.Caption = "Population Source Link"
+        Me.colPopulationSourceLink.FieldName = "PopulationSourceLink"
+        Me.colPopulationSourceLink.Name = "colPopulationSourceLink"
+        Me.colPopulationSourceLink.Visible = True
+        Me.colPopulationSourceLink.VisibleIndex = 28
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2833,13 +2842,13 @@ Partial Class Form1
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GSPEDeliverableXtraTabPage.ResumeLayout(False)
-        Me.HeaderPanel.ResumeLayout(False)
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         CType(Me.GSPEGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GSPEPivotXtraTabPage.ResumeLayout(False)
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.HeaderPanel.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3161,4 +3170,5 @@ Partial Class Form1
     Friend WithEvents fieldComments As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents fieldSourceFilename As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents fieldCertificationLevel As DevExpress.XtraPivotGrid.PivotGridField
+    Friend WithEvents colPopulationSourceLink As DevExpress.XtraGrid.Columns.GridColumn
 End Class

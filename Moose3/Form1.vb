@@ -10,11 +10,11 @@ Public Class Form1
 
     Private Sub LoadDataset()
         Try
+            Me.GSPE_SurveysTableAdapter.Fill(Me.MooseDataSet.GSPE_Surveys)
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            ' Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
-            Me.GSPE_SurveysTableAdapter.Fill(Me.MooseDataSet.GSPE_Surveys)
+            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -36,7 +36,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub SetUpGridControl(GC As GridControl, ShowFooter As Boolean)
+    Private Sub SetUpGridControl(GC As GridControl, ShowFooter As Boolean, ShowGroupPanel As Boolean)
         GC.UseEmbeddedNavigator = True
         Dim GV As GridView = TryCast(GC.MainView, GridView)
         GV.OptionsBehavior.AllowAddRows = True
@@ -46,6 +46,7 @@ Public Class Form1
         GV.OptionsView.BestFitMode = GridBestFitMode.Fast
         GV.OptionsView.ColumnAutoWidth = False
         GV.OptionsView.ShowFooter = ShowFooter
+        GV.OptionsView.ShowGroupPanel = ShowGroupPanel
     End Sub
 
     ''' <summary>
@@ -129,19 +130,16 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDataset()
-        SetUpGridControl(Me.PopulationGridControl, False)
-        SetUpGridControl(Me.DensityGridControl, False)
-        SetUpGridControl(Me.ResultsGridControl, False)
+        SetUpGridControl(Me.PopulationGridControl, False, False)
+        SetUpGridControl(Me.DensityGridControl, False, False)
+        SetUpGridControl(Me.ResultsGridControl, False, False)
+        SetUpGridControl(Me.GSPEGridControl, True, True)
 
         'Set up survey vertical grid control
         SetUpVGridControl(Me.SurveyVGridControl)
 
         'Set up the survey VGridControl's long field editors.
         SetUpSurveyVGridControlRowEditors()
-
-
-
-
 
     End Sub
 

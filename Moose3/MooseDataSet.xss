@@ -13,6 +13,22 @@
     <Shape ID="DesignTable:GSPE_Surveys" ZOrder="5" X="70" Y="70" Height="305" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
   </Shapes>
   <Connectors>
+    <Connector ID="DesignRelation:FK_GSPE_Ratios_GSPE_Surveys" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>261</X>
+          <Y>375</Y>
+        </Point>
+        <Point>
+          <X>261</X>
+          <Y>1212</Y>
+        </Point>
+        <Point>
+          <X>364</X>
+          <Y>1212</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
     <Connector ID="DesignRelation:FK_GSPE_GSPE_Surveys" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
@@ -54,22 +70,6 @@
         <Point>
           <X>364</X>
           <Y>837</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FK_GSPE_Ratios_GSPE_Surveys" ZOrder="1" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>261</X>
-          <Y>375</Y>
-        </Point>
-        <Point>
-          <X>261</X>
-          <Y>1212</Y>
-        </Point>
-        <Point>
-          <X>364</X>
-          <Y>1212</Y>
         </Point>
       </RoutePoints>
     </Connector>
