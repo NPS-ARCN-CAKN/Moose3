@@ -4,6 +4,7 @@ Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
 Imports DevExpress.XtraVerticalGrid
+Imports DevExpress.XtraVerticalGrid.Rows
 
 Public Class Form1
 
@@ -46,6 +47,39 @@ Public Class Form1
         GV.OptionsView.ColumnAutoWidth = False
         GV.OptionsView.ShowFooter = ShowFooter
     End Sub
+
+    ''' <summary>
+    ''' Sets up a VGridControl the way I like it.
+    ''' </summary>
+    ''' <param name="VGC">VGridControl to set up.</param>
+    Private Sub SetUpVGridControl(VGC As VGridControl)
+        Try
+            'Format each row of the control
+            For Each VGridBaseRow As BaseRow In VGC.Rows
+                With VGridBaseRow.AppearanceCell.TextOptions
+                    .HAlignment = DevExpress.Utils.HorzAlignment.Near
+                    .VAlignment = DevExpress.Utils.VertAlignment.Top
+                    .WordWrap = True
+                End With
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub SetUpSurveyVGridControlRowEditors()
+        'Create a RepositoryItemMemoEdit editor to handle the Summary data field
+        Dim AbstractMemoEdit As New RepositoryItemMemoEdit
+        Dim DatasetProcessingStepsMemoEdit As New RepositoryItemMemoEdit
+        Dim SummaryMemoEdit As New RepositoryItemMemoEdit
+        AbstractMemoEdit.WordWrap = True
+        DatasetProcessingStepsMemoEdit.WordWrap = True
+        SummaryMemoEdit.WordWrap = True
+        rowAbstract.Properties.RowEdit = AbstractMemoEdit
+        rowDatasetProcessingSteps.Properties.RowEdit = DatasetProcessingStepsMemoEdit
+        rowSummary.Properties.RowEdit = SummaryMemoEdit 'Set rowSummary's row editor to SummaryMemoEdit
+    End Sub
+
 
     Private Sub AskToSaveDataset()
         Try
@@ -99,17 +133,14 @@ Public Class Form1
         SetUpGridControl(Me.DensityGridControl, False)
         SetUpGridControl(Me.ResultsGridControl, False)
 
+        'Set up survey vertical grid control
+        SetUpVGridControl(Me.SurveyVGridControl)
 
-        'Create a RepositoryItemMemoEdit editor to handle the Summary data field
-        Dim AbstractMemoEdit As New RepositoryItemMemoEdit
-        Dim DatasetProcessingStepsMemoEdit As New RepositoryItemMemoEdit
-        Dim SummaryMemoEdit As New RepositoryItemMemoEdit
-        AbstractMemoEdit.WordWrap = True
-        DatasetProcessingStepsMemoEdit.WordWrap = True
-        SummaryMemoEdit.WordWrap = True
-        rowAbstract.Properties.RowEdit = AbstractMemoEdit
-        rowDatasetProcessingSteps.Properties.RowEdit = DatasetProcessingStepsMemoEdit
-        rowSummary.Properties.RowEdit = SummaryMemoEdit 'Set rowSummary's row editor to SummaryMemoEdit
+        'Set up the survey VGridControl's long field editors.
+        SetUpSurveyVGridControlRowEditors()
+
+
+
 
 
     End Sub
