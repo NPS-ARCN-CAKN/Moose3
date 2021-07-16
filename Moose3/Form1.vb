@@ -36,37 +36,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub SetUpGridControl(GC As GridControl, ShowFooter As Boolean, ShowGroupPanel As Boolean)
-        GC.UseEmbeddedNavigator = True
-        Dim GV As GridView = TryCast(GC.MainView, GridView)
-        GV.OptionsBehavior.AllowAddRows = True
-        GV.OptionsBehavior.AllowDeleteRows = True
-        GV.BestFitColumns(True)
-        GV.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom
-        GV.OptionsView.BestFitMode = GridBestFitMode.Fast
-        GV.OptionsView.ColumnAutoWidth = False
-        GV.OptionsView.ShowFooter = ShowFooter
-        GV.OptionsView.ShowGroupPanel = ShowGroupPanel
-    End Sub
 
-    ''' <summary>
-    ''' Sets up a VGridControl the way I like it.
-    ''' </summary>
-    ''' <param name="VGC">VGridControl to set up.</param>
-    Private Sub SetUpVGridControl(VGC As VGridControl)
-        Try
-            'Format each row of the control
-            For Each VGridBaseRow As BaseRow In VGC.Rows
-                With VGridBaseRow.AppearanceCell.TextOptions
-                    .HAlignment = DevExpress.Utils.HorzAlignment.Near
-                    .VAlignment = DevExpress.Utils.VertAlignment.Top
-                    .WordWrap = True
-                End With
-            Next
-        Catch ex As Exception
-            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
-        End Try
-    End Sub
 
     Private Sub SetUpSurveyVGridControlRowEditors()
         'Create a RepositoryItemMemoEdit editor to handle the Summary data field
@@ -130,10 +100,10 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDataset()
-        SetUpGridControl(Me.PopulationGridControl, False, False)
-        SetUpGridControl(Me.DensityGridControl, False, False)
-        SetUpGridControl(Me.ResultsGridControl, False, False)
-        SetUpGridControl(Me.GSPEGridControl, True, True)
+        SetUpGridControl(Me.PopulationGridControl, False, False, False)
+        SetUpGridControl(Me.DensityGridControl, False, False, False)
+        SetUpGridControl(Me.ResultsGridControl, False, False, False)
+        SetUpGridControl(Me.GSPEGridControl, True, True, False)
 
         'Set up survey vertical grid control
         SetUpVGridControl(Me.SurveyVGridControl)

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DataShaperForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,30 @@ Partial Class DataShaperForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DataShaperForm))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.QuerySelectorToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.DataShaperPivotGridControl = New DevExpress.XtraPivotGrid.PivotGridControl()
         Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl()
         Me.DatasetXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
+        Me.DataShaperGridControl = New DevExpress.XtraGrid.GridControl()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.PivotXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataShaperPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabControl1.SuspendLayout()
+        Me.DatasetXtraTabPage.SuspendLayout()
+        CType(Me.DataShaperGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PivotXtraTabPage.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1184, 25)
@@ -57,15 +60,6 @@ Partial Class DataShaperForm
         '
         Me.QuerySelectorToolStripComboBox.Name = "QuerySelectorToolStripComboBox"
         Me.QuerySelectorToolStripComboBox.Size = New System.Drawing.Size(400, 25)
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'DataShaperPivotGridControl
         '
@@ -88,9 +82,26 @@ Partial Class DataShaperForm
         '
         'DatasetXtraTabPage
         '
+        Me.DatasetXtraTabPage.Controls.Add(Me.DataShaperGridControl)
         Me.DatasetXtraTabPage.Name = "DatasetXtraTabPage"
         Me.DatasetXtraTabPage.Size = New System.Drawing.Size(1182, 711)
         Me.DatasetXtraTabPage.Text = "Dataset"
+        '
+        'DataShaperGridControl
+        '
+        Me.DataShaperGridControl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataShaperGridControl.Location = New System.Drawing.Point(0, 0)
+        Me.DataShaperGridControl.MainView = Me.GridView1
+        Me.DataShaperGridControl.Name = "DataShaperGridControl"
+        Me.DataShaperGridControl.Size = New System.Drawing.Size(1182, 711)
+        Me.DataShaperGridControl.TabIndex = 0
+        Me.DataShaperGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        '
+        'GridView1
+        '
+        Me.GridView1.GridControl = Me.DataShaperGridControl
+        Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsView.ShowFooter = True
         '
         'PivotXtraTabPage
         '
@@ -113,6 +124,9 @@ Partial Class DataShaperForm
         CType(Me.DataShaperPivotGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabControl1.ResumeLayout(False)
+        Me.DatasetXtraTabPage.ResumeLayout(False)
+        CType(Me.DataShaperGridControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PivotXtraTabPage.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -122,9 +136,10 @@ Partial Class DataShaperForm
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents QuerySelectorToolStripComboBox As ToolStripComboBox
-    Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents DataShaperPivotGridControl As DevExpress.XtraPivotGrid.PivotGridControl
     Friend WithEvents XtraTabControl1 As DevExpress.XtraTab.XtraTabControl
     Friend WithEvents DatasetXtraTabPage As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents PivotXtraTabPage As DevExpress.XtraTab.XtraTabPage
+    Friend WithEvents DataShaperGridControl As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
 End Class
