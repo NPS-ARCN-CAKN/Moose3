@@ -14,7 +14,7 @@ Public Class Form1
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
+            'Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -227,5 +227,11 @@ Public Class Form1
     Private Sub LoadDatasetToolStripButton_Click(sender As Object, e As EventArgs) Handles LoadDatasetToolStripButton.Click
         AskToSaveDataset()
         LoadDataset()
+    End Sub
+
+    Private Sub DataShaperToolStripButton_Click(sender As Object, e As EventArgs) Handles DataShaperToolStripButton.Click
+        Dim DataShaperForm As New DataShaperForm
+        DataShaperForm.ShowDialog()
+
     End Sub
 End Class

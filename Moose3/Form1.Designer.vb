@@ -166,6 +166,7 @@ Partial Class Form1
         Me.colReportDate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAnalysisPerformedBy = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colPopulationEstimateSource = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colPopulationSourceLink = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRecordInsertedDate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRecordInsertedBy = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colValidatedDate = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -402,7 +403,7 @@ Partial Class Form1
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.LoadDatasetToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.colPopulationSourceLink = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.DataShaperToolStripButton = New System.Windows.Forms.ToolStripButton()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -555,7 +556,7 @@ Partial Class Form1
         Me.SurveyVGridControl.Appearance.FocusedRow.Options.UseBackColor = True
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
-        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
+        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.SizeNS
         Me.SurveyVGridControl.CustomizationFormBounds = New System.Drawing.Rectangle(457, 176, 214, 258)
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1013,6 +1014,14 @@ Partial Class Form1
         Me.colPopulationEstimateSource.Name = "colPopulationEstimateSource"
         Me.colPopulationEstimateSource.Visible = True
         Me.colPopulationEstimateSource.VisibleIndex = 23
+        '
+        'colPopulationSourceLink
+        '
+        Me.colPopulationSourceLink.Caption = "Population Source Link"
+        Me.colPopulationSourceLink.FieldName = "PopulationSourceLink"
+        Me.colPopulationSourceLink.Name = "colPopulationSourceLink"
+        Me.colPopulationSourceLink.Visible = True
+        Me.colPopulationSourceLink.VisibleIndex = 28
         '
         'colRecordInsertedDate
         '
@@ -2747,7 +2756,7 @@ Partial Class Form1
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(372, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(812, 25)
@@ -2782,13 +2791,14 @@ Partial Class Form1
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'colPopulationSourceLink
+        'DataShaperToolStripButton
         '
-        Me.colPopulationSourceLink.Caption = "Population Source Link"
-        Me.colPopulationSourceLink.FieldName = "PopulationSourceLink"
-        Me.colPopulationSourceLink.Name = "colPopulationSourceLink"
-        Me.colPopulationSourceLink.Visible = True
-        Me.colPopulationSourceLink.VisibleIndex = 28
+        Me.DataShaperToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.DataShaperToolStripButton.Image = CType(resources.GetObject("DataShaperToolStripButton.Image"), System.Drawing.Image)
+        Me.DataShaperToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.DataShaperToolStripButton.Name = "DataShaperToolStripButton"
+        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(82, 22)
+        Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
         'Form1
         '
@@ -2800,7 +2810,7 @@ Partial Class Form1
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.DockPanel1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "NPS Moose Monitoring GSPE Database Application"
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3171,4 +3181,5 @@ Partial Class Form1
     Friend WithEvents fieldSourceFilename As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents fieldCertificationLevel As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents colPopulationSourceLink As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents DataShaperToolStripButton As ToolStripButton
 End Class
