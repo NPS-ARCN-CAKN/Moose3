@@ -98,7 +98,7 @@ Partial Class Form1
         Me.GSPE_DensityEstimatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GSPE_PopulationEstimatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GSPE_ResultsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
+        Me.MainDockManager = New DevExpress.XtraBars.Docking.DockManager(Me.components)
         Me.SurveySelectorDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SurveysListBoxControl = New DevExpress.XtraEditors.ListBoxControl()
@@ -138,6 +138,8 @@ Partial Class Form1
         Me.rowValidatedBy = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
         Me.MainXtraTabControl = New DevExpress.XtraTab.XtraTabControl()
         Me.SurveyDetailsXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
+        Me.SurveyDetailsPanel = New System.Windows.Forms.Panel()
+        Me.SurveyDetailsLabel = New System.Windows.Forms.Label()
         Me.ResultsXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.ResultsSplitContainer = New System.Windows.Forms.SplitContainer()
         Me.PopulationGridControl = New DevExpress.XtraGrid.GridControl()
@@ -404,15 +406,29 @@ Partial Class Form1
         Me.LoadDatasetToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataShaperToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.SurveyDetailsPanel = New System.Windows.Forms.Panel()
-        Me.SurveyDetailsLabel = New System.Windows.Forms.Label()
+        Me.AbstractDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.ControlContainer1 = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.SummaryDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.ControlContainer2 = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.CommentsDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.ControlContainer3 = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.DatasetProcessingStepsDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.ControlContainer4 = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.hideContainerRight = New DevExpress.XtraBars.Docking.AutoHideContainer()
+        Me.AbstractTextBox = New System.Windows.Forms.TextBox()
+        Me.CommentsTextBox = New System.Windows.Forms.TextBox()
+        Me.DatasetProcessingStepsTextBox = New System.Windows.Forms.TextBox()
+        Me.SurveyPivotGridToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.SurveyPivotGridToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ExportPivotGridToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
+        Me.ExportPivotGridToolStripButton = New System.Windows.Forms.ToolStripButton()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_DensityEstimatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_ResultsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MainDockManager, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SurveySelectorDockPanel.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -422,6 +438,7 @@ Partial Class Form1
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainXtraTabControl.SuspendLayout()
         Me.SurveyDetailsXtraTabPage.SuspendLayout()
+        Me.SurveyDetailsPanel.SuspendLayout()
         Me.ResultsXtraTabPage.SuspendLayout()
         CType(Me.ResultsSplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ResultsSplitContainer.Panel1.SuspendLayout()
@@ -453,7 +470,15 @@ Partial Class Form1
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HeaderPanel.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        Me.SurveyDetailsPanel.SuspendLayout()
+        Me.AbstractDockPanel.SuspendLayout()
+        Me.ControlContainer1.SuspendLayout()
+        Me.SummaryDockPanel.SuspendLayout()
+        Me.CommentsDockPanel.SuspendLayout()
+        Me.ControlContainer3.SuspendLayout()
+        Me.DatasetProcessingStepsDockPanel.SuspendLayout()
+        Me.ControlContainer4.SuspendLayout()
+        Me.hideContainerRight.SuspendLayout()
+        Me.SurveyPivotGridToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -516,11 +541,14 @@ Partial Class Form1
         Me.GSPE_ResultsBindingSource.DataMember = "FK_GSPE_Ratios_GSPE_Surveys"
         Me.GSPE_ResultsBindingSource.DataSource = Me.GSPE_SurveysBindingSource
         '
-        'DockManager1
+        'MainDockManager
         '
-        Me.DockManager1.Form = Me
-        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.SurveySelectorDockPanel})
-        Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"})
+        Me.MainDockManager.AutoHideContainers.AddRange(New DevExpress.XtraBars.Docking.AutoHideContainer() {Me.hideContainerRight})
+        Me.MainDockManager.DockModeVS2005FadeFramesCount = 1
+        Me.MainDockManager.DockModeVS2005FadeSpeed = 150
+        Me.MainDockManager.Form = Me
+        Me.MainDockManager.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.SurveySelectorDockPanel, Me.SummaryDockPanel})
+        Me.MainDockManager.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"})
         '
         'SurveySelectorDockPanel
         '
@@ -572,7 +600,7 @@ Partial Class Form1
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 668)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(589, 668)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
@@ -795,7 +823,7 @@ Partial Class Form1
         Me.MainXtraTabControl.Location = New System.Drawing.Point(372, 64)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(812, 722)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(591, 722)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage, Me.GSPEDeliverableXtraTabPage, Me.GSPEPivotXtraTabPage})
         '
@@ -805,8 +833,28 @@ Partial Class Form1
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyDetailsPanel)
         Me.SurveyDetailsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.page_white_edit
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
-        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(810, 694)
+        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(589, 694)
         Me.SurveyDetailsXtraTabPage.Text = "Survey details"
+        '
+        'SurveyDetailsPanel
+        '
+        Me.SurveyDetailsPanel.Controls.Add(Me.SurveyDetailsLabel)
+        Me.SurveyDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
+        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(589, 26)
+        Me.SurveyDetailsPanel.TabIndex = 2
+        '
+        'SurveyDetailsLabel
+        '
+        Me.SurveyDetailsLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SurveyDetailsLabel.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        Me.SurveyDetailsLabel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
+        Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(4)
+        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(589, 26)
+        Me.SurveyDetailsLabel.TabIndex = 0
+        Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
         '
         'ResultsXtraTabPage
         '
@@ -2227,8 +2275,9 @@ Partial Class Form1
         'GSPEPivotXtraTabPage
         '
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.GSPEPivotGridControl)
+        Me.GSPEPivotXtraTabPage.Controls.Add(Me.SurveyPivotGridToolStrip)
         Me.GSPEPivotXtraTabPage.Name = "GSPEPivotXtraTabPage"
-        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(810, 694)
+        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(589, 694)
         Me.GSPEPivotXtraTabPage.Text = "Summarize data deliverable"
         '
         'GSPEPivotGridControl
@@ -2236,10 +2285,10 @@ Partial Class Form1
         Me.GSPEPivotGridControl.DataSource = Me.GSPEBindingSource
         Me.GSPEPivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GSPEPivotGridControl.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldPark, Me.fieldSurveyName, Me.fieldSurveyYear, Me.fieldSeason, Me.fieldSubArea, Me.fieldGMU, Me.fieldID, Me.fieldStartDate, Me.fieldStopDate, Me.fieldIntID, Me.fieldRand, Me.fieldFiringOrder, Me.fieldSelected, Me.fieldCounted, Me.fieldExclude, Me.fieldStrat, Me.fieldStratName, Me.fieldStratMoose, Me.fieldStratTracks, Me.fieldStratHab, Me.fieldSearchMin, Me.fieldDateCounted, Me.fieldPercNotFlown, Me.fieldXCOORD, Me.fieldYCOORD, Me.fieldAreaSqMi, Me.fieldADULT, Me.fieldBULL3040, Me.fieldBULL3050, Me.fieldBULL3060, Me.fieldBULL4150, Me.fieldBULLALL, Me.fieldBULLGT50, Me.fieldBULLGT60, Me.fieldBULLGTE50, Me.fieldBULLLT30, Me.fieldBULLLT50, Me.fieldCALF, Me.fieldCOW, Me.fieldCOWW0, Me.fieldCOWW1, Me.fieldCOWW2, Me.fieldCOWW3, Me.fieldLGBULL, Me.fieldMEDBULL, Me.fieldMEDLBULL, Me.fieldSMBULL, Me.fieldUNKNOWN, Me.fieldYBULLALL, Me.fieldYBULLGTSF, Me.fieldYBULLSF, Me.fieldMOOSE, Me.fieldPilot, Me.fieldObserver, Me.fieldPersonnel, Me.fieldDensity, Me.fieldSCFPlot, Me.fieldStd, Me.fieldInt, Me.fieldComments, Me.fieldSourceFilename, Me.fieldCertificationLevel})
-        Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 0)
+        Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 25)
         Me.GSPEPivotGridControl.Name = "GSPEPivotGridControl"
         Me.GSPEPivotGridControl.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized
-        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(810, 694)
+        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(589, 669)
         Me.GSPEPivotGridControl.TabIndex = 0
         '
         'fieldPark
@@ -2752,7 +2801,7 @@ Partial Class Form1
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderPanel.Location = New System.Drawing.Point(372, 25)
         Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(812, 39)
+        Me.HeaderPanel.Size = New System.Drawing.Size(591, 39)
         Me.HeaderPanel.TabIndex = 2
         '
         'HeaderLabel
@@ -2764,7 +2813,7 @@ Partial Class Form1
         Me.HeaderLabel.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HeaderLabel.Location = New System.Drawing.Point(6, 9)
         Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(803, 23)
+        Me.HeaderLabel.Size = New System.Drawing.Size(582, 23)
         Me.HeaderLabel.TabIndex = 0
         Me.HeaderLabel.Text = "Label1"
         '
@@ -2773,7 +2822,7 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(372, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(812, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(591, 25)
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -2814,25 +2863,163 @@ Partial Class Form1
         Me.DataShaperToolStripButton.Size = New System.Drawing.Size(82, 22)
         Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
-        'SurveyDetailsPanel
+        'AbstractDockPanel
         '
-        Me.SurveyDetailsPanel.Controls.Add(Me.SurveyDetailsLabel)
-        Me.SurveyDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
-        Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
-        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(810, 26)
-        Me.SurveyDetailsPanel.TabIndex = 2
+        Me.AbstractDockPanel.Controls.Add(Me.ControlContainer1)
+        Me.AbstractDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.AbstractDockPanel.ID = New System.Guid("c5c92d15-0acd-44a3-9b81-d86dc9f6760d")
+        Me.AbstractDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.AbstractDockPanel.Name = "AbstractDockPanel"
+        Me.AbstractDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
+        Me.AbstractDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.AbstractDockPanel.SavedIndex = 1
+        Me.AbstractDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.AbstractDockPanel.Text = "Abstract"
+        Me.AbstractDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
-        'SurveyDetailsLabel
+        'ControlContainer1
         '
-        Me.SurveyDetailsLabel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SurveyDetailsLabel.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        Me.SurveyDetailsLabel.Location = New System.Drawing.Point(0, 0)
-        Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
-        Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(4)
-        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(810, 26)
-        Me.SurveyDetailsLabel.TabIndex = 0
-        Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
+        Me.ControlContainer1.Controls.Add(Me.AbstractTextBox)
+        Me.ControlContainer1.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer1.Name = "ControlContainer1"
+        Me.ControlContainer1.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer1.TabIndex = 0
+        '
+        'SummaryDockPanel
+        '
+        Me.SummaryDockPanel.Controls.Add(Me.ControlContainer2)
+        Me.SummaryDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.SummaryDockPanel.ID = New System.Guid("72ba9f59-3463-44df-bd62-6d847a2187d3")
+        Me.SummaryDockPanel.Location = New System.Drawing.Point(963, 0)
+        Me.SummaryDockPanel.Name = "SummaryDockPanel"
+        Me.SummaryDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
+        Me.SummaryDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.SummaryDockPanel.Text = "Survey summary"
+        '
+        'ControlContainer2
+        '
+        Me.ControlContainer2.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer2.Name = "ControlContainer2"
+        Me.ControlContainer2.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer2.TabIndex = 0
+        '
+        'CommentsDockPanel
+        '
+        Me.CommentsDockPanel.Controls.Add(Me.ControlContainer3)
+        Me.CommentsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.CommentsDockPanel.ID = New System.Guid("bc429878-ddf0-45e7-ad27-27b16bfb425f")
+        Me.CommentsDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.CommentsDockPanel.Name = "CommentsDockPanel"
+        Me.CommentsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
+        Me.CommentsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.CommentsDockPanel.SavedIndex = 2
+        Me.CommentsDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.CommentsDockPanel.Text = "Comments"
+        Me.CommentsDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
+        '
+        'ControlContainer3
+        '
+        Me.ControlContainer3.Controls.Add(Me.CommentsTextBox)
+        Me.ControlContainer3.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer3.Name = "ControlContainer3"
+        Me.ControlContainer3.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer3.TabIndex = 0
+        '
+        'DatasetProcessingStepsDockPanel
+        '
+        Me.DatasetProcessingStepsDockPanel.Controls.Add(Me.ControlContainer4)
+        Me.DatasetProcessingStepsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.DatasetProcessingStepsDockPanel.ID = New System.Guid("9bf63ea7-bed1-4d5e-9427-7d7329baba10")
+        Me.DatasetProcessingStepsDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.DatasetProcessingStepsDockPanel.Name = "DatasetProcessingStepsDockPanel"
+        Me.DatasetProcessingStepsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
+        Me.DatasetProcessingStepsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.DatasetProcessingStepsDockPanel.SavedIndex = 2
+        Me.DatasetProcessingStepsDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.DatasetProcessingStepsDockPanel.Text = "Dataset processing steps"
+        Me.DatasetProcessingStepsDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
+        '
+        'ControlContainer4
+        '
+        Me.ControlContainer4.Controls.Add(Me.DatasetProcessingStepsTextBox)
+        Me.ControlContainer4.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer4.Name = "ControlContainer4"
+        Me.ControlContainer4.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer4.TabIndex = 0
+        '
+        'hideContainerRight
+        '
+        Me.hideContainerRight.BackColor = System.Drawing.SystemColors.Control
+        Me.hideContainerRight.Controls.Add(Me.AbstractDockPanel)
+        Me.hideContainerRight.Controls.Add(Me.CommentsDockPanel)
+        Me.hideContainerRight.Controls.Add(Me.DatasetProcessingStepsDockPanel)
+        Me.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.hideContainerRight.Location = New System.Drawing.Point(1163, 0)
+        Me.hideContainerRight.Name = "hideContainerRight"
+        Me.hideContainerRight.Size = New System.Drawing.Size(21, 786)
+        '
+        'AbstractTextBox
+        '
+        Me.AbstractTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "Abstract", True))
+        Me.AbstractTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AbstractTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AbstractTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.AbstractTextBox.Multiline = True
+        Me.AbstractTextBox.Name = "AbstractTextBox"
+        Me.AbstractTextBox.Size = New System.Drawing.Size(193, 757)
+        Me.AbstractTextBox.TabIndex = 0
+        '
+        'CommentsTextBox
+        '
+        Me.CommentsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "Comments", True))
+        Me.CommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CommentsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CommentsTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.CommentsTextBox.Multiline = True
+        Me.CommentsTextBox.Name = "CommentsTextBox"
+        Me.CommentsTextBox.Size = New System.Drawing.Size(193, 757)
+        Me.CommentsTextBox.TabIndex = 1
+        '
+        'DatasetProcessingStepsTextBox
+        '
+        Me.DatasetProcessingStepsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "DatasetProcessingSteps", True))
+        Me.DatasetProcessingStepsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DatasetProcessingStepsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.DatasetProcessingStepsTextBox.Multiline = True
+        Me.DatasetProcessingStepsTextBox.Name = "DatasetProcessingStepsTextBox"
+        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(193, 757)
+        Me.DatasetProcessingStepsTextBox.TabIndex = 1
+        '
+        'SurveyPivotGridToolStrip
+        '
+        Me.SurveyPivotGridToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SurveyPivotGridToolStripLabel, Me.ExportPivotGridToolStripComboBox, Me.ExportPivotGridToolStripButton})
+        Me.SurveyPivotGridToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyPivotGridToolStrip.Name = "SurveyPivotGridToolStrip"
+        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(589, 25)
+        Me.SurveyPivotGridToolStrip.TabIndex = 1
+        Me.SurveyPivotGridToolStrip.Text = "Pivot grid"
+        '
+        'SurveyPivotGridToolStripLabel
+        '
+        Me.SurveyPivotGridToolStripLabel.Name = "SurveyPivotGridToolStripLabel"
+        Me.SurveyPivotGridToolStripLabel.Size = New System.Drawing.Size(44, 22)
+        Me.SurveyPivotGridToolStripLabel.Text = "Export:"
+        '
+        'ExportPivotGridToolStripComboBox
+        '
+        Me.ExportPivotGridToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
+        Me.ExportPivotGridToolStripComboBox.Name = "ExportPivotGridToolStripComboBox"
+        Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(121, 25)
+        '
+        'ExportPivotGridToolStripButton
+        '
+        Me.ExportPivotGridToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ExportPivotGridToolStripButton.Image = CType(resources.GetObject("ExportPivotGridToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportPivotGridToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportPivotGridToolStripButton.Name = "ExportPivotGridToolStripButton"
+        Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(54, 22)
+        Me.ExportPivotGridToolStripButton.Text = "Export..."
         '
         'Form1
         '
@@ -2842,7 +3029,9 @@ Partial Class Form1
         Me.Controls.Add(Me.MainXtraTabControl)
         Me.Controls.Add(Me.HeaderPanel)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.SummaryDockPanel)
         Me.Controls.Add(Me.SurveySelectorDockPanel)
+        Me.Controls.Add(Me.hideContainerRight)
         Me.Name = "Form1"
         Me.Text = "NPS Moose Monitoring GSPE Database Application"
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2851,7 +3040,7 @@ Partial Class Form1
         CType(Me.GSPE_DensityEstimatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GSPE_ResultsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MainDockManager, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SurveySelectorDockPanel.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2861,6 +3050,7 @@ Partial Class Form1
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainXtraTabControl.ResumeLayout(False)
         Me.SurveyDetailsXtraTabPage.ResumeLayout(False)
+        Me.SurveyDetailsPanel.ResumeLayout(False)
         Me.ResultsXtraTabPage.ResumeLayout(False)
         Me.ResultsSplitContainer.Panel1.ResumeLayout(False)
         Me.ResultsSplitContainer.Panel2.ResumeLayout(False)
@@ -2889,11 +3079,24 @@ Partial Class Form1
         CType(Me.GSPEGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GSPEPivotXtraTabPage.ResumeLayout(False)
+        Me.GSPEPivotXtraTabPage.PerformLayout()
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.HeaderPanel.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        Me.SurveyDetailsPanel.ResumeLayout(False)
+        Me.AbstractDockPanel.ResumeLayout(False)
+        Me.ControlContainer1.ResumeLayout(False)
+        Me.ControlContainer1.PerformLayout()
+        Me.SummaryDockPanel.ResumeLayout(False)
+        Me.CommentsDockPanel.ResumeLayout(False)
+        Me.ControlContainer3.ResumeLayout(False)
+        Me.ControlContainer3.PerformLayout()
+        Me.DatasetProcessingStepsDockPanel.ResumeLayout(False)
+        Me.ControlContainer4.ResumeLayout(False)
+        Me.ControlContainer4.PerformLayout()
+        Me.hideContainerRight.ResumeLayout(False)
+        Me.SurveyPivotGridToolStrip.ResumeLayout(False)
+        Me.SurveyPivotGridToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2911,7 +3114,7 @@ Partial Class Form1
     Friend WithEvents GSPE_PopulationEstimatesBindingSource As BindingSource
     Friend WithEvents GSPE_ResultsTableAdapter As MooseDataSetTableAdapters.GSPE_ResultsTableAdapter
     Friend WithEvents GSPE_ResultsBindingSource As BindingSource
-    Friend WithEvents DockManager1 As DevExpress.XtraBars.Docking.DockManager
+    Friend WithEvents MainDockManager As DevExpress.XtraBars.Docking.DockManager
     Friend WithEvents SurveySelectorDockPanel As DevExpress.XtraBars.Docking.DockPanel
     Friend WithEvents DockPanel1_Container As DevExpress.XtraBars.Docking.ControlContainer
     Friend WithEvents SurveysListBoxControl As DevExpress.XtraEditors.ListBoxControl
@@ -3219,4 +3422,20 @@ Partial Class Form1
     Friend WithEvents DataShaperToolStripButton As ToolStripButton
     Friend WithEvents SurveyDetailsPanel As Panel
     Friend WithEvents SurveyDetailsLabel As Label
+    Friend WithEvents hideContainerRight As DevExpress.XtraBars.Docking.AutoHideContainer
+    Friend WithEvents AbstractDockPanel As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents ControlContainer1 As DevExpress.XtraBars.Docking.ControlContainer
+    Friend WithEvents AbstractTextBox As TextBox
+    Friend WithEvents CommentsDockPanel As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents ControlContainer3 As DevExpress.XtraBars.Docking.ControlContainer
+    Friend WithEvents DatasetProcessingStepsDockPanel As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents ControlContainer4 As DevExpress.XtraBars.Docking.ControlContainer
+    Friend WithEvents SummaryDockPanel As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents ControlContainer2 As DevExpress.XtraBars.Docking.ControlContainer
+    Friend WithEvents CommentsTextBox As TextBox
+    Friend WithEvents DatasetProcessingStepsTextBox As TextBox
+    Friend WithEvents SurveyPivotGridToolStrip As ToolStrip
+    Friend WithEvents SurveyPivotGridToolStripLabel As ToolStripLabel
+    Friend WithEvents ExportPivotGridToolStripComboBox As ToolStripComboBox
+    Friend WithEvents ExportPivotGridToolStripButton As ToolStripButton
 End Class

@@ -33,11 +33,7 @@ Public Class Form1
             Me.Validate()
 
             'End all pending edits
-            Me.GSPEBindingSource.EndEdit()
-            Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
-            Me.GSPE_DensityEstimatesBindingSource.EndEdit()
-            Me.GSPE_ResultsBindingSource.EndEdit()
-            Me.GSPE_SurveysBindingSource.EndEdit()
+            EndEdits()
 
             'Send deletes, inserts and updates
             Me.TableAdapterManager.UpdateAll(Me.MooseDataSet)
@@ -46,6 +42,18 @@ Public Class Form1
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
 
+    End Sub
+
+    ''' <summary>
+    ''' Ends all pending edits on the various binding sources
+    ''' </summary>
+    Private Sub EndEdits()
+        'End all pending edits
+        Me.GSPEBindingSource.EndEdit()
+        Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
+        Me.GSPE_DensityEstimatesBindingSource.EndEdit()
+        Me.GSPE_ResultsBindingSource.EndEdit()
+        Me.GSPE_SurveysBindingSource.EndEdit()
     End Sub
 
     ''' <summary>
@@ -194,5 +202,44 @@ Public Class Form1
         Dim DataShaperForm As New DataShaperForm
         DataShaperForm.Show()
 
+    End Sub
+
+    Private Sub GSPE_SurveysBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.PositionChanged
+        EndEdits()
+    End Sub
+
+    Private Sub ExportPivotGridToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridToolStripButton.Click
+        Try
+            If Me.ExportPivotGridToolStripComboBox.Text = "Excel" Then
+                Dim FileFilter As String = "Excel files (*.xlsx)" '|*.txt|All files (*.*)|*.*" 
+                Dim FileExtension As String = "xlsx"
+                'Get the current survey name
+                Dim GV As GridView = Me.SurveyGridControl.MainView
+                Dim SurveyName As String = "Results"
+                If GV.FocusedRowHandle >= 0 Then
+                    SurveyName = GV.GetFocusedRowCellValue("SurveyName")
+                End If
+
+                'Open a save file dialog to allow the user to save the file someplace
+                Dim SFD As New SaveFileDialog
+                With SFD
+                    .AddExtension = True
+                    .CheckFileExists = True
+                    .CheckPathExists = True
+                    .DefaultExt = FileExtension
+                    .FileName = SurveyName.Trim & "." & FileExtension
+                    .Filter = FileFilter
+                End With
+
+                'Show the dialog
+                If SFD.ShowDialog = DialogResult.OK Then
+                    Dim ExportPath As String = SFD.FileName
+                    Me.GSPEPivotGridControl.ExportToCsv(ExportPath)
+                End If
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 End Class
