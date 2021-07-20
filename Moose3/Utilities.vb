@@ -87,6 +87,8 @@ Module Utilities
         GV.OptionsView.ColumnAutoWidth = False
         GV.OptionsView.ShowFooter = ShowFooter
         GV.OptionsView.ShowGroupPanel = ShowGroupPanel
+        GV.OptionsSelection.MultiSelect = True
+        GV.OptionsSelection.MultiSelectMode = GridMultiSelectMode.CellSelect
     End Sub
 
     ''' <summary>

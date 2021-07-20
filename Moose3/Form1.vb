@@ -58,12 +58,15 @@ Public Class Form1
         Dim AbstractMemoEdit As New RepositoryItemMemoEdit
         Dim DatasetProcessingStepsMemoEdit As New RepositoryItemMemoEdit
         Dim SummaryMemoEdit As New RepositoryItemMemoEdit
+        Dim CommentsMemoEdit As New RepositoryItemMemoEdit
         AbstractMemoEdit.WordWrap = True
         DatasetProcessingStepsMemoEdit.WordWrap = True
         SummaryMemoEdit.WordWrap = True
+        CommentsMemoEdit.WordWrap = True
         rowAbstract.Properties.RowEdit = AbstractMemoEdit
         rowDatasetProcessingSteps.Properties.RowEdit = DatasetProcessingStepsMemoEdit
         rowSummary.Properties.RowEdit = SummaryMemoEdit 'Set rowSummary's row editor to SummaryMemoEdit
+        rowComments.Properties.RowEdit = CommentsMemoEdit
     End Sub
 
 

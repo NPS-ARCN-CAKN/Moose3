@@ -26,15 +26,15 @@ Partial Class DataShaperForm
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.QuerySelectorToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
+        Me.RefreshToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExportPivotGridToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.DataShaperPivotGridControl = New DevExpress.XtraPivotGrid.PivotGridControl()
         Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl()
         Me.DatasetXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.DataShaperGridControl = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.PivotXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
-        Me.RefreshToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ExportPivotGridToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataShaperPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +64,27 @@ Partial Class DataShaperForm
         '
         Me.QuerySelectorToolStripComboBox.Name = "QuerySelectorToolStripComboBox"
         Me.QuerySelectorToolStripComboBox.Size = New System.Drawing.Size(400, 25)
+        '
+        'RefreshToolStripButton
+        '
+        Me.RefreshToolStripButton.Image = CType(resources.GetObject("RefreshToolStripButton.Image"), System.Drawing.Image)
+        Me.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RefreshToolStripButton.Name = "RefreshToolStripButton"
+        Me.RefreshToolStripButton.Size = New System.Drawing.Size(66, 22)
+        Me.RefreshToolStripButton.Text = "Refresh"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ExportPivotGridToolStripButton
+        '
+        Me.ExportPivotGridToolStripButton.Image = CType(resources.GetObject("ExportPivotGridToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportPivotGridToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportPivotGridToolStripButton.Name = "ExportPivotGridToolStripButton"
+        Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(124, 22)
+        Me.ExportPivotGridToolStripButton.Text = "Export pivot grid..."
         '
         'DataShaperPivotGridControl
         '
@@ -105,6 +126,8 @@ Partial Class DataShaperForm
         '
         Me.GridView1.GridControl = Me.DataShaperGridControl
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsSelection.MultiSelect = True
+        Me.GridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect
         Me.GridView1.OptionsView.ShowFooter = True
         '
         'PivotXtraTabPage
@@ -113,27 +136,6 @@ Partial Class DataShaperForm
         Me.PivotXtraTabPage.Name = "PivotXtraTabPage"
         Me.PivotXtraTabPage.Size = New System.Drawing.Size(1182, 711)
         Me.PivotXtraTabPage.Text = "Pivot grid"
-        '
-        'RefreshToolStripButton
-        '
-        Me.RefreshToolStripButton.Image = CType(resources.GetObject("RefreshToolStripButton.Image"), System.Drawing.Image)
-        Me.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.RefreshToolStripButton.Name = "RefreshToolStripButton"
-        Me.RefreshToolStripButton.Size = New System.Drawing.Size(66, 22)
-        Me.RefreshToolStripButton.Text = "Refresh"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ExportPivotGridToolStripButton
-        '
-        Me.ExportPivotGridToolStripButton.Image = CType(resources.GetObject("ExportPivotGridToolStripButton.Image"), System.Drawing.Image)
-        Me.ExportPivotGridToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ExportPivotGridToolStripButton.Name = "ExportPivotGridToolStripButton"
-        Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(124, 22)
-        Me.ExportPivotGridToolStripButton.Text = "Export pivot grid..."
         '
         'DataShaperForm
         '
