@@ -22,6 +22,7 @@ Partial Class DataShaperForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DataShaperForm))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.QuerySelectorToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
@@ -31,6 +32,9 @@ Partial Class DataShaperForm
         Me.DataShaperGridControl = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.PivotXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
+        Me.RefreshToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExportPivotGridToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataShaperPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,7 +47,7 @@ Partial Class DataShaperForm
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox, Me.RefreshToolStripButton, Me.ToolStripSeparator1, Me.ExportPivotGridToolStripButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1184, 25)
@@ -110,6 +114,27 @@ Partial Class DataShaperForm
         Me.PivotXtraTabPage.Size = New System.Drawing.Size(1182, 711)
         Me.PivotXtraTabPage.Text = "Pivot grid"
         '
+        'RefreshToolStripButton
+        '
+        Me.RefreshToolStripButton.Image = CType(resources.GetObject("RefreshToolStripButton.Image"), System.Drawing.Image)
+        Me.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RefreshToolStripButton.Name = "RefreshToolStripButton"
+        Me.RefreshToolStripButton.Size = New System.Drawing.Size(66, 22)
+        Me.RefreshToolStripButton.Text = "Refresh"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ExportPivotGridToolStripButton
+        '
+        Me.ExportPivotGridToolStripButton.Image = CType(resources.GetObject("ExportPivotGridToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportPivotGridToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportPivotGridToolStripButton.Name = "ExportPivotGridToolStripButton"
+        Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(124, 22)
+        Me.ExportPivotGridToolStripButton.Text = "Export pivot grid..."
+        '
         'DataShaperForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -142,4 +167,7 @@ Partial Class DataShaperForm
     Friend WithEvents PivotXtraTabPage As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents DataShaperGridControl As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents RefreshToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ExportPivotGridToolStripButton As ToolStripButton
 End Class

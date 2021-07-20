@@ -99,7 +99,7 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GSPE_ResultsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
-        Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.SurveySelectorDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SurveysListBoxControl = New DevExpress.XtraEditors.ListBoxControl()
         Me.SurveyVGridControl = New DevExpress.XtraVerticalGrid.VGridControl()
@@ -411,7 +411,7 @@ Partial Class Form1
         CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_ResultsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DockPanel1.SuspendLayout()
+        Me.SurveySelectorDockPanel.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -516,19 +516,21 @@ Partial Class Form1
         'DockManager1
         '
         Me.DockManager1.Form = Me
-        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.DockPanel1})
+        Me.DockManager1.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.SurveySelectorDockPanel})
         Me.DockManager1.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"})
         '
-        'DockPanel1
+        'SurveySelectorDockPanel
         '
-        Me.DockPanel1.Controls.Add(Me.DockPanel1_Container)
-        Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left
-        Me.DockPanel1.ID = New System.Guid("aba0a096-d031-43b4-aad9-b579af23cd0a")
-        Me.DockPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.DockPanel1.Name = "DockPanel1"
-        Me.DockPanel1.OriginalSize = New System.Drawing.Size(372, 200)
-        Me.DockPanel1.Size = New System.Drawing.Size(372, 786)
-        Me.DockPanel1.Text = "Survey selector"
+        Me.SurveySelectorDockPanel.Controls.Add(Me.DockPanel1_Container)
+        Me.SurveySelectorDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left
+        Me.SurveySelectorDockPanel.Header = "Surveys inventory"
+        Me.SurveySelectorDockPanel.Hint = "Survey selector"
+        Me.SurveySelectorDockPanel.ID = New System.Guid("aba0a096-d031-43b4-aad9-b579af23cd0a")
+        Me.SurveySelectorDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveySelectorDockPanel.Name = "SurveySelectorDockPanel"
+        Me.SurveySelectorDockPanel.OriginalSize = New System.Drawing.Size(372, 200)
+        Me.SurveySelectorDockPanel.Size = New System.Drawing.Size(372, 786)
+        Me.SurveySelectorDockPanel.Text = "Survey selector"
         '
         'DockPanel1_Container
         '
@@ -2223,7 +2225,7 @@ Partial Class Form1
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.GSPEPivotGridControl)
         Me.GSPEPivotXtraTabPage.Name = "GSPEPivotXtraTabPage"
         Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(810, 694)
-        Me.GSPEPivotXtraTabPage.Text = "GSPE data summarizer"
+        Me.GSPEPivotXtraTabPage.Text = "Summarize data deliverable"
         '
         'GSPEPivotGridControl
         '
@@ -2259,6 +2261,14 @@ Partial Class Form1
         DataSourceColumnBinding3.ColumnName = "SurveyYear"
         Me.fieldSurveyYear.DataBinding = DataSourceColumnBinding3
         Me.fieldSurveyYear.Name = "fieldSurveyYear"
+        Me.fieldSurveyYear.Options.AllowFilter = DevExpress.Utils.DefaultBoolean.[True]
+        Me.fieldSurveyYear.Options.AllowFilterBySummary = DevExpress.Utils.DefaultBoolean.[True]
+        Me.fieldSurveyYear.Options.AllowRunTimeSummaryChange = True
+        Me.fieldSurveyYear.Options.AllowSort = DevExpress.Utils.DefaultBoolean.[True]
+        Me.fieldSurveyYear.Options.AllowSortBySummary = DevExpress.Utils.DefaultBoolean.[True]
+        Me.fieldSurveyYear.Options.FieldFilterPopupMode = DevExpress.XtraPivotGrid.FieldFilterPopupMode.Excel
+        Me.fieldSurveyYear.Options.ShowGroupIntervalName = True
+        Me.fieldSurveyYear.Options.ShowSummaryTypeName = True
         '
         'fieldSeason
         '
@@ -2808,7 +2818,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MainXtraTabControl)
         Me.Controls.Add(Me.HeaderPanel)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.DockPanel1)
+        Me.Controls.Add(Me.SurveySelectorDockPanel)
         Me.Name = "Form1"
         Me.Text = "NPS Moose Monitoring GSPE Database Application"
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2818,7 +2828,7 @@ Partial Class Form1
         CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GSPE_ResultsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DockPanel1.ResumeLayout(False)
+        Me.SurveySelectorDockPanel.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2877,7 +2887,7 @@ Partial Class Form1
     Friend WithEvents GSPE_ResultsTableAdapter As MooseDataSetTableAdapters.GSPE_ResultsTableAdapter
     Friend WithEvents GSPE_ResultsBindingSource As BindingSource
     Friend WithEvents DockManager1 As DevExpress.XtraBars.Docking.DockManager
-    Friend WithEvents DockPanel1 As DevExpress.XtraBars.Docking.DockPanel
+    Friend WithEvents SurveySelectorDockPanel As DevExpress.XtraBars.Docking.DockPanel
     Friend WithEvents DockPanel1_Container As DevExpress.XtraBars.Docking.ControlContainer
     Friend WithEvents SurveysListBoxControl As DevExpress.XtraEditors.ListBoxControl
     Friend WithEvents MainXtraTabControl As DevExpress.XtraTab.XtraTabControl

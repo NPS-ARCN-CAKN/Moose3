@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraPivotGrid
 Imports DevExpress.XtraPrinting
 Imports DevExpress.XtraVerticalGrid
 Imports DevExpress.XtraVerticalGrid.Rows
@@ -63,14 +64,24 @@ Module Utilities
         End If
     End Sub
 
-
+    ''' <summary>
+    ''' Does the busy work of basically setting up a GridControl the way I like it. 
+    ''' </summary>
+    ''' <param name="GC"></param>
+    ''' <param name="ShowFooter"></param>
+    ''' <param name="ShowGroupPanel"></param>
+    ''' <param name="SetReadOnly"></param>
     Public Sub SetUpGridControl(GC As GridControl, ShowFooter As Boolean, ShowGroupPanel As Boolean, SetReadOnly As Boolean)
+
+        'You cannot delete a record in a GridControl without an embedded navigator. Weird but true, so I show it using this line.
         GC.UseEmbeddedNavigator = True
+
+        'GridControls have a series of GridViews and they always have a MainView. This is where you set options.
         Dim GV As GridView = TryCast(GC.MainView, GridView)
+        GV.BestFitColumns(False) 'I think this should be false to set the column widths to their contents automatically.(??????). Very strange
         GV.OptionsBehavior.AllowAddRows = True
         GV.OptionsBehavior.AllowDeleteRows = True
         GV.OptionsBehavior.ReadOnly = SetReadOnly
-        GV.BestFitColumns(True)
         GV.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom
         GV.OptionsView.BestFitMode = GridBestFitMode.Fast
         GV.OptionsView.ColumnAutoWidth = False
@@ -97,5 +108,34 @@ Module Utilities
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Sets up a PivotGridControl the way I like it
+    ''' </summary>
+    ''' <param name="PGC">PivotGridControl to set up.</param>
+    Public Sub SetUpPivotGridControl(PGC As PivotGridControl)
+        Try
+            With PGC
+                .BestFit()
+                .BestFitColumnArea()
+                .BestFitDataHeaders(True)
+                .BestFitRowArea()
+                .OptionsBehavior.BestFitMode = PivotGridBestFitMode.FieldValue
+                .OptionsMenu.EnableFieldValueMenu = True
+                .OptionsMenu.EnableFormatRulesMenu = True
+                .OptionsMenu.EnableHeaderAreaMenu = True
+                .Text = "Pivot grid text"
+
+            End With
+
+            For Each PGField As PivotGridField In PGC.Fields
+                With PGField
+                    .Options.AllowRunTimeSummaryChange = True
+                    .BestFit()
+                End With
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
 
 End Module

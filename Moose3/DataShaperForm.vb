@@ -75,15 +75,16 @@ Public Class DataShaperForm
 
     Private Sub QuerySelectorToolStripComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles QuerySelectorToolStripComboBox.SelectedIndexChanged
         If Me.QuerySelectorToolStripComboBox.Text.Trim.Length > 0 Then
-            Me.LoadingDatasetToolStripProgressBar.Value = 5
             Dim Query As String = "SELECT * FROM " & Me.QuerySelectorToolStripComboBox.Text.Trim
             LoadDataTableIntoInterface(Query)
-            Me.LoadingDatasetToolStripProgressBar.Value = 0
         End If
-
     End Sub
 
     Private Sub QuerySelectorToolStripComboBox_DropDown(sender As Object, e As EventArgs) Handles QuerySelectorToolStripComboBox.DropDown
         LoadQuerySelector()
+    End Sub
+
+    Private Sub ExportPivotGridToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridToolStripButton.Click
+        Me.DataShaperPivotGridControl.ExportToXlsx("C:\temp\zPivotGridExport.xlsx")
     End Sub
 End Class

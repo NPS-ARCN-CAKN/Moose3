@@ -8,36 +8,51 @@ Imports DevExpress.XtraVerticalGrid.Rows
 
 Public Class Form1
 
+    ''' <summary>
+    ''' Loads the data from the moose database into the local memory copy of it, MooseDataset
+    ''' </summary>
     Private Sub LoadDataset()
         Try
             Me.GSPE_SurveysTableAdapter.Fill(Me.MooseDataSet.GSPE_Surveys)
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            'Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
+            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
+            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
 
 
     End Sub
-
+    ''' <summary>
+    ''' Saves all the changes from the local in memory dataset back to the database
+    ''' </summary>
     Private Sub SaveDataset()
         Try
             Me.Validate()
+
+            'End all pending edits
+            Me.GSPEBindingSource.EndEdit()
             Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
             Me.GSPE_DensityEstimatesBindingSource.EndEdit()
             Me.GSPE_ResultsBindingSource.EndEdit()
             Me.GSPE_SurveysBindingSource.EndEdit()
+
+            'Send deletes, inserts and updates
             Me.TableAdapterManager.UpdateAll(Me.MooseDataSet)
+
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
 
     End Sub
 
-
-
+    ''' <summary>
+    ''' Sets up the various long text editors in the vertical grid control. Basically, out of the box the vertical grid control does not size or wrap long text very
+    ''' well, it just leaves the row height small and adds an ellipse so you have to click it to see it. This Sub builds memo editors and assigns them to the 
+    ''' long text fields so that they are easier to see at a glance.
+    ''' </summary>
     Private Sub SetUpSurveyVGridControlRowEditors()
         'Create a RepositoryItemMemoEdit editor to handle the Summary data field
         Dim AbstractMemoEdit As New RepositoryItemMemoEdit
@@ -52,6 +67,9 @@ Public Class Form1
     End Sub
 
 
+    ''' <summary>
+    ''' Asks the user if they want to save pending edits back to the database.
+    ''' </summary>
     Private Sub AskToSaveDataset()
         Try
             If Me.MooseDataSet.HasChanges = True Then
@@ -99,7 +117,10 @@ Public Class Form1
     '=================================================================================================
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Load the data into the form
         LoadDataset()
+
+        'Set up the grid controls the way I like them
         SetUpGridControl(Me.PopulationGridControl, False, False, False)
         SetUpGridControl(Me.DensityGridControl, False, False, False)
         SetUpGridControl(Me.ResultsGridControl, False, False, False)
@@ -110,6 +131,9 @@ Public Class Form1
 
         'Set up the survey VGridControl's long field editors.
         SetUpSurveyVGridControlRowEditors()
+
+        'Set up the pivot grid controls
+        SetUpPivotGridControl(Me.GSPEPivotGridControl)
 
     End Sub
 
@@ -201,7 +225,7 @@ Public Class Form1
 
     Private Sub DataShaperToolStripButton_Click(sender As Object, e As EventArgs) Handles DataShaperToolStripButton.Click
         Dim DataShaperForm As New DataShaperForm
-        DataShaperForm.ShowDialog()
+        DataShaperForm.Show()
 
     End Sub
 End Class
