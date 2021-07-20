@@ -404,6 +404,8 @@ Partial Class Form1
         Me.LoadDatasetToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataShaperToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SurveyDetailsPanel = New System.Windows.Forms.Panel()
+        Me.SurveyDetailsLabel = New System.Windows.Forms.Label()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -451,6 +453,7 @@ Partial Class Form1
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HeaderPanel.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.SurveyDetailsPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -558,18 +561,18 @@ Partial Class Form1
         Me.SurveyVGridControl.Appearance.FocusedRow.Options.UseBackColor = True
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
-        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.SizeNS
+        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
         Me.SurveyVGridControl.CustomizationFormBounds = New System.Drawing.Rectangle(457, 176, 214, 258)
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SurveyVGridControl.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView
-        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 26)
         Me.SurveyVGridControl.Name = "SurveyVGridControl"
         Me.SurveyVGridControl.RecordWidth = 148
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 694)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(810, 668)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
@@ -799,6 +802,7 @@ Partial Class Form1
         'SurveyDetailsXtraTabPage
         '
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyVGridControl)
+        Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyDetailsPanel)
         Me.SurveyDetailsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.page_white_edit
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
         Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(810, 694)
@@ -2810,6 +2814,26 @@ Partial Class Form1
         Me.DataShaperToolStripButton.Size = New System.Drawing.Size(82, 22)
         Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
+        'SurveyDetailsPanel
+        '
+        Me.SurveyDetailsPanel.Controls.Add(Me.SurveyDetailsLabel)
+        Me.SurveyDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
+        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(810, 26)
+        Me.SurveyDetailsPanel.TabIndex = 2
+        '
+        'SurveyDetailsLabel
+        '
+        Me.SurveyDetailsLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SurveyDetailsLabel.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        Me.SurveyDetailsLabel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
+        Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(4)
+        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(810, 26)
+        Me.SurveyDetailsLabel.TabIndex = 0
+        Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2869,6 +2893,7 @@ Partial Class Form1
         Me.HeaderPanel.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.SurveyDetailsPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3192,4 +3217,6 @@ Partial Class Form1
     Friend WithEvents fieldCertificationLevel As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents colPopulationSourceLink As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents DataShaperToolStripButton As ToolStripButton
+    Friend WithEvents SurveyDetailsPanel As Panel
+    Friend WithEvents SurveyDetailsLabel As Label
 End Class

@@ -138,4 +138,28 @@ Module Utilities
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Returns the value of the specified column in a VGridControl
+    ''' </summary>
+    ''' <param name="VG">VGRidControl.</param>
+    ''' <param name="ColumnName">Column name of the data to retrieve.</param>
+    ''' <returns>String.</returns>
+    Public Function GetVGridControlCellValue(VG As VGridControl, ColumnName As String) As String
+        Dim ReturnValue As String = "" 'The value to be returned
+        If ColumnName.Trim.Length > 0 Then 'Make sure we have a non-zero length ColumnName
+            Try
+                'See if the cell is DBNull
+                If Not IsDBNull(VG.GetCellValue(ColumnName, VG.FocusedRecord)) Then
+                    'Set the return value to the focused record's cell value
+                    ReturnValue = VG.GetCellValue(ColumnName, VG.FocusedRecord)
+                Else
+                    ReturnValue = "The value of " & ColumnName & " is DBNULL."
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+            End Try
+        End If
+        Return ReturnValue
+    End Function
+
 End Module

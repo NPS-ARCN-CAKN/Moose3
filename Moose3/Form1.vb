@@ -139,42 +139,6 @@ Public Class Form1
 
 
 
-
-
-    Private Sub SurveyVGridControl_DoubleClick(sender As Object, e As EventArgs) Handles SurveyVGridControl.DoubleClick
-        Dim VG As VGridControl = TryCast(sender, VGridControl)
-        If Not VG Is Nothing Then
-            Dim RefCode As String = GetVGridControlCellValue(VG, "ReportReferenceCode")
-            Debug.Print(RefCode)
-        Else
-            Debug.Print("VGridControl is nothing")
-        End If
-    End Sub
-
-    ''' <summary>
-    ''' Returns the value of the specified column in a VGridControl
-    ''' </summary>
-    ''' <param name="VG">VGRidControl.</param>
-    ''' <param name="ColumnName">Column name of the data to retrieve.</param>
-    ''' <returns>String.</returns>
-    Private Function GetVGridControlCellValue(VG As VGridControl, ColumnName As String) As String
-        Dim ReturnValue As String = "" 'The value to be returned
-        If ColumnName.Trim.Length > 0 Then 'Make sure we have a non-zero length ColumnName
-            Try
-                'See if the cell is DBNull
-                If Not IsDBNull(VG.GetCellValue(ColumnName, VG.FocusedRecord)) Then
-                    'Set the return value to the focused record's cell value
-                    ReturnValue = VG.GetCellValue(ColumnName, VG.FocusedRecord)
-                Else
-                    ReturnValue = "The value of " & ColumnName & " is DBNULL."
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
-            End Try
-        End If
-        Return ReturnValue
-    End Function
-
     Private Sub OpenReportReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportReferenceToolStripMenuItem.Click
         OpenSurveyIRMAReference("ReportReferenceCode")
     End Sub
