@@ -18,7 +18,6 @@ Public Class Form1
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
             Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
-            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -210,36 +209,100 @@ Public Class Form1
 
     Private Sub ExportPivotGridToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridToolStripButton.Click
         Try
-            If Me.ExportPivotGridToolStripComboBox.Text = "Excel" Then
-                Dim FileFilter As String = "Excel files (*.xlsx)" '|*.txt|All files (*.*)|*.*" 
-                Dim FileExtension As String = "xlsx"
-                'Get the current survey name
-                Dim GV As GridView = Me.SurveyGridControl.MainView
-                Dim SurveyName As String = "Results"
-                If GV.FocusedRowHandle >= 0 Then
-                    SurveyName = GV.GetFocusedRowCellValue("SurveyName")
-                End If
+            'Get the current survey name
+            Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
 
-                'Open a save file dialog to allow the user to save the file someplace
-                Dim SFD As New SaveFileDialog
-                With SFD
-                    .AddExtension = True
-                    .CheckFileExists = True
-                    .CheckPathExists = True
-                    .DefaultExt = FileExtension
-                    .FileName = SurveyName.Trim & "." & FileExtension
-                    .Filter = FileFilter
-                End With
+            'Get the requested export format and set up parameters for the savefiledialog
+            Dim ExportFormat As String = Me.ExportPivotGridToolStripComboBox.Text.Trim
+            Dim FileFilter As String = ""
+            Dim FileExtension As String = ""
 
-                'Show the dialog
-                If SFD.ShowDialog = DialogResult.OK Then
-                    Dim ExportPath As String = SFD.FileName
+            'Determine which export format is needed
+            If ExportFormat = "" Then
+                MsgBox("Please select an export file format.")
+                Me.ExportPivotGridToolStripComboBox.Focus()
+            ElseIf ExportFormat = "Excel" Then
+                FileFilter = "Excel files (*.xlsx)|(*.xlsx)"
+                FileExtension = "xlsx"
+            ElseIf ExportFormat = "CSV" Then
+                FileFilter = "Comma delimited text files (*.csv)|(*.csv)"
+                FileExtension = "csv"
+            End If
+
+            'Open a save file dialog to allow the user to save the file someplace
+            Dim SFD As New SaveFileDialog
+            With SFD
+                .AddExtension = True
+                .DefaultExt = FileExtension
+                .FileName = SurveyName.Trim & "." & FileExtension
+                .Filter = FileFilter
+            End With
+
+            'Show the dialog
+            If SFD.ShowDialog = DialogResult.OK Then
+                'Make a path to the export file
+                Dim ExportPath As String = SFD.FileName
+
+                'Now export the data in the requested format
+                If ExportFormat = "Excel" Then
+                    Me.GSPEPivotGridControl.ExportToXlsx(ExportPath)
+                ElseIf ExportFormat = "CSV" Then
                     Me.GSPEPivotGridControl.ExportToCsv(ExportPath)
                 End If
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
     End Sub
+
+    Private Sub GSPEGridControlExportToolStripButton_Click(sender As Object, e As EventArgs) Handles GSPEGridControlExportToolStripButton.Click
+        Try
+            'Get the current survey name
+            Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
+
+            'Get the requested export format and set up parameters for the savefiledialog
+            Dim ExportFormat As String = GSPEGridControlExportFormatToolStripComboBox.Text.Trim
+            Dim FileFilter As String = ""
+            Dim FileExtension As String = ""
+
+            'Determine which export format is needed
+            If ExportFormat = "" Then
+                MsgBox("Please select an export file format.")
+                Me.GSPEGridControlExportFormatToolStripComboBox.Focus()
+            ElseIf ExportFormat = "Excel" Then
+                FileFilter = "Excel files (*.xlsx)|(*.xlsx)"
+                FileExtension = "xlsx"
+            ElseIf ExportFormat = "CSV" Then
+                FileFilter = "Comma delimited text files (*.csv)|(*.csv)"
+                FileExtension = "csv"
+            End If
+
+            'Open a save file dialog to allow the user to save the file someplace
+            Dim SFD As New SaveFileDialog
+            With SFD
+                .AddExtension = True
+                .DefaultExt = FileExtension
+                .FileName = SurveyName.Trim & "." & FileExtension
+                .Filter = FileFilter
+            End With
+
+            'Show the dialog
+            If SFD.ShowDialog = DialogResult.OK Then
+                'Make a path to the export file
+                Dim ExportPath As String = SFD.FileName
+
+                'Now export the data in the requested format
+                If ExportFormat = "Excel" Then
+                    Me.GSPEGridControl.ExportToXlsx(ExportPath)
+                ElseIf ExportFormat = "CSV" Then
+                    Me.GSPEGridControl.ExportToCsv(ExportPath)
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+
+
 End Class
