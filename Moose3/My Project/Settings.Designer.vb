@@ -67,13 +67,61 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("https://irma.nps.gov/DataStore/Reference/Profile/2")>  _
-        Public Property IRMADataStoreReferencePrefix() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("J:\Monitoring\Moose")>  _
+        Public Property CAKNSharedMooseDirectory() As String
             Get
-                Return CType(Me("IRMADataStoreReferencePrefix"),String)
+                Return CType(Me("CAKNSharedMooseDirectory"),String)
             End Get
             Set
-                Me("IRMADataStoreReferencePrefix") = value
+                Me("CAKNSharedMooseDirectory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("O:\Monitoring\Vital Signs\Moose")>  _
+        Public Property ARCNSharedMooseDirectory() As String
+            Get
+                Return CType(Me("ARCNSharedMooseDirectory"),String)
+            End Get
+            Set
+                Me("ARCNSharedMooseDirectory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2222140")>  _
+        Public Property ARCNProjectReferenceCode() As String
+            Get
+                Return CType(Me("ARCNProjectReferenceCode"),String)
+            End Get
+            Set
+                Me("ARCNProjectReferenceCode") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2220369")>  _
+        Public Property CAKNProjectReferenceCode() As String
+            Get
+                Return CType(Me("CAKNProjectReferenceCode"),String)
+            End Get
+            Set
+                Me("CAKNProjectReferenceCode") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://irma.nps.gov/DataStore/Reference/Profile/")>  _
+        Public Property IRMAReferenceURLPrefix() As String
+            Get
+                Return CType(Me("IRMAReferenceURLPrefix"),String)
+            End Get
+            Set
+                Me("IRMAReferenceURLPrefix") = value
             End Set
         End Property
     End Class

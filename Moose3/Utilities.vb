@@ -55,7 +55,7 @@ Module Utilities
 
     Public Sub OpenDataStoreReference(ReferenceCode As Integer)
         If IsNumeric(ReferenceCode) = True Then
-            Dim URL As String = My.Settings.IRMADataStoreReferencePrefix & ReferenceCode.ToString
+            Dim URL As String = My.Settings.IRMAReferenceURLPrefix & ReferenceCode.ToString
             Try
                 Process.Start(URL)
             Catch ex As Exception
@@ -63,6 +63,20 @@ Module Utilities
             End Try
         End If
     End Sub
+
+    ''' <summary>
+    ''' Starts the submitted process.
+    ''' </summary>
+    ''' <param name="ProcessToStart"></param>
+    Public Sub StartProcess(ProcessToStart As String)
+        Try
+            Process.Start(ProcessToStart)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+
 
     ''' <summary>
     ''' Does the busy work of basically setting up a GridControl the way I like it. 
@@ -79,9 +93,10 @@ Module Utilities
         'GridControls have a series of GridViews and they always have a MainView. This is where you set options.
         Dim GV As GridView = TryCast(GC.MainView, GridView)
         GV.BestFitColumns(False) 'I think this should be false to set the column widths to their contents automatically.(??????). Very strange
+        GV.OptionsBehavior.ReadOnly = SetReadOnly
         GV.OptionsBehavior.AllowAddRows = True
         GV.OptionsBehavior.AllowDeleteRows = True
-        GV.OptionsBehavior.ReadOnly = SetReadOnly
+        GV.OptionsBehavior.Editable = True
         GV.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom
         GV.OptionsView.BestFitMode = GridBestFitMode.Fast
         GV.OptionsView.ColumnAutoWidth = False

@@ -101,7 +101,7 @@ Public Class Form1
         Try
             Dim RefCode As Integer = CInt(Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord))
             If RefCode > 0 Then
-                Dim URL As String = My.Settings.IRMADataStoreReferencePrefix & RefCode
+                Dim URL As String = My.Settings.IRMAReferenceURLPrefix & RefCode
                 Process.Start(URL)
             End If
         Catch ex As Exception
@@ -131,7 +131,7 @@ Public Class Form1
         LoadDataset()
 
         'Set up the grid controls the way I like them
-        SetUpGridControl(Me.PopulationGridControl, False, False, False)
+        SetUpGridControl(Me.PopulationGridControl, False, True, False)
         SetUpGridControl(Me.DensityGridControl, False, False, False)
         SetUpGridControl(Me.ResultsGridControl, False, False, False)
         SetUpGridControl(Me.GSPEGridControl, True, True, False)
@@ -303,6 +303,53 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Click
+        Try
+            StartProcess(My.Settings.CAKNSharedMooseDirectory)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Click
+        Try
+            StartProcess(My.Settings.ARCNSharedMooseDirectory)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub ARCNMasterDataStoreReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ARCNMasterDataStoreReferenceToolStripMenuItem.Click
+        Try
+            StartProcess(My.Settings.IRMAReferenceURLPrefix & My.Settings.ARCNProjectReferenceCode)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub CAKNMasterDataStoreReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CAKNMasterDataStoreReferenceToolStripMenuItem.Click
+        Try
+            StartProcess(My.Settings.IRMAReferenceURLPrefix & My.Settings.CAKNProjectReferenceCode)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
 
 
+    
+
+
+    Private Sub GSPE_SurveysBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.CurrentChanged
+        SetUpGridControl(Me.PopulationGridControl, False, True, False)
+    End Sub
+
+    Private Sub PopulationGridControl_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs) Handles PopulationGridControl.PreviewKeyDown
+        'Dim gridControl As GridControl = CType(sender, GridControl)
+        'Dim currentView As GridView = CType(gridControl.FocusedView, GridView)
+        'If e.KeyCode = Keys.Delete Then
+        '    If MsgBox("Delete the current row?", MsgBoxStyle.YesNo, "Confirm delete.") = MsgBoxResult.Yes Then
+        '        currentView.DeleteRow(currentView.FocusedRowHandle)
+        '    End If
+        'End If
+    End Sub
 End Class
