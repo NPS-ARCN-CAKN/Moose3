@@ -23,69 +23,69 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataSourceColumnBinding63 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding64 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding65 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding66 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding67 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding68 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding69 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding70 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding71 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding72 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding73 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding74 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding75 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding76 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding77 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding78 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding79 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding80 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding81 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding82 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding83 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding84 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding85 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding86 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding87 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding88 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding89 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding90 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding91 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding92 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding93 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding94 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding95 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding96 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding97 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding98 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding99 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding100 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding101 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding102 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding103 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding104 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding105 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding106 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding107 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding108 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding109 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding110 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding111 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding112 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding113 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding114 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding115 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding116 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding117 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding118 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding119 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding120 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding121 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding122 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding123 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding124 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding4 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding5 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding6 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding7 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding8 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding9 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding10 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding11 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding12 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding13 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding14 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding15 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding16 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding17 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding18 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding19 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding20 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding21 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding22 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding23 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding24 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding25 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding26 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding27 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding28 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding29 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding30 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding31 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding32 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding33 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding34 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding35 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding36 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding37 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding38 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding39 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding40 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding41 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding42 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding43 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding44 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding45 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding46 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding47 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding48 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding49 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding50 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding51 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding52 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding53 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding54 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding55 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding56 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding57 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding58 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding59 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding60 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding61 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding62 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Me.MooseDataSet = New Moose3.MooseDataSet()
         Me.GSPE_SurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GSPE_SurveysTableAdapter = New Moose3.MooseDataSetTableAdapters.GSPE_SurveysTableAdapter()
@@ -106,15 +106,17 @@ Partial Class Form1
         Me.CommentsDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer3 = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.CommentsTextBox = New System.Windows.Forms.TextBox()
-        Me.DatasetProcessingStepsDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
-        Me.ControlContainer4 = New DevExpress.XtraBars.Docking.ControlContainer()
-        Me.DatasetProcessingStepsTextBox = New System.Windows.Forms.TextBox()
         Me.SummaryDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer2 = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SummaryTextBox = New System.Windows.Forms.TextBox()
         Me.SurveySelectorDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SurveysListBoxControl = New DevExpress.XtraEditors.ListBoxControl()
+        Me.DatasetProcessingStepsDockPanel = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.ControlContainer4 = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.DatasetProcessingStepsTextBox = New System.Windows.Forms.TextBox()
+        Me.DatasetProcessingStepsToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.AddProcessingNoteToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.SurveyVGridControl = New DevExpress.XtraVerticalGrid.VGridControl()
         Me.SurveyContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.OpenReportReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -155,100 +157,99 @@ Partial Class Form1
         Me.SurveyDetailsLabel = New System.Windows.Forms.Label()
         Me.ResultsXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.ResultsSplitContainer = New System.Windows.Forms.SplitContainer()
-        Me.PopulationGridControl = New DevExpress.XtraGrid.GridControl()
-        Me.PopEstGridView = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colAnalysis_Column = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colStrata = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colConfidence = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colPopulation_Estimate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colStandard_Error = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colLower_Limit = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colUpper_Limit = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colProportion_of_Mean = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colStrata_Column = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colAnalysis_Area = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCounted_Column = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colUnit_Area_Column = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSurveyArea = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSampledArea = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colIntensity = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRelativePrecision = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSightabilityCorrectionFactor = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colDensity = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colComments = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colReportDate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colAnalysisPerformedBy = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colPopulationEstimateSource = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colPopulationSourceLink = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSurveyName = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colParkSubArea = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRecordInsertedDate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRecordInsertedBy = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colValidatedDate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colValidatedBy = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.PopulationEstimatesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ParkSubAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AnalysisColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StrataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ConfidenceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PopulationEstimateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StandardErrorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LowerLimitDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UpperLimitDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProportionofMeanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StrataColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AnalysisAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CountedColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnitAreaColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SurveyAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SampledAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IntensityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RelativePrecisionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SightabilityCorrectionFactorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReportDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AnalysisPerformedByDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PopulationSourceLinkDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CommentsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValidatedDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValidatedByDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedByDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SurveyNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FKGSPEPopulationEstimatesGSPESurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ResultsSplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.DensityGridControl = New DevExpress.XtraGrid.GridControl()
-        Me.GridView3 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colStratum = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.Analysis_ColumnGridColumn = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colDensity_Estimate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colDensity_AreaSurveyed_SqMi = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colDensity_AverageSearchEffort = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colDensityEstimateMethodology = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colDensityEstimateSource = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.DensityEstimateSourceLinkGridColumn = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colReportDate1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colComments1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colValidatedDate1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colValidatedBy1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRecordInsertedDate1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRecordInsertedBy1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colParkSubArea1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSurveyName1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ResultsGridControl = New DevExpress.XtraGrid.GridControl()
-        Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colBullCowRatio = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCalfCowRatio = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCalfAdultRatio = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colADULT = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_30_40 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_30_50 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_30_60 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_41_50 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_ALL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_GT_50 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_GT_60 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_GTE_50 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_LT_30 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_LT_50 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCALF = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_0 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_3 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colLG_BULL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colMED_BULL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colMED_L_BULL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSM_BULL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colUNKNOWN = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colYBULL_ALL = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colYBULL_GTSF = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colYBULL_SF = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colMOOSE = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSubAreaSurveyed_SqMi = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSubAreaAverageSearchEffort = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colMethodologyUsed = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colResultsSource = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ResultsSourceLinkGridColumn = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.ResultsSourceLinkRepositoryItemHyperLinkEdit = New DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit()
-        Me.colComments2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSurveyName2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colParkSubArea2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRecordInsertedDate2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colRecordInsertedBy2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colValidatedDate2 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colValidatedBy2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.DensityEstimatesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ParkSubAreaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AnalysisColumnDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StratumDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityEstimateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReportDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityEstimateSourceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CommentsDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValidatedDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValidatedByDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedByDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SurveyNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FKGSPEDensityEstimatesGSPESurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ResultsDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ParkSubAreaDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BullCowRatioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CalfCowRatioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CalfAdultRatioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ADULTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULL3040DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULL3050DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULL3060DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULL4150DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULLALLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULLGT50DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULLGT60DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULLGTE50DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULLLT30DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BULLLT50DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CALFDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COWDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COWW0DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COWW1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COWW2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COWW3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LGBULLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEDBULLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEDLBULLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SMBULLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UNKNOWNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.YBULLALLDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.YBULLGTSFDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.YBULLSFDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MOOSEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MethodologyUsedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ResultsSourceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ResultsSourceLinkDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CommentsDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValidatedDateDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValidatedByDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedByDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SurveyNameDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FKGSPERatiosGSPESurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GSPEDeliverableXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
@@ -403,14 +404,18 @@ Partial Class Form1
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.DirectoriesToolStripDropDownButton = New System.Windows.Forms.ToolStripDropDownButton()
         Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
         Me.AutoHideContainer1 = New DevExpress.XtraBars.Docking.AutoHideContainer()
         Me.SummaryDockPanel2 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer5 = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SummaryTextBox2 = New System.Windows.Forms.TextBox()
+        Me.SurveysInventoryToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.AddSurveyToolStripButton = New System.Windows.Forms.ToolStripButton()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -423,13 +428,14 @@ Partial Class Form1
         Me.ControlContainer1.SuspendLayout()
         Me.CommentsDockPanel.SuspendLayout()
         Me.ControlContainer3.SuspendLayout()
-        Me.DatasetProcessingStepsDockPanel.SuspendLayout()
-        Me.ControlContainer4.SuspendLayout()
         Me.SummaryDockPanel.SuspendLayout()
         Me.ControlContainer2.SuspendLayout()
         Me.SurveySelectorDockPanel.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DatasetProcessingStepsDockPanel.SuspendLayout()
+        Me.ControlContainer4.SuspendLayout()
+        Me.DatasetProcessingStepsToolStrip.SuspendLayout()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SurveyContextMenuStrip.SuspendLayout()
         CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -442,17 +448,16 @@ Partial Class Form1
         Me.ResultsSplitContainer.Panel1.SuspendLayout()
         Me.ResultsSplitContainer.Panel2.SuspendLayout()
         Me.ResultsSplitContainer.SuspendLayout()
-        CType(Me.PopulationGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PopEstGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PopulationEstimatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKGSPEPopulationEstimatesGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResultsSplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ResultsSplitContainer2.Panel1.SuspendLayout()
         Me.ResultsSplitContainer2.Panel2.SuspendLayout()
         Me.ResultsSplitContainer2.SuspendLayout()
-        CType(Me.DensityGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ResultsGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ResultsSourceLinkRepositoryItemHyperLinkEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DensityEstimatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKGSPEDensityEstimatesGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ResultsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKGSPERatiosGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GSPEDeliverableXtraTabPage.SuspendLayout()
@@ -468,6 +473,7 @@ Partial Class Form1
         Me.AutoHideContainer1.SuspendLayout()
         Me.SummaryDockPanel2.SuspendLayout()
         Me.ControlContainer5.SuspendLayout()
+        Me.SurveysInventoryToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -537,7 +543,7 @@ Partial Class Form1
         Me.MainDockManager.DockModeVS2005FadeSpeed = 150
         Me.MainDockManager.Form = Me
         Me.MainDockManager.HiddenPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.SummaryDockPanel})
-        Me.MainDockManager.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.SurveySelectorDockPanel})
+        Me.MainDockManager.RootPanels.AddRange(New DevExpress.XtraBars.Docking.DockPanel() {Me.SurveySelectorDockPanel, Me.DatasetProcessingStepsDockPanel})
         Me.MainDockManager.TopZIndexControls.AddRange(New String() {"DevExpress.XtraBars.BarDockControl", "DevExpress.XtraBars.StandaloneBarDockControl", "System.Windows.Forms.MenuStrip", "System.Windows.Forms.StatusStrip", "System.Windows.Forms.StatusBar", "DevExpress.XtraBars.Ribbon.RibbonStatusBar", "DevExpress.XtraBars.Ribbon.RibbonControl", "DevExpress.XtraBars.Navigation.OfficeNavigationBar", "DevExpress.XtraBars.Navigation.TileNavPane", "DevExpress.XtraBars.TabFormControl", "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl", "DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"})
         '
         'hideContainerRight
@@ -545,7 +551,6 @@ Partial Class Form1
         Me.hideContainerRight.BackColor = System.Drawing.SystemColors.Control
         Me.hideContainerRight.Controls.Add(Me.AbstractDockPanel)
         Me.hideContainerRight.Controls.Add(Me.CommentsDockPanel)
-        Me.hideContainerRight.Controls.Add(Me.DatasetProcessingStepsDockPanel)
         Me.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right
         Me.hideContainerRight.Location = New System.Drawing.Point(1142, 0)
         Me.hideContainerRight.Name = "hideContainerRight"
@@ -556,7 +561,7 @@ Partial Class Form1
         Me.AbstractDockPanel.Controls.Add(Me.ControlContainer1)
         Me.AbstractDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.AbstractDockPanel.ID = New System.Guid("c5c92d15-0acd-44a3-9b81-d86dc9f6760d")
-        Me.AbstractDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.AbstractDockPanel.Location = New System.Drawing.Point(963, 0)
         Me.AbstractDockPanel.Name = "AbstractDockPanel"
         Me.AbstractDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
         Me.AbstractDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
@@ -589,7 +594,7 @@ Partial Class Form1
         Me.CommentsDockPanel.Controls.Add(Me.ControlContainer3)
         Me.CommentsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.CommentsDockPanel.ID = New System.Guid("bc429878-ddf0-45e7-ad27-27b16bfb425f")
-        Me.CommentsDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.CommentsDockPanel.Location = New System.Drawing.Point(963, 0)
         Me.CommentsDockPanel.Name = "CommentsDockPanel"
         Me.CommentsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
         Me.CommentsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
@@ -616,39 +621,6 @@ Partial Class Form1
         Me.CommentsTextBox.Name = "CommentsTextBox"
         Me.CommentsTextBox.Size = New System.Drawing.Size(193, 757)
         Me.CommentsTextBox.TabIndex = 1
-        '
-        'DatasetProcessingStepsDockPanel
-        '
-        Me.DatasetProcessingStepsDockPanel.Controls.Add(Me.ControlContainer4)
-        Me.DatasetProcessingStepsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
-        Me.DatasetProcessingStepsDockPanel.ID = New System.Guid("9bf63ea7-bed1-4d5e-9427-7d7329baba10")
-        Me.DatasetProcessingStepsDockPanel.Location = New System.Drawing.Point(0, 0)
-        Me.DatasetProcessingStepsDockPanel.Name = "DatasetProcessingStepsDockPanel"
-        Me.DatasetProcessingStepsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
-        Me.DatasetProcessingStepsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
-        Me.DatasetProcessingStepsDockPanel.SavedIndex = 2
-        Me.DatasetProcessingStepsDockPanel.Size = New System.Drawing.Size(200, 786)
-        Me.DatasetProcessingStepsDockPanel.Text = "Dataset processing steps"
-        Me.DatasetProcessingStepsDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
-        '
-        'ControlContainer4
-        '
-        Me.ControlContainer4.Controls.Add(Me.DatasetProcessingStepsTextBox)
-        Me.ControlContainer4.Location = New System.Drawing.Point(4, 26)
-        Me.ControlContainer4.Name = "ControlContainer4"
-        Me.ControlContainer4.Size = New System.Drawing.Size(193, 757)
-        Me.ControlContainer4.TabIndex = 0
-        '
-        'DatasetProcessingStepsTextBox
-        '
-        Me.DatasetProcessingStepsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "DatasetProcessingSteps", True))
-        Me.DatasetProcessingStepsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DatasetProcessingStepsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 0)
-        Me.DatasetProcessingStepsTextBox.Multiline = True
-        Me.DatasetProcessingStepsTextBox.Name = "DatasetProcessingStepsTextBox"
-        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(193, 757)
-        Me.DatasetProcessingStepsTextBox.TabIndex = 1
         '
         'SummaryDockPanel
         '
@@ -699,6 +671,7 @@ Partial Class Form1
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.SurveysListBoxControl)
+        Me.DockPanel1_Container.Controls.Add(Me.SurveysInventoryToolStrip)
         Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 26)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
         Me.DockPanel1_Container.Size = New System.Drawing.Size(235, 757)
@@ -709,12 +682,61 @@ Partial Class Form1
         Me.SurveysListBoxControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveysListBoxControl.DisplayMember = "SurveyName"
         Me.SurveysListBoxControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 0)
+        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 25)
         Me.SurveysListBoxControl.Name = "SurveysListBoxControl"
-        Me.SurveysListBoxControl.Size = New System.Drawing.Size(235, 757)
+        Me.SurveysListBoxControl.Size = New System.Drawing.Size(235, 732)
         Me.SurveysListBoxControl.SortOrder = System.Windows.Forms.SortOrder.Ascending
         Me.SurveysListBoxControl.TabIndex = 0
         Me.SurveysListBoxControl.ValueMember = "SurveyName"
+        '
+        'DatasetProcessingStepsDockPanel
+        '
+        Me.DatasetProcessingStepsDockPanel.Controls.Add(Me.ControlContainer4)
+        Me.DatasetProcessingStepsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
+        Me.DatasetProcessingStepsDockPanel.ID = New System.Guid("9bf63ea7-bed1-4d5e-9427-7d7329baba10")
+        Me.DatasetProcessingStepsDockPanel.Location = New System.Drawing.Point(942, 0)
+        Me.DatasetProcessingStepsDockPanel.Name = "DatasetProcessingStepsDockPanel"
+        Me.DatasetProcessingStepsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
+        Me.DatasetProcessingStepsDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.DatasetProcessingStepsDockPanel.Text = "Dataset processing steps"
+        '
+        'ControlContainer4
+        '
+        Me.ControlContainer4.Controls.Add(Me.DatasetProcessingStepsTextBox)
+        Me.ControlContainer4.Controls.Add(Me.DatasetProcessingStepsToolStrip)
+        Me.ControlContainer4.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer4.Name = "ControlContainer4"
+        Me.ControlContainer4.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer4.TabIndex = 0
+        '
+        'DatasetProcessingStepsTextBox
+        '
+        Me.DatasetProcessingStepsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "DatasetProcessingSteps", True))
+        Me.DatasetProcessingStepsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DatasetProcessingStepsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 25)
+        Me.DatasetProcessingStepsTextBox.Multiline = True
+        Me.DatasetProcessingStepsTextBox.Name = "DatasetProcessingStepsTextBox"
+        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(193, 732)
+        Me.DatasetProcessingStepsTextBox.TabIndex = 1
+        '
+        'DatasetProcessingStepsToolStrip
+        '
+        Me.DatasetProcessingStepsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddProcessingNoteToolStripButton})
+        Me.DatasetProcessingStepsToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.DatasetProcessingStepsToolStrip.Name = "DatasetProcessingStepsToolStrip"
+        Me.DatasetProcessingStepsToolStrip.Size = New System.Drawing.Size(193, 25)
+        Me.DatasetProcessingStepsToolStrip.TabIndex = 2
+        Me.DatasetProcessingStepsToolStrip.Text = "ToolStrip1"
+        '
+        'AddProcessingNoteToolStripButton
+        '
+        Me.AddProcessingNoteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.AddProcessingNoteToolStripButton.Image = CType(resources.GetObject("AddProcessingNoteToolStripButton.Image"), System.Drawing.Image)
+        Me.AddProcessingNoteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AddProcessingNoteToolStripButton.Name = "AddProcessingNoteToolStripButton"
+        Me.AddProcessingNoteToolStripButton.Size = New System.Drawing.Size(147, 22)
+        Me.AddProcessingNoteToolStripButton.Text = "Append a new dated note"
         '
         'SurveyVGridControl
         '
@@ -722,7 +744,7 @@ Partial Class Form1
         Me.SurveyVGridControl.Appearance.FocusedRow.Options.UseBackColor = True
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
-        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.SizeNS
+        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
         Me.SurveyVGridControl.CustomizationFormBounds = New System.Drawing.Rectangle(457, 176, 214, 258)
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
@@ -733,7 +755,7 @@ Partial Class Form1
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(898, 668)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(698, 668)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
@@ -958,7 +980,7 @@ Partial Class Form1
         Me.MainXtraTabControl.Location = New System.Drawing.Point(242, 64)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(900, 722)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(700, 722)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage, Me.GSPEDeliverableXtraTabPage, Me.GSPEPivotXtraTabPage})
         '
@@ -968,7 +990,7 @@ Partial Class Form1
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyDetailsPanel)
         Me.SurveyDetailsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.page_white_edit
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
-        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(698, 694)
         Me.SurveyDetailsXtraTabPage.Text = "Survey details"
         '
         'SurveyDetailsPanel
@@ -977,7 +999,7 @@ Partial Class Form1
         Me.SurveyDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
         Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
-        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(898, 26)
+        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(698, 26)
         Me.SurveyDetailsPanel.TabIndex = 2
         '
         'SurveyDetailsLabel
@@ -987,7 +1009,7 @@ Partial Class Form1
         Me.SurveyDetailsLabel.Location = New System.Drawing.Point(0, 0)
         Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
         Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(4)
-        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(898, 26)
+        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(698, 26)
         Me.SurveyDetailsLabel.TabIndex = 0
         Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
         '
@@ -997,7 +1019,7 @@ Partial Class Form1
         Me.ResultsXtraTabPage.Controls.Add(Me.GridControl1)
         Me.ResultsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.table_lightning
         Me.ResultsXtraTabPage.Name = "ResultsXtraTabPage"
-        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(698, 694)
         Me.ResultsXtraTabPage.Text = "Results"
         '
         'ResultsSplitContainer
@@ -1009,270 +1031,209 @@ Partial Class Form1
         '
         'ResultsSplitContainer.Panel1
         '
-        Me.ResultsSplitContainer.Panel1.Controls.Add(Me.PopulationGridControl)
+        Me.ResultsSplitContainer.Panel1.Controls.Add(Me.PopulationEstimatesDataGridView)
         '
         'ResultsSplitContainer.Panel2
         '
         Me.ResultsSplitContainer.Panel2.Controls.Add(Me.ResultsSplitContainer2)
-        Me.ResultsSplitContainer.Size = New System.Drawing.Size(898, 694)
-        Me.ResultsSplitContainer.SplitterDistance = 112
+        Me.ResultsSplitContainer.Size = New System.Drawing.Size(698, 694)
+        Me.ResultsSplitContainer.SplitterDistance = 236
         Me.ResultsSplitContainer.TabIndex = 1
         '
-        'PopulationGridControl
+        'PopulationEstimatesDataGridView
         '
-        Me.PopulationGridControl.DataSource = Me.GSPE_PopulationEstimatesBindingSource
-        Me.PopulationGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PopulationGridControl.Location = New System.Drawing.Point(0, 0)
-        Me.PopulationGridControl.MainView = Me.PopEstGridView
-        Me.PopulationGridControl.Name = "PopulationGridControl"
-        Me.PopulationGridControl.Size = New System.Drawing.Size(898, 112)
-        Me.PopulationGridControl.TabIndex = 0
-        Me.PopulationGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.PopEstGridView})
+        Me.PopulationEstimatesDataGridView.AllowUserToOrderColumns = True
+        Me.PopulationEstimatesDataGridView.AutoGenerateColumns = False
+        Me.PopulationEstimatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.ConfidenceDataGridViewTextBoxColumn, Me.PopulationEstimateDataGridViewTextBoxColumn, Me.StandardErrorDataGridViewTextBoxColumn, Me.LowerLimitDataGridViewTextBoxColumn, Me.UpperLimitDataGridViewTextBoxColumn, Me.ProportionofMeanDataGridViewTextBoxColumn, Me.StrataColumnDataGridViewTextBoxColumn, Me.AnalysisAreaDataGridViewTextBoxColumn, Me.CountedColumnDataGridViewTextBoxColumn, Me.UnitAreaColumnDataGridViewTextBoxColumn, Me.SurveyAreaDataGridViewTextBoxColumn, Me.SampledAreaDataGridViewTextBoxColumn, Me.IntensityDataGridViewTextBoxColumn, Me.RelativePrecisionDataGridViewTextBoxColumn, Me.SightabilityCorrectionFactorDataGridViewTextBoxColumn, Me.DensityDataGridViewTextBoxColumn, Me.ReportDateDataGridViewTextBoxColumn, Me.AnalysisPerformedByDataGridViewTextBoxColumn, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.PopulationSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn, Me.ValidatedDateDataGridViewTextBoxColumn, Me.ValidatedByDataGridViewTextBoxColumn, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.SurveyNameDataGridViewTextBoxColumn})
+        Me.PopulationEstimatesDataGridView.DataSource = Me.FKGSPEPopulationEstimatesGSPESurveysBindingSource
+        Me.PopulationEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.PopulationEstimatesDataGridView.Name = "PopulationEstimatesDataGridView"
+        Me.PopulationEstimatesDataGridView.Size = New System.Drawing.Size(698, 236)
+        Me.PopulationEstimatesDataGridView.TabIndex = 0
         '
-        'PopEstGridView
+        'ParkSubAreaDataGridViewTextBoxColumn
         '
-        Me.PopEstGridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colAnalysis_Column, Me.colStrata, Me.colConfidence, Me.colPopulation_Estimate, Me.colStandard_Error, Me.colLower_Limit, Me.colUpper_Limit, Me.colProportion_of_Mean, Me.colStrata_Column, Me.colAnalysis_Area, Me.colCounted_Column, Me.colUnit_Area_Column, Me.colSurveyArea, Me.colSampledArea, Me.colIntensity, Me.colRelativePrecision, Me.colSightabilityCorrectionFactor, Me.colDensity, Me.colComments, Me.colReportDate, Me.colAnalysisPerformedBy, Me.colPopulationEstimateSource, Me.colPopulationSourceLink, Me.colSurveyName, Me.colParkSubArea, Me.colRecordInsertedDate, Me.colRecordInsertedBy, Me.colValidatedDate, Me.colValidatedBy})
-        Me.PopEstGridView.GridControl = Me.PopulationGridControl
-        Me.PopEstGridView.Name = "PopEstGridView"
-        Me.PopEstGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[True]
-        Me.PopEstGridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[True]
-        Me.PopEstGridView.OptionsBehavior.Editable = False
-        Me.PopEstGridView.OptionsView.ColumnAutoWidth = False
-        Me.PopEstGridView.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colStrata_Column, DevExpress.Data.ColumnSortOrder.Ascending)})
+        Me.ParkSubAreaDataGridViewTextBoxColumn.DataPropertyName = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn.Name = "ParkSubAreaDataGridViewTextBoxColumn"
         '
-        'colAnalysis_Column
+        'AnalysisColumnDataGridViewTextBoxColumn
         '
-        Me.colAnalysis_Column.FieldName = "Analysis_Column"
-        Me.colAnalysis_Column.Name = "colAnalysis_Column"
-        Me.colAnalysis_Column.Visible = True
-        Me.colAnalysis_Column.VisibleIndex = 0
-        Me.colAnalysis_Column.Width = 107
+        Me.AnalysisColumnDataGridViewTextBoxColumn.DataPropertyName = "Analysis_Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.HeaderText = "Analysis_Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.Name = "AnalysisColumnDataGridViewTextBoxColumn"
         '
-        'colStrata
+        'StrataDataGridViewTextBoxColumn
         '
-        Me.colStrata.FieldName = "Strata"
-        Me.colStrata.Name = "colStrata"
-        Me.colStrata.Visible = True
-        Me.colStrata.VisibleIndex = 1
-        Me.colStrata.Width = 53
+        Me.StrataDataGridViewTextBoxColumn.DataPropertyName = "Strata"
+        Me.StrataDataGridViewTextBoxColumn.HeaderText = "Strata"
+        Me.StrataDataGridViewTextBoxColumn.Name = "StrataDataGridViewTextBoxColumn"
         '
-        'colConfidence
+        'ConfidenceDataGridViewTextBoxColumn
         '
-        Me.colConfidence.FieldName = "Confidence"
-        Me.colConfidence.Name = "colConfidence"
-        Me.colConfidence.Visible = True
-        Me.colConfidence.VisibleIndex = 5
-        Me.colConfidence.Width = 77
+        Me.ConfidenceDataGridViewTextBoxColumn.DataPropertyName = "Confidence"
+        Me.ConfidenceDataGridViewTextBoxColumn.HeaderText = "Confidence"
+        Me.ConfidenceDataGridViewTextBoxColumn.Name = "ConfidenceDataGridViewTextBoxColumn"
         '
-        'colPopulation_Estimate
+        'PopulationEstimateDataGridViewTextBoxColumn
         '
-        Me.colPopulation_Estimate.FieldName = "Population_Estimate"
-        Me.colPopulation_Estimate.Name = "colPopulation_Estimate"
-        Me.colPopulation_Estimate.Visible = True
-        Me.colPopulation_Estimate.VisibleIndex = 2
-        Me.colPopulation_Estimate.Width = 120
+        Me.PopulationEstimateDataGridViewTextBoxColumn.DataPropertyName = "Population_Estimate"
+        Me.PopulationEstimateDataGridViewTextBoxColumn.HeaderText = "Population_Estimate"
+        Me.PopulationEstimateDataGridViewTextBoxColumn.Name = "PopulationEstimateDataGridViewTextBoxColumn"
         '
-        'colStandard_Error
+        'StandardErrorDataGridViewTextBoxColumn
         '
-        Me.colStandard_Error.FieldName = "Standard_Error"
-        Me.colStandard_Error.Name = "colStandard_Error"
-        Me.colStandard_Error.Visible = True
-        Me.colStandard_Error.VisibleIndex = 6
-        Me.colStandard_Error.Width = 97
+        Me.StandardErrorDataGridViewTextBoxColumn.DataPropertyName = "Standard_Error"
+        Me.StandardErrorDataGridViewTextBoxColumn.HeaderText = "Standard_Error"
+        Me.StandardErrorDataGridViewTextBoxColumn.Name = "StandardErrorDataGridViewTextBoxColumn"
         '
-        'colLower_Limit
+        'LowerLimitDataGridViewTextBoxColumn
         '
-        Me.colLower_Limit.FieldName = "Lower_Limit"
-        Me.colLower_Limit.Name = "colLower_Limit"
-        Me.colLower_Limit.Visible = True
-        Me.colLower_Limit.VisibleIndex = 3
-        Me.colLower_Limit.Width = 79
+        Me.LowerLimitDataGridViewTextBoxColumn.DataPropertyName = "Lower_Limit"
+        Me.LowerLimitDataGridViewTextBoxColumn.HeaderText = "Lower_Limit"
+        Me.LowerLimitDataGridViewTextBoxColumn.Name = "LowerLimitDataGridViewTextBoxColumn"
         '
-        'colUpper_Limit
+        'UpperLimitDataGridViewTextBoxColumn
         '
-        Me.colUpper_Limit.FieldName = "Upper_Limit"
-        Me.colUpper_Limit.Name = "colUpper_Limit"
-        Me.colUpper_Limit.Visible = True
-        Me.colUpper_Limit.VisibleIndex = 4
-        Me.colUpper_Limit.Width = 79
+        Me.UpperLimitDataGridViewTextBoxColumn.DataPropertyName = "Upper_Limit"
+        Me.UpperLimitDataGridViewTextBoxColumn.HeaderText = "Upper_Limit"
+        Me.UpperLimitDataGridViewTextBoxColumn.Name = "UpperLimitDataGridViewTextBoxColumn"
         '
-        'colProportion_of_Mean
+        'ProportionofMeanDataGridViewTextBoxColumn
         '
-        Me.colProportion_of_Mean.FieldName = "Proportion_of_Mean"
-        Me.colProportion_of_Mean.Name = "colProportion_of_Mean"
-        Me.colProportion_of_Mean.Visible = True
-        Me.colProportion_of_Mean.VisibleIndex = 7
-        Me.colProportion_of_Mean.Width = 121
+        Me.ProportionofMeanDataGridViewTextBoxColumn.DataPropertyName = "Proportion_of_Mean"
+        Me.ProportionofMeanDataGridViewTextBoxColumn.HeaderText = "Proportion_of_Mean"
+        Me.ProportionofMeanDataGridViewTextBoxColumn.Name = "ProportionofMeanDataGridViewTextBoxColumn"
         '
-        'colStrata_Column
+        'StrataColumnDataGridViewTextBoxColumn
         '
-        Me.colStrata_Column.FieldName = "Strata_Column"
-        Me.colStrata_Column.Name = "colStrata_Column"
-        Me.colStrata_Column.Visible = True
-        Me.colStrata_Column.VisibleIndex = 14
-        Me.colStrata_Column.Width = 113
+        Me.StrataColumnDataGridViewTextBoxColumn.DataPropertyName = "Strata_Column"
+        Me.StrataColumnDataGridViewTextBoxColumn.HeaderText = "Strata_Column"
+        Me.StrataColumnDataGridViewTextBoxColumn.Name = "StrataColumnDataGridViewTextBoxColumn"
         '
-        'colAnalysis_Area
+        'AnalysisAreaDataGridViewTextBoxColumn
         '
-        Me.colAnalysis_Area.FieldName = "Analysis_Area"
-        Me.colAnalysis_Area.Name = "colAnalysis_Area"
-        Me.colAnalysis_Area.Visible = True
-        Me.colAnalysis_Area.VisibleIndex = 11
-        Me.colAnalysis_Area.Width = 99
+        Me.AnalysisAreaDataGridViewTextBoxColumn.DataPropertyName = "Analysis_Area"
+        Me.AnalysisAreaDataGridViewTextBoxColumn.HeaderText = "Analysis_Area"
+        Me.AnalysisAreaDataGridViewTextBoxColumn.Name = "AnalysisAreaDataGridViewTextBoxColumn"
         '
-        'colCounted_Column
+        'CountedColumnDataGridViewTextBoxColumn
         '
-        Me.colCounted_Column.FieldName = "Counted_Column"
-        Me.colCounted_Column.Name = "colCounted_Column"
-        Me.colCounted_Column.Visible = True
-        Me.colCounted_Column.VisibleIndex = 15
-        Me.colCounted_Column.Width = 110
+        Me.CountedColumnDataGridViewTextBoxColumn.DataPropertyName = "Counted_Column"
+        Me.CountedColumnDataGridViewTextBoxColumn.HeaderText = "Counted_Column"
+        Me.CountedColumnDataGridViewTextBoxColumn.Name = "CountedColumnDataGridViewTextBoxColumn"
         '
-        'colUnit_Area_Column
+        'UnitAreaColumnDataGridViewTextBoxColumn
         '
-        Me.colUnit_Area_Column.FieldName = "Unit_Area_Column"
-        Me.colUnit_Area_Column.Name = "colUnit_Area_Column"
-        Me.colUnit_Area_Column.Visible = True
-        Me.colUnit_Area_Column.VisibleIndex = 16
-        Me.colUnit_Area_Column.Width = 116
+        Me.UnitAreaColumnDataGridViewTextBoxColumn.DataPropertyName = "Unit_Area_Column"
+        Me.UnitAreaColumnDataGridViewTextBoxColumn.HeaderText = "Unit_Area_Column"
+        Me.UnitAreaColumnDataGridViewTextBoxColumn.Name = "UnitAreaColumnDataGridViewTextBoxColumn"
         '
-        'colSurveyArea
+        'SurveyAreaDataGridViewTextBoxColumn
         '
-        Me.colSurveyArea.FieldName = "SurveyArea"
-        Me.colSurveyArea.Name = "colSurveyArea"
-        Me.colSurveyArea.Visible = True
-        Me.colSurveyArea.VisibleIndex = 10
-        Me.colSurveyArea.Width = 83
+        Me.SurveyAreaDataGridViewTextBoxColumn.DataPropertyName = "SurveyArea"
+        Me.SurveyAreaDataGridViewTextBoxColumn.HeaderText = "SurveyArea"
+        Me.SurveyAreaDataGridViewTextBoxColumn.Name = "SurveyAreaDataGridViewTextBoxColumn"
         '
-        'colSampledArea
+        'SampledAreaDataGridViewTextBoxColumn
         '
-        Me.colSampledArea.FieldName = "SampledArea"
-        Me.colSampledArea.Name = "colSampledArea"
-        Me.colSampledArea.Visible = True
-        Me.colSampledArea.VisibleIndex = 9
-        Me.colSampledArea.Width = 125
+        Me.SampledAreaDataGridViewTextBoxColumn.DataPropertyName = "SampledArea"
+        Me.SampledAreaDataGridViewTextBoxColumn.HeaderText = "SampledArea"
+        Me.SampledAreaDataGridViewTextBoxColumn.Name = "SampledAreaDataGridViewTextBoxColumn"
         '
-        'colIntensity
+        'IntensityDataGridViewTextBoxColumn
         '
-        Me.colIntensity.FieldName = "Intensity"
-        Me.colIntensity.Name = "colIntensity"
-        Me.colIntensity.Visible = True
-        Me.colIntensity.VisibleIndex = 8
-        Me.colIntensity.Width = 136
+        Me.IntensityDataGridViewTextBoxColumn.DataPropertyName = "Intensity"
+        Me.IntensityDataGridViewTextBoxColumn.HeaderText = "Intensity"
+        Me.IntensityDataGridViewTextBoxColumn.Name = "IntensityDataGridViewTextBoxColumn"
         '
-        'colRelativePrecision
+        'RelativePrecisionDataGridViewTextBoxColumn
         '
-        Me.colRelativePrecision.FieldName = "RelativePrecision"
-        Me.colRelativePrecision.Name = "colRelativePrecision"
-        Me.colRelativePrecision.Visible = True
-        Me.colRelativePrecision.VisibleIndex = 17
-        Me.colRelativePrecision.Width = 118
+        Me.RelativePrecisionDataGridViewTextBoxColumn.DataPropertyName = "RelativePrecision"
+        Me.RelativePrecisionDataGridViewTextBoxColumn.HeaderText = "RelativePrecision"
+        Me.RelativePrecisionDataGridViewTextBoxColumn.Name = "RelativePrecisionDataGridViewTextBoxColumn"
         '
-        'colSightabilityCorrectionFactor
+        'SightabilityCorrectionFactorDataGridViewTextBoxColumn
         '
-        Me.colSightabilityCorrectionFactor.FieldName = "SightabilityCorrectionFactor"
-        Me.colSightabilityCorrectionFactor.Name = "colSightabilityCorrectionFactor"
-        Me.colSightabilityCorrectionFactor.Visible = True
-        Me.colSightabilityCorrectionFactor.VisibleIndex = 12
-        Me.colSightabilityCorrectionFactor.Width = 357
+        Me.SightabilityCorrectionFactorDataGridViewTextBoxColumn.DataPropertyName = "SightabilityCorrectionFactor"
+        Me.SightabilityCorrectionFactorDataGridViewTextBoxColumn.HeaderText = "SightabilityCorrectionFactor"
+        Me.SightabilityCorrectionFactorDataGridViewTextBoxColumn.Name = "SightabilityCorrectionFactorDataGridViewTextBoxColumn"
         '
-        'colDensity
+        'DensityDataGridViewTextBoxColumn
         '
-        Me.colDensity.FieldName = "Density"
-        Me.colDensity.Name = "colDensity"
-        Me.colDensity.Visible = True
-        Me.colDensity.VisibleIndex = 13
-        Me.colDensity.Width = 182
+        Me.DensityDataGridViewTextBoxColumn.DataPropertyName = "Density"
+        Me.DensityDataGridViewTextBoxColumn.HeaderText = "Density"
+        Me.DensityDataGridViewTextBoxColumn.Name = "DensityDataGridViewTextBoxColumn"
         '
-        'colComments
+        'ReportDateDataGridViewTextBoxColumn
         '
-        Me.colComments.FieldName = "Comments"
-        Me.colComments.Name = "colComments"
-        Me.colComments.Visible = True
-        Me.colComments.VisibleIndex = 18
-        Me.colComments.Width = 102
+        Me.ReportDateDataGridViewTextBoxColumn.DataPropertyName = "ReportDate"
+        Me.ReportDateDataGridViewTextBoxColumn.HeaderText = "ReportDate"
+        Me.ReportDateDataGridViewTextBoxColumn.Name = "ReportDateDataGridViewTextBoxColumn"
         '
-        'colReportDate
+        'AnalysisPerformedByDataGridViewTextBoxColumn
         '
-        Me.colReportDate.FieldName = "ReportDate"
-        Me.colReportDate.Name = "colReportDate"
-        Me.colReportDate.Visible = True
-        Me.colReportDate.VisibleIndex = 19
-        Me.colReportDate.Width = 89
+        Me.AnalysisPerformedByDataGridViewTextBoxColumn.DataPropertyName = "AnalysisPerformedBy"
+        Me.AnalysisPerformedByDataGridViewTextBoxColumn.HeaderText = "AnalysisPerformedBy"
+        Me.AnalysisPerformedByDataGridViewTextBoxColumn.Name = "AnalysisPerformedByDataGridViewTextBoxColumn"
         '
-        'colAnalysisPerformedBy
+        'PopulationEstimateSourceDataGridViewTextBoxColumn
         '
-        Me.colAnalysisPerformedBy.FieldName = "AnalysisPerformedBy"
-        Me.colAnalysisPerformedBy.Name = "colAnalysisPerformedBy"
-        Me.colAnalysisPerformedBy.Visible = True
-        Me.colAnalysisPerformedBy.VisibleIndex = 20
-        Me.colAnalysisPerformedBy.Width = 130
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.DataPropertyName = "PopulationEstimateSource"
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.HeaderText = "PopulationEstimateSource"
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.Name = "PopulationEstimateSourceDataGridViewTextBoxColumn"
         '
-        'colPopulationEstimateSource
+        'PopulationSourceLinkDataGridViewTextBoxColumn
         '
-        Me.colPopulationEstimateSource.FieldName = "PopulationEstimateSource"
-        Me.colPopulationEstimateSource.Name = "colPopulationEstimateSource"
-        Me.colPopulationEstimateSource.Visible = True
-        Me.colPopulationEstimateSource.VisibleIndex = 21
-        Me.colPopulationEstimateSource.Width = 153
+        Me.PopulationSourceLinkDataGridViewTextBoxColumn.DataPropertyName = "PopulationSourceLink"
+        Me.PopulationSourceLinkDataGridViewTextBoxColumn.HeaderText = "PopulationSourceLink"
+        Me.PopulationSourceLinkDataGridViewTextBoxColumn.Name = "PopulationSourceLinkDataGridViewTextBoxColumn"
         '
-        'colPopulationSourceLink
+        'CommentsDataGridViewTextBoxColumn
         '
-        Me.colPopulationSourceLink.Caption = "Population Source Link"
-        Me.colPopulationSourceLink.FieldName = "PopulationSourceLink"
-        Me.colPopulationSourceLink.Name = "colPopulationSourceLink"
-        Me.colPopulationSourceLink.Visible = True
-        Me.colPopulationSourceLink.VisibleIndex = 27
-        Me.colPopulationSourceLink.Width = 140
+        Me.CommentsDataGridViewTextBoxColumn.DataPropertyName = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn.HeaderText = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn.Name = "CommentsDataGridViewTextBoxColumn"
         '
-        'colSurveyName
+        'ValidatedDateDataGridViewTextBoxColumn
         '
-        Me.colSurveyName.FieldName = "SurveyName"
-        Me.colSurveyName.Name = "colSurveyName"
-        Me.colSurveyName.OptionsColumn.ReadOnly = True
-        Me.colSurveyName.Width = 156
+        Me.ValidatedDateDataGridViewTextBoxColumn.DataPropertyName = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn.HeaderText = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn.Name = "ValidatedDateDataGridViewTextBoxColumn"
         '
-        'colParkSubArea
+        'ValidatedByDataGridViewTextBoxColumn
         '
-        Me.colParkSubArea.FieldName = "ParkSubArea"
-        Me.colParkSubArea.Name = "colParkSubArea"
-        Me.colParkSubArea.Visible = True
-        Me.colParkSubArea.VisibleIndex = 22
-        Me.colParkSubArea.Width = 256
+        Me.ValidatedByDataGridViewTextBoxColumn.DataPropertyName = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn.HeaderText = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn.Name = "ValidatedByDataGridViewTextBoxColumn"
         '
-        'colRecordInsertedDate
+        'RecordInsertedDateDataGridViewTextBoxColumn
         '
-        Me.colRecordInsertedDate.FieldName = "RecordInsertedDate"
-        Me.colRecordInsertedDate.Name = "colRecordInsertedDate"
-        Me.colRecordInsertedDate.OptionsColumn.ReadOnly = True
-        Me.colRecordInsertedDate.Visible = True
-        Me.colRecordInsertedDate.VisibleIndex = 23
-        Me.colRecordInsertedDate.Width = 127
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.Name = "RecordInsertedDateDataGridViewTextBoxColumn"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'colRecordInsertedBy
+        'RecordInsertedByDataGridViewTextBoxColumn
         '
-        Me.colRecordInsertedBy.FieldName = "RecordInsertedBy"
-        Me.colRecordInsertedBy.Name = "colRecordInsertedBy"
-        Me.colRecordInsertedBy.OptionsColumn.ReadOnly = True
-        Me.colRecordInsertedBy.Visible = True
-        Me.colRecordInsertedBy.VisibleIndex = 24
-        Me.colRecordInsertedBy.Width = 116
+        Me.RecordInsertedByDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.Name = "RecordInsertedByDataGridViewTextBoxColumn"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'colValidatedDate
+        'SurveyNameDataGridViewTextBoxColumn
         '
-        Me.colValidatedDate.FieldName = "ValidatedDate"
-        Me.colValidatedDate.Name = "colValidatedDate"
-        Me.colValidatedDate.Visible = True
-        Me.colValidatedDate.VisibleIndex = 25
-        Me.colValidatedDate.Width = 93
+        Me.SurveyNameDataGridViewTextBoxColumn.DataPropertyName = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn.HeaderText = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn.Name = "SurveyNameDataGridViewTextBoxColumn"
+        Me.SurveyNameDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'colValidatedBy
+        'FKGSPEPopulationEstimatesGSPESurveysBindingSource
         '
-        Me.colValidatedBy.FieldName = "ValidatedBy"
-        Me.colValidatedBy.Name = "colValidatedBy"
-        Me.colValidatedBy.Visible = True
-        Me.colValidatedBy.VisibleIndex = 26
-        Me.colValidatedBy.Width = 82
+        Me.FKGSPEPopulationEstimatesGSPESurveysBindingSource.DataMember = "FK_GSPE_PopulationEstimates_GSPE_Surveys"
+        Me.FKGSPEPopulationEstimatesGSPESurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
         '
         'ResultsSplitContainer2
         '
@@ -1283,513 +1244,398 @@ Partial Class Form1
         '
         'ResultsSplitContainer2.Panel1
         '
-        Me.ResultsSplitContainer2.Panel1.Controls.Add(Me.DensityGridControl)
+        Me.ResultsSplitContainer2.Panel1.Controls.Add(Me.DensityEstimatesDataGridView)
         '
         'ResultsSplitContainer2.Panel2
         '
-        Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsGridControl)
-        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(898, 578)
-        Me.ResultsSplitContainer2.SplitterDistance = 178
+        Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsDataGridView)
+        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(698, 454)
+        Me.ResultsSplitContainer2.SplitterDistance = 273
         Me.ResultsSplitContainer2.TabIndex = 0
         '
-        'DensityGridControl
-        '
-        Me.DensityGridControl.DataSource = Me.GSPE_DensityEstimatesBindingSource
-        Me.DensityGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DensityGridControl.Location = New System.Drawing.Point(0, 0)
-        Me.DensityGridControl.MainView = Me.GridView3
-        Me.DensityGridControl.Name = "DensityGridControl"
-        Me.DensityGridControl.Size = New System.Drawing.Size(898, 178)
-        Me.DensityGridControl.TabIndex = 0
-        Me.DensityGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
-        '
-        'GridView3
-        '
-        Me.GridView3.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colStratum, Me.Analysis_ColumnGridColumn, Me.colDensity_Estimate, Me.colDensity_AreaSurveyed_SqMi, Me.colDensity_AverageSearchEffort, Me.colDensityEstimateMethodology, Me.colDensityEstimateSource, Me.DensityEstimateSourceLinkGridColumn, Me.colReportDate1, Me.colComments1, Me.colValidatedDate1, Me.colValidatedBy1, Me.colRecordInsertedDate1, Me.colRecordInsertedBy1, Me.colParkSubArea1, Me.colSurveyName1})
-        Me.GridView3.GridControl = Me.DensityGridControl
-        Me.GridView3.Name = "GridView3"
-        Me.GridView3.OptionsView.ColumnAutoWidth = False
-        Me.GridView3.OptionsView.ShowGroupPanel = False
-        '
-        'colStratum
-        '
-        Me.colStratum.FieldName = "Stratum"
-        Me.colStratum.Name = "colStratum"
-        Me.colStratum.Visible = True
-        Me.colStratum.VisibleIndex = 0
-        Me.colStratum.Width = 100
-        '
-        'Analysis_ColumnGridColumn
-        '
-        Me.Analysis_ColumnGridColumn.Caption = "Analysis_Column"
-        Me.Analysis_ColumnGridColumn.FieldName = "Analysis_Column"
-        Me.Analysis_ColumnGridColumn.Name = "Analysis_ColumnGridColumn"
-        Me.Analysis_ColumnGridColumn.Visible = True
-        Me.Analysis_ColumnGridColumn.VisibleIndex = 1
-        Me.Analysis_ColumnGridColumn.Width = 103
-        '
-        'colDensity_Estimate
-        '
-        Me.colDensity_Estimate.FieldName = "Density_Estimate"
-        Me.colDensity_Estimate.Name = "colDensity_Estimate"
-        Me.colDensity_Estimate.Visible = True
-        Me.colDensity_Estimate.VisibleIndex = 2
-        Me.colDensity_Estimate.Width = 106
-        '
-        'colDensity_AreaSurveyed_SqMi
-        '
-        Me.colDensity_AreaSurveyed_SqMi.FieldName = "Density_AreaSurveyed_SqMi"
-        Me.colDensity_AreaSurveyed_SqMi.Name = "colDensity_AreaSurveyed_SqMi"
-        Me.colDensity_AreaSurveyed_SqMi.Visible = True
-        Me.colDensity_AreaSurveyed_SqMi.VisibleIndex = 3
-        Me.colDensity_AreaSurveyed_SqMi.Width = 168
-        '
-        'colDensity_AverageSearchEffort
-        '
-        Me.colDensity_AverageSearchEffort.FieldName = "Density_AverageSearchEffort"
-        Me.colDensity_AverageSearchEffort.Name = "colDensity_AverageSearchEffort"
-        Me.colDensity_AverageSearchEffort.Visible = True
-        Me.colDensity_AverageSearchEffort.VisibleIndex = 4
-        Me.colDensity_AverageSearchEffort.Width = 173
-        '
-        'colDensityEstimateMethodology
-        '
-        Me.colDensityEstimateMethodology.FieldName = "DensityEstimateMethodology"
-        Me.colDensityEstimateMethodology.Name = "colDensityEstimateMethodology"
-        Me.colDensityEstimateMethodology.Visible = True
-        Me.colDensityEstimateMethodology.VisibleIndex = 5
-        Me.colDensityEstimateMethodology.Width = 168
-        '
-        'colDensityEstimateSource
-        '
-        Me.colDensityEstimateSource.FieldName = "DensityEstimateSource"
-        Me.colDensityEstimateSource.Name = "colDensityEstimateSource"
-        Me.colDensityEstimateSource.Visible = True
-        Me.colDensityEstimateSource.VisibleIndex = 6
-        Me.colDensityEstimateSource.Width = 153
-        '
-        'DensityEstimateSourceLinkGridColumn
-        '
-        Me.DensityEstimateSourceLinkGridColumn.Caption = "Source link"
-        Me.DensityEstimateSourceLinkGridColumn.FieldName = "DensityEstimateSourceLink"
-        Me.DensityEstimateSourceLinkGridColumn.Name = "DensityEstimateSourceLinkGridColumn"
-        Me.DensityEstimateSourceLinkGridColumn.Visible = True
-        Me.DensityEstimateSourceLinkGridColumn.VisibleIndex = 7
-        Me.DensityEstimateSourceLinkGridColumn.Width = 113
-        '
-        'colReportDate1
-        '
-        Me.colReportDate1.FieldName = "ReportDate"
-        Me.colReportDate1.Name = "colReportDate1"
-        Me.colReportDate1.Visible = True
-        Me.colReportDate1.VisibleIndex = 8
-        Me.colReportDate1.Width = 89
-        '
-        'colComments1
-        '
-        Me.colComments1.FieldName = "Comments"
-        Me.colComments1.Name = "colComments1"
-        Me.colComments1.Visible = True
-        Me.colComments1.VisibleIndex = 9
-        Me.colComments1.Width = 89
-        '
-        'colValidatedDate1
-        '
-        Me.colValidatedDate1.FieldName = "ValidatedDate"
-        Me.colValidatedDate1.Name = "colValidatedDate1"
-        Me.colValidatedDate1.Visible = True
-        Me.colValidatedDate1.VisibleIndex = 14
-        Me.colValidatedDate1.Width = 93
-        '
-        'colValidatedBy1
-        '
-        Me.colValidatedBy1.FieldName = "ValidatedBy"
-        Me.colValidatedBy1.Name = "colValidatedBy1"
-        Me.colValidatedBy1.Visible = True
-        Me.colValidatedBy1.VisibleIndex = 15
-        Me.colValidatedBy1.Width = 89
-        '
-        'colRecordInsertedDate1
-        '
-        Me.colRecordInsertedDate1.FieldName = "RecordInsertedDate"
-        Me.colRecordInsertedDate1.Name = "colRecordInsertedDate1"
-        Me.colRecordInsertedDate1.OptionsColumn.ReadOnly = True
-        Me.colRecordInsertedDate1.Visible = True
-        Me.colRecordInsertedDate1.VisibleIndex = 12
-        Me.colRecordInsertedDate1.Width = 127
-        '
-        'colRecordInsertedBy1
-        '
-        Me.colRecordInsertedBy1.FieldName = "RecordInsertedBy"
-        Me.colRecordInsertedBy1.Name = "colRecordInsertedBy1"
-        Me.colRecordInsertedBy1.OptionsColumn.ReadOnly = True
-        Me.colRecordInsertedBy1.Visible = True
-        Me.colRecordInsertedBy1.VisibleIndex = 13
-        Me.colRecordInsertedBy1.Width = 116
-        '
-        'colParkSubArea1
-        '
-        Me.colParkSubArea1.FieldName = "ParkSubArea"
-        Me.colParkSubArea1.Name = "colParkSubArea1"
-        Me.colParkSubArea1.OptionsColumn.ReadOnly = True
-        Me.colParkSubArea1.Visible = True
-        Me.colParkSubArea1.VisibleIndex = 11
-        Me.colParkSubArea1.Width = 91
-        '
-        'colSurveyName1
-        '
-        Me.colSurveyName1.FieldName = "SurveyName"
-        Me.colSurveyName1.Name = "colSurveyName1"
-        Me.colSurveyName1.OptionsColumn.ReadOnly = True
-        Me.colSurveyName1.Visible = True
-        Me.colSurveyName1.VisibleIndex = 10
-        Me.colSurveyName1.Width = 89
-        '
-        'ResultsGridControl
-        '
-        Me.ResultsGridControl.DataSource = Me.GSPE_ResultsBindingSource
-        Me.ResultsGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ResultsGridControl.Location = New System.Drawing.Point(0, 0)
-        Me.ResultsGridControl.MainView = Me.GridView4
-        Me.ResultsGridControl.Name = "ResultsGridControl"
-        Me.ResultsGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.ResultsSourceLinkRepositoryItemHyperLinkEdit})
-        Me.ResultsGridControl.Size = New System.Drawing.Size(898, 396)
-        Me.ResultsGridControl.TabIndex = 0
-        Me.ResultsGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
-        '
-        'GridView4
-        '
-        Me.GridView4.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colBullCowRatio, Me.colCalfCowRatio, Me.colCalfAdultRatio, Me.colADULT, Me.colBULL_30_40, Me.colBULL_30_50, Me.colBULL_30_60, Me.colBULL_41_50, Me.colBULL_ALL, Me.colBULL_GT_50, Me.colBULL_GT_60, Me.colBULL_GTE_50, Me.colBULL_LT_30, Me.colBULL_LT_50, Me.colCALF, Me.colCOW, Me.colCOW_W_0, Me.colCOW_W_1, Me.colCOW_W_2, Me.colCOW_W_3, Me.colLG_BULL, Me.colMED_BULL, Me.colMED_L_BULL, Me.colSM_BULL, Me.colUNKNOWN, Me.colYBULL_ALL, Me.colYBULL_GTSF, Me.colYBULL_SF, Me.colMOOSE, Me.colSubAreaSurveyed_SqMi, Me.colSubAreaAverageSearchEffort, Me.colMethodologyUsed, Me.colResultsSource, Me.ResultsSourceLinkGridColumn, Me.colComments2, Me.colSurveyName2, Me.colParkSubArea2, Me.colRecordInsertedDate2, Me.colRecordInsertedBy2, Me.colValidatedDate2, Me.colValidatedBy2})
-        Me.GridView4.GridControl = Me.ResultsGridControl
-        Me.GridView4.Name = "GridView4"
-        Me.GridView4.OptionsView.ColumnAutoWidth = False
-        Me.GridView4.OptionsView.ShowGroupPanel = False
-        '
-        'colBullCowRatio
-        '
-        Me.colBullCowRatio.FieldName = "BullCowRatio"
-        Me.colBullCowRatio.Name = "colBullCowRatio"
-        Me.colBullCowRatio.Visible = True
-        Me.colBullCowRatio.VisibleIndex = 2
-        Me.colBullCowRatio.Width = 91
-        '
-        'colCalfCowRatio
-        '
-        Me.colCalfCowRatio.FieldName = "CalfCowRatio"
-        Me.colCalfCowRatio.Name = "colCalfCowRatio"
-        Me.colCalfCowRatio.Visible = True
-        Me.colCalfCowRatio.VisibleIndex = 3
-        Me.colCalfCowRatio.Width = 94
-        '
-        'colCalfAdultRatio
-        '
-        Me.colCalfAdultRatio.FieldName = "CalfAdultRatio"
-        Me.colCalfAdultRatio.Name = "colCalfAdultRatio"
-        Me.colCalfAdultRatio.Visible = True
-        Me.colCalfAdultRatio.VisibleIndex = 4
-        Me.colCalfAdultRatio.Width = 98
-        '
-        'colADULT
-        '
-        Me.colADULT.FieldName = "ADULT"
-        Me.colADULT.Name = "colADULT"
-        Me.colADULT.Visible = True
-        Me.colADULT.VisibleIndex = 5
-        '
-        'colBULL_30_40
-        '
-        Me.colBULL_30_40.FieldName = "BULL_30_40"
-        Me.colBULL_30_40.Name = "colBULL_30_40"
-        Me.colBULL_30_40.Visible = True
-        Me.colBULL_30_40.VisibleIndex = 6
-        Me.colBULL_30_40.Width = 82
-        '
-        'colBULL_30_50
-        '
-        Me.colBULL_30_50.FieldName = "BULL_30_50"
-        Me.colBULL_30_50.Name = "colBULL_30_50"
-        Me.colBULL_30_50.Visible = True
-        Me.colBULL_30_50.VisibleIndex = 7
-        Me.colBULL_30_50.Width = 82
-        '
-        'colBULL_30_60
-        '
-        Me.colBULL_30_60.FieldName = "BULL_30_60"
-        Me.colBULL_30_60.Name = "colBULL_30_60"
-        Me.colBULL_30_60.Visible = True
-        Me.colBULL_30_60.VisibleIndex = 8
-        Me.colBULL_30_60.Width = 82
-        '
-        'colBULL_41_50
-        '
-        Me.colBULL_41_50.FieldName = "BULL_41_50"
-        Me.colBULL_41_50.Name = "colBULL_41_50"
-        Me.colBULL_41_50.Visible = True
-        Me.colBULL_41_50.VisibleIndex = 9
-        Me.colBULL_41_50.Width = 82
-        '
-        'colBULL_ALL
-        '
-        Me.colBULL_ALL.FieldName = "BULL_ALL"
-        Me.colBULL_ALL.Name = "colBULL_ALL"
-        Me.colBULL_ALL.Visible = True
-        Me.colBULL_ALL.VisibleIndex = 10
-        '
-        'colBULL_GT_50
+        'DensityEstimatesDataGridView
         '
-        Me.colBULL_GT_50.FieldName = "BULL_GT_50"
-        Me.colBULL_GT_50.Name = "colBULL_GT_50"
-        Me.colBULL_GT_50.Visible = True
-        Me.colBULL_GT_50.VisibleIndex = 11
-        Me.colBULL_GT_50.Width = 83
-        '
-        'colBULL_GT_60
+        Me.DensityEstimatesDataGridView.AllowUserToOrderColumns = True
+        Me.DensityEstimatesDataGridView.AutoGenerateColumns = False
+        Me.DensityEstimatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DensityEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn1, Me.AnalysisColumnDataGridViewTextBoxColumn1, Me.StratumDataGridViewTextBoxColumn, Me.DensityEstimateDataGridViewTextBoxColumn, Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn, Me.DensityAverageSearchEffortDataGridViewTextBoxColumn, Me.DensityEstimateMethodologyDataGridViewTextBoxColumn, Me.ReportDateDataGridViewTextBoxColumn1, Me.DensityEstimateSourceDataGridViewTextBoxColumn, Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn1, Me.ValidatedDateDataGridViewTextBoxColumn1, Me.ValidatedByDataGridViewTextBoxColumn1, Me.RecordInsertedDateDataGridViewTextBoxColumn1, Me.RecordInsertedByDataGridViewTextBoxColumn1, Me.SurveyNameDataGridViewTextBoxColumn1})
+        Me.DensityEstimatesDataGridView.DataSource = Me.FKGSPEDensityEstimatesGSPESurveysBindingSource
+        Me.DensityEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DensityEstimatesDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.DensityEstimatesDataGridView.Name = "DensityEstimatesDataGridView"
+        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(698, 273)
+        Me.DensityEstimatesDataGridView.TabIndex = 1
         '
-        Me.colBULL_GT_60.FieldName = "BULL_GT_60"
-        Me.colBULL_GT_60.Name = "colBULL_GT_60"
-        Me.colBULL_GT_60.Visible = True
-        Me.colBULL_GT_60.VisibleIndex = 12
-        Me.colBULL_GT_60.Width = 83
+        'ParkSubAreaDataGridViewTextBoxColumn1
         '
-        'colBULL_GTE_50
+        Me.ParkSubAreaDataGridViewTextBoxColumn1.DataPropertyName = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn1.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn1.Name = "ParkSubAreaDataGridViewTextBoxColumn1"
         '
-        Me.colBULL_GTE_50.FieldName = "BULL_GTE_50"
-        Me.colBULL_GTE_50.Name = "colBULL_GTE_50"
-        Me.colBULL_GTE_50.Visible = True
-        Me.colBULL_GTE_50.VisibleIndex = 13
-        Me.colBULL_GTE_50.Width = 89
+        'AnalysisColumnDataGridViewTextBoxColumn1
         '
-        'colBULL_LT_30
+        Me.AnalysisColumnDataGridViewTextBoxColumn1.DataPropertyName = "Analysis_Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn1.HeaderText = "Analysis_Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn1.Name = "AnalysisColumnDataGridViewTextBoxColumn1"
         '
-        Me.colBULL_LT_30.FieldName = "BULL_LT_30"
-        Me.colBULL_LT_30.Name = "colBULL_LT_30"
-        Me.colBULL_LT_30.Visible = True
-        Me.colBULL_LT_30.VisibleIndex = 14
-        Me.colBULL_LT_30.Width = 81
+        'StratumDataGridViewTextBoxColumn
         '
-        'colBULL_LT_50
+        Me.StratumDataGridViewTextBoxColumn.DataPropertyName = "Stratum"
+        Me.StratumDataGridViewTextBoxColumn.HeaderText = "Stratum"
+        Me.StratumDataGridViewTextBoxColumn.Name = "StratumDataGridViewTextBoxColumn"
         '
-        Me.colBULL_LT_50.FieldName = "BULL_LT_50"
-        Me.colBULL_LT_50.Name = "colBULL_LT_50"
-        Me.colBULL_LT_50.Visible = True
-        Me.colBULL_LT_50.VisibleIndex = 15
-        Me.colBULL_LT_50.Width = 81
+        'DensityEstimateDataGridViewTextBoxColumn
         '
-        'colCALF
+        Me.DensityEstimateDataGridViewTextBoxColumn.DataPropertyName = "Density_Estimate"
+        Me.DensityEstimateDataGridViewTextBoxColumn.HeaderText = "Density_Estimate"
+        Me.DensityEstimateDataGridViewTextBoxColumn.Name = "DensityEstimateDataGridViewTextBoxColumn"
         '
-        Me.colCALF.FieldName = "CALF"
-        Me.colCALF.Name = "colCALF"
-        Me.colCALF.Visible = True
-        Me.colCALF.VisibleIndex = 16
+        'DensityAreaSurveyedSqMiDataGridViewTextBoxColumn
         '
-        'colCOW
+        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.DataPropertyName = "Density_AreaSurveyed_SqMi"
+        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.HeaderText = "Density_AreaSurveyed_SqMi"
+        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.Name = "DensityAreaSurveyedSqMiDataGridViewTextBoxColumn"
         '
-        Me.colCOW.FieldName = "COW"
-        Me.colCOW.Name = "colCOW"
-        Me.colCOW.Visible = True
-        Me.colCOW.VisibleIndex = 17
+        'DensityAverageSearchEffortDataGridViewTextBoxColumn
         '
-        'colCOW_W_0
+        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.DataPropertyName = "Density_AverageSearchEffort"
+        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.HeaderText = "Density_AverageSearchEffort"
+        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.Name = "DensityAverageSearchEffortDataGridViewTextBoxColumn"
         '
-        Me.colCOW_W_0.FieldName = "COW_W_0"
-        Me.colCOW_W_0.Name = "colCOW_W_0"
-        Me.colCOW_W_0.Visible = True
-        Me.colCOW_W_0.VisibleIndex = 18
-        Me.colCOW_W_0.Width = 76
+        'DensityEstimateMethodologyDataGridViewTextBoxColumn
         '
-        'colCOW_W_1
+        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.DataPropertyName = "DensityEstimateMethodology"
+        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.HeaderText = "DensityEstimateMethodology"
+        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.Name = "DensityEstimateMethodologyDataGridViewTextBoxColumn"
         '
-        Me.colCOW_W_1.FieldName = "COW_W_1"
-        Me.colCOW_W_1.Name = "colCOW_W_1"
-        Me.colCOW_W_1.Visible = True
-        Me.colCOW_W_1.VisibleIndex = 19
-        Me.colCOW_W_1.Width = 76
+        'ReportDateDataGridViewTextBoxColumn1
         '
-        'colCOW_W_2
+        Me.ReportDateDataGridViewTextBoxColumn1.DataPropertyName = "ReportDate"
+        Me.ReportDateDataGridViewTextBoxColumn1.HeaderText = "ReportDate"
+        Me.ReportDateDataGridViewTextBoxColumn1.Name = "ReportDateDataGridViewTextBoxColumn1"
         '
-        Me.colCOW_W_2.FieldName = "COW_W_2"
-        Me.colCOW_W_2.Name = "colCOW_W_2"
-        Me.colCOW_W_2.Visible = True
-        Me.colCOW_W_2.VisibleIndex = 20
-        Me.colCOW_W_2.Width = 76
+        'DensityEstimateSourceDataGridViewTextBoxColumn
         '
-        'colCOW_W_3
+        Me.DensityEstimateSourceDataGridViewTextBoxColumn.DataPropertyName = "DensityEstimateSource"
+        Me.DensityEstimateSourceDataGridViewTextBoxColumn.HeaderText = "DensityEstimateSource"
+        Me.DensityEstimateSourceDataGridViewTextBoxColumn.Name = "DensityEstimateSourceDataGridViewTextBoxColumn"
         '
-        Me.colCOW_W_3.FieldName = "COW_W_3"
-        Me.colCOW_W_3.Name = "colCOW_W_3"
-        Me.colCOW_W_3.Visible = True
-        Me.colCOW_W_3.VisibleIndex = 21
-        Me.colCOW_W_3.Width = 76
+        'DensityEstimateSourceLinkDataGridViewTextBoxColumn
         '
-        'colLG_BULL
+        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.DataPropertyName = "DensityEstimateSourceLink"
+        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.HeaderText = "DensityEstimateSourceLink"
+        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.Name = "DensityEstimateSourceLinkDataGridViewTextBoxColumn"
         '
-        Me.colLG_BULL.FieldName = "LG_BULL"
-        Me.colLG_BULL.Name = "colLG_BULL"
-        Me.colLG_BULL.Visible = True
-        Me.colLG_BULL.VisibleIndex = 22
+        'CommentsDataGridViewTextBoxColumn1
         '
-        'colMED_BULL
+        Me.CommentsDataGridViewTextBoxColumn1.DataPropertyName = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn1.HeaderText = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn1.Name = "CommentsDataGridViewTextBoxColumn1"
         '
-        Me.colMED_BULL.FieldName = "MED_BULL"
-        Me.colMED_BULL.Name = "colMED_BULL"
-        Me.colMED_BULL.Visible = True
-        Me.colMED_BULL.VisibleIndex = 23
+        'ValidatedDateDataGridViewTextBoxColumn1
         '
-        'colMED_L_BULL
+        Me.ValidatedDateDataGridViewTextBoxColumn1.DataPropertyName = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn1.HeaderText = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn1.Name = "ValidatedDateDataGridViewTextBoxColumn1"
         '
-        Me.colMED_L_BULL.FieldName = "MED_L_BULL"
-        Me.colMED_L_BULL.Name = "colMED_L_BULL"
-        Me.colMED_L_BULL.Visible = True
-        Me.colMED_L_BULL.VisibleIndex = 24
-        Me.colMED_L_BULL.Width = 84
+        'ValidatedByDataGridViewTextBoxColumn1
         '
-        'colSM_BULL
+        Me.ValidatedByDataGridViewTextBoxColumn1.DataPropertyName = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn1.HeaderText = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn1.Name = "ValidatedByDataGridViewTextBoxColumn1"
         '
-        Me.colSM_BULL.FieldName = "SM_BULL"
-        Me.colSM_BULL.Name = "colSM_BULL"
-        Me.colSM_BULL.Visible = True
-        Me.colSM_BULL.VisibleIndex = 25
+        'RecordInsertedDateDataGridViewTextBoxColumn1
         '
-        'colUNKNOWN
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1.DataPropertyName = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1.Name = "RecordInsertedDateDataGridViewTextBoxColumn1"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1.ReadOnly = True
         '
-        Me.colUNKNOWN.FieldName = "UNKNOWN"
-        Me.colUNKNOWN.Name = "colUNKNOWN"
-        Me.colUNKNOWN.Visible = True
-        Me.colUNKNOWN.VisibleIndex = 26
+        'RecordInsertedByDataGridViewTextBoxColumn1
         '
-        'colYBULL_ALL
+        Me.RecordInsertedByDataGridViewTextBoxColumn1.DataPropertyName = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn1.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn1.Name = "RecordInsertedByDataGridViewTextBoxColumn1"
+        Me.RecordInsertedByDataGridViewTextBoxColumn1.ReadOnly = True
         '
-        Me.colYBULL_ALL.FieldName = "YBULL_ALL"
-        Me.colYBULL_ALL.Name = "colYBULL_ALL"
-        Me.colYBULL_ALL.Visible = True
-        Me.colYBULL_ALL.VisibleIndex = 27
+        'SurveyNameDataGridViewTextBoxColumn1
         '
-        'colYBULL_GTSF
+        Me.SurveyNameDataGridViewTextBoxColumn1.DataPropertyName = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn1.HeaderText = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn1.Name = "SurveyNameDataGridViewTextBoxColumn1"
+        Me.SurveyNameDataGridViewTextBoxColumn1.ReadOnly = True
         '
-        Me.colYBULL_GTSF.FieldName = "YBULL_GTSF"
-        Me.colYBULL_GTSF.Name = "colYBULL_GTSF"
-        Me.colYBULL_GTSF.Visible = True
-        Me.colYBULL_GTSF.VisibleIndex = 28
-        Me.colYBULL_GTSF.Width = 83
+        'FKGSPEDensityEstimatesGSPESurveysBindingSource
         '
-        'colYBULL_SF
+        Me.FKGSPEDensityEstimatesGSPESurveysBindingSource.DataMember = "FK_GSPE_DensityEstimates_GSPE_Surveys"
+        Me.FKGSPEDensityEstimatesGSPESurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
         '
-        Me.colYBULL_SF.FieldName = "YBULL_SF"
-        Me.colYBULL_SF.Name = "colYBULL_SF"
-        Me.colYBULL_SF.Visible = True
-        Me.colYBULL_SF.VisibleIndex = 29
+        'ResultsDataGridView
         '
-        'colMOOSE
+        Me.ResultsDataGridView.AllowUserToOrderColumns = True
+        Me.ResultsDataGridView.AutoGenerateColumns = False
+        Me.ResultsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ResultsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn2, Me.BullCowRatioDataGridViewTextBoxColumn, Me.CalfCowRatioDataGridViewTextBoxColumn, Me.CalfAdultRatioDataGridViewTextBoxColumn, Me.ADULTDataGridViewTextBoxColumn, Me.BULL3040DataGridViewTextBoxColumn, Me.BULL3050DataGridViewTextBoxColumn, Me.BULL3060DataGridViewTextBoxColumn, Me.BULL4150DataGridViewTextBoxColumn, Me.BULLALLDataGridViewTextBoxColumn, Me.BULLGT50DataGridViewTextBoxColumn, Me.BULLGT60DataGridViewTextBoxColumn, Me.BULLGTE50DataGridViewTextBoxColumn, Me.BULLLT30DataGridViewTextBoxColumn, Me.BULLLT50DataGridViewTextBoxColumn, Me.CALFDataGridViewTextBoxColumn, Me.COWDataGridViewTextBoxColumn, Me.COWW0DataGridViewTextBoxColumn, Me.COWW1DataGridViewTextBoxColumn, Me.COWW2DataGridViewTextBoxColumn, Me.COWW3DataGridViewTextBoxColumn, Me.LGBULLDataGridViewTextBoxColumn, Me.MEDBULLDataGridViewTextBoxColumn, Me.MEDLBULLDataGridViewTextBoxColumn, Me.SMBULLDataGridViewTextBoxColumn, Me.UNKNOWNDataGridViewTextBoxColumn, Me.YBULLALLDataGridViewTextBoxColumn, Me.YBULLGTSFDataGridViewTextBoxColumn, Me.YBULLSFDataGridViewTextBoxColumn, Me.MOOSEDataGridViewTextBoxColumn, Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn, Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn, Me.MethodologyUsedDataGridViewTextBoxColumn, Me.ResultsSourceDataGridViewTextBoxColumn, Me.ResultsSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn2, Me.ValidatedDateDataGridViewTextBoxColumn2, Me.ValidatedByDataGridViewTextBoxColumn2, Me.RecordInsertedDateDataGridViewTextBoxColumn2, Me.RecordInsertedByDataGridViewTextBoxColumn2, Me.SurveyNameDataGridViewTextBoxColumn2})
+        Me.ResultsDataGridView.DataSource = Me.FKGSPERatiosGSPESurveysBindingSource
+        Me.ResultsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ResultsDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.ResultsDataGridView.Name = "ResultsDataGridView"
+        Me.ResultsDataGridView.Size = New System.Drawing.Size(698, 177)
+        Me.ResultsDataGridView.TabIndex = 1
         '
-        Me.colMOOSE.FieldName = "MOOSE"
-        Me.colMOOSE.Name = "colMOOSE"
-        Me.colMOOSE.Visible = True
-        Me.colMOOSE.VisibleIndex = 30
+        'ParkSubAreaDataGridViewTextBoxColumn2
         '
-        'colSubAreaSurveyed_SqMi
+        Me.ParkSubAreaDataGridViewTextBoxColumn2.DataPropertyName = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn2.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn2.Name = "ParkSubAreaDataGridViewTextBoxColumn2"
         '
-        Me.colSubAreaSurveyed_SqMi.FieldName = "SubAreaSurveyed_SqMi"
-        Me.colSubAreaSurveyed_SqMi.Name = "colSubAreaSurveyed_SqMi"
-        Me.colSubAreaSurveyed_SqMi.Visible = True
-        Me.colSubAreaSurveyed_SqMi.VisibleIndex = 31
-        Me.colSubAreaSurveyed_SqMi.Width = 147
+        'BullCowRatioDataGridViewTextBoxColumn
         '
-        'colSubAreaAverageSearchEffort
+        Me.BullCowRatioDataGridViewTextBoxColumn.DataPropertyName = "BullCowRatio"
+        Me.BullCowRatioDataGridViewTextBoxColumn.HeaderText = "BullCowRatio"
+        Me.BullCowRatioDataGridViewTextBoxColumn.Name = "BullCowRatioDataGridViewTextBoxColumn"
         '
-        Me.colSubAreaAverageSearchEffort.FieldName = "SubAreaAverageSearchEffort"
-        Me.colSubAreaAverageSearchEffort.Name = "colSubAreaAverageSearchEffort"
-        Me.colSubAreaAverageSearchEffort.Visible = True
-        Me.colSubAreaAverageSearchEffort.VisibleIndex = 32
-        Me.colSubAreaAverageSearchEffort.Width = 178
+        'CalfCowRatioDataGridViewTextBoxColumn
         '
-        'colMethodologyUsed
+        Me.CalfCowRatioDataGridViewTextBoxColumn.DataPropertyName = "CalfCowRatio"
+        Me.CalfCowRatioDataGridViewTextBoxColumn.HeaderText = "CalfCowRatio"
+        Me.CalfCowRatioDataGridViewTextBoxColumn.Name = "CalfCowRatioDataGridViewTextBoxColumn"
         '
-        Me.colMethodologyUsed.FieldName = "MethodologyUsed"
-        Me.colMethodologyUsed.Name = "colMethodologyUsed"
-        Me.colMethodologyUsed.Visible = True
-        Me.colMethodologyUsed.VisibleIndex = 33
-        Me.colMethodologyUsed.Width = 112
+        'CalfAdultRatioDataGridViewTextBoxColumn
         '
-        'colResultsSource
+        Me.CalfAdultRatioDataGridViewTextBoxColumn.DataPropertyName = "CalfAdultRatio"
+        Me.CalfAdultRatioDataGridViewTextBoxColumn.HeaderText = "CalfAdultRatio"
+        Me.CalfAdultRatioDataGridViewTextBoxColumn.Name = "CalfAdultRatioDataGridViewTextBoxColumn"
         '
-        Me.colResultsSource.FieldName = "ResultsSource"
-        Me.colResultsSource.Name = "colResultsSource"
-        Me.colResultsSource.Visible = True
-        Me.colResultsSource.VisibleIndex = 34
-        Me.colResultsSource.Width = 94
+        'ADULTDataGridViewTextBoxColumn
         '
-        'ResultsSourceLinkGridColumn
+        Me.ADULTDataGridViewTextBoxColumn.DataPropertyName = "ADULT"
+        Me.ADULTDataGridViewTextBoxColumn.HeaderText = "ADULT"
+        Me.ADULTDataGridViewTextBoxColumn.Name = "ADULTDataGridViewTextBoxColumn"
         '
-        Me.ResultsSourceLinkGridColumn.Caption = "ResultsSourceLink"
-        Me.ResultsSourceLinkGridColumn.ColumnEdit = Me.ResultsSourceLinkRepositoryItemHyperLinkEdit
-        Me.ResultsSourceLinkGridColumn.FieldName = "ResultsSourceLink"
-        Me.ResultsSourceLinkGridColumn.Name = "ResultsSourceLinkGridColumn"
-        Me.ResultsSourceLinkGridColumn.Visible = True
-        Me.ResultsSourceLinkGridColumn.VisibleIndex = 35
-        Me.ResultsSourceLinkGridColumn.Width = 109
+        'BULL3040DataGridViewTextBoxColumn
         '
-        'ResultsSourceLinkRepositoryItemHyperLinkEdit
+        Me.BULL3040DataGridViewTextBoxColumn.DataPropertyName = "BULL_30_40"
+        Me.BULL3040DataGridViewTextBoxColumn.HeaderText = "BULL_30_40"
+        Me.BULL3040DataGridViewTextBoxColumn.Name = "BULL3040DataGridViewTextBoxColumn"
         '
-        Me.ResultsSourceLinkRepositoryItemHyperLinkEdit.AutoHeight = False
-        Me.ResultsSourceLinkRepositoryItemHyperLinkEdit.Name = "ResultsSourceLinkRepositoryItemHyperLinkEdit"
+        'BULL3050DataGridViewTextBoxColumn
         '
-        'colComments2
+        Me.BULL3050DataGridViewTextBoxColumn.DataPropertyName = "BULL_30_50"
+        Me.BULL3050DataGridViewTextBoxColumn.HeaderText = "BULL_30_50"
+        Me.BULL3050DataGridViewTextBoxColumn.Name = "BULL3050DataGridViewTextBoxColumn"
         '
-        Me.colComments2.FieldName = "Comments"
-        Me.colComments2.Name = "colComments2"
-        Me.colComments2.Visible = True
-        Me.colComments2.VisibleIndex = 36
+        'BULL3060DataGridViewTextBoxColumn
         '
-        'colSurveyName2
+        Me.BULL3060DataGridViewTextBoxColumn.DataPropertyName = "BULL_30_60"
+        Me.BULL3060DataGridViewTextBoxColumn.HeaderText = "BULL_30_60"
+        Me.BULL3060DataGridViewTextBoxColumn.Name = "BULL3060DataGridViewTextBoxColumn"
         '
-        Me.colSurveyName2.FieldName = "SurveyName"
-        Me.colSurveyName2.Name = "colSurveyName2"
-        Me.colSurveyName2.OptionsColumn.ReadOnly = True
-        Me.colSurveyName2.Visible = True
-        Me.colSurveyName2.VisibleIndex = 0
-        Me.colSurveyName2.Width = 87
+        'BULL4150DataGridViewTextBoxColumn
         '
-        'colParkSubArea2
+        Me.BULL4150DataGridViewTextBoxColumn.DataPropertyName = "BULL_41_50"
+        Me.BULL4150DataGridViewTextBoxColumn.HeaderText = "BULL_41_50"
+        Me.BULL4150DataGridViewTextBoxColumn.Name = "BULL4150DataGridViewTextBoxColumn"
         '
-        Me.colParkSubArea2.FieldName = "ParkSubArea"
-        Me.colParkSubArea2.Name = "colParkSubArea2"
-        Me.colParkSubArea2.Visible = True
-        Me.colParkSubArea2.VisibleIndex = 1
-        Me.colParkSubArea2.Width = 91
+        'BULLALLDataGridViewTextBoxColumn
         '
-        'colRecordInsertedDate2
+        Me.BULLALLDataGridViewTextBoxColumn.DataPropertyName = "BULL_ALL"
+        Me.BULLALLDataGridViewTextBoxColumn.HeaderText = "BULL_ALL"
+        Me.BULLALLDataGridViewTextBoxColumn.Name = "BULLALLDataGridViewTextBoxColumn"
         '
-        Me.colRecordInsertedDate2.FieldName = "RecordInsertedDate"
-        Me.colRecordInsertedDate2.Name = "colRecordInsertedDate2"
-        Me.colRecordInsertedDate2.OptionsColumn.ReadOnly = True
-        Me.colRecordInsertedDate2.Visible = True
-        Me.colRecordInsertedDate2.VisibleIndex = 37
-        Me.colRecordInsertedDate2.Width = 127
+        'BULLGT50DataGridViewTextBoxColumn
         '
-        'colRecordInsertedBy2
+        Me.BULLGT50DataGridViewTextBoxColumn.DataPropertyName = "BULL_GT_50"
+        Me.BULLGT50DataGridViewTextBoxColumn.HeaderText = "BULL_GT_50"
+        Me.BULLGT50DataGridViewTextBoxColumn.Name = "BULLGT50DataGridViewTextBoxColumn"
         '
-        Me.colRecordInsertedBy2.FieldName = "RecordInsertedBy"
-        Me.colRecordInsertedBy2.Name = "colRecordInsertedBy2"
-        Me.colRecordInsertedBy2.OptionsColumn.ReadOnly = True
-        Me.colRecordInsertedBy2.Visible = True
-        Me.colRecordInsertedBy2.VisibleIndex = 38
-        Me.colRecordInsertedBy2.Width = 116
+        'BULLGT60DataGridViewTextBoxColumn
         '
-        'colValidatedDate2
+        Me.BULLGT60DataGridViewTextBoxColumn.DataPropertyName = "BULL_GT_60"
+        Me.BULLGT60DataGridViewTextBoxColumn.HeaderText = "BULL_GT_60"
+        Me.BULLGT60DataGridViewTextBoxColumn.Name = "BULLGT60DataGridViewTextBoxColumn"
         '
-        Me.colValidatedDate2.FieldName = "ValidatedDate"
-        Me.colValidatedDate2.Name = "colValidatedDate2"
-        Me.colValidatedDate2.Visible = True
-        Me.colValidatedDate2.VisibleIndex = 39
-        Me.colValidatedDate2.Width = 93
+        'BULLGTE50DataGridViewTextBoxColumn
         '
-        'colValidatedBy2
+        Me.BULLGTE50DataGridViewTextBoxColumn.DataPropertyName = "BULL_GTE_50"
+        Me.BULLGTE50DataGridViewTextBoxColumn.HeaderText = "BULL_GTE_50"
+        Me.BULLGTE50DataGridViewTextBoxColumn.Name = "BULLGTE50DataGridViewTextBoxColumn"
         '
-        Me.colValidatedBy2.FieldName = "ValidatedBy"
-        Me.colValidatedBy2.Name = "colValidatedBy2"
-        Me.colValidatedBy2.Visible = True
-        Me.colValidatedBy2.VisibleIndex = 40
-        Me.colValidatedBy2.Width = 82
+        'BULLLT30DataGridViewTextBoxColumn
+        '
+        Me.BULLLT30DataGridViewTextBoxColumn.DataPropertyName = "BULL_LT_30"
+        Me.BULLLT30DataGridViewTextBoxColumn.HeaderText = "BULL_LT_30"
+        Me.BULLLT30DataGridViewTextBoxColumn.Name = "BULLLT30DataGridViewTextBoxColumn"
+        '
+        'BULLLT50DataGridViewTextBoxColumn
+        '
+        Me.BULLLT50DataGridViewTextBoxColumn.DataPropertyName = "BULL_LT_50"
+        Me.BULLLT50DataGridViewTextBoxColumn.HeaderText = "BULL_LT_50"
+        Me.BULLLT50DataGridViewTextBoxColumn.Name = "BULLLT50DataGridViewTextBoxColumn"
+        '
+        'CALFDataGridViewTextBoxColumn
+        '
+        Me.CALFDataGridViewTextBoxColumn.DataPropertyName = "CALF"
+        Me.CALFDataGridViewTextBoxColumn.HeaderText = "CALF"
+        Me.CALFDataGridViewTextBoxColumn.Name = "CALFDataGridViewTextBoxColumn"
+        '
+        'COWDataGridViewTextBoxColumn
+        '
+        Me.COWDataGridViewTextBoxColumn.DataPropertyName = "COW"
+        Me.COWDataGridViewTextBoxColumn.HeaderText = "COW"
+        Me.COWDataGridViewTextBoxColumn.Name = "COWDataGridViewTextBoxColumn"
+        '
+        'COWW0DataGridViewTextBoxColumn
+        '
+        Me.COWW0DataGridViewTextBoxColumn.DataPropertyName = "COW_W_0"
+        Me.COWW0DataGridViewTextBoxColumn.HeaderText = "COW_W_0"
+        Me.COWW0DataGridViewTextBoxColumn.Name = "COWW0DataGridViewTextBoxColumn"
+        '
+        'COWW1DataGridViewTextBoxColumn
+        '
+        Me.COWW1DataGridViewTextBoxColumn.DataPropertyName = "COW_W_1"
+        Me.COWW1DataGridViewTextBoxColumn.HeaderText = "COW_W_1"
+        Me.COWW1DataGridViewTextBoxColumn.Name = "COWW1DataGridViewTextBoxColumn"
+        '
+        'COWW2DataGridViewTextBoxColumn
+        '
+        Me.COWW2DataGridViewTextBoxColumn.DataPropertyName = "COW_W_2"
+        Me.COWW2DataGridViewTextBoxColumn.HeaderText = "COW_W_2"
+        Me.COWW2DataGridViewTextBoxColumn.Name = "COWW2DataGridViewTextBoxColumn"
+        '
+        'COWW3DataGridViewTextBoxColumn
+        '
+        Me.COWW3DataGridViewTextBoxColumn.DataPropertyName = "COW_W_3"
+        Me.COWW3DataGridViewTextBoxColumn.HeaderText = "COW_W_3"
+        Me.COWW3DataGridViewTextBoxColumn.Name = "COWW3DataGridViewTextBoxColumn"
+        '
+        'LGBULLDataGridViewTextBoxColumn
+        '
+        Me.LGBULLDataGridViewTextBoxColumn.DataPropertyName = "LG_BULL"
+        Me.LGBULLDataGridViewTextBoxColumn.HeaderText = "LG_BULL"
+        Me.LGBULLDataGridViewTextBoxColumn.Name = "LGBULLDataGridViewTextBoxColumn"
+        '
+        'MEDBULLDataGridViewTextBoxColumn
+        '
+        Me.MEDBULLDataGridViewTextBoxColumn.DataPropertyName = "MED_BULL"
+        Me.MEDBULLDataGridViewTextBoxColumn.HeaderText = "MED_BULL"
+        Me.MEDBULLDataGridViewTextBoxColumn.Name = "MEDBULLDataGridViewTextBoxColumn"
+        '
+        'MEDLBULLDataGridViewTextBoxColumn
+        '
+        Me.MEDLBULLDataGridViewTextBoxColumn.DataPropertyName = "MED_L_BULL"
+        Me.MEDLBULLDataGridViewTextBoxColumn.HeaderText = "MED_L_BULL"
+        Me.MEDLBULLDataGridViewTextBoxColumn.Name = "MEDLBULLDataGridViewTextBoxColumn"
+        '
+        'SMBULLDataGridViewTextBoxColumn
+        '
+        Me.SMBULLDataGridViewTextBoxColumn.DataPropertyName = "SM_BULL"
+        Me.SMBULLDataGridViewTextBoxColumn.HeaderText = "SM_BULL"
+        Me.SMBULLDataGridViewTextBoxColumn.Name = "SMBULLDataGridViewTextBoxColumn"
+        '
+        'UNKNOWNDataGridViewTextBoxColumn
+        '
+        Me.UNKNOWNDataGridViewTextBoxColumn.DataPropertyName = "UNKNOWN"
+        Me.UNKNOWNDataGridViewTextBoxColumn.HeaderText = "UNKNOWN"
+        Me.UNKNOWNDataGridViewTextBoxColumn.Name = "UNKNOWNDataGridViewTextBoxColumn"
+        '
+        'YBULLALLDataGridViewTextBoxColumn
+        '
+        Me.YBULLALLDataGridViewTextBoxColumn.DataPropertyName = "YBULL_ALL"
+        Me.YBULLALLDataGridViewTextBoxColumn.HeaderText = "YBULL_ALL"
+        Me.YBULLALLDataGridViewTextBoxColumn.Name = "YBULLALLDataGridViewTextBoxColumn"
+        '
+        'YBULLGTSFDataGridViewTextBoxColumn
+        '
+        Me.YBULLGTSFDataGridViewTextBoxColumn.DataPropertyName = "YBULL_GTSF"
+        Me.YBULLGTSFDataGridViewTextBoxColumn.HeaderText = "YBULL_GTSF"
+        Me.YBULLGTSFDataGridViewTextBoxColumn.Name = "YBULLGTSFDataGridViewTextBoxColumn"
+        '
+        'YBULLSFDataGridViewTextBoxColumn
+        '
+        Me.YBULLSFDataGridViewTextBoxColumn.DataPropertyName = "YBULL_SF"
+        Me.YBULLSFDataGridViewTextBoxColumn.HeaderText = "YBULL_SF"
+        Me.YBULLSFDataGridViewTextBoxColumn.Name = "YBULLSFDataGridViewTextBoxColumn"
+        '
+        'MOOSEDataGridViewTextBoxColumn
+        '
+        Me.MOOSEDataGridViewTextBoxColumn.DataPropertyName = "MOOSE"
+        Me.MOOSEDataGridViewTextBoxColumn.HeaderText = "MOOSE"
+        Me.MOOSEDataGridViewTextBoxColumn.Name = "MOOSEDataGridViewTextBoxColumn"
+        '
+        'SubAreaSurveyedSqMiDataGridViewTextBoxColumn
+        '
+        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.DataPropertyName = "SubAreaSurveyed_SqMi"
+        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.HeaderText = "SubAreaSurveyed_SqMi"
+        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.Name = "SubAreaSurveyedSqMiDataGridViewTextBoxColumn"
+        '
+        'SubAreaAverageSearchEffortDataGridViewTextBoxColumn
+        '
+        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.DataPropertyName = "SubAreaAverageSearchEffort"
+        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.HeaderText = "SubAreaAverageSearchEffort"
+        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.Name = "SubAreaAverageSearchEffortDataGridViewTextBoxColumn"
+        '
+        'MethodologyUsedDataGridViewTextBoxColumn
+        '
+        Me.MethodologyUsedDataGridViewTextBoxColumn.DataPropertyName = "MethodologyUsed"
+        Me.MethodologyUsedDataGridViewTextBoxColumn.HeaderText = "MethodologyUsed"
+        Me.MethodologyUsedDataGridViewTextBoxColumn.Name = "MethodologyUsedDataGridViewTextBoxColumn"
+        '
+        'ResultsSourceDataGridViewTextBoxColumn
+        '
+        Me.ResultsSourceDataGridViewTextBoxColumn.DataPropertyName = "ResultsSource"
+        Me.ResultsSourceDataGridViewTextBoxColumn.HeaderText = "ResultsSource"
+        Me.ResultsSourceDataGridViewTextBoxColumn.Name = "ResultsSourceDataGridViewTextBoxColumn"
+        '
+        'ResultsSourceLinkDataGridViewTextBoxColumn
+        '
+        Me.ResultsSourceLinkDataGridViewTextBoxColumn.DataPropertyName = "ResultsSourceLink"
+        Me.ResultsSourceLinkDataGridViewTextBoxColumn.HeaderText = "ResultsSourceLink"
+        Me.ResultsSourceLinkDataGridViewTextBoxColumn.Name = "ResultsSourceLinkDataGridViewTextBoxColumn"
+        '
+        'CommentsDataGridViewTextBoxColumn2
+        '
+        Me.CommentsDataGridViewTextBoxColumn2.DataPropertyName = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn2.HeaderText = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn2.Name = "CommentsDataGridViewTextBoxColumn2"
+        '
+        'ValidatedDateDataGridViewTextBoxColumn2
+        '
+        Me.ValidatedDateDataGridViewTextBoxColumn2.DataPropertyName = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn2.HeaderText = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn2.Name = "ValidatedDateDataGridViewTextBoxColumn2"
+        '
+        'ValidatedByDataGridViewTextBoxColumn2
+        '
+        Me.ValidatedByDataGridViewTextBoxColumn2.DataPropertyName = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn2.HeaderText = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn2.Name = "ValidatedByDataGridViewTextBoxColumn2"
+        '
+        'RecordInsertedDateDataGridViewTextBoxColumn2
+        '
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2.DataPropertyName = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2.Name = "RecordInsertedDateDataGridViewTextBoxColumn2"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'RecordInsertedByDataGridViewTextBoxColumn2
+        '
+        Me.RecordInsertedByDataGridViewTextBoxColumn2.DataPropertyName = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn2.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn2.Name = "RecordInsertedByDataGridViewTextBoxColumn2"
+        Me.RecordInsertedByDataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'SurveyNameDataGridViewTextBoxColumn2
+        '
+        Me.SurveyNameDataGridViewTextBoxColumn2.DataPropertyName = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn2.HeaderText = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn2.Name = "SurveyNameDataGridViewTextBoxColumn2"
+        Me.SurveyNameDataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'FKGSPERatiosGSPESurveysBindingSource
+        '
+        Me.FKGSPERatiosGSPESurveysBindingSource.DataMember = "FK_GSPE_Ratios_GSPE_Surveys"
+        Me.FKGSPERatiosGSPESurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
         '
         'GridControl1
         '
@@ -1811,7 +1657,7 @@ Partial Class Form1
         Me.GSPEDeliverableXtraTabPage.Controls.Add(Me.GSPEGridControlToolStrip)
         Me.GSPEDeliverableXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.GSPEDeliverableXtraTabPage.Name = "GSPEDeliverableXtraTabPage"
-        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(698, 694)
         Me.GSPEDeliverableXtraTabPage.Text = "GSPE data deliverable"
         '
         'GSPEGridControl
@@ -1821,7 +1667,7 @@ Partial Class Form1
         Me.GSPEGridControl.Location = New System.Drawing.Point(0, 25)
         Me.GSPEGridControl.MainView = Me.GridView2
         Me.GSPEGridControl.Name = "GSPEGridControl"
-        Me.GSPEGridControl.Size = New System.Drawing.Size(898, 669)
+        Me.GSPEGridControl.Size = New System.Drawing.Size(698, 669)
         Me.GSPEGridControl.TabIndex = 0
         Me.GSPEGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -2299,7 +2145,7 @@ Partial Class Form1
         Me.GSPEGridControlToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.GSPEGridControlExportFormatToolStripComboBox, Me.GSPEGridControlExportToolStripButton})
         Me.GSPEGridControlToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPEGridControlToolStrip.Name = "GSPEGridControlToolStrip"
-        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(698, 25)
         Me.GSPEGridControlToolStrip.TabIndex = 2
         Me.GSPEGridControlToolStrip.Text = "Pivot grid"
         '
@@ -2330,7 +2176,7 @@ Partial Class Form1
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.GSPEPivotGridControl)
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.SurveyPivotGridToolStrip)
         Me.GSPEPivotXtraTabPage.Name = "GSPEPivotXtraTabPage"
-        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(698, 694)
         Me.GSPEPivotXtraTabPage.Text = "Summarize data deliverable"
         '
         'GSPEPivotGridControl
@@ -2341,31 +2187,31 @@ Partial Class Form1
         Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 25)
         Me.GSPEPivotGridControl.Name = "GSPEPivotGridControl"
         Me.GSPEPivotGridControl.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized
-        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(898, 669)
+        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(698, 669)
         Me.GSPEPivotGridControl.TabIndex = 0
         '
         'fieldPark
         '
         Me.fieldPark.AreaIndex = 0
         Me.fieldPark.Caption = "Park"
-        DataSourceColumnBinding1.ColumnName = "Park"
-        Me.fieldPark.DataBinding = DataSourceColumnBinding1
+        DataSourceColumnBinding63.ColumnName = "Park"
+        Me.fieldPark.DataBinding = DataSourceColumnBinding63
         Me.fieldPark.Name = "fieldPark"
         '
         'fieldSurveyName
         '
         Me.fieldSurveyName.AreaIndex = 1
         Me.fieldSurveyName.Caption = "Survey Name"
-        DataSourceColumnBinding2.ColumnName = "SurveyName"
-        Me.fieldSurveyName.DataBinding = DataSourceColumnBinding2
+        DataSourceColumnBinding64.ColumnName = "SurveyName"
+        Me.fieldSurveyName.DataBinding = DataSourceColumnBinding64
         Me.fieldSurveyName.Name = "fieldSurveyName"
         '
         'fieldSurveyYear
         '
         Me.fieldSurveyYear.AreaIndex = 2
         Me.fieldSurveyYear.Caption = "Survey Year"
-        DataSourceColumnBinding3.ColumnName = "SurveyYear"
-        Me.fieldSurveyYear.DataBinding = DataSourceColumnBinding3
+        DataSourceColumnBinding65.ColumnName = "SurveyYear"
+        Me.fieldSurveyYear.DataBinding = DataSourceColumnBinding65
         Me.fieldSurveyYear.Name = "fieldSurveyYear"
         Me.fieldSurveyYear.Options.AllowFilter = DevExpress.Utils.DefaultBoolean.[True]
         Me.fieldSurveyYear.Options.AllowFilterBySummary = DevExpress.Utils.DefaultBoolean.[True]
@@ -2380,472 +2226,472 @@ Partial Class Form1
         '
         Me.fieldSeason.AreaIndex = 3
         Me.fieldSeason.Caption = "Season"
-        DataSourceColumnBinding4.ColumnName = "Season"
-        Me.fieldSeason.DataBinding = DataSourceColumnBinding4
+        DataSourceColumnBinding66.ColumnName = "Season"
+        Me.fieldSeason.DataBinding = DataSourceColumnBinding66
         Me.fieldSeason.Name = "fieldSeason"
         '
         'fieldSubArea
         '
         Me.fieldSubArea.AreaIndex = 4
         Me.fieldSubArea.Caption = "Sub Area"
-        DataSourceColumnBinding5.ColumnName = "SubArea"
-        Me.fieldSubArea.DataBinding = DataSourceColumnBinding5
+        DataSourceColumnBinding67.ColumnName = "SubArea"
+        Me.fieldSubArea.DataBinding = DataSourceColumnBinding67
         Me.fieldSubArea.Name = "fieldSubArea"
         '
         'fieldGMU
         '
         Me.fieldGMU.AreaIndex = 5
         Me.fieldGMU.Caption = "GMU"
-        DataSourceColumnBinding6.ColumnName = "GMU"
-        Me.fieldGMU.DataBinding = DataSourceColumnBinding6
+        DataSourceColumnBinding68.ColumnName = "GMU"
+        Me.fieldGMU.DataBinding = DataSourceColumnBinding68
         Me.fieldGMU.Name = "fieldGMU"
         '
         'fieldID
         '
         Me.fieldID.AreaIndex = 6
         Me.fieldID.Caption = "ID"
-        DataSourceColumnBinding7.ColumnName = "ID"
-        Me.fieldID.DataBinding = DataSourceColumnBinding7
+        DataSourceColumnBinding69.ColumnName = "ID"
+        Me.fieldID.DataBinding = DataSourceColumnBinding69
         Me.fieldID.Name = "fieldID"
         '
         'fieldStartDate
         '
         Me.fieldStartDate.AreaIndex = 7
         Me.fieldStartDate.Caption = "StartDate"
-        DataSourceColumnBinding8.ColumnName = "StartDate"
-        Me.fieldStartDate.DataBinding = DataSourceColumnBinding8
+        DataSourceColumnBinding70.ColumnName = "StartDate"
+        Me.fieldStartDate.DataBinding = DataSourceColumnBinding70
         Me.fieldStartDate.Name = "fieldStartDate"
         '
         'fieldStopDate
         '
         Me.fieldStopDate.AreaIndex = 8
         Me.fieldStopDate.Caption = "StopDate"
-        DataSourceColumnBinding9.ColumnName = "StopDate"
-        Me.fieldStopDate.DataBinding = DataSourceColumnBinding9
+        DataSourceColumnBinding71.ColumnName = "StopDate"
+        Me.fieldStopDate.DataBinding = DataSourceColumnBinding71
         Me.fieldStopDate.Name = "fieldStopDate"
         '
         'fieldIntID
         '
         Me.fieldIntID.AreaIndex = 9
         Me.fieldIntID.Caption = "Int ID"
-        DataSourceColumnBinding10.ColumnName = "IntID"
-        Me.fieldIntID.DataBinding = DataSourceColumnBinding10
+        DataSourceColumnBinding72.ColumnName = "IntID"
+        Me.fieldIntID.DataBinding = DataSourceColumnBinding72
         Me.fieldIntID.Name = "fieldIntID"
         '
         'fieldRand
         '
         Me.fieldRand.AreaIndex = 10
         Me.fieldRand.Caption = "Rand"
-        DataSourceColumnBinding11.ColumnName = "Rand"
-        Me.fieldRand.DataBinding = DataSourceColumnBinding11
+        DataSourceColumnBinding73.ColumnName = "Rand"
+        Me.fieldRand.DataBinding = DataSourceColumnBinding73
         Me.fieldRand.Name = "fieldRand"
         '
         'fieldFiringOrder
         '
         Me.fieldFiringOrder.AreaIndex = 11
         Me.fieldFiringOrder.Caption = "Firing Order"
-        DataSourceColumnBinding12.ColumnName = "FiringOrder"
-        Me.fieldFiringOrder.DataBinding = DataSourceColumnBinding12
+        DataSourceColumnBinding74.ColumnName = "FiringOrder"
+        Me.fieldFiringOrder.DataBinding = DataSourceColumnBinding74
         Me.fieldFiringOrder.Name = "fieldFiringOrder"
         '
         'fieldSelected
         '
         Me.fieldSelected.AreaIndex = 12
         Me.fieldSelected.Caption = "Selected"
-        DataSourceColumnBinding13.ColumnName = "Selected"
-        Me.fieldSelected.DataBinding = DataSourceColumnBinding13
+        DataSourceColumnBinding75.ColumnName = "Selected"
+        Me.fieldSelected.DataBinding = DataSourceColumnBinding75
         Me.fieldSelected.Name = "fieldSelected"
         '
         'fieldCounted
         '
         Me.fieldCounted.AreaIndex = 13
         Me.fieldCounted.Caption = "Counted"
-        DataSourceColumnBinding14.ColumnName = "Counted"
-        Me.fieldCounted.DataBinding = DataSourceColumnBinding14
+        DataSourceColumnBinding76.ColumnName = "Counted"
+        Me.fieldCounted.DataBinding = DataSourceColumnBinding76
         Me.fieldCounted.Name = "fieldCounted"
         '
         'fieldExclude
         '
         Me.fieldExclude.AreaIndex = 14
         Me.fieldExclude.Caption = "Exclude"
-        DataSourceColumnBinding15.ColumnName = "Exclude"
-        Me.fieldExclude.DataBinding = DataSourceColumnBinding15
+        DataSourceColumnBinding77.ColumnName = "Exclude"
+        Me.fieldExclude.DataBinding = DataSourceColumnBinding77
         Me.fieldExclude.Name = "fieldExclude"
         '
         'fieldStrat
         '
         Me.fieldStrat.AreaIndex = 15
         Me.fieldStrat.Caption = "Strat"
-        DataSourceColumnBinding16.ColumnName = "Strat"
-        Me.fieldStrat.DataBinding = DataSourceColumnBinding16
+        DataSourceColumnBinding78.ColumnName = "Strat"
+        Me.fieldStrat.DataBinding = DataSourceColumnBinding78
         Me.fieldStrat.Name = "fieldStrat"
         '
         'fieldStratName
         '
         Me.fieldStratName.AreaIndex = 16
         Me.fieldStratName.Caption = "Strat Name"
-        DataSourceColumnBinding17.ColumnName = "StratName"
-        Me.fieldStratName.DataBinding = DataSourceColumnBinding17
+        DataSourceColumnBinding79.ColumnName = "StratName"
+        Me.fieldStratName.DataBinding = DataSourceColumnBinding79
         Me.fieldStratName.Name = "fieldStratName"
         '
         'fieldStratMoose
         '
         Me.fieldStratMoose.AreaIndex = 17
         Me.fieldStratMoose.Caption = "Strat Moose"
-        DataSourceColumnBinding18.ColumnName = "StratMoose"
-        Me.fieldStratMoose.DataBinding = DataSourceColumnBinding18
+        DataSourceColumnBinding80.ColumnName = "StratMoose"
+        Me.fieldStratMoose.DataBinding = DataSourceColumnBinding80
         Me.fieldStratMoose.Name = "fieldStratMoose"
         '
         'fieldStratTracks
         '
         Me.fieldStratTracks.AreaIndex = 18
         Me.fieldStratTracks.Caption = "Strat Tracks"
-        DataSourceColumnBinding19.ColumnName = "StratTracks"
-        Me.fieldStratTracks.DataBinding = DataSourceColumnBinding19
+        DataSourceColumnBinding81.ColumnName = "StratTracks"
+        Me.fieldStratTracks.DataBinding = DataSourceColumnBinding81
         Me.fieldStratTracks.Name = "fieldStratTracks"
         '
         'fieldStratHab
         '
         Me.fieldStratHab.AreaIndex = 19
         Me.fieldStratHab.Caption = "Strat Hab"
-        DataSourceColumnBinding20.ColumnName = "StratHab"
-        Me.fieldStratHab.DataBinding = DataSourceColumnBinding20
+        DataSourceColumnBinding82.ColumnName = "StratHab"
+        Me.fieldStratHab.DataBinding = DataSourceColumnBinding82
         Me.fieldStratHab.Name = "fieldStratHab"
         '
         'fieldSearchMin
         '
         Me.fieldSearchMin.AreaIndex = 20
         Me.fieldSearchMin.Caption = "Search Min"
-        DataSourceColumnBinding21.ColumnName = "SearchMin"
-        Me.fieldSearchMin.DataBinding = DataSourceColumnBinding21
+        DataSourceColumnBinding83.ColumnName = "SearchMin"
+        Me.fieldSearchMin.DataBinding = DataSourceColumnBinding83
         Me.fieldSearchMin.Name = "fieldSearchMin"
         '
         'fieldDateCounted
         '
         Me.fieldDateCounted.AreaIndex = 21
         Me.fieldDateCounted.Caption = "DateCounted"
-        DataSourceColumnBinding22.ColumnName = "DateCounted"
-        Me.fieldDateCounted.DataBinding = DataSourceColumnBinding22
+        DataSourceColumnBinding84.ColumnName = "DateCounted"
+        Me.fieldDateCounted.DataBinding = DataSourceColumnBinding84
         Me.fieldDateCounted.Name = "fieldDateCounted"
         '
         'fieldPercNotFlown
         '
         Me.fieldPercNotFlown.AreaIndex = 22
         Me.fieldPercNotFlown.Caption = "Perc_Not_Flown"
-        DataSourceColumnBinding23.ColumnName = "Perc_Not_Flown"
-        Me.fieldPercNotFlown.DataBinding = DataSourceColumnBinding23
+        DataSourceColumnBinding85.ColumnName = "Perc_Not_Flown"
+        Me.fieldPercNotFlown.DataBinding = DataSourceColumnBinding85
         Me.fieldPercNotFlown.Name = "fieldPercNotFlown"
         '
         'fieldXCOORD
         '
         Me.fieldXCOORD.AreaIndex = 23
         Me.fieldXCOORD.Caption = "X_COORD"
-        DataSourceColumnBinding24.ColumnName = "X_COORD"
-        Me.fieldXCOORD.DataBinding = DataSourceColumnBinding24
+        DataSourceColumnBinding86.ColumnName = "X_COORD"
+        Me.fieldXCOORD.DataBinding = DataSourceColumnBinding86
         Me.fieldXCOORD.Name = "fieldXCOORD"
         '
         'fieldYCOORD
         '
         Me.fieldYCOORD.AreaIndex = 24
         Me.fieldYCOORD.Caption = "Y_COORD"
-        DataSourceColumnBinding25.ColumnName = "Y_COORD"
-        Me.fieldYCOORD.DataBinding = DataSourceColumnBinding25
+        DataSourceColumnBinding87.ColumnName = "Y_COORD"
+        Me.fieldYCOORD.DataBinding = DataSourceColumnBinding87
         Me.fieldYCOORD.Name = "fieldYCOORD"
         '
         'fieldAreaSqMi
         '
         Me.fieldAreaSqMi.AreaIndex = 25
         Me.fieldAreaSqMi.Caption = "Area_Sq Mi"
-        DataSourceColumnBinding26.ColumnName = "Area_SqMi"
-        Me.fieldAreaSqMi.DataBinding = DataSourceColumnBinding26
+        DataSourceColumnBinding88.ColumnName = "Area_SqMi"
+        Me.fieldAreaSqMi.DataBinding = DataSourceColumnBinding88
         Me.fieldAreaSqMi.Name = "fieldAreaSqMi"
         '
         'fieldADULT
         '
         Me.fieldADULT.AreaIndex = 26
         Me.fieldADULT.Caption = "ADULT"
-        DataSourceColumnBinding27.ColumnName = "ADULT"
-        Me.fieldADULT.DataBinding = DataSourceColumnBinding27
+        DataSourceColumnBinding89.ColumnName = "ADULT"
+        Me.fieldADULT.DataBinding = DataSourceColumnBinding89
         Me.fieldADULT.Name = "fieldADULT"
         '
         'fieldBULL3040
         '
         Me.fieldBULL3040.AreaIndex = 27
         Me.fieldBULL3040.Caption = "BULL_30_40"
-        DataSourceColumnBinding28.ColumnName = "BULL_30_40"
-        Me.fieldBULL3040.DataBinding = DataSourceColumnBinding28
+        DataSourceColumnBinding90.ColumnName = "BULL_30_40"
+        Me.fieldBULL3040.DataBinding = DataSourceColumnBinding90
         Me.fieldBULL3040.Name = "fieldBULL3040"
         '
         'fieldBULL3050
         '
         Me.fieldBULL3050.AreaIndex = 28
         Me.fieldBULL3050.Caption = "BULL_30_50"
-        DataSourceColumnBinding29.ColumnName = "BULL_30_50"
-        Me.fieldBULL3050.DataBinding = DataSourceColumnBinding29
+        DataSourceColumnBinding91.ColumnName = "BULL_30_50"
+        Me.fieldBULL3050.DataBinding = DataSourceColumnBinding91
         Me.fieldBULL3050.Name = "fieldBULL3050"
         '
         'fieldBULL3060
         '
         Me.fieldBULL3060.AreaIndex = 29
         Me.fieldBULL3060.Caption = "BULL_30_60"
-        DataSourceColumnBinding30.ColumnName = "BULL_30_60"
-        Me.fieldBULL3060.DataBinding = DataSourceColumnBinding30
+        DataSourceColumnBinding92.ColumnName = "BULL_30_60"
+        Me.fieldBULL3060.DataBinding = DataSourceColumnBinding92
         Me.fieldBULL3060.Name = "fieldBULL3060"
         '
         'fieldBULL4150
         '
         Me.fieldBULL4150.AreaIndex = 30
         Me.fieldBULL4150.Caption = "BULL_41_50"
-        DataSourceColumnBinding31.ColumnName = "BULL_41_50"
-        Me.fieldBULL4150.DataBinding = DataSourceColumnBinding31
+        DataSourceColumnBinding93.ColumnName = "BULL_41_50"
+        Me.fieldBULL4150.DataBinding = DataSourceColumnBinding93
         Me.fieldBULL4150.Name = "fieldBULL4150"
         '
         'fieldBULLALL
         '
         Me.fieldBULLALL.AreaIndex = 31
         Me.fieldBULLALL.Caption = "BULL_ALL"
-        DataSourceColumnBinding32.ColumnName = "BULL_ALL"
-        Me.fieldBULLALL.DataBinding = DataSourceColumnBinding32
+        DataSourceColumnBinding94.ColumnName = "BULL_ALL"
+        Me.fieldBULLALL.DataBinding = DataSourceColumnBinding94
         Me.fieldBULLALL.Name = "fieldBULLALL"
         '
         'fieldBULLGT50
         '
         Me.fieldBULLGT50.AreaIndex = 32
         Me.fieldBULLGT50.Caption = "BULL_GT_50"
-        DataSourceColumnBinding33.ColumnName = "BULL_GT_50"
-        Me.fieldBULLGT50.DataBinding = DataSourceColumnBinding33
+        DataSourceColumnBinding95.ColumnName = "BULL_GT_50"
+        Me.fieldBULLGT50.DataBinding = DataSourceColumnBinding95
         Me.fieldBULLGT50.Name = "fieldBULLGT50"
         '
         'fieldBULLGT60
         '
         Me.fieldBULLGT60.AreaIndex = 33
         Me.fieldBULLGT60.Caption = "BULL_GT_60"
-        DataSourceColumnBinding34.ColumnName = "BULL_GT_60"
-        Me.fieldBULLGT60.DataBinding = DataSourceColumnBinding34
+        DataSourceColumnBinding96.ColumnName = "BULL_GT_60"
+        Me.fieldBULLGT60.DataBinding = DataSourceColumnBinding96
         Me.fieldBULLGT60.Name = "fieldBULLGT60"
         '
         'fieldBULLGTE50
         '
         Me.fieldBULLGTE50.AreaIndex = 34
         Me.fieldBULLGTE50.Caption = "BULL_GTE_50"
-        DataSourceColumnBinding35.ColumnName = "BULL_GTE_50"
-        Me.fieldBULLGTE50.DataBinding = DataSourceColumnBinding35
+        DataSourceColumnBinding97.ColumnName = "BULL_GTE_50"
+        Me.fieldBULLGTE50.DataBinding = DataSourceColumnBinding97
         Me.fieldBULLGTE50.Name = "fieldBULLGTE50"
         '
         'fieldBULLLT30
         '
         Me.fieldBULLLT30.AreaIndex = 35
         Me.fieldBULLLT30.Caption = "BULL_LT_30"
-        DataSourceColumnBinding36.ColumnName = "BULL_LT_30"
-        Me.fieldBULLLT30.DataBinding = DataSourceColumnBinding36
+        DataSourceColumnBinding98.ColumnName = "BULL_LT_30"
+        Me.fieldBULLLT30.DataBinding = DataSourceColumnBinding98
         Me.fieldBULLLT30.Name = "fieldBULLLT30"
         '
         'fieldBULLLT50
         '
         Me.fieldBULLLT50.AreaIndex = 36
         Me.fieldBULLLT50.Caption = "BULL_LT_50"
-        DataSourceColumnBinding37.ColumnName = "BULL_LT_50"
-        Me.fieldBULLLT50.DataBinding = DataSourceColumnBinding37
+        DataSourceColumnBinding99.ColumnName = "BULL_LT_50"
+        Me.fieldBULLLT50.DataBinding = DataSourceColumnBinding99
         Me.fieldBULLLT50.Name = "fieldBULLLT50"
         '
         'fieldCALF
         '
         Me.fieldCALF.AreaIndex = 37
         Me.fieldCALF.Caption = "CALF"
-        DataSourceColumnBinding38.ColumnName = "CALF"
-        Me.fieldCALF.DataBinding = DataSourceColumnBinding38
+        DataSourceColumnBinding100.ColumnName = "CALF"
+        Me.fieldCALF.DataBinding = DataSourceColumnBinding100
         Me.fieldCALF.Name = "fieldCALF"
         '
         'fieldCOW
         '
         Me.fieldCOW.AreaIndex = 38
         Me.fieldCOW.Caption = "COW"
-        DataSourceColumnBinding39.ColumnName = "COW"
-        Me.fieldCOW.DataBinding = DataSourceColumnBinding39
+        DataSourceColumnBinding101.ColumnName = "COW"
+        Me.fieldCOW.DataBinding = DataSourceColumnBinding101
         Me.fieldCOW.Name = "fieldCOW"
         '
         'fieldCOWW0
         '
         Me.fieldCOWW0.AreaIndex = 39
         Me.fieldCOWW0.Caption = "COW_W_0"
-        DataSourceColumnBinding40.ColumnName = "COW_W_0"
-        Me.fieldCOWW0.DataBinding = DataSourceColumnBinding40
+        DataSourceColumnBinding102.ColumnName = "COW_W_0"
+        Me.fieldCOWW0.DataBinding = DataSourceColumnBinding102
         Me.fieldCOWW0.Name = "fieldCOWW0"
         '
         'fieldCOWW1
         '
         Me.fieldCOWW1.AreaIndex = 40
         Me.fieldCOWW1.Caption = "COW_W_1"
-        DataSourceColumnBinding41.ColumnName = "COW_W_1"
-        Me.fieldCOWW1.DataBinding = DataSourceColumnBinding41
+        DataSourceColumnBinding103.ColumnName = "COW_W_1"
+        Me.fieldCOWW1.DataBinding = DataSourceColumnBinding103
         Me.fieldCOWW1.Name = "fieldCOWW1"
         '
         'fieldCOWW2
         '
         Me.fieldCOWW2.AreaIndex = 41
         Me.fieldCOWW2.Caption = "COW_W_2"
-        DataSourceColumnBinding42.ColumnName = "COW_W_2"
-        Me.fieldCOWW2.DataBinding = DataSourceColumnBinding42
+        DataSourceColumnBinding104.ColumnName = "COW_W_2"
+        Me.fieldCOWW2.DataBinding = DataSourceColumnBinding104
         Me.fieldCOWW2.Name = "fieldCOWW2"
         '
         'fieldCOWW3
         '
         Me.fieldCOWW3.AreaIndex = 42
         Me.fieldCOWW3.Caption = "COW_W_3"
-        DataSourceColumnBinding43.ColumnName = "COW_W_3"
-        Me.fieldCOWW3.DataBinding = DataSourceColumnBinding43
+        DataSourceColumnBinding105.ColumnName = "COW_W_3"
+        Me.fieldCOWW3.DataBinding = DataSourceColumnBinding105
         Me.fieldCOWW3.Name = "fieldCOWW3"
         '
         'fieldLGBULL
         '
         Me.fieldLGBULL.AreaIndex = 43
         Me.fieldLGBULL.Caption = "LG_BULL"
-        DataSourceColumnBinding44.ColumnName = "LG_BULL"
-        Me.fieldLGBULL.DataBinding = DataSourceColumnBinding44
+        DataSourceColumnBinding106.ColumnName = "LG_BULL"
+        Me.fieldLGBULL.DataBinding = DataSourceColumnBinding106
         Me.fieldLGBULL.Name = "fieldLGBULL"
         '
         'fieldMEDBULL
         '
         Me.fieldMEDBULL.AreaIndex = 44
         Me.fieldMEDBULL.Caption = "MED_BULL"
-        DataSourceColumnBinding45.ColumnName = "MED_BULL"
-        Me.fieldMEDBULL.DataBinding = DataSourceColumnBinding45
+        DataSourceColumnBinding107.ColumnName = "MED_BULL"
+        Me.fieldMEDBULL.DataBinding = DataSourceColumnBinding107
         Me.fieldMEDBULL.Name = "fieldMEDBULL"
         '
         'fieldMEDLBULL
         '
         Me.fieldMEDLBULL.AreaIndex = 45
         Me.fieldMEDLBULL.Caption = "MED_L_BULL"
-        DataSourceColumnBinding46.ColumnName = "MED_L_BULL"
-        Me.fieldMEDLBULL.DataBinding = DataSourceColumnBinding46
+        DataSourceColumnBinding108.ColumnName = "MED_L_BULL"
+        Me.fieldMEDLBULL.DataBinding = DataSourceColumnBinding108
         Me.fieldMEDLBULL.Name = "fieldMEDLBULL"
         '
         'fieldSMBULL
         '
         Me.fieldSMBULL.AreaIndex = 46
         Me.fieldSMBULL.Caption = "SM_BULL"
-        DataSourceColumnBinding47.ColumnName = "SM_BULL"
-        Me.fieldSMBULL.DataBinding = DataSourceColumnBinding47
+        DataSourceColumnBinding109.ColumnName = "SM_BULL"
+        Me.fieldSMBULL.DataBinding = DataSourceColumnBinding109
         Me.fieldSMBULL.Name = "fieldSMBULL"
         '
         'fieldUNKNOWN
         '
         Me.fieldUNKNOWN.AreaIndex = 47
         Me.fieldUNKNOWN.Caption = "UNKNOWN"
-        DataSourceColumnBinding48.ColumnName = "UNKNOWN"
-        Me.fieldUNKNOWN.DataBinding = DataSourceColumnBinding48
+        DataSourceColumnBinding110.ColumnName = "UNKNOWN"
+        Me.fieldUNKNOWN.DataBinding = DataSourceColumnBinding110
         Me.fieldUNKNOWN.Name = "fieldUNKNOWN"
         '
         'fieldYBULLALL
         '
         Me.fieldYBULLALL.AreaIndex = 48
         Me.fieldYBULLALL.Caption = "YBULL_ALL"
-        DataSourceColumnBinding49.ColumnName = "YBULL_ALL"
-        Me.fieldYBULLALL.DataBinding = DataSourceColumnBinding49
+        DataSourceColumnBinding111.ColumnName = "YBULL_ALL"
+        Me.fieldYBULLALL.DataBinding = DataSourceColumnBinding111
         Me.fieldYBULLALL.Name = "fieldYBULLALL"
         '
         'fieldYBULLGTSF
         '
         Me.fieldYBULLGTSF.AreaIndex = 49
         Me.fieldYBULLGTSF.Caption = "YBULL_GTSF"
-        DataSourceColumnBinding50.ColumnName = "YBULL_GTSF"
-        Me.fieldYBULLGTSF.DataBinding = DataSourceColumnBinding50
+        DataSourceColumnBinding112.ColumnName = "YBULL_GTSF"
+        Me.fieldYBULLGTSF.DataBinding = DataSourceColumnBinding112
         Me.fieldYBULLGTSF.Name = "fieldYBULLGTSF"
         '
         'fieldYBULLSF
         '
         Me.fieldYBULLSF.AreaIndex = 50
         Me.fieldYBULLSF.Caption = "YBULL_SF"
-        DataSourceColumnBinding51.ColumnName = "YBULL_SF"
-        Me.fieldYBULLSF.DataBinding = DataSourceColumnBinding51
+        DataSourceColumnBinding113.ColumnName = "YBULL_SF"
+        Me.fieldYBULLSF.DataBinding = DataSourceColumnBinding113
         Me.fieldYBULLSF.Name = "fieldYBULLSF"
         '
         'fieldMOOSE
         '
         Me.fieldMOOSE.AreaIndex = 51
         Me.fieldMOOSE.Caption = "MOOSE"
-        DataSourceColumnBinding52.ColumnName = "MOOSE"
-        Me.fieldMOOSE.DataBinding = DataSourceColumnBinding52
+        DataSourceColumnBinding114.ColumnName = "MOOSE"
+        Me.fieldMOOSE.DataBinding = DataSourceColumnBinding114
         Me.fieldMOOSE.Name = "fieldMOOSE"
         '
         'fieldPilot
         '
         Me.fieldPilot.AreaIndex = 52
         Me.fieldPilot.Caption = "Pilot"
-        DataSourceColumnBinding53.ColumnName = "Pilot"
-        Me.fieldPilot.DataBinding = DataSourceColumnBinding53
+        DataSourceColumnBinding115.ColumnName = "Pilot"
+        Me.fieldPilot.DataBinding = DataSourceColumnBinding115
         Me.fieldPilot.Name = "fieldPilot"
         '
         'fieldObserver
         '
         Me.fieldObserver.AreaIndex = 53
         Me.fieldObserver.Caption = "Observer"
-        DataSourceColumnBinding54.ColumnName = "Observer"
-        Me.fieldObserver.DataBinding = DataSourceColumnBinding54
+        DataSourceColumnBinding116.ColumnName = "Observer"
+        Me.fieldObserver.DataBinding = DataSourceColumnBinding116
         Me.fieldObserver.Name = "fieldObserver"
         '
         'fieldPersonnel
         '
         Me.fieldPersonnel.AreaIndex = 54
         Me.fieldPersonnel.Caption = "Personnel"
-        DataSourceColumnBinding55.ColumnName = "Personnel"
-        Me.fieldPersonnel.DataBinding = DataSourceColumnBinding55
+        DataSourceColumnBinding117.ColumnName = "Personnel"
+        Me.fieldPersonnel.DataBinding = DataSourceColumnBinding117
         Me.fieldPersonnel.Name = "fieldPersonnel"
         '
         'fieldDensity
         '
         Me.fieldDensity.AreaIndex = 55
         Me.fieldDensity.Caption = "Density"
-        DataSourceColumnBinding56.ColumnName = "Density"
-        Me.fieldDensity.DataBinding = DataSourceColumnBinding56
+        DataSourceColumnBinding118.ColumnName = "Density"
+        Me.fieldDensity.DataBinding = DataSourceColumnBinding118
         Me.fieldDensity.Name = "fieldDensity"
         '
         'fieldSCFPlot
         '
         Me.fieldSCFPlot.AreaIndex = 56
         Me.fieldSCFPlot.Caption = "SCF_Plot"
-        DataSourceColumnBinding57.ColumnName = "SCF_Plot"
-        Me.fieldSCFPlot.DataBinding = DataSourceColumnBinding57
+        DataSourceColumnBinding119.ColumnName = "SCF_Plot"
+        Me.fieldSCFPlot.DataBinding = DataSourceColumnBinding119
         Me.fieldSCFPlot.Name = "fieldSCFPlot"
         '
         'fieldStd
         '
         Me.fieldStd.AreaIndex = 57
         Me.fieldStd.Caption = "Std"
-        DataSourceColumnBinding58.ColumnName = "Std"
-        Me.fieldStd.DataBinding = DataSourceColumnBinding58
+        DataSourceColumnBinding120.ColumnName = "Std"
+        Me.fieldStd.DataBinding = DataSourceColumnBinding120
         Me.fieldStd.Name = "fieldStd"
         '
         'fieldInt
         '
         Me.fieldInt.AreaIndex = 58
         Me.fieldInt.Caption = "Int"
-        DataSourceColumnBinding59.ColumnName = "Int"
-        Me.fieldInt.DataBinding = DataSourceColumnBinding59
+        DataSourceColumnBinding121.ColumnName = "Int"
+        Me.fieldInt.DataBinding = DataSourceColumnBinding121
         Me.fieldInt.Name = "fieldInt"
         '
         'fieldComments
         '
         Me.fieldComments.AreaIndex = 59
         Me.fieldComments.Caption = "Comments"
-        DataSourceColumnBinding60.ColumnName = "Comments"
-        Me.fieldComments.DataBinding = DataSourceColumnBinding60
+        DataSourceColumnBinding122.ColumnName = "Comments"
+        Me.fieldComments.DataBinding = DataSourceColumnBinding122
         Me.fieldComments.Name = "fieldComments"
         '
         'fieldSourceFilename
         '
         Me.fieldSourceFilename.AreaIndex = 60
         Me.fieldSourceFilename.Caption = "Source Filename"
-        DataSourceColumnBinding61.ColumnName = "SourceFilename"
-        Me.fieldSourceFilename.DataBinding = DataSourceColumnBinding61
+        DataSourceColumnBinding123.ColumnName = "SourceFilename"
+        Me.fieldSourceFilename.DataBinding = DataSourceColumnBinding123
         Me.fieldSourceFilename.Name = "fieldSourceFilename"
         '
         'fieldCertificationLevel
         '
         Me.fieldCertificationLevel.AreaIndex = 61
         Me.fieldCertificationLevel.Caption = "Certification Level"
-        DataSourceColumnBinding62.ColumnName = "CertificationLevel"
-        Me.fieldCertificationLevel.DataBinding = DataSourceColumnBinding62
+        DataSourceColumnBinding124.ColumnName = "CertificationLevel"
+        Me.fieldCertificationLevel.DataBinding = DataSourceColumnBinding124
         Me.fieldCertificationLevel.Name = "fieldCertificationLevel"
         '
         'SurveyPivotGridToolStrip
@@ -2853,7 +2699,7 @@ Partial Class Form1
         Me.SurveyPivotGridToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SurveyPivotGridToolStripLabel, Me.ExportPivotGridToolStripComboBox, Me.ExportPivotGridToolStripButton})
         Me.SurveyPivotGridToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SurveyPivotGridToolStrip.Name = "SurveyPivotGridToolStrip"
-        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(698, 25)
         Me.SurveyPivotGridToolStrip.TabIndex = 1
         Me.SurveyPivotGridToolStrip.Text = "Pivot grid"
         '
@@ -2885,7 +2731,7 @@ Partial Class Form1
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderPanel.Location = New System.Drawing.Point(242, 25)
         Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(900, 39)
+        Me.HeaderPanel.Size = New System.Drawing.Size(700, 39)
         Me.HeaderPanel.TabIndex = 2
         '
         'HeaderLabel
@@ -2897,16 +2743,16 @@ Partial Class Form1
         Me.HeaderLabel.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HeaderLabel.Location = New System.Drawing.Point(6, 9)
         Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(891, 23)
+        Me.HeaderLabel.Size = New System.Drawing.Size(691, 23)
         Me.HeaderLabel.TabIndex = 0
         Me.HeaderLabel.Text = "Label1"
         '
         'MainToolStrip
         '
-        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton, Me.ToolStripSeparator3, Me.DirectoriesToolStripDropDownButton})
+        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton, Me.ToolStripSeparator3, Me.DirectoriesToolStripDropDownButton, Me.ToolStripSeparator4})
         Me.MainToolStrip.Location = New System.Drawing.Point(242, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(900, 25)
+        Me.MainToolStrip.Size = New System.Drawing.Size(700, 25)
         Me.MainToolStrip.TabIndex = 4
         Me.MainToolStrip.Text = "ToolStrip1"
         '
@@ -2955,7 +2801,7 @@ Partial Class Form1
         'DirectoriesToolStripDropDownButton
         '
         Me.DirectoriesToolStripDropDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.DirectoriesToolStripDropDownButton.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.ARCNMasterDataStoreReferenceToolStripMenuItem, Me.CAKNMasterDataStoreReferenceToolStripMenuItem})
+        Me.DirectoriesToolStripDropDownButton.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.ARCNMasterDataStoreReferenceToolStripMenuItem, Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.CAKNMasterDataStoreReferenceToolStripMenuItem, Me.OpenToolStripMenuItem})
         Me.DirectoriesToolStripDropDownButton.Image = CType(resources.GetObject("DirectoriesToolStripDropDownButton.Image"), System.Drawing.Image)
         Me.DirectoriesToolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DirectoriesToolStripDropDownButton.Name = "DirectoriesToolStripDropDownButton"
@@ -2968,23 +2814,34 @@ Partial Class Form1
         Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
         Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Text = "ARCN moose monitoring shared directory"
         '
-        'OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem
-        '
-        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Name = "OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem"
-        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
-        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Text = "CAKN moose monitoring shared directory"
-        '
         'ARCNMasterDataStoreReferenceToolStripMenuItem
         '
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Name = "ARCNMasterDataStoreReferenceToolStripMenuItem"
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Text = "ARCN master Data Store reference..."
         '
+        'OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem
+        '
+        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Name = "OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem"
+        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Text = "CAKN moose monitoring shared directory"
+        '
         'CAKNMasterDataStoreReferenceToolStripMenuItem
         '
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Name = "CAKNMasterDataStoreReferenceToolStripMenuItem"
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Text = "CAKN master Data Store reference..."
+        '
+        'OpenToolStripMenuItem
+        '
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.OpenToolStripMenuItem.Text = "ARCN moose monitoring shared directory"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'DockManager1
         '
@@ -3007,7 +2864,7 @@ Partial Class Form1
         Me.SummaryDockPanel2.Controls.Add(Me.ControlContainer5)
         Me.SummaryDockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.SummaryDockPanel2.ID = New System.Guid("44b04e58-9107-4a5a-a9c1-89631044cb0c")
-        Me.SummaryDockPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.SummaryDockPanel2.Location = New System.Drawing.Point(963, 0)
         Me.SummaryDockPanel2.Name = "SummaryDockPanel2"
         Me.SummaryDockPanel2.OriginalSize = New System.Drawing.Size(200, 200)
         Me.SummaryDockPanel2.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
@@ -3035,6 +2892,24 @@ Partial Class Form1
         Me.SummaryTextBox2.Size = New System.Drawing.Size(193, 757)
         Me.SummaryTextBox2.TabIndex = 2
         '
+        'SurveysInventoryToolStrip
+        '
+        Me.SurveysInventoryToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddSurveyToolStripButton})
+        Me.SurveysInventoryToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.SurveysInventoryToolStrip.Name = "SurveysInventoryToolStrip"
+        Me.SurveysInventoryToolStrip.Size = New System.Drawing.Size(235, 25)
+        Me.SurveysInventoryToolStrip.TabIndex = 1
+        Me.SurveysInventoryToolStrip.Text = "ToolStrip1"
+        '
+        'AddSurveyToolStripButton
+        '
+        Me.AddSurveyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.AddSurveyToolStripButton.Image = CType(resources.GetObject("AddSurveyToolStripButton.Image"), System.Drawing.Image)
+        Me.AddSurveyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AddSurveyToolStripButton.Name = "AddSurveyToolStripButton"
+        Me.AddSurveyToolStripButton.Size = New System.Drawing.Size(104, 22)
+        Me.AddSurveyToolStripButton.Text = "Add new survey..."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3043,6 +2918,7 @@ Partial Class Form1
         Me.Controls.Add(Me.MainXtraTabControl)
         Me.Controls.Add(Me.HeaderPanel)
         Me.Controls.Add(Me.MainToolStrip)
+        Me.Controls.Add(Me.DatasetProcessingStepsDockPanel)
         Me.Controls.Add(Me.SurveySelectorDockPanel)
         Me.Controls.Add(Me.hideContainerRight)
         Me.Controls.Add(Me.AutoHideContainer1)
@@ -3062,15 +2938,18 @@ Partial Class Form1
         Me.CommentsDockPanel.ResumeLayout(False)
         Me.ControlContainer3.ResumeLayout(False)
         Me.ControlContainer3.PerformLayout()
-        Me.DatasetProcessingStepsDockPanel.ResumeLayout(False)
-        Me.ControlContainer4.ResumeLayout(False)
-        Me.ControlContainer4.PerformLayout()
         Me.SummaryDockPanel.ResumeLayout(False)
         Me.ControlContainer2.ResumeLayout(False)
         Me.ControlContainer2.PerformLayout()
         Me.SurveySelectorDockPanel.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
+        Me.DockPanel1_Container.PerformLayout()
         CType(Me.SurveysListBoxControl, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DatasetProcessingStepsDockPanel.ResumeLayout(False)
+        Me.ControlContainer4.ResumeLayout(False)
+        Me.ControlContainer4.PerformLayout()
+        Me.DatasetProcessingStepsToolStrip.ResumeLayout(False)
+        Me.DatasetProcessingStepsToolStrip.PerformLayout()
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SurveyContextMenuStrip.ResumeLayout(False)
         CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3083,17 +2962,16 @@ Partial Class Form1
         Me.ResultsSplitContainer.Panel2.ResumeLayout(False)
         CType(Me.ResultsSplitContainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer.ResumeLayout(False)
-        CType(Me.PopulationGridControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PopEstGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PopulationEstimatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKGSPEPopulationEstimatesGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer2.Panel1.ResumeLayout(False)
         Me.ResultsSplitContainer2.Panel2.ResumeLayout(False)
         CType(Me.ResultsSplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer2.ResumeLayout(False)
-        CType(Me.DensityGridControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ResultsGridControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ResultsSourceLinkRepositoryItemHyperLinkEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DensityEstimatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKGSPEDensityEstimatesGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ResultsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKGSPERatiosGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GSPEDeliverableXtraTabPage.ResumeLayout(False)
@@ -3115,6 +2993,8 @@ Partial Class Form1
         Me.SummaryDockPanel2.ResumeLayout(False)
         Me.ControlContainer5.ResumeLayout(False)
         Me.ControlContainer5.PerformLayout()
+        Me.SurveysInventoryToolStrip.ResumeLayout(False)
+        Me.SurveysInventoryToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3167,95 +3047,7 @@ Partial Class Form1
     Friend WithEvents rowValidatedBy As DevExpress.XtraVerticalGrid.Rows.EditorRow
     Friend WithEvents ResultsXtraTabPage As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents ResultsSplitContainer As SplitContainer
-    Friend WithEvents PopulationGridControl As DevExpress.XtraGrid.GridControl
-    Friend WithEvents PopEstGridView As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents colSurveyName As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colParkSubArea As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colAnalysis_Column As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colStrata As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colConfidence As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colPopulation_Estimate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colStandard_Error As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colLower_Limit As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colUpper_Limit As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colProportion_of_Mean As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colStrata_Column As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colAnalysis_Area As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCounted_Column As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colUnit_Area_Column As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colSurveyArea As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colSampledArea As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colIntensity As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRelativePrecision As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colSightabilityCorrectionFactor As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDensity As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colComments As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colReportDate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colAnalysisPerformedBy As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colPopulationEstimateSource As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRecordInsertedDate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRecordInsertedBy As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colValidatedDate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colValidatedBy As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ResultsSplitContainer2 As SplitContainer
-    Friend WithEvents DensityGridControl As DevExpress.XtraGrid.GridControl
-    Friend WithEvents GridView3 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents colSurveyName1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colParkSubArea1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colStratum As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDensity_Estimate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDensity_AreaSurveyed_SqMi As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDensity_AverageSearchEffort As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDensityEstimateMethodology As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colDensityEstimateSource As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colReportDate1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colComments1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRecordInsertedDate1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRecordInsertedBy1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colValidatedDate1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colValidatedBy1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents ResultsGridControl As DevExpress.XtraGrid.GridControl
-    Friend WithEvents GridView4 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents colSurveyName2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colParkSubArea2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBullCowRatio As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCalfCowRatio As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCalfAdultRatio As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colADULT As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_30_40 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_30_50 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_30_60 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_41_50 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_ALL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_GT_50 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_GT_60 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_GTE_50 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_LT_30 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colBULL_LT_50 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCALF As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCOW As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCOW_W_0 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCOW_W_1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCOW_W_2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCOW_W_3 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colLG_BULL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colMED_BULL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colMED_L_BULL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colSM_BULL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colUNKNOWN As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colYBULL_ALL As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colYBULL_GTSF As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colYBULL_SF As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colMOOSE As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colSubAreaSurveyed_SqMi As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colSubAreaAverageSearchEffort As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colMethodologyUsed As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colResultsSource As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colComments2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRecordInsertedDate2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colRecordInsertedBy2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colValidatedDate2 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colValidatedBy2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents AbstractRepositoryItemMemoEdit As DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit
@@ -3266,8 +3058,6 @@ Partial Class Form1
     Friend WithEvents OpenProtocolReferenceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HeaderPanel As Panel
     Friend WithEvents HeaderLabel As Label
-    Friend WithEvents ResultsSourceLinkGridColumn As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents ResultsSourceLinkRepositoryItemHyperLinkEdit As DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit
     Friend WithEvents OpenDataDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MainToolStrip As ToolStrip
     Friend WithEvents SaveToolStripButton As ToolStripButton
@@ -3407,7 +3197,6 @@ Partial Class Form1
     Friend WithEvents fieldComments As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents fieldSourceFilename As DevExpress.XtraPivotGrid.PivotGridField
     Friend WithEvents fieldCertificationLevel As DevExpress.XtraPivotGrid.PivotGridField
-    Friend WithEvents colPopulationSourceLink As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents DataShaperToolStripButton As ToolStripButton
     Friend WithEvents SurveyDetailsPanel As Panel
     Friend WithEvents SurveyDetailsLabel As Label
@@ -3437,12 +3226,108 @@ Partial Class Form1
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents GSPEGridControlExportFormatToolStripComboBox As ToolStripComboBox
     Friend WithEvents GSPEGridControlExportToolStripButton As ToolStripButton
-    Friend WithEvents Analysis_ColumnGridColumn As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents DensityEstimateSourceLinkGridColumn As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents DirectoriesToolStripDropDownButton As ToolStripDropDownButton
     Friend WithEvents OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ARCNMasterDataStoreReferenceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CAKNMasterDataStoreReferenceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DatasetProcessingStepsToolStrip As ToolStrip
+    Friend WithEvents AddProcessingNoteToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PopulationEstimatesDataGridView As DataGridView
+    Friend WithEvents ParkSubAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AnalysisColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StrataDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ConfidenceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PopulationEstimateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StandardErrorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LowerLimitDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UpperLimitDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProportionofMeanDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StrataColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AnalysisAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CountedColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UnitAreaColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SurveyAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SampledAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IntensityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RelativePrecisionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SightabilityCorrectionFactorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DensityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ReportDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AnalysisPerformedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PopulationEstimateSourceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PopulationSourceLinkDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CommentsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ValidatedDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ValidatedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SurveyNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FKGSPEPopulationEstimatesGSPESurveysBindingSource As BindingSource
+    Friend WithEvents DensityEstimatesDataGridView As DataGridView
+    Friend WithEvents ParkSubAreaDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents AnalysisColumnDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents StratumDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DensityEstimateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DensityAreaSurveyedSqMiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DensityAverageSearchEffortDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DensityEstimateMethodologyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ReportDateDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DensityEstimateSourceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DensityEstimateSourceLinkDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CommentsDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ValidatedDateDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ValidatedByDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedDateDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents SurveyNameDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents FKGSPEDensityEstimatesGSPESurveysBindingSource As BindingSource
+    Friend WithEvents ResultsDataGridView As DataGridView
+    Friend WithEvents ParkSubAreaDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents BullCowRatioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CalfCowRatioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CalfAdultRatioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ADULTDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULL3040DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULL3050DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULL3060DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULL4150DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULLALLDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULLGT50DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULLGT60DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULLGTE50DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULLLT30DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BULLLT50DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CALFDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents COWDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents COWW0DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents COWW1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents COWW2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents COWW3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LGBULLDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MEDBULLDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MEDLBULLDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SMBULLDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UNKNOWNDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents YBULLALLDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents YBULLGTSFDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents YBULLSFDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MOOSEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SubAreaSurveyedSqMiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SubAreaAverageSearchEffortDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MethodologyUsedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ResultsSourceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ResultsSourceLinkDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CommentsDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents ValidatedDateDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents ValidatedByDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedDateDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents SurveyNameDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents FKGSPERatiosGSPESurveysBindingSource As BindingSource
+    Friend WithEvents SurveysInventoryToolStrip As ToolStrip
+    Friend WithEvents AddSurveyToolStripButton As ToolStripButton
 End Class

@@ -110,7 +110,38 @@ Public Class Form1
     End Sub
 
 
+    Private Sub AddNewSurveyRecord()
+        Try
+            Dim NewSurveyName As String = InputBox("Enter a name for the new survey", "Add a new survey record")
+            Dim SurveyYear As String = InputBox("What year did the survey take place?", "Year")
+            If NewSurveyName.Trim.Length > 0 Then
+                If SurveyYear.Trim.Length > 0 Then
+                    If IsNumeric(SurveyYear) = True Then
+                        Dim NewGSPE_SurveyDataRow As DataRow = MooseDataSet.Tables("GSPE_Surveys").NewRow
+                        With NewGSPE_SurveyDataRow
+                            .Item("SurveyName") = NewSurveyName.Trim
+                            .Item("Year") = CInt(SurveyYear)
+                            .Item("DatasetProcessingSteps") = Now & " " & My.User.Name & ": " & NewSurveyName & " survey record created."
+                            .Item("RecordInsertedDate") = Now
+                            .Item("RecordInsertedBy") = My.User.Name
+                        End With
+                        MooseDataSet.Tables("GSPE_Surveys").Rows.Add(NewGSPE_SurveyDataRow)
+                        MsgBox("Your new survey record, " & NewSurveyName & " is now available in the surveys inventory selector.")
 
+                    Else
+                        MsgBox("Year must be numeric.")
+
+                    End If
+                Else
+                    MsgBox("Survey year is required.")
+                End If
+            Else
+                MsgBox("Survey name is required.")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
 
 
 
@@ -131,9 +162,6 @@ Public Class Form1
         LoadDataset()
 
         'Set up the grid controls the way I like them
-        SetUpGridControl(Me.PopulationGridControl, False, True, False)
-        SetUpGridControl(Me.DensityGridControl, False, False, False)
-        SetUpGridControl(Me.ResultsGridControl, False, False, False)
         SetUpGridControl(Me.GSPEGridControl, True, True, False)
 
         'Set up survey vertical grid control
@@ -340,10 +368,12 @@ Public Class Form1
 
 
     Private Sub GSPE_SurveysBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.CurrentChanged
-        SetUpGridControl(Me.PopulationGridControl, False, True, False)
+        EndEdits()
+
+        'SetUpGridControl(Me.PopulationGridControl, False, True, False)
     End Sub
 
-    Private Sub PopulationGridControl_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs) Handles PopulationGridControl.PreviewKeyDown
+    Private Sub PopulationGridControl_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs)
         'Dim gridControl As GridControl = CType(sender, GridControl)
         'Dim currentView As GridView = CType(gridControl.FocusedView, GridView)
         'If e.KeyCode = Keys.Delete Then
@@ -351,5 +381,83 @@ Public Class Form1
         '        currentView.DeleteRow(currentView.FocusedRowHandle)
         '    End If
         'End If
+    End Sub
+
+    Private Sub PopEstGridView_InitNewRow(sender As Object, e As InitNewRowEventArgs)
+        'Set up automatically the values for RecordInsertedDate and RecordInsertedBy.
+        SetUpRecordInsertedByAndDateDefaultValues(sender, e)
+    End Sub
+
+    Private Sub DensityGridView_InitNewRow(sender As Object, e As InitNewRowEventArgs)
+        'Set up automatically the values for RecordInsertedDate and RecordInsertedBy.
+        SetUpRecordInsertedByAndDateDefaultValues(sender, e)
+    End Sub
+
+    Private Sub ResultsGridView_InitNewRow(sender As Object, e As InitNewRowEventArgs)
+        'Set up automatically the values for RecordInsertedDate and RecordInsertedBy.
+        SetUpRecordInsertedByAndDateDefaultValues(sender, e)
+    End Sub
+
+    Private Sub AddProcessingNoteToolStripButton_Click(sender As Object, e As EventArgs) Handles AddProcessingNoteToolStripButton.Click
+        Dim ProcessingNotes As String = Me.DatasetProcessingStepsTextBox.Text.Trim
+        ProcessingNotes = ProcessingNotes & vbNewLine & Now & " " & My.User.Name & ":"
+        'Debug.Print(ProcessingNotes)
+        Me.DatasetProcessingStepsTextBox.Text = ProcessingNotes
+    End Sub
+
+    Private Sub NewSurveyRecordToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        'allow user to add a new survey record
+        AddNewSurveyRecord()
+    End Sub
+
+    Private Sub PopulationEstimatesDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles PopulationEstimatesDataGridView.DataError
+        Try
+            MsgBox(e.Exception.Message)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub DensityEstimatesDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles DensityEstimatesDataGridView.DataError
+        Try
+            MsgBox(e.Exception.Message)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub ResultsDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles ResultsDataGridView.DataError
+        Try
+            MsgBox(e.Exception.Message)
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub PopulationEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles PopulationEstimatesDataGridView.DefaultValuesNeeded
+        'Pre-enter metadata on new records
+        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
+        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
+    End Sub
+
+    Private Sub DensityEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles DensityEstimatesDataGridView.DefaultValuesNeeded
+        'Pre-enter metadata on new records
+        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
+        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
+        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn1").Value = Now
+        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn1").Value = My.User.Name
+    End Sub
+
+    Private Sub ResultsDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles ResultsDataGridView.DefaultValuesNeeded
+        'Pre-enter metadata on new records
+        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
+        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
+        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn2").Value = Now
+        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn2").Value = My.User.Name
+    End Sub
+
+    Private Sub AddSurveyToolStripButton_Click(sender As Object, e As EventArgs) Handles AddSurveyToolStripButton.Click
+        'Open a form to add a new survey to the inventory
+        AddNewSurveyRecord()
     End Sub
 End Class

@@ -76,7 +76,16 @@ Module Utilities
         End Try
     End Sub
 
-
+    ''' <summary>
+    ''' My database tables generally all have two columns that record the date a new record is inserted and the the person inserting. These are default values that the GridView must handle. This Sub automates this task.
+    ''' </summary>
+    ''' <param name="sender">sender. This will be the calling GridView.</param>
+    ''' <param name="e">InitNewRowEventArgs.</param>
+    Public Sub SetUpRecordInsertedByAndDateDefaultValues(sender As Object, e As InitNewRowEventArgs)
+        Dim V As DevExpress.XtraGrid.Views.Grid.GridView = sender
+        V.SetRowCellValue(e.RowHandle, "RecordInsertedDate", Now)
+        V.SetRowCellValue(e.RowHandle, "RecordInsertedBy", My.User.Name)
+    End Sub
 
     ''' <summary>
     ''' Does the busy work of basically setting up a GridControl the way I like it. 
