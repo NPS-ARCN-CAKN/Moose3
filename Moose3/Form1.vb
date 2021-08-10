@@ -474,6 +474,7 @@ Public Class Form1
         e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn2").Value = My.User.Name
         e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn2").Value = "REQUIRED"
         e.Row.Cells("ResultsSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+        e.Row.Cells("ResultID").Value = Guid.NewGuid.ToString
     End Sub
 
     Private Sub AddSurveyToolStripButton_Click(sender As Object, e As EventArgs) Handles AddSurveyToolStripButton.Click
@@ -485,6 +486,8 @@ Public Class Form1
         'Append a signed, dated comment prefix to the comments box
         AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
     End Sub
+
+
 
     'Private Sub PopulationEstimatesDataGridView_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles PopulationEstimatesDataGridView.CellValidating
     '    'Validate the entered data
