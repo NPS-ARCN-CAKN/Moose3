@@ -17,7 +17,7 @@ Public Class Form1
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
+            ' Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -143,6 +143,15 @@ Public Class Form1
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Appends a dated and signed comment prefix to the contents of TextBoxToEdit.
+    ''' </summary>
+    ''' <param name="TextboxToEdit">The TextBox to append the comment to. TextBox.</param>
+    Private Sub AddSignedDatedCommentToTextBox(TextboxToEdit As TextBox)
+        Dim Comment As String = TextboxToEdit.Text.Trim
+        Comment = Comment & vbNewLine & Now & " " & My.User.Name & ":"
+        TextboxToEdit.Text = Comment
+    End Sub
 
 
 
@@ -172,6 +181,11 @@ Public Class Form1
 
         'Set up the pivot grid controls
         SetUpPivotGridControl(Me.GSPEPivotGridControl)
+
+        'Autosize the datagridview columns
+        Me.PopulationEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+        Me.DensityEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+        Me.ResultsDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
 
     End Sub
 
@@ -399,11 +413,10 @@ Public Class Form1
     End Sub
 
     Private Sub AddProcessingNoteToolStripButton_Click(sender As Object, e As EventArgs) Handles AddProcessingNoteToolStripButton.Click
-        Dim ProcessingNotes As String = Me.DatasetProcessingStepsTextBox.Text.Trim
-        ProcessingNotes = ProcessingNotes & vbNewLine & Now & " " & My.User.Name & ":"
-        'Debug.Print(ProcessingNotes)
-        Me.DatasetProcessingStepsTextBox.Text = ProcessingNotes
+        AddSignedDatedCommentToTextBox(Me.DatasetProcessingStepsTextBox)
     End Sub
+
+
 
     Private Sub NewSurveyRecordToolStripMenuItem_Click(sender As Object, e As EventArgs)
         'allow user to add a new survey record
@@ -438,26 +451,61 @@ Public Class Form1
         'Pre-enter metadata on new records
         e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
         e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
+        e.Row.Cells("PopulationEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn").Value = "REQUIRED"
+        e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn").Value = "REQUIRED: "
+        e.Row.Cells("StrataDataGridViewTextBoxColumn").Value = "REQUIRED: "
+        e.Row.Cells("ConfidenceDataGridViewTextBoxColumn").Value = "-9999"
     End Sub
 
     Private Sub DensityEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles DensityEstimatesDataGridView.DefaultValuesNeeded
         'Pre-enter metadata on new records
-        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
-        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
         e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn1").Value = Now
         e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn1").Value = My.User.Name
+        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn1").Value = "REQUIRED"
+        e.Row.Cells("StratumDataGridViewTextBoxColumn").Value = "REQUIRED: "
+        e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn1").Value = "REQUIRED: "
+        e.Row.Cells("DensityEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
     End Sub
 
     Private Sub ResultsDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles ResultsDataGridView.DefaultValuesNeeded
         'Pre-enter metadata on new records
-        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
-        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
         e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn2").Value = Now
         e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn2").Value = My.User.Name
+        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn2").Value = "REQUIRED"
+        e.Row.Cells("ResultsSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
     End Sub
 
     Private Sub AddSurveyToolStripButton_Click(sender As Object, e As EventArgs) Handles AddSurveyToolStripButton.Click
         'Open a form to add a new survey to the inventory
         AddNewSurveyRecord()
     End Sub
+
+    Private Sub AppendNewCommentToolStripButton_Click(sender As Object, e As EventArgs) Handles AppendNewCommentToolStripButton.Click
+        'Append a signed, dated comment prefix to the comments box
+        AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
+    End Sub
+
+    'Private Sub PopulationEstimatesDataGridView_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles PopulationEstimatesDataGridView.CellValidating
+    '    'Validate the entered data
+    '    Dim DGV As DataGridView = sender
+    '    Dim RequiredColumns As String = "SurveyName,ParkSubArea,Analysis_Column,Strata,Confidence,PopulationEstimateSource"
+    '    Dim RequiredColumnNames As String() = RequiredColumns.Split(",")
+    '    For Each ColumnName As String In RequiredColumnNames
+    '        If DGV.Columns(e.ColumnIndex).HeaderText <> ColumnName Then
+    '            Return
+    '        Else
+    '            If String.IsNullOrEmpty(e.FormattedValue) = True Then
+    '                DGV.Rows(e.RowIndex).ErrorText = ColumnName & " is required."
+    '                e.Cancel = True
+    '            End If
+    '        End If
+    '    Next
+    'End Sub
+
+    'Private Sub PopulationEstimatesDataGridView_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles PopulationEstimatesDataGridView.CellEndEdit
+    '    'Clear any row errors 
+    '    Dim DGV As DataGridView = sender
+    '    DGV.Rows(e.RowIndex).ErrorText = String.Empty
+    'End Sub
 End Class
