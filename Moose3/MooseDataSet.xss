@@ -7,13 +7,13 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="375" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:GSPE" ZOrder="9" X="364" Y="70" Height="305" Width="174" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:GSPE_DensityEstimates" ZOrder="3" X="365" Y="445" Height="305" Width="278" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:GSPE_PopulationEstimates" ZOrder="1" X="358" Y="853" Height="305" Width="298" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:GSPE_DensityEstimates" ZOrder="4" X="365" Y="445" Height="305" Width="278" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:GSPE_PopulationEstimates" ZOrder="2" X="358" Y="853" Height="305" Width="298" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:GSPE_Results" ZOrder="8" X="364" Y="1195" Height="305" Width="221" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:GSPE_Surveys" ZOrder="7" X="70" Y="70" Height="305" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_GSPE_Ratios_GSPE_Surveys" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_GSPE_Ratios_GSPE_Surveys" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>261</X>
@@ -57,7 +57,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_GSPE_PopulationEstimates_GSPE_Surveys" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_GSPE_PopulationEstimates_GSPE_Surveys" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>269</X>

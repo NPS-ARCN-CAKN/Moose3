@@ -183,9 +183,9 @@ Public Class Form1
         SetUpPivotGridControl(Me.GSPEPivotGridControl)
 
         'Autosize the datagridview columns
-        Me.PopulationEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
-        Me.DensityEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
-        Me.ResultsDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+        'Me.PopulationEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
+        'Me.DensityEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
+        'Me.ResultsDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
 
     End Sub
 
@@ -485,6 +485,25 @@ Public Class Form1
     Private Sub AppendNewCommentToolStripButton_Click(sender As Object, e As EventArgs) Handles AppendNewCommentToolStripButton.Click
         'Append a signed, dated comment prefix to the comments box
         AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
+    End Sub
+
+    Private Sub PopulationEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles PopulationEstimatesDataGridView.SelectionChanged
+        Me.PopulationEstimatesDataGridView.EndEdit()
+        Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
+    End Sub
+
+    Private Sub DensityEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles DensityEstimatesDataGridView.SelectionChanged
+        Me.DensityEstimatesDataGridView.EndEdit()
+        Me.GSPE_DensityEstimatesBindingSource.EndEdit()
+    End Sub
+
+    Private Sub ResultsDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles ResultsDataGridView.SelectionChanged
+        Me.ResultsDataGridView.EndEdit()
+        Me.GSPE_ResultsBindingSource.EndEdit()
+    End Sub
+
+    Private Sub SurveyVGridControl_SelectedChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.SelectedChangedEventArgs) Handles SurveyVGridControl.SelectedChanged
+        Me.GSPE_SurveysBindingSource.EndEdit()
     End Sub
 
 
