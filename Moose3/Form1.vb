@@ -13,6 +13,7 @@ Public Class Form1
     ''' </summary>
     Private Sub LoadDataset()
         Try
+            Me.HeaderLabel.Text = "Connecting: " & My.Settings.MooseConnectionString
             Me.GSPE_SurveysTableAdapter.Fill(Me.MooseDataSet.GSPE_Surveys)
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
@@ -20,9 +21,8 @@ Public Class Form1
             Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+            Me.HeaderLabel.Text = "Database connection error: " & ex.Message
         End Try
-
-
     End Sub
     ''' <summary>
     ''' Saves all the changes from the local in memory dataset back to the database

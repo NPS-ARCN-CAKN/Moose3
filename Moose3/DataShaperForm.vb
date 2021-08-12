@@ -3,6 +3,9 @@ Imports SkeeterUtilities.DataFileToDataTableConverters.DataFileToDataTableConver
 
 Public Class DataShaperForm
 
+    Dim CurrentDataTable As New DataTable 'This will be the DataTable that holds the main interface's query contents
+    Dim CurrentQuery As String = "" 'This will hold the current query that fills CurrentDataTable
+
     ''' <summary>
     ''' Loads the query selector combo box with available tables and queries in the moose database
     ''' </summary>
@@ -34,14 +37,13 @@ Public Class DataShaperForm
     Private Sub LoadDataTableIntoInterface(Sql As String)
         Try
             'Get a list of tables and queries in the database
-
-            Dim DT As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, Sql)
+            CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, Sql)
 
             'Load the datatable into the grid control
             'Me.DataShaperGridControl.DataSource = Nothing
             With Me.DataShaperGridControl
-                .DataSource = DT
-                .RefreshDataSource()
+                .DataSource = CurrentDataTable
+                '.RefreshDataSource()
             End With
             Dim GV As GridView = TryCast(Me.DataShaperGridControl.MainView, GridView)
             With GV
@@ -52,7 +54,7 @@ Public Class DataShaperForm
                 SetUpGridControl(Me.DataShaperGridControl, True, True, True)
 
             'Load the datatable into the pivot grid control
-            Me.DataShaperPivotGridControl.DataSource = DT
+            Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
             Me.DataShaperPivotGridControl.RetrieveFields()
         Catch ex As Exception
             MsgBox("Failed to retrieve the dataset from the database: " & ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
@@ -75,8 +77,8 @@ Public Class DataShaperForm
 
     Private Sub QuerySelectorToolStripComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles QuerySelectorToolStripComboBox.SelectedIndexChanged
         If Me.QuerySelectorToolStripComboBox.Text.Trim.Length > 0 Then
-            Dim Query As String = "SELECT * FROM " & Me.QuerySelectorToolStripComboBox.Text.Trim
-            LoadDataTableIntoInterface(Query)
+            CurrentQuery = "SELECT * FROM " & Me.QuerySelectorToolStripComboBox.Text.Trim
+            LoadDataTableIntoInterface(CurrentQuery)
         End If
     End Sub
 
@@ -86,5 +88,15 @@ Public Class DataShaperForm
 
     Private Sub ExportPivotGridToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridToolStripButton.Click
         Me.DataShaperPivotGridControl.ExportToXlsx("C:\temp\zPivotGridExport.xlsx")
+    End Sub
+
+    Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshToolStripButton.Click
+        Try
+            CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, CurrentQuery)
+            Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
+            Me.DataShaperGridControl.DataSource = CurrentDataTable
+        Catch ex As Exception
+            MsgBox("Failed to refresh the dataset from the database: " & ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 End Class

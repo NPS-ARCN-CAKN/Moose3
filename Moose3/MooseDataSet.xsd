@@ -1497,6 +1497,7 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

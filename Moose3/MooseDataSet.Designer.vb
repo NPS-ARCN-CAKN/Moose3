@@ -2188,6 +2188,8 @@ Partial Public Class MooseDataSet
         
         Private columnPopulationSourceLink As Global.System.Data.DataColumn
         
+        Private columnDataColumn1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2456,6 +2458,14 @@ Partial Public Class MooseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DataColumn1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDataColumn1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2521,9 +2531,10 @@ Partial Public Class MooseDataSet
                     ByVal RecordInsertedBy As String,  _
                     ByVal ValidatedDate As Date,  _
                     ByVal ValidatedBy As String,  _
-                    ByVal PopulationSourceLink As String) As GSPE_PopulationEstimatesRow
+                    ByVal PopulationSourceLink As String,  _
+                    ByVal DataColumn1 As String) As GSPE_PopulationEstimatesRow
             Dim rowGSPE_PopulationEstimatesRow As GSPE_PopulationEstimatesRow = CType(Me.NewRow,GSPE_PopulationEstimatesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, ParkSubArea, Analysis_Column, Strata, Confidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink}
+            Dim columnValuesArray() As Object = New Object() {Nothing, ParkSubArea, Analysis_Column, Strata, Confidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink, DataColumn1}
             If (Not (parentGSPE_SurveysRowByFK_GSPE_PopulationEstimates_GSPE_Surveys) Is Nothing) Then
                 columnValuesArray(0) = parentGSPE_SurveysRowByFK_GSPE_PopulationEstimates_GSPE_Surveys(0)
             End If
@@ -2584,6 +2595,7 @@ Partial Public Class MooseDataSet
             Me.columnValidatedDate = MyBase.Columns("ValidatedDate")
             Me.columnValidatedBy = MyBase.Columns("ValidatedBy")
             Me.columnPopulationSourceLink = MyBase.Columns("PopulationSourceLink")
+            Me.columnDataColumn1 = MyBase.Columns("DataColumn1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2647,6 +2659,8 @@ Partial Public Class MooseDataSet
             MyBase.Columns.Add(Me.columnValidatedBy)
             Me.columnPopulationSourceLink = New Global.System.Data.DataColumn("PopulationSourceLink", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPopulationSourceLink)
+            Me.columnDataColumn1 = New Global.System.Data.DataColumn("DataColumn1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDataColumn1)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnSurveyName, Me.columnParkSubArea, Me.columnAnalysis_Column, Me.columnStrata, Me.columnConfidence}, true))
             Me.columnSurveyName.AllowDBNull = false
             Me.columnSurveyName.MaxLength = 100
@@ -6748,6 +6762,22 @@ Partial Public Class MooseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DataColumn1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableGSPE_PopulationEstimates.DataColumn1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DataColumn1' in table 'GSPE_PopulationEstimates' is DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableGSPE_PopulationEstimates.DataColumn1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property GSPE_SurveysRow() As GSPE_SurveysRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_GSPE_PopulationEstimates_GSPE_Surveys")),GSPE_SurveysRow)
@@ -6995,6 +7025,18 @@ Partial Public Class MooseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetPopulationSourceLinkNull()
             Me(Me.tableGSPE_PopulationEstimates.PopulationSourceLinkColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsDataColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableGSPE_PopulationEstimates.DataColumn1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetDataColumn1Null()
+            Me(Me.tableGSPE_PopulationEstimates.DataColumn1Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     
