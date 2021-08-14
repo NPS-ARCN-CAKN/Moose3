@@ -18,7 +18,7 @@ Public Class Form1
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
+            'Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
             Me.HeaderLabel.Text = "Database connection error: " & ex.Message
@@ -183,7 +183,12 @@ Public Class Form1
         SetUpPivotGridControl(Me.GSPEPivotGridControl)
 
         'Autosize the datagridview columns
-        'Me.PopulationEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
+        With Me.GSPE_PopulationEstimatesDataGridView
+            .Dock = DockStyle.Fill
+            .AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+            .ScrollBars = ScrollBars.Both
+        End With
+
         'Me.DensityEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
         'Me.ResultsDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
 
@@ -423,14 +428,24 @@ Public Class Form1
         AddNewSurveyRecord()
     End Sub
 
-    Private Sub PopulationEstimatesDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles PopulationEstimatesDataGridView.DataError
+    Private Sub PopulationEstimatesDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles GSPE_PopulationEstimatesDataGridView.DataError
         Try
             MsgBox(e.Exception.Message)
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
     End Sub
-
+    Private Sub PopulationEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles GSPE_PopulationEstimatesDataGridView.DefaultValuesNeeded
+        'Pre-enter metadata on new records
+        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
+        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
+        e.Row.Cells("PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn").Value = -9999
+        e.Row.Cells("PopulationEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn").Value = "REQUIRED"
+        e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn").Value = "REQUIRED: "
+        e.Row.Cells("StrataDataGridViewTextBoxColumn").Value = "REQUIRED: "
+        e.Row.Cells("ConfidenceDataGridViewTextBoxColumn").Value = "-9999"
+    End Sub
     Private Sub DensityEstimatesDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles DensityEstimatesDataGridView.DataError
         Try
             MsgBox(e.Exception.Message)
@@ -447,16 +462,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub PopulationEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles PopulationEstimatesDataGridView.DefaultValuesNeeded
-        'Pre-enter metadata on new records
-        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
-        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
-        e.Row.Cells("PopulationEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
-        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn").Value = "REQUIRED"
-        e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn").Value = "REQUIRED: "
-        e.Row.Cells("StrataDataGridViewTextBoxColumn").Value = "REQUIRED: "
-        e.Row.Cells("ConfidenceDataGridViewTextBoxColumn").Value = "-9999"
-    End Sub
+
 
     Private Sub DensityEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles DensityEstimatesDataGridView.DefaultValuesNeeded
         'Pre-enter metadata on new records
@@ -487,24 +493,26 @@ Public Class Form1
         AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
     End Sub
 
-    Private Sub PopulationEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles PopulationEstimatesDataGridView.SelectionChanged
-        Me.PopulationEstimatesDataGridView.EndEdit()
-        Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
-    End Sub
 
-    Private Sub DensityEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles DensityEstimatesDataGridView.SelectionChanged
-        Me.DensityEstimatesDataGridView.EndEdit()
-        Me.GSPE_DensityEstimatesBindingSource.EndEdit()
-    End Sub
 
-    Private Sub ResultsDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles ResultsDataGridView.SelectionChanged
-        Me.ResultsDataGridView.EndEdit()
-        Me.GSPE_ResultsBindingSource.EndEdit()
-    End Sub
+    'Private Sub PopulationEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles PopulationEstimatesDataGridView.SelectionChanged
+    '    Me.PopulationEstimatesDataGridView.EndEdit()
+    '    Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
+    'End Sub
 
-    Private Sub SurveyVGridControl_SelectedChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.SelectedChangedEventArgs) Handles SurveyVGridControl.SelectedChanged
-        Me.GSPE_SurveysBindingSource.EndEdit()
-    End Sub
+    'Private Sub DensityEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles DensityEstimatesDataGridView.SelectionChanged
+    '    Me.DensityEstimatesDataGridView.EndEdit()
+    '    Me.GSPE_DensityEstimatesBindingSource.EndEdit()
+    'End Sub
+
+    'Private Sub ResultsDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles ResultsDataGridView.SelectionChanged
+    '    Me.ResultsDataGridView.EndEdit()
+    '    Me.GSPE_ResultsBindingSource.EndEdit()
+    'End Sub
+
+    'Private Sub SurveyVGridControl_SelectedChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.SelectedChangedEventArgs) Handles SurveyVGridControl.SelectedChanged
+    '    Me.GSPE_SurveysBindingSource.EndEdit()
+    'End Sub
 
 
 

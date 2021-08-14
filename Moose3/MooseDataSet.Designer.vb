@@ -2190,6 +2190,8 @@ Partial Public Class MooseDataSet
         
         Private columnPopulationEstimateSourceReferenceCode As Global.System.Data.DataColumn
         
+        Private columnPopulationEstimateID As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2466,6 +2468,14 @@ Partial Public Class MooseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PopulationEstimateIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPopulationEstimateID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2534,7 +2544,7 @@ Partial Public Class MooseDataSet
                     ByVal PopulationSourceLink As String,  _
                     ByVal PopulationEstimateSourceReferenceCode As Integer) As GSPE_PopulationEstimatesRow
             Dim rowGSPE_PopulationEstimatesRow As GSPE_PopulationEstimatesRow = CType(Me.NewRow,GSPE_PopulationEstimatesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, ParkSubArea, Analysis_Column, Strata, Confidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink, PopulationEstimateSourceReferenceCode}
+            Dim columnValuesArray() As Object = New Object() {Nothing, ParkSubArea, Analysis_Column, Strata, Confidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink, PopulationEstimateSourceReferenceCode, Nothing}
             If (Not (parentGSPE_SurveysRowByFK_GSPE_PopulationEstimates_GSPE_Surveys) Is Nothing) Then
                 columnValuesArray(0) = parentGSPE_SurveysRowByFK_GSPE_PopulationEstimates_GSPE_Surveys(0)
             End If
@@ -2545,8 +2555,8 @@ Partial Public Class MooseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByPopulationEstimateSourceReferenceCodeSurveyNameParkSubAreaAnalysis_ColumnStrataConfidence(ByVal PopulationEstimateSourceReferenceCode As Integer, ByVal SurveyName As String, ByVal ParkSubArea As String, ByVal Analysis_Column As String, ByVal Strata As String, ByVal Confidence As Integer) As GSPE_PopulationEstimatesRow
-            Return CType(Me.Rows.Find(New Object() {PopulationEstimateSourceReferenceCode, SurveyName, ParkSubArea, Analysis_Column, Strata, Confidence}),GSPE_PopulationEstimatesRow)
+        Public Function FindByPopulationEstimateID(ByVal PopulationEstimateID As Integer) As GSPE_PopulationEstimatesRow
+            Return CType(Me.Rows.Find(New Object() {PopulationEstimateID}),GSPE_PopulationEstimatesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2596,6 +2606,7 @@ Partial Public Class MooseDataSet
             Me.columnValidatedBy = MyBase.Columns("ValidatedBy")
             Me.columnPopulationSourceLink = MyBase.Columns("PopulationSourceLink")
             Me.columnPopulationEstimateSourceReferenceCode = MyBase.Columns("PopulationEstimateSourceReferenceCode")
+            Me.columnPopulationEstimateID = MyBase.Columns("PopulationEstimateID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2661,7 +2672,9 @@ Partial Public Class MooseDataSet
             MyBase.Columns.Add(Me.columnPopulationSourceLink)
             Me.columnPopulationEstimateSourceReferenceCode = New Global.System.Data.DataColumn("PopulationEstimateSourceReferenceCode", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPopulationEstimateSourceReferenceCode)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnPopulationEstimateSourceReferenceCode, Me.columnSurveyName, Me.columnParkSubArea, Me.columnAnalysis_Column, Me.columnStrata, Me.columnConfidence}, true))
+            Me.columnPopulationEstimateID = New Global.System.Data.DataColumn("PopulationEstimateID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPopulationEstimateID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnPopulationEstimateID}, true))
             Me.columnSurveyName.AllowDBNull = false
             Me.columnSurveyName.MaxLength = 100
             Me.columnParkSubArea.AllowDBNull = false
@@ -2687,6 +2700,11 @@ Partial Public Class MooseDataSet
             Me.columnPopulationSourceLink.Caption = "Population Source Link"
             Me.columnPopulationSourceLink.MaxLength = 4000
             Me.columnPopulationEstimateSourceReferenceCode.AllowDBNull = false
+            Me.columnPopulationEstimateID.AutoIncrement = true
+            Me.columnPopulationEstimateID.AutoIncrementSeed = -1
+            Me.columnPopulationEstimateID.AutoIncrementStep = -1
+            Me.columnPopulationEstimateID.AllowDBNull = false
+            Me.columnPopulationEstimateID.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6769,6 +6787,17 @@ Partial Public Class MooseDataSet
             End Get
             Set
                 Me(Me.tableGSPE_PopulationEstimates.PopulationEstimateSourceReferenceCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property PopulationEstimateID() As Integer
+            Get
+                Return CType(Me(Me.tableGSPE_PopulationEstimates.PopulationEstimateIDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableGSPE_PopulationEstimates.PopulationEstimateIDColumn) = value
             End Set
         End Property
         
@@ -12589,18 +12618,10 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (SurveyName = @Original_Survey"& _ 
-                "Name) AND (ParkSubArea = @Original_ParkSubArea) AND (Analysis_Column = @Original"& _ 
-                "_Analysis_Column) AND (Strata = @Original_Strata) AND (Confidence = @Original_Co"& _ 
-                "nfidence) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (PopulationEstimateSourceReferenceCode "& _ 
-                "= @PopulationEstimateSourceReferenceCode)"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (PopulationEstimateID = @Origi"& _ 
+                "nal_PopulationEstimateID)"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ParkSubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Analysis_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strata", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Confidence", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Confidence", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (SurveyName, ParkS"& _ 
@@ -12608,24 +12629,23 @@ Namespace MooseDataSetTableAdapters
                 ", Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Analysis_Area, Co"& _ 
                 "unted_Column, Unit_Area_Column, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SurveyArea, SampledAr"& _ 
                 "ea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comment"& _ 
-                "s, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate"& _ 
-                ", RecordInsertedBy, ValidatedDate, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ValidatedBy, Popul"& _ 
-                "ationSourceLink, PopulationEstimateSourceReferenceCode)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@SurveyN"& _ 
-                "ame,@ParkSubArea,@Analysis_Column,@Strata,@Confidence,@Population_Estimate,@Stan"& _ 
-                "dard_Error,@Lower_Limit,@Upper_Limit,@Proportion_of_Mean,@Strata_Column,@Analysi"& _ 
-                "s_Area,@Counted_Column,@Unit_Area_Column,@SurveyArea,@SampledArea,@Intensity,@Re"& _ 
-                "lativePrecision,@SightabilityCorrectionFactor,@Density,@Comments,@ReportDate,@An"& _ 
-                "alysisPerformedBy,@PopulationEstimateSource,@RecordInsertedDate,@RecordInsertedB"& _ 
-                "y,@ValidatedDate,@ValidatedBy,@PopulationSourceLink,@PopulationEstimateSourceRef"& _ 
-                "erenceCode); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT SurveyName, ParkSubArea, Analysis_Column, Strata, Confiden"& _ 
-                "ce, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proportion_of"& _ 
-                "_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyAre"& _ 
-                "a, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Dens"& _ 
-                "ity, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, Record"& _ 
-                "InsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink"& _ 
-                " FROM GSPE_PopulationEstimates WHERE (Analysis_Column = @Analysis_Column) AND (C"& _ 
-                "onfidence = @Confidence) AND (ParkSubArea = @ParkSubArea) AND (Strata = @Strata)"& _ 
-                " AND (SurveyName = @SurveyName)"
+                "s, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, ValidatedDate, Val"& _ 
+                "idatedBy, PopulationSourceLink, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PopulationEstimateSou"& _ 
+                "rceReferenceCode)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@SurveyName,@ParkSubArea,@Analysis_Column,@Str"& _ 
+                "ata,@Confidence,@Population_Estimate,@Standard_Error,@Lower_Limit,@Upper_Limit,@"& _ 
+                "Proportion_of_Mean,@Strata_Column,@Analysis_Area,@Counted_Column,@Unit_Area_Colu"& _ 
+                "mn,@SurveyArea,@SampledArea,@Intensity,@RelativePrecision,@SightabilityCorrectio"& _ 
+                "nFactor,@Density,@Comments,@ReportDate,@AnalysisPerformedBy,@PopulationEstimateS"& _ 
+                "ource,@ValidatedDate,@ValidatedBy,@PopulationSourceLink,@PopulationEstimateSourc"& _ 
+                "eReferenceCode);    "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT SurveyName, ParkSubArea, Analysis_Column, Strata, C"& _ 
+                "onfidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Propor"& _ 
+                "tion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, Su"& _ 
+                "rveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFacto"& _ 
+                "r, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource,"& _ 
+                " RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSou"& _ 
+                "rceLink FROM GSPE_PopulationEstimates WHERE (Analysis_Column = @Analysis_Column)"& _ 
+                " AND (Confidence = @Confidence) AND (ParkSubArea = @ParkSubArea) AND (Strata = @"& _ 
+                "Strata) AND (SurveyName = @SurveyName)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ParkSubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -12651,45 +12671,38 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ReportDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AnalysisPerformedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSource", Global.System.Data.SqlDbType.VarChar, 1000, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSource", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 4000, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE       GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                SurveyName = @SurveyNam"& _ 
-                "e, ParkSubArea = @ParkSubArea, PopulationEstimateSourceReferenceCode = @Populati"& _ 
-                "onEstimateSourceReferenceCode, Analysis_Column = @Analysis_Column, Strata = @Str"& _ 
-                "ata, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Confidence = @Confidence, Population_Estimate = "& _ 
-                "@Population_Estimate, Standard_Error = @Standard_Error, Lower_Limit = @Lower_Lim"& _ 
-                "it, Upper_Limit = @Upper_Limit, Proportion_of_Mean = @Proportion_of_Mean, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
-                "                     Strata_Column = @Strata_Column, Analysis_Area = @Analysis_A"& _ 
-                "rea, Counted_Column = @Counted_Column, Unit_Area_Column = @Unit_Area_Column, Sur"& _ 
-                "veyArea = @SurveyArea, SampledArea = @SampledArea, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         In"& _ 
-                "tensity = @Intensity, RelativePrecision = @RelativePrecision, SightabilityCorrec"& _ 
-                "tionFactor = @SightabilityCorrectionFactor, Density = @Density, Comments = @Comm"& _ 
-                "ents, ReportDate = @ReportDate, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AnalysisPerformedBy ="& _ 
-                " @AnalysisPerformedBy, PopulationEstimateSource = @PopulationEstimateSource, Rec"& _ 
-                "ordInsertedDate = @RecordInsertedDate, RecordInsertedBy = @RecordInsertedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
-                "                        ValidatedDate = @ValidatedDate, ValidatedBy = @Validated"& _ 
-                "By, PopulationSourceLink = @PopulationSourceLink"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (SurveyName = @Or"& _ 
-                "iginal_SurveyName) AND (ParkSubArea = @Original_ParkSubArea) AND (Analysis_Colum"& _ 
-                "n = @Original_Analysis_Column) AND (Strata = @Original_Strata) AND (Confidence ="& _ 
-                " @Original_Confidence) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (PopulationEstimateSourceR"& _ 
-                "eferenceCode = @Original_PopulationEstimateSourceReferenceCode);    "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Sur"& _ 
-                "veyName, ParkSubArea, Analysis_Column, Strata, Confidence, Population_Estimate, "& _ 
-                "Standard_Error, Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Ana"& _ 
-                "lysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity"& _ 
-                ", RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate"& _ 
-                ", AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInser"& _ 
-                "tedBy, ValidatedDate, ValidatedBy, PopulationSourceLink FROM GSPE_PopulationEsti"& _ 
-                "mates WHERE (Analysis_Column = @Analysis_Column) AND (Confidence = @Confidence) "& _ 
-                "AND (ParkSubArea = @ParkSubArea) AND (Strata = @Strata) AND (SurveyName = @Surve"& _ 
-                "yName)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                ParkSubArea = @ParkSubA"& _ 
+                "rea, PopulationEstimateSourceReferenceCode = @PopulationEstimateSourceReferenceC"& _ 
+                "ode, Analysis_Column = @Analysis_Column, Strata = @Strata, Confidence = @Confide"& _ 
+                "nce, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Population_Estimate = @Population_Estimate, Stan"& _ 
+                "dard_Error = @Standard_Error, Lower_Limit = @Lower_Limit, Upper_Limit = @Upper_L"& _ 
+                "imit, Proportion_of_Mean = @Proportion_of_Mean, Strata_Column = @Strata_Column, "& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Analysis_Area = @Analysis_Area, Counted_Column = @Cou"& _ 
+                "nted_Column, Unit_Area_Column = @Unit_Area_Column, SurveyArea = @SurveyArea, Sam"& _ 
+                "pledArea = @SampledArea, Intensity = @Intensity, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Rela"& _ 
+                "tivePrecision = @RelativePrecision, SightabilityCorrectionFactor = @Sightability"& _ 
+                "CorrectionFactor, Density = @Density, Comments = @Comments, ReportDate = @Report"& _ 
+                "Date, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AnalysisPerformedBy = @AnalysisPerformedBy, Pop"& _ 
+                "ulationEstimateSource = @PopulationEstimateSource, RecordInsertedDate = @RecordI"& _ 
+                "nsertedDate, RecordInsertedBy = @RecordInsertedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Va"& _ 
+                "lidatedDate = @ValidatedDate, ValidatedBy = @ValidatedBy, PopulationSourceLink ="& _ 
+                " @PopulationSourceLink"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (PopulationEstimateID = @Original_Populatio"& _ 
+                "nEstimateID);      "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT SurveyName, ParkSubArea, Analysis_Column, Strata, Co"& _ 
+                "nfidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proport"& _ 
+                "ion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, Sur"& _ 
+                "veyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor"& _ 
+                ", Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, "& _ 
+                "RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSour"& _ 
+                "ceLink FROM GSPE_PopulationEstimates WHERE (Analysis_Column = @Analysis_Column) "& _ 
+                "AND (Confidence = @Confidence) AND (ParkSubArea = @ParkSubArea) AND (Strata = @S"& _ 
+                "trata) AND (SurveyName = @SurveyName)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ParkSubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Analysis_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -12719,12 +12732,8 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 4000, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ParkSubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Analysis_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strata", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Confidence", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Confidence", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12747,7 +12756,7 @@ Namespace MooseDataSetTableAdapters
                 "ty, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDa"& _ 
                 "te, AnalysisPerformedBy, PopulationEstimateSource, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Re"& _ 
                 "cordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSource"& _ 
-                "Link"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            GSPE_PopulationEstimates"
+                "Link, PopulationEstimateID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            GSPE_PopulationEstimates"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -12807,29 +12816,8 @@ Namespace MooseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_SurveyName As String, ByVal Original_ParkSubArea As String, ByVal Original_Analysis_Column As String, ByVal Original_Strata As String, ByVal Original_Confidence As Integer, ByVal PopulationEstimateSourceReferenceCode As Integer) As Integer
-            If (Original_SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_SurveyName")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_SurveyName,String)
-            End If
-            If (Original_ParkSubArea Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ParkSubArea")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_ParkSubArea,String)
-            End If
-            If (Original_Analysis_Column Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Analysis_Column")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Analysis_Column,String)
-            End If
-            If (Original_Strata Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Strata")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Strata,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Confidence,Integer)
-            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_PopulationEstimateID As Integer) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_PopulationEstimateID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12874,8 +12862,6 @@ Namespace MooseDataSetTableAdapters
                     ByVal ReportDate As String,  _
                     ByVal AnalysisPerformedBy As String,  _
                     ByVal PopulationEstimateSource As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
                     ByVal ValidatedDate As String,  _
                     ByVal ValidatedBy As String,  _
                     ByVal PopulationSourceLink As String,  _
@@ -12992,28 +12978,22 @@ Namespace MooseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(23).Value = CType(PopulationEstimateSource,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(24).Value = CType(RecordInsertedDate,Date)
-            If (RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("RecordInsertedBy")
-            Else
-                Me.Adapter.InsertCommand.Parameters(25).Value = CType(RecordInsertedBy,String)
-            End If
             If (ValidatedDate Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(26).Value = CType(ValidatedDate,String)
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(ValidatedDate,String)
             End If
             If (ValidatedBy Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(27).Value = CType(ValidatedBy,String)
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(ValidatedBy,String)
             End If
             If (PopulationSourceLink Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(28).Value = CType(PopulationSourceLink,String)
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(PopulationSourceLink,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(29).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
+            Me.Adapter.InsertCommand.Parameters(27).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13034,7 +13014,6 @@ Namespace MooseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal SurveyName As String,  _
                     ByVal ParkSubArea As String,  _
                     ByVal PopulationEstimateSourceReferenceCode As Integer,  _
                     ByVal Analysis_Column As String,  _
@@ -13064,168 +13043,143 @@ Namespace MooseDataSetTableAdapters
                     ByVal ValidatedDate As String,  _
                     ByVal ValidatedBy As String,  _
                     ByVal PopulationSourceLink As String,  _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_ParkSubArea As String,  _
-                    ByVal Original_Analysis_Column As String,  _
-                    ByVal Original_Strata As String,  _
-                    ByVal Original_Confidence As Integer,  _
-                    ByVal Original_PopulationEstimateSourceReferenceCode As Integer) As Integer
-            If (SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("SurveyName")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(SurveyName,String)
-            End If
+                    ByVal Original_PopulationEstimateID As Integer,  _
+                    ByVal SurveyName As String) As Integer
             If (ParkSubArea Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("ParkSubArea")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(ParkSubArea,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(ParkSubArea,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
             If (Analysis_Column Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Analysis_Column")
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Analysis_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Analysis_Column,String)
             End If
             If (Strata Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Strata")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Strata,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Strata,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Confidence,Integer)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Population_Estimate,Double)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Confidence,Integer)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Population_Estimate,Double)
             If (Standard_Error.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Standard_Error.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Standard_Error.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Lower_Limit.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Lower_Limit.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (Lower_Limit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Lower_Limit.Value,Double)
+            If (Upper_Limit.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Upper_Limit.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Upper_Limit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Upper_Limit.Value,Double)
+            If (Proportion_of_Mean.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Proportion_of_Mean.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
-            If (Proportion_of_Mean.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Proportion_of_Mean.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
             If (Strata_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Strata_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Strata_Column,String)
             End If
             If (Analysis_Area Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Analysis_Area,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Analysis_Area,String)
             End If
             If (Counted_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Counted_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Counted_Column,String)
             End If
             If (Unit_Area_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Unit_Area_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Unit_Area_Column,String)
             End If
             If (SurveyArea.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SurveyArea.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(SurveyArea.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SampledArea.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SampledArea.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
-            If (SampledArea.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(SampledArea.Value,Double)
+            If (Intensity.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Intensity.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
-            If (Intensity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Intensity.Value,Double)
+            If (RelativePrecision.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(RelativePrecision.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
-            If (RelativePrecision.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(RelativePrecision.Value,Double)
+            If (SightabilityCorrectionFactor.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(SightabilityCorrectionFactor.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
-            If (SightabilityCorrectionFactor.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(SightabilityCorrectionFactor.Value,Double)
+            If (Density.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Density.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            If (Density.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Density.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
             If (Comments Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Comments,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Comments,String)
             End If
             If (ReportDate Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(ReportDate,String)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(ReportDate,String)
             End If
             If (AnalysisPerformedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(AnalysisPerformedBy,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(AnalysisPerformedBy,String)
             End If
             If (PopulationEstimateSource Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("PopulationEstimateSource")
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(PopulationEstimateSource,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(PopulationEstimateSource,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(RecordInsertedDate,Date)
+            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(RecordInsertedDate,Date)
             If (RecordInsertedBy Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("RecordInsertedBy")
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(RecordInsertedBy,String)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(RecordInsertedBy,String)
             End If
             If (ValidatedDate Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(ValidatedDate,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(ValidatedDate,String)
             End If
             If (ValidatedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(ValidatedBy,String)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(ValidatedBy,String)
             End If
             If (PopulationSourceLink Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(PopulationSourceLink,String)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(PopulationSourceLink,String)
             End If
-            If (Original_SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_SurveyName")
+            Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_PopulationEstimateID,Integer)
+            If (SurveyName Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("SurveyName")
             Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_SurveyName,String)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(SurveyName,String)
             End If
-            If (Original_ParkSubArea Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ParkSubArea")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_ParkSubArea,String)
-            End If
-            If (Original_Analysis_Column Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Analysis_Column")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_Analysis_Column,String)
-            End If
-            If (Original_Strata Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Strata")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Strata,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Confidence,Integer)
-            Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_PopulationEstimateSourceReferenceCode,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13239,44 +13193,6 @@ Namespace MooseDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal Population_Estimate As Double,  _
-                    ByVal Standard_Error As Global.System.Nullable(Of Double),  _
-                    ByVal Lower_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Upper_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Proportion_of_Mean As Global.System.Nullable(Of Double),  _
-                    ByVal Strata_Column As String,  _
-                    ByVal Analysis_Area As String,  _
-                    ByVal Counted_Column As String,  _
-                    ByVal Unit_Area_Column As String,  _
-                    ByVal SurveyArea As Global.System.Nullable(Of Double),  _
-                    ByVal SampledArea As Global.System.Nullable(Of Double),  _
-                    ByVal Intensity As Global.System.Nullable(Of Double),  _
-                    ByVal RelativePrecision As Global.System.Nullable(Of Double),  _
-                    ByVal SightabilityCorrectionFactor As Global.System.Nullable(Of Double),  _
-                    ByVal Density As Global.System.Nullable(Of Double),  _
-                    ByVal Comments As String,  _
-                    ByVal ReportDate As String,  _
-                    ByVal AnalysisPerformedBy As String,  _
-                    ByVal PopulationEstimateSource As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
-                    ByVal ValidatedDate As String,  _
-                    ByVal ValidatedBy As String,  _
-                    ByVal PopulationSourceLink As String,  _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_ParkSubArea As String,  _
-                    ByVal Original_Analysis_Column As String,  _
-                    ByVal Original_Strata As String,  _
-                    ByVal Original_Confidence As Integer,  _
-                    ByVal Original_PopulationEstimateSourceReferenceCode As Integer) As Integer
-            Return Me.Update(Original_SurveyName, Original_ParkSubArea, Original_PopulationEstimateSourceReferenceCode, Original_Analysis_Column, Original_Strata, Original_Confidence, Population_Estimate, Standard_Error, Lower_Limit, Upper_Limit, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink, Original_SurveyName, Original_ParkSubArea, Original_Analysis_Column, Original_Strata, Original_Confidence, Original_PopulationEstimateSourceReferenceCode)
         End Function
     End Class
     
