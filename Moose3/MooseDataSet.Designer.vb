@@ -12619,91 +12619,10 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [GSPE_PopulationEstimates] WHERE (([SurveyName] = @Original_SurveyNam"& _ 
-                "e) AND ([ParkSubArea] = @Original_ParkSubArea) AND ([PopulationEstimateSourceRef"& _ 
-                "erenceCode] = @Original_PopulationEstimateSourceReferenceCode) AND ([Analysis_Co"& _ 
-                "lumn] = @Original_Analysis_Column) AND ([Strata] = @Original_Strata) AND ([Confi"& _ 
-                "dence] = @Original_Confidence) AND ([Population_Estimate] = @Original_Population"& _ 
-                "_Estimate) AND ((@IsNull_Lower_Limit = 1 AND [Lower_Limit] IS NULL) OR ([Lower_L"& _ 
-                "imit] = @Original_Lower_Limit)) AND ((@IsNull_Upper_Limit = 1 AND [Upper_Limit] "& _ 
-                "IS NULL) OR ([Upper_Limit] = @Original_Upper_Limit)) AND ((@IsNull_Standard_Erro"& _ 
-                "r = 1 AND [Standard_Error] IS NULL) OR ([Standard_Error] = @Original_Standard_Er"& _ 
-                "ror)) AND ((@IsNull_Proportion_of_Mean = 1 AND [Proportion_of_Mean] IS NULL) OR "& _ 
-                "([Proportion_of_Mean] = @Original_Proportion_of_Mean)) AND ((@IsNull_Strata_Colu"& _ 
-                "mn = 1 AND [Strata_Column] IS NULL) OR ([Strata_Column] = @Original_Strata_Colum"& _ 
-                "n)) AND ((@IsNull_Analysis_Area = 1 AND [Analysis_Area] IS NULL) OR ([Analysis_A"& _ 
-                "rea] = @Original_Analysis_Area)) AND ((@IsNull_Counted_Column = 1 AND [Counted_C"& _ 
-                "olumn] IS NULL) OR ([Counted_Column] = @Original_Counted_Column)) AND ((@IsNull_"& _ 
-                "Unit_Area_Column = 1 AND [Unit_Area_Column] IS NULL) OR ([Unit_Area_Column] = @O"& _ 
-                "riginal_Unit_Area_Column)) AND ((@IsNull_SurveyArea = 1 AND [SurveyArea] IS NULL"& _ 
-                ") OR ([SurveyArea] = @Original_SurveyArea)) AND ((@IsNull_SampledArea = 1 AND [S"& _ 
-                "ampledArea] IS NULL) OR ([SampledArea] = @Original_SampledArea)) AND ((@IsNull_I"& _ 
-                "ntensity = 1 AND [Intensity] IS NULL) OR ([Intensity] = @Original_Intensity)) AN"& _ 
-                "D ((@IsNull_RelativePrecision = 1 AND [RelativePrecision] IS NULL) OR ([Relative"& _ 
-                "Precision] = @Original_RelativePrecision)) AND ((@IsNull_SightabilityCorrectionF"& _ 
-                "actor = 1 AND [SightabilityCorrectionFactor] IS NULL) OR ([SightabilityCorrectio"& _ 
-                "nFactor] = @Original_SightabilityCorrectionFactor)) AND ((@IsNull_Density = 1 AN"& _ 
-                "D [Density] IS NULL) OR ([Density] = @Original_Density)) AND ((@IsNull_ReportDat"& _ 
-                "e = 1 AND [ReportDate] IS NULL) OR ([ReportDate] = @Original_ReportDate)) AND (("& _ 
-                "@IsNull_AnalysisPerformedBy = 1 AND [AnalysisPerformedBy] IS NULL) OR ([Analysis"& _ 
-                "PerformedBy] = @Original_AnalysisPerformedBy)) AND ([PopulationEstimateSource] ="& _ 
-                " @Original_PopulationEstimateSource) AND ([RecordInsertedDate] = @Original_Recor"& _ 
-                "dInsertedDate) AND ([RecordInsertedBy] = @Original_RecordInsertedBy) AND ((@IsNu"& _ 
-                "ll_ValidatedDate = 1 AND [ValidatedDate] IS NULL) OR ([ValidatedDate] = @Origina"& _ 
-                "l_ValidatedDate)) AND ((@IsNull_ValidatedBy = 1 AND [ValidatedBy] IS NULL) OR (["& _ 
-                "ValidatedBy] = @Original_ValidatedBy)) AND ((@IsNull_PopulationSourceLink = 1 AN"& _ 
-                "D [PopulationSourceLink] IS NULL) OR ([PopulationSourceLink] = @Original_Populat"& _ 
-                "ionSourceLink)) AND ([PopulationEstimateID] = @Original_PopulationEstimateID))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (PopulationEstimateID = @Origi"& _ 
+                "nal_PopulationEstimateID)"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ParkSubArea", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Analysis_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strata", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Confidence", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Confidence", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Population_Estimate", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Population_Estimate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Lower_Limit", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lower_Limit", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Lower_Limit", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lower_Limit", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Upper_Limit", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Upper_Limit", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Upper_Limit", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Upper_Limit", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Standard_Error", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Standard_Error", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Standard_Error", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Standard_Error", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Proportion_of_Mean", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proportion_of_Mean", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Proportion_of_Mean", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proportion_of_Mean", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strata_Column", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata_Column", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strata_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Analysis_Area", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Area", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Analysis_Area", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Area", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Counted_Column", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted_Column", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Counted_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Unit_Area_Column", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unit_Area_Column", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Unit_Area_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unit_Area_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SurveyArea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyArea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyArea", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SampledArea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SampledArea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SampledArea", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SampledArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Intensity", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Intensity", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Intensity", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Intensity", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RelativePrecision", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RelativePrecision", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RelativePrecision", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RelativePrecision", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SightabilityCorrectionFactor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SightabilityCorrectionFactor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SightabilityCorrectionFactor", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SightabilityCorrectionFactor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Density", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Density", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ReportDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ReportDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AnalysisPerformedBy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AnalysisPerformedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateSource", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSource", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RecordInsertedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ValidatedDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ValidatedDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ValidatedBy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ValidatedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PopulationSourceLink", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [GSPE_PopulationEstimates] ([SurveyName], [ParkSubArea], [PopulationE"& _ 
@@ -12761,144 +12680,58 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [GSPE_PopulationEstimates] SET [SurveyName] = @SurveyName, [ParkSubArea] ="& _ 
-                " @ParkSubArea, [PopulationEstimateSourceReferenceCode] = @PopulationEstimateSour"& _ 
-                "ceReferenceCode, [Analysis_Column] = @Analysis_Column, [Strata] = @Strata, [Conf"& _ 
-                "idence] = @Confidence, [Population_Estimate] = @Population_Estimate, [Lower_Limi"& _ 
-                "t] = @Lower_Limit, [Upper_Limit] = @Upper_Limit, [Standard_Error] = @Standard_Er"& _ 
-                "ror, [Proportion_of_Mean] = @Proportion_of_Mean, [Strata_Column] = @Strata_Colum"& _ 
-                "n, [Analysis_Area] = @Analysis_Area, [Counted_Column] = @Counted_Column, [Unit_A"& _ 
-                "rea_Column] = @Unit_Area_Column, [SurveyArea] = @SurveyArea, [SampledArea] = @Sa"& _ 
-                "mpledArea, [Intensity] = @Intensity, [RelativePrecision] = @RelativePrecision, ["& _ 
-                "SightabilityCorrectionFactor] = @SightabilityCorrectionFactor, [Density] = @Dens"& _ 
-                "ity, [Comments] = @Comments, [ReportDate] = @ReportDate, [AnalysisPerformedBy] ="& _ 
-                " @AnalysisPerformedBy, [PopulationEstimateSource] = @PopulationEstimateSource, ["& _ 
-                "RecordInsertedDate] = @RecordInsertedDate, [RecordInsertedBy] = @RecordInsertedB"& _ 
-                "y, [ValidatedDate] = @ValidatedDate, [ValidatedBy] = @ValidatedBy, [PopulationSo"& _ 
-                "urceLink] = @PopulationSourceLink WHERE (([SurveyName] = @Original_SurveyName) A"& _ 
-                "ND ([ParkSubArea] = @Original_ParkSubArea) AND ([PopulationEstimateSourceReferen"& _ 
-                "ceCode] = @Original_PopulationEstimateSourceReferenceCode) AND ([Analysis_Column"& _ 
-                "] = @Original_Analysis_Column) AND ([Strata] = @Original_Strata) AND ([Confidenc"& _ 
-                "e] = @Original_Confidence) AND ([Population_Estimate] = @Original_Population_Est"& _ 
-                "imate) AND ((@IsNull_Lower_Limit = 1 AND [Lower_Limit] IS NULL) OR ([Lower_Limit"& _ 
-                "] = @Original_Lower_Limit)) AND ((@IsNull_Upper_Limit = 1 AND [Upper_Limit] IS N"& _ 
-                "ULL) OR ([Upper_Limit] = @Original_Upper_Limit)) AND ((@IsNull_Standard_Error = "& _ 
-                "1 AND [Standard_Error] IS NULL) OR ([Standard_Error] = @Original_Standard_Error)"& _ 
-                ") AND ((@IsNull_Proportion_of_Mean = 1 AND [Proportion_of_Mean] IS NULL) OR ([Pr"& _ 
-                "oportion_of_Mean] = @Original_Proportion_of_Mean)) AND ((@IsNull_Strata_Column ="& _ 
-                " 1 AND [Strata_Column] IS NULL) OR ([Strata_Column] = @Original_Strata_Column)) "& _ 
-                "AND ((@IsNull_Analysis_Area = 1 AND [Analysis_Area] IS NULL) OR ([Analysis_Area]"& _ 
-                " = @Original_Analysis_Area)) AND ((@IsNull_Counted_Column = 1 AND [Counted_Colum"& _ 
-                "n] IS NULL) OR ([Counted_Column] = @Original_Counted_Column)) AND ((@IsNull_Unit"& _ 
-                "_Area_Column = 1 AND [Unit_Area_Column] IS NULL) OR ([Unit_Area_Column] = @Origi"& _ 
-                "nal_Unit_Area_Column)) AND ((@IsNull_SurveyArea = 1 AND [SurveyArea] IS NULL) OR"& _ 
-                " ([SurveyArea] = @Original_SurveyArea)) AND ((@IsNull_SampledArea = 1 AND [Sampl"& _ 
-                "edArea] IS NULL) OR ([SampledArea] = @Original_SampledArea)) AND ((@IsNull_Inten"& _ 
-                "sity = 1 AND [Intensity] IS NULL) OR ([Intensity] = @Original_Intensity)) AND (("& _ 
-                "@IsNull_RelativePrecision = 1 AND [RelativePrecision] IS NULL) OR ([RelativePrec"& _ 
-                "ision] = @Original_RelativePrecision)) AND ((@IsNull_SightabilityCorrectionFacto"& _ 
-                "r = 1 AND [SightabilityCorrectionFactor] IS NULL) OR ([SightabilityCorrectionFac"& _ 
-                "tor] = @Original_SightabilityCorrectionFactor)) AND ((@IsNull_Density = 1 AND [D"& _ 
-                "ensity] IS NULL) OR ([Density] = @Original_Density)) AND ((@IsNull_ReportDate = "& _ 
-                "1 AND [ReportDate] IS NULL) OR ([ReportDate] = @Original_ReportDate)) AND ((@IsN"& _ 
-                "ull_AnalysisPerformedBy = 1 AND [AnalysisPerformedBy] IS NULL) OR ([AnalysisPerf"& _ 
-                "ormedBy] = @Original_AnalysisPerformedBy)) AND ([PopulationEstimateSource] = @Or"& _ 
-                "iginal_PopulationEstimateSource) AND ([RecordInsertedDate] = @Original_RecordIns"& _ 
-                "ertedDate) AND ([RecordInsertedBy] = @Original_RecordInsertedBy) AND ((@IsNull_V"& _ 
-                "alidatedDate = 1 AND [ValidatedDate] IS NULL) OR ([ValidatedDate] = @Original_Va"& _ 
-                "lidatedDate)) AND ((@IsNull_ValidatedBy = 1 AND [ValidatedBy] IS NULL) OR ([Vali"& _ 
-                "datedBy] = @Original_ValidatedBy)) AND ((@IsNull_PopulationSourceLink = 1 AND [P"& _ 
-                "opulationSourceLink] IS NULL) OR ([PopulationSourceLink] = @Original_PopulationS"& _ 
-                "ourceLink)) AND ([PopulationEstimateID] = @Original_PopulationEstimateID));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SEL"& _ 
-                "ECT SurveyName, ParkSubArea, PopulationEstimateSourceReferenceCode, Analysis_Col"& _ 
-                "umn, Strata, Confidence, Population_Estimate, Lower_Limit, Upper_Limit, Standard"& _ 
-                "_Error, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_A"& _ 
-                "rea_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityC"& _ 
-                "orrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationE"& _ 
-                "stimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy,"& _ 
-                " PopulationSourceLink, PopulationEstimateID FROM GSPE_PopulationEstimates WHERE "& _ 
-                "(PopulationEstimateID = @PopulationEstimateID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       GSPE_PopulationEstimates"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                ParkSubArea = @ParkSubA"& _ 
+                "rea, PopulationEstimateSourceReferenceCode = @PopulationEstimateSourceReferenceC"& _ 
+                "ode, Analysis_Column = @Analysis_Column, Strata = @Strata, Confidence = @Confide"& _ 
+                "nce, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Population_Estimate = @Population_Estimate, Lowe"& _ 
+                "r_Limit = @Lower_Limit, Upper_Limit = @Upper_Limit, Standard_Error = @Standard_E"& _ 
+                "rror, Proportion_of_Mean = @Proportion_of_Mean, Strata_Column = @Strata_Column, "& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Analysis_Area = @Analysis_Area, Counted_Column = @Cou"& _ 
+                "nted_Column, Unit_Area_Column = @Unit_Area_Column, SurveyArea = @SurveyArea, Sam"& _ 
+                "pledArea = @SampledArea, Intensity = @Intensity, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Rela"& _ 
+                "tivePrecision = @RelativePrecision, SightabilityCorrectionFactor = @Sightability"& _ 
+                "CorrectionFactor, Comments = @Comments, ReportDate = @ReportDate, AnalysisPerfor"& _ 
+                "medBy = @AnalysisPerformedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PopulationEstimateSourc"& _ 
+                "e = @PopulationEstimateSource, ValidatedDate = @ValidatedDate, ValidatedBy = @Va"& _ 
+                "lidatedBy, PopulationSourceLink = @PopulationSourceLink"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Populatio"& _ 
+                "nEstimateID = @Original_PopulationEstimateID); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT SurveyName, ParkSubArea,"& _ 
+                " PopulationEstimateSourceReferenceCode, Analysis_Column, Strata, Confidence, Pop"& _ 
+                "ulation_Estimate, Lower_Limit, Upper_Limit, Standard_Error, Proportion_of_Mean, "& _ 
+                "Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, Samp"& _ 
+                "ledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Co"& _ 
+                "mments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInserte"& _ 
+                "dDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink, Popul"& _ 
+                "ationEstimateID FROM GSPE_PopulationEstimates WHERE (PopulationEstimateID = @Pop"& _ 
+                "ulationEstimateID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ParkSubArea", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Analysis_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strata", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Confidence", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Confidence", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Population_Estimate", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Population_Estimate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lower_Limit", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lower_Limit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Upper_Limit", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Upper_Limit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Standard_Error", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Standard_Error", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Proportion_of_Mean", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proportion_of_Mean", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strata_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Analysis_Area", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Area", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Counted_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Unit_Area_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unit_Area_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyArea", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SampledArea", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SampledArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Intensity", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Intensity", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RelativePrecision", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RelativePrecision", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SightabilityCorrectionFactor", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SightabilityCorrectionFactor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Density", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ReportDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AnalysisPerformedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSource", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSource", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ParkSubArea", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Analysis_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strata", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Confidence", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Confidence", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Population_Estimate", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Population_Estimate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Lower_Limit", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lower_Limit", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Lower_Limit", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Lower_Limit", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Upper_Limit", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Upper_Limit", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Upper_Limit", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Upper_Limit", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Standard_Error", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Standard_Error", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Standard_Error", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Standard_Error", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Proportion_of_Mean", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proportion_of_Mean", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Proportion_of_Mean", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proportion_of_Mean", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strata_Column", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata_Column", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strata_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Analysis_Area", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Area", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Analysis_Area", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Area", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Counted_Column", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted_Column", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Counted_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Unit_Area_Column", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unit_Area_Column", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Unit_Area_Column", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unit_Area_Column", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SurveyArea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyArea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyArea", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SampledArea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SampledArea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SampledArea", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SampledArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Intensity", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Intensity", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Intensity", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Intensity", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_RelativePrecision", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RelativePrecision", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RelativePrecision", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RelativePrecision", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SightabilityCorrectionFactor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SightabilityCorrectionFactor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SightabilityCorrectionFactor", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SightabilityCorrectionFactor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Density", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Density", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ReportDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ReportDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_AnalysisPerformedBy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AnalysisPerformedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateSource", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSource", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RecordInsertedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ValidatedDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ValidatedDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ValidatedBy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ValidatedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PopulationSourceLink", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ParkSubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ParkSubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSourceReferenceCode", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSourceReferenceCode", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Analysis_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strata", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Confidence", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Confidence", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Population_Estimate", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Population_Estimate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lower_Limit", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Lower_Limit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Upper_Limit", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Upper_Limit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Standard_Error", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Standard_Error", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Proportion_of_Mean", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Proportion_of_Mean", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strata_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Strata_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Analysis_Area", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Analysis_Area", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Counted_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Unit_Area_Column", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Unit_Area_Column", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyArea", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SampledArea", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SampledArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Intensity", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Intensity", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RelativePrecision", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "RelativePrecision", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SightabilityCorrectionFactor", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SightabilityCorrectionFactor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ReportDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "ReportDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AnalysisPerformedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "AnalysisPerformedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateSource", Global.System.Data.SqlDbType.VarChar, 1000, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateSource", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedDate", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ValidatedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "ValidatedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationSourceLink", Global.System.Data.SqlDbType.VarChar, 4000, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationSourceLink", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PopulationEstimateID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PopulationEstimateID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "PopulationEstimateID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12981,205 +12814,8 @@ Namespace MooseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete( _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_ParkSubArea As String,  _
-                    ByVal Original_PopulationEstimateSourceReferenceCode As Integer,  _
-                    ByVal Original_Analysis_Column As String,  _
-                    ByVal Original_Strata As String,  _
-                    ByVal Original_Confidence As Integer,  _
-                    ByVal Original_Population_Estimate As Double,  _
-                    ByVal Original_Lower_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Upper_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Standard_Error As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Proportion_of_Mean As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Strata_Column As String,  _
-                    ByVal Original_Analysis_Area As String,  _
-                    ByVal Original_Counted_Column As String,  _
-                    ByVal Original_Unit_Area_Column As String,  _
-                    ByVal Original_SurveyArea As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SampledArea As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Intensity As Global.System.Nullable(Of Double),  _
-                    ByVal Original_RelativePrecision As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SightabilityCorrectionFactor As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Density As Global.System.Nullable(Of Double),  _
-                    ByVal Original_ReportDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_AnalysisPerformedBy As String,  _
-                    ByVal Original_PopulationEstimateSource As String,  _
-                    ByVal Original_RecordInsertedDate As Date,  _
-                    ByVal Original_RecordInsertedBy As String,  _
-                    ByVal Original_ValidatedDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_ValidatedBy As String,  _
-                    ByVal Original_PopulationSourceLink As String,  _
-                    ByVal Original_PopulationEstimateID As Integer) As Integer
-            If (Original_SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_SurveyName")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_SurveyName,String)
-            End If
-            If (Original_ParkSubArea Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ParkSubArea")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_ParkSubArea,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_PopulationEstimateSourceReferenceCode,Integer)
-            If (Original_Analysis_Column Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Analysis_Column")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Analysis_Column,String)
-            End If
-            If (Original_Strata Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Strata")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Strata,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Confidence,Integer)
-            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Population_Estimate,Double)
-            If (Original_Lower_Limit.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Lower_Limit.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Upper_Limit.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Upper_Limit.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Standard_Error.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Standard_Error.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Proportion_of_Mean.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Proportion_of_Mean.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Strata_Column Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Strata_Column,String)
-            End If
-            If (Original_Analysis_Area Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Analysis_Area,String)
-            End If
-            If (Original_Counted_Column Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Counted_Column,String)
-            End If
-            If (Original_Unit_Area_Column Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Unit_Area_Column,String)
-            End If
-            If (Original_SurveyArea.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_SurveyArea.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SampledArea.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_SampledArea.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Intensity.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_Intensity.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
-            End If
-            If (Original_RelativePrecision.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_RelativePrecision.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SightabilityCorrectionFactor.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_SightabilityCorrectionFactor.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Density.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(Original_Density.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(34).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ReportDate.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(Original_ReportDate.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(36).Value = Global.System.DBNull.Value
-            End If
-            If (Original_AnalysisPerformedBy Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(Original_AnalysisPerformedBy,String)
-            End If
-            If (Original_PopulationEstimateSource Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_PopulationEstimateSource")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(Original_PopulationEstimateSource,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(40).Value = CType(Original_RecordInsertedDate,Date)
-            If (Original_RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_RecordInsertedBy")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(Original_RecordInsertedBy,String)
-            End If
-            If (Original_ValidatedDate.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(Original_ValidatedDate.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(43).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ValidatedBy Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(45).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(Original_ValidatedBy,String)
-            End If
-            If (Original_PopulationSourceLink Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(47).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(Original_PopulationSourceLink,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(48).Value = CType(Original_PopulationEstimateID,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_PopulationEstimateID As Integer) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_PopulationEstimateID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13384,7 +13020,6 @@ Namespace MooseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal SurveyName As String,  _
                     ByVal ParkSubArea As String,  _
                     ByVal PopulationEstimateSourceReferenceCode As Integer,  _
                     ByVal Analysis_Column As String,  _
@@ -13404,350 +13039,135 @@ Namespace MooseDataSetTableAdapters
                     ByVal Intensity As Global.System.Nullable(Of Double),  _
                     ByVal RelativePrecision As Global.System.Nullable(Of Double),  _
                     ByVal SightabilityCorrectionFactor As Global.System.Nullable(Of Double),  _
-                    ByVal Density As Global.System.Nullable(Of Double),  _
                     ByVal Comments As String,  _
-                    ByVal ReportDate As Global.System.Nullable(Of Date),  _
+                    ByVal ReportDate As String,  _
                     ByVal AnalysisPerformedBy As String,  _
                     ByVal PopulationEstimateSource As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
-                    ByVal ValidatedDate As Global.System.Nullable(Of Date),  _
+                    ByVal ValidatedDate As String,  _
                     ByVal ValidatedBy As String,  _
                     ByVal PopulationSourceLink As String,  _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_ParkSubArea As String,  _
-                    ByVal Original_PopulationEstimateSourceReferenceCode As Integer,  _
-                    ByVal Original_Analysis_Column As String,  _
-                    ByVal Original_Strata As String,  _
-                    ByVal Original_Confidence As Integer,  _
-                    ByVal Original_Population_Estimate As Double,  _
-                    ByVal Original_Lower_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Upper_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Standard_Error As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Proportion_of_Mean As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Strata_Column As String,  _
-                    ByVal Original_Analysis_Area As String,  _
-                    ByVal Original_Counted_Column As String,  _
-                    ByVal Original_Unit_Area_Column As String,  _
-                    ByVal Original_SurveyArea As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SampledArea As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Intensity As Global.System.Nullable(Of Double),  _
-                    ByVal Original_RelativePrecision As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SightabilityCorrectionFactor As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Density As Global.System.Nullable(Of Double),  _
-                    ByVal Original_ReportDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_AnalysisPerformedBy As String,  _
-                    ByVal Original_PopulationEstimateSource As String,  _
-                    ByVal Original_RecordInsertedDate As Date,  _
-                    ByVal Original_RecordInsertedBy As String,  _
-                    ByVal Original_ValidatedDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_ValidatedBy As String,  _
-                    ByVal Original_PopulationSourceLink As String,  _
                     ByVal Original_PopulationEstimateID As Integer,  _
                     ByVal PopulationEstimateID As Integer) As Integer
-            If (SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("SurveyName")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(SurveyName,String)
-            End If
             If (ParkSubArea Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("ParkSubArea")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(ParkSubArea,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(ParkSubArea,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(PopulationEstimateSourceReferenceCode,Integer)
             If (Analysis_Column Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Analysis_Column")
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Analysis_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Analysis_Column,String)
             End If
             If (Strata Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Strata")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Strata,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Strata,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Confidence,Integer)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Population_Estimate,Double)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Confidence,Integer)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Population_Estimate,Double)
             If (Lower_Limit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Lower_Limit.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Lower_Limit.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Upper_Limit.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Upper_Limit.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (Upper_Limit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Upper_Limit.Value,Double)
+            If (Standard_Error.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Standard_Error.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Standard_Error.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Standard_Error.Value,Double)
+            If (Proportion_of_Mean.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Proportion_of_Mean.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
-            If (Proportion_of_Mean.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Proportion_of_Mean.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            End If
             If (Strata_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Strata_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Strata_Column,String)
             End If
             If (Analysis_Area Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Analysis_Area,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Analysis_Area,String)
             End If
             If (Counted_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Counted_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Counted_Column,String)
             End If
             If (Unit_Area_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Unit_Area_Column,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Unit_Area_Column,String)
             End If
             If (SurveyArea.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SurveyArea.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(SurveyArea.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (SampledArea.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(SampledArea.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
-            If (SampledArea.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(SampledArea.Value,Double)
+            If (Intensity.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Intensity.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
-            If (Intensity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Intensity.Value,Double)
+            If (RelativePrecision.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(RelativePrecision.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
-            If (RelativePrecision.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(RelativePrecision.Value,Double)
+            If (SightabilityCorrectionFactor.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(SightabilityCorrectionFactor.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
-            If (SightabilityCorrectionFactor.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(SightabilityCorrectionFactor.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (Density.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Density.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
             If (Comments Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Comments,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Comments,String)
             End If
-            If (ReportDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(ReportDate.Value,Date)
+            If (ReportDate Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(ReportDate,String)
             End If
             If (AnalysisPerformedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(AnalysisPerformedBy,String)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(AnalysisPerformedBy,String)
             End If
             If (PopulationEstimateSource Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("PopulationEstimateSource")
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(PopulationEstimateSource,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(PopulationEstimateSource,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(RecordInsertedDate,Date)
-            If (RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("RecordInsertedBy")
+            If (ValidatedDate Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(RecordInsertedBy,String)
-            End If
-            If (ValidatedDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(ValidatedDate.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(ValidatedDate,String)
             End If
             If (ValidatedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(ValidatedBy,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(ValidatedBy,String)
             End If
             If (PopulationSourceLink Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(PopulationSourceLink,String)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(PopulationSourceLink,String)
             End If
-            If (Original_SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_SurveyName")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_SurveyName,String)
-            End If
-            If (Original_ParkSubArea Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_ParkSubArea")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_ParkSubArea,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_PopulationEstimateSourceReferenceCode,Integer)
-            If (Original_Analysis_Column Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Analysis_Column")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Analysis_Column,String)
-            End If
-            If (Original_Strata Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Strata")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Strata,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Confidence,Integer)
-            Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_Population_Estimate,Double)
-            If (Original_Lower_Limit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_Lower_Limit.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Upper_Limit.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_Upper_Limit.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Standard_Error.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_Standard_Error.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Proportion_of_Mean.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_Proportion_of_Mean.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Strata_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_Strata_Column,String)
-            End If
-            If (Original_Analysis_Area Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_Analysis_Area,String)
-            End If
-            If (Original_Counted_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_Counted_Column,String)
-            End If
-            If (Original_Unit_Area_Column Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_Unit_Area_Column,String)
-            End If
-            If (Original_SurveyArea.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_SurveyArea.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SampledArea.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_SampledArea.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Intensity.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_Intensity.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
-            End If
-            If (Original_RelativePrecision.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_RelativePrecision.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SightabilityCorrectionFactor.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_SightabilityCorrectionFactor.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Density.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_Density.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ReportDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_ReportDate.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
-            End If
-            If (Original_AnalysisPerformedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_AnalysisPerformedBy,String)
-            End If
-            If (Original_PopulationEstimateSource Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_PopulationEstimateSource")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_PopulationEstimateSource,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_RecordInsertedDate,Date)
-            If (Original_RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_RecordInsertedBy")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_RecordInsertedBy,String)
-            End If
-            If (Original_ValidatedDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_ValidatedDate.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(73).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ValidatedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(75).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(Original_ValidatedBy,String)
-            End If
-            If (Original_PopulationSourceLink Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(77).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_PopulationSourceLink,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_PopulationEstimateID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(79).Value = CType(PopulationEstimateID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_PopulationEstimateID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(27).Value = CType(PopulationEstimateID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13761,74 +13181,6 @@ Namespace MooseDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal SurveyName As String,  _
-                    ByVal ParkSubArea As String,  _
-                    ByVal PopulationEstimateSourceReferenceCode As Integer,  _
-                    ByVal Analysis_Column As String,  _
-                    ByVal Strata As String,  _
-                    ByVal Confidence As Integer,  _
-                    ByVal Population_Estimate As Double,  _
-                    ByVal Lower_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Upper_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Standard_Error As Global.System.Nullable(Of Double),  _
-                    ByVal Proportion_of_Mean As Global.System.Nullable(Of Double),  _
-                    ByVal Strata_Column As String,  _
-                    ByVal Analysis_Area As String,  _
-                    ByVal Counted_Column As String,  _
-                    ByVal Unit_Area_Column As String,  _
-                    ByVal SurveyArea As Global.System.Nullable(Of Double),  _
-                    ByVal SampledArea As Global.System.Nullable(Of Double),  _
-                    ByVal Intensity As Global.System.Nullable(Of Double),  _
-                    ByVal RelativePrecision As Global.System.Nullable(Of Double),  _
-                    ByVal SightabilityCorrectionFactor As Global.System.Nullable(Of Double),  _
-                    ByVal Density As Global.System.Nullable(Of Double),  _
-                    ByVal Comments As String,  _
-                    ByVal ReportDate As Global.System.Nullable(Of Date),  _
-                    ByVal AnalysisPerformedBy As String,  _
-                    ByVal PopulationEstimateSource As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
-                    ByVal ValidatedDate As Global.System.Nullable(Of Date),  _
-                    ByVal ValidatedBy As String,  _
-                    ByVal PopulationSourceLink As String,  _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_ParkSubArea As String,  _
-                    ByVal Original_PopulationEstimateSourceReferenceCode As Integer,  _
-                    ByVal Original_Analysis_Column As String,  _
-                    ByVal Original_Strata As String,  _
-                    ByVal Original_Confidence As Integer,  _
-                    ByVal Original_Population_Estimate As Double,  _
-                    ByVal Original_Lower_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Upper_Limit As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Standard_Error As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Proportion_of_Mean As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Strata_Column As String,  _
-                    ByVal Original_Analysis_Area As String,  _
-                    ByVal Original_Counted_Column As String,  _
-                    ByVal Original_Unit_Area_Column As String,  _
-                    ByVal Original_SurveyArea As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SampledArea As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Intensity As Global.System.Nullable(Of Double),  _
-                    ByVal Original_RelativePrecision As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SightabilityCorrectionFactor As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Density As Global.System.Nullable(Of Double),  _
-                    ByVal Original_ReportDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_AnalysisPerformedBy As String,  _
-                    ByVal Original_PopulationEstimateSource As String,  _
-                    ByVal Original_RecordInsertedDate As Date,  _
-                    ByVal Original_RecordInsertedBy As String,  _
-                    ByVal Original_ValidatedDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_ValidatedBy As String,  _
-                    ByVal Original_PopulationSourceLink As String,  _
-                    ByVal Original_PopulationEstimateID As Integer) As Integer
-            Return Me.Update(SurveyName, ParkSubArea, PopulationEstimateSourceReferenceCode, Analysis_Column, Strata, Confidence, Population_Estimate, Lower_Limit, Upper_Limit, Standard_Error, Proportion_of_Mean, Strata_Column, Analysis_Area, Counted_Column, Unit_Area_Column, SurveyArea, SampledArea, Intensity, RelativePrecision, SightabilityCorrectionFactor, Density, Comments, ReportDate, AnalysisPerformedBy, PopulationEstimateSource, RecordInsertedDate, RecordInsertedBy, ValidatedDate, ValidatedBy, PopulationSourceLink, Original_SurveyName, Original_ParkSubArea, Original_PopulationEstimateSourceReferenceCode, Original_Analysis_Column, Original_Strata, Original_Confidence, Original_Population_Estimate, Original_Lower_Limit, Original_Upper_Limit, Original_Standard_Error, Original_Proportion_of_Mean, Original_Strata_Column, Original_Analysis_Area, Original_Counted_Column, Original_Unit_Area_Column, Original_SurveyArea, Original_SampledArea, Original_Intensity, Original_RelativePrecision, Original_SightabilityCorrectionFactor, Original_Density, Original_ReportDate, Original_AnalysisPerformedBy, Original_PopulationEstimateSource, Original_RecordInsertedDate, Original_RecordInsertedBy, Original_ValidatedDate, Original_ValidatedBy, Original_PopulationSourceLink, Original_PopulationEstimateID, Original_PopulationEstimateID)
         End Function
     End Class
     
