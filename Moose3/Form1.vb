@@ -5,6 +5,7 @@ Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
 Imports DevExpress.XtraVerticalGrid
 Imports DevExpress.XtraVerticalGrid.Rows
+Imports SkeeterUtilities.DataFileToDataTableConverters.DataFileToDataTableConverters
 
 Public Class Form1
 
@@ -53,6 +54,33 @@ Public Class Form1
         Me.GSPE_DensityEstimatesBindingSource.EndEdit()
         Me.GSPE_ResultsBindingSource.EndEdit()
         Me.GSPE_SurveysBindingSource.EndEdit()
+    End Sub
+
+    Private Sub LoadGridColumnDescriptions()
+        Try
+            'Get the columns descriptions from the database and load them into the tooltips of the matching column in the datagridview
+            Dim TableName As String = "GSPE_PopulationEstimates"
+            Dim DGV As DataGridView = Me.GSPE_PopulationEstimatesDataGridView
+            Dim ColumnsDescriptionsSQL As String = "SELECT [Column],ColumnDescription FROM DatabaseColumnsDescriptions WHERE [Table] = '" & TableName & "' Order By [Column]"
+            Dim ColumnsDescriptionsDataTable As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, ColumnsDescriptionsSQL)
+
+            'Loop through the datagridview columns looking for matches to the columns in the columnsdescriptionsdatatable
+            For Each DGVColumn As DataGridViewColumn In DGV.Columns
+                'Loop through the columns definitions datatable and look for a match
+                Dim ColumnName As String = DGVColumn.DataPropertyName.Trim
+                For Each DR As DataRow In ColumnsDescriptionsDataTable.Rows
+                    If DR.Item("Column").ToString.Trim.ToLower = ColumnName.Trim.ToLower Then
+                        DGVColumn.ToolTipText = DR.Item("ColumnDescription")
+                    End If
+                Next
+                'Dim Filter As String = "Column = '" & ColumnName & "'"
+                'Debug.Print(ColumnName & vbTab & Filter)
+                'Dim MyView As New DataView(ColumnsDescriptionsDataTable, Filter, False, DataViewRowState.CurrentRows)
+                'If V.Count = 1 Then DGVColumn.ToolTipText = V(0).Item("ColumnDescription")
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 
     ''' <summary>
@@ -186,8 +214,11 @@ Public Class Form1
         With Me.GSPE_PopulationEstimatesDataGridView
             .Dock = DockStyle.Fill
             .AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+            .AutoResizeColumnHeadersHeight()
             .ScrollBars = ScrollBars.Both
         End With
+
+        LoadGridColumnDescriptions()
 
         'Me.DensityEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
         'Me.ResultsDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)

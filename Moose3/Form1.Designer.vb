@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
@@ -161,38 +162,37 @@ Partial Class Form1
         Me.ResultsXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.ResultsSplitContainer = New System.Windows.Forms.SplitContainer()
         Me.GSPE_PopulationEstimatesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ParkSubAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AnalysisColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StrataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ConfidenceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AnalysisColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ConfidenceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SurveyAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SampledAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Analysis_Area = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RecordInsertedDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RecordInsertedByDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RecordInsertedByDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GSPE_PopulationEstimatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ResultsSplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.DensityEstimatesDataGridView = New System.Windows.Forms.DataGridView()
         Me.ParkSubAreaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -399,6 +399,7 @@ Partial Class Form1
         Me.SurveyPivotGridToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ExportPivotGridToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
         Me.ExportPivotGridToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.GSPE_PopulationEstimatesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HeaderPanel = New System.Windows.Forms.Panel()
         Me.HeaderLabel = New System.Windows.Forms.Label()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
@@ -420,7 +421,12 @@ Partial Class Form1
         Me.SummaryDockPanel2 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer5 = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SummaryTextBox2 = New System.Windows.Forms.TextBox()
-        Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GSPE_PopulationEstimatesToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.PopulationEstimatesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.DensityEstimatesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ResultsToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -455,7 +461,7 @@ Partial Class Form1
         Me.ResultsSplitContainer.Panel2.SuspendLayout()
         Me.ResultsSplitContainer.SuspendLayout()
         CType(Me.GSPE_PopulationEstimatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResultsSplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ResultsSplitContainer2.Panel1.SuspendLayout()
         Me.ResultsSplitContainer2.Panel2.SuspendLayout()
@@ -473,13 +479,16 @@ Partial Class Form1
         Me.GSPEPivotXtraTabPage.SuspendLayout()
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SurveyPivotGridToolStrip.SuspendLayout()
+        CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.HeaderPanel.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         CType(Me.DockManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AutoHideContainer1.SuspendLayout()
         Me.SummaryDockPanel2.SuspendLayout()
         Me.ControlContainer5.SuspendLayout()
-        CType(Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GSPE_PopulationEstimatesToolStrip.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -1075,6 +1084,7 @@ Partial Class Form1
         '
         Me.ResultsSplitContainer.Panel1.AutoScroll = True
         Me.ResultsSplitContainer.Panel1.Controls.Add(Me.GSPE_PopulationEstimatesDataGridView)
+        Me.ResultsSplitContainer.Panel1.Controls.Add(Me.GSPE_PopulationEstimatesToolStrip)
         '
         'ResultsSplitContainer.Panel2
         '
@@ -1087,205 +1097,254 @@ Partial Class Form1
         '
         Me.GSPE_PopulationEstimatesDataGridView.AllowUserToOrderColumns = True
         Me.GSPE_PopulationEstimatesDataGridView.AutoGenerateColumns = False
+        Me.GSPE_PopulationEstimatesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.GSPE_PopulationEstimatesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GSPE_PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.ParkSubAreaDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.ConfidenceDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn31})
+        Me.GSPE_PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn, Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.ConfidenceDataGridViewTextBoxColumn, Me.SurveyAreaDataGridViewTextBoxColumn, Me.SampledAreaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn18, Me.Analysis_Area, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn1})
         Me.GSPE_PopulationEstimatesDataGridView.DataSource = Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
         Me.GSPE_PopulationEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GSPE_PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.GSPE_PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
         Me.GSPE_PopulationEstimatesDataGridView.Name = "GSPE_PopulationEstimatesDataGridView"
-        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(898, 236)
+        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(898, 211)
         Me.GSPE_PopulationEstimatesDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "SurveyName"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "SurveyName"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
         'ParkSubAreaDataGridViewTextBoxColumn
         '
         Me.ParkSubAreaDataGridViewTextBoxColumn.DataPropertyName = "ParkSubArea"
         Me.ParkSubAreaDataGridViewTextBoxColumn.HeaderText = "ParkSubArea"
         Me.ParkSubAreaDataGridViewTextBoxColumn.Name = "ParkSubAreaDataGridViewTextBoxColumn"
+        Me.ParkSubAreaDataGridViewTextBoxColumn.ToolTipText = "Required. Sub-area of the park that was sampled, if applicable. Enter the park ac" &
+    "ronym if the whole park was sampled."
+        Me.ParkSubAreaDataGridViewTextBoxColumn.Width = 94
         '
-        'AnalysisColumnDataGridViewTextBoxColumn
+        'PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn
         '
-        Me.AnalysisColumnDataGridViewTextBoxColumn.DataPropertyName = "Analysis_Column"
-        Me.AnalysisColumnDataGridViewTextBoxColumn.HeaderText = "Analysis_Column"
-        Me.AnalysisColumnDataGridViewTextBoxColumn.Name = "AnalysisColumnDataGridViewTextBoxColumn"
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.DataPropertyName = "PopulationEstimateSourceReferenceCode"
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.HeaderText = "Population Estimate Source Reference Code"
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.Name = "PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn"
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.ToolTipText = "Required. Enter the reference code of the report from which the statistic was der" &
+    "ived. Each statistic must have a supporting report."
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.Width = 243
         '
         'StrataDataGridViewTextBoxColumn
         '
         Me.StrataDataGridViewTextBoxColumn.DataPropertyName = "Strata"
-        Me.StrataDataGridViewTextBoxColumn.HeaderText = "Strata"
+        Me.StrataDataGridViewTextBoxColumn.HeaderText = "Stratum"
         Me.StrataDataGridViewTextBoxColumn.Name = "StrataDataGridViewTextBoxColumn"
+        Me.StrataDataGridViewTextBoxColumn.ToolTipText = "Stratum associated with the statistic; High, Low, etc. Use InTotSurvey if the sta" &
+    "tistic applies to the survey as a whole."
+        Me.StrataDataGridViewTextBoxColumn.Width = 70
         '
-        'ConfidenceDataGridViewTextBoxColumn
+        'AnalysisColumnDataGridViewTextBoxColumn
         '
-        Me.ConfidenceDataGridViewTextBoxColumn.DataPropertyName = "Confidence"
-        Me.ConfidenceDataGridViewTextBoxColumn.HeaderText = "Confidence"
-        Me.ConfidenceDataGridViewTextBoxColumn.Name = "ConfidenceDataGridViewTextBoxColumn"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.DataPropertyName = "Analysis_Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.HeaderText = "Analysis Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.Name = "AnalysisColumnDataGridViewTextBoxColumn"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.ToolTipText = "Moose, Adults, Bulls, Cows, etc."
+        Me.AnalysisColumnDataGridViewTextBoxColumn.Width = 109
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "Population_Estimate"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Population_Estimate"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Standard_Error"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Standard_Error"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn6.Width = 129
         '
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "Lower_Limit"
         Me.DataGridViewTextBoxColumn8.HeaderText = "Lower_Limit"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Width = 88
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "Upper_Limit"
         Me.DataGridViewTextBoxColumn9.HeaderText = "Upper_Limit"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 88
         '
-        'DataGridViewTextBoxColumn10
+        'ConfidenceDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Proportion_of_Mean"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Proportion_of_Mean"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.ConfidenceDataGridViewTextBoxColumn.DataPropertyName = "Confidence"
+        Me.ConfidenceDataGridViewTextBoxColumn.HeaderText = "Confidence"
+        Me.ConfidenceDataGridViewTextBoxColumn.Name = "ConfidenceDataGridViewTextBoxColumn"
+        Me.ConfidenceDataGridViewTextBoxColumn.Width = 86
         '
-        'DataGridViewTextBoxColumn11
+        'SurveyAreaDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Strata_Column"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Strata_Column"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.SurveyAreaDataGridViewTextBoxColumn.DataPropertyName = "SurveyArea"
+        Me.SurveyAreaDataGridViewTextBoxColumn.HeaderText = "Survey Total Area"
+        Me.SurveyAreaDataGridViewTextBoxColumn.Name = "SurveyAreaDataGridViewTextBoxColumn"
+        Me.SurveyAreaDataGridViewTextBoxColumn.ToolTipText = "Total area of the park, survey area, conservation unit, etc."
+        Me.SurveyAreaDataGridViewTextBoxColumn.Width = 119
         '
-        'DataGridViewTextBoxColumn12
+        'SampledAreaDataGridViewTextBoxColumn
         '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "Analysis_Area"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Analysis_Area"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "Counted_Column"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "Counted_Column"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "Unit_Area_Column"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Unit_Area_Column"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "SurveyArea"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "SurveyArea"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "SampledArea"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "SampledArea"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "Intensity"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "Intensity"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "RelativePrecision"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "RelativePrecision"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.SampledAreaDataGridViewTextBoxColumn.DataPropertyName = "SampledArea"
+        Me.SampledAreaDataGridViewTextBoxColumn.HeaderText = "SampledArea"
+        Me.SampledAreaDataGridViewTextBoxColumn.Name = "SampledAreaDataGridViewTextBoxColumn"
+        Me.SampledAreaDataGridViewTextBoxColumn.ToolTipText = "Total area of the sampled units; this may be less than the total area of the surv" &
+    "ey."
+        Me.SampledAreaDataGridViewTextBoxColumn.Width = 95
         '
         'DataGridViewTextBoxColumn19
         '
         Me.DataGridViewTextBoxColumn19.DataPropertyName = "SightabilityCorrectionFactor"
         Me.DataGridViewTextBoxColumn19.HeaderText = "SightabilityCorrectionFactor"
         Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.Width = 165
         '
-        'DataGridViewTextBoxColumn20
+        'DataGridViewTextBoxColumn7
         '
-        Me.DataGridViewTextBoxColumn20.DataPropertyName = "Density"
-        Me.DataGridViewTextBoxColumn20.HeaderText = "Density"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Standard_Error"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Standard_Error"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Width = 106
         '
-        'DataGridViewTextBoxColumn21
+        'DataGridViewTextBoxColumn10
         '
-        Me.DataGridViewTextBoxColumn21.DataPropertyName = "Comments"
-        Me.DataGridViewTextBoxColumn21.HeaderText = "Comments"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Proportion_of_Mean"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Proportion_of_Mean"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Width = 130
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "Intensity"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Intensity"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.Width = 75
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Strata_Column"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Strata_Column"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Width = 103
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "Counted_Column"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Counted_Column"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.Width = 114
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "Unit_Area_Column"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Unit_Area_Column"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.Width = 121
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "RelativePrecision"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "RelativePrecision"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.Width = 113
+        '
+        'Analysis_Area
+        '
+        Me.Analysis_Area.DataPropertyName = "Analysis_Area"
+        Me.Analysis_Area.HeaderText = "Analysis_Area"
+        Me.Analysis_Area.Name = "Analysis_Area"
+        Me.Analysis_Area.ToolTipText = "Text description of the analysis area; not to be confused with numeric columns. S" &
+    "urvey Total Area or SampledArea."
         '
         'DataGridViewTextBoxColumn22
         '
         Me.DataGridViewTextBoxColumn22.DataPropertyName = "ReportDate"
         Me.DataGridViewTextBoxColumn22.HeaderText = "ReportDate"
         Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.Width = 88
         '
         'DataGridViewTextBoxColumn23
         '
         Me.DataGridViewTextBoxColumn23.DataPropertyName = "AnalysisPerformedBy"
         Me.DataGridViewTextBoxColumn23.HeaderText = "AnalysisPerformedBy"
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.Width = 133
         '
         'PopulationEstimateSourceDataGridViewTextBoxColumn
         '
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn.DataPropertyName = "PopulationEstimateSource"
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn.HeaderText = "PopulationEstimateSource"
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn.Name = "PopulationEstimateSourceDataGridViewTextBoxColumn"
-        '
-        'RecordInsertedDateDataGridViewTextBoxColumn
-        '
-        Me.RecordInsertedDateDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedDate"
-        Me.RecordInsertedDateDataGridViewTextBoxColumn.HeaderText = "RecordInsertedDate"
-        Me.RecordInsertedDateDataGridViewTextBoxColumn.Name = "RecordInsertedDateDataGridViewTextBoxColumn"
-        '
-        'RecordInsertedByDataGridViewTextBoxColumn
-        '
-        Me.RecordInsertedByDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedBy"
-        Me.RecordInsertedByDataGridViewTextBoxColumn.HeaderText = "RecordInsertedBy"
-        Me.RecordInsertedByDataGridViewTextBoxColumn.Name = "RecordInsertedByDataGridViewTextBoxColumn"
-        '
-        'DataGridViewTextBoxColumn27
-        '
-        Me.DataGridViewTextBoxColumn27.DataPropertyName = "ValidatedDate"
-        Me.DataGridViewTextBoxColumn27.HeaderText = "ValidatedDate"
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        '
-        'DataGridViewTextBoxColumn28
-        '
-        Me.DataGridViewTextBoxColumn28.DataPropertyName = "ValidatedBy"
-        Me.DataGridViewTextBoxColumn28.HeaderText = "ValidatedBy"
-        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.Width = 156
         '
         'DataGridViewTextBoxColumn29
         '
         Me.DataGridViewTextBoxColumn29.DataPropertyName = "PopulationSourceLink"
         Me.DataGridViewTextBoxColumn29.HeaderText = "PopulationSourceLink"
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.Width = 133
         '
-        'PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn21
         '
-        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.DataPropertyName = "PopulationEstimateSourceReferenceCode"
-        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.HeaderText = "PopulationEstimateSourceReferenceCode"
-        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.Name = "PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn21.DataPropertyName = "Comments"
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Comments"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.Width = 82
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.DataPropertyName = "ValidatedDate"
+        Me.DataGridViewTextBoxColumn27.HeaderText = "ValidatedDate"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.Width = 99
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.DataPropertyName = "ValidatedBy"
+        Me.DataGridViewTextBoxColumn28.HeaderText = "ValidatedBy"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.Width = 88
+        '
+        'RecordInsertedDateDataGridViewTextBoxColumn
+        '
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.Name = "RecordInsertedDateDataGridViewTextBoxColumn"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.Width = 130
+        '
+        'RecordInsertedByDataGridViewTextBoxColumn
+        '
+        Me.RecordInsertedByDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.Name = "RecordInsertedByDataGridViewTextBoxColumn"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RecordInsertedByDataGridViewTextBoxColumn.Width = 119
         '
         'DataGridViewTextBoxColumn31
         '
         Me.DataGridViewTextBoxColumn31.DataPropertyName = "PopulationEstimateID"
         Me.DataGridViewTextBoxColumn31.HeaderText = "PopulationEstimateID"
         Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
+        Me.DataGridViewTextBoxColumn31.Width = 134
         '
-        'GSPE_PopulationEstimatesBindingSource
+        'DataGridViewTextBoxColumn1
         '
-        Me.GSPE_PopulationEstimatesBindingSource.DataMember = "FK_GSPE_PopulationEstimates_GSPE_Surveys"
-        Me.GSPE_PopulationEstimatesBindingSource.DataSource = Me.GSPE_SurveysBindingSource
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "SurveyName"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "SurveyName"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 93
+        '
+        'FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
+        '
+        Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource.DataMember = "FK_GSPE_PopulationEstimates_GSPE_Surveys"
+        Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
         '
         'ResultsSplitContainer2
         '
@@ -1297,10 +1356,12 @@ Partial Class Form1
         'ResultsSplitContainer2.Panel1
         '
         Me.ResultsSplitContainer2.Panel1.Controls.Add(Me.DensityEstimatesDataGridView)
+        Me.ResultsSplitContainer2.Panel1.Controls.Add(Me.ToolStrip1)
         '
         'ResultsSplitContainer2.Panel2
         '
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsDataGridView)
+        Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ToolStrip2)
         Me.ResultsSplitContainer2.Size = New System.Drawing.Size(898, 454)
         Me.ResultsSplitContainer2.SplitterDistance = 273
         Me.ResultsSplitContainer2.TabIndex = 0
@@ -1314,9 +1375,9 @@ Partial Class Form1
         Me.DensityEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn1, Me.StratumDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn1, Me.DensityEstimateDataGridViewTextBoxColumn, Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn, Me.DensityAverageSearchEffortDataGridViewTextBoxColumn, Me.DensityEstimateMethodologyDataGridViewTextBoxColumn, Me.ReportDateDataGridViewTextBoxColumn1, Me.DensityEstimateSourceDataGridViewTextBoxColumn, Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn1, Me.ValidatedDateDataGridViewTextBoxColumn1, Me.ValidatedByDataGridViewTextBoxColumn1, Me.RecordInsertedDateDataGridViewTextBoxColumn1, Me.RecordInsertedByDataGridViewTextBoxColumn1, Me.SurveyNameDataGridViewTextBoxColumn1})
         Me.DensityEstimatesDataGridView.DataSource = Me.FKGSPEDensityEstimatesGSPESurveysBindingSource
         Me.DensityEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DensityEstimatesDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.DensityEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
         Me.DensityEstimatesDataGridView.Name = "DensityEstimatesDataGridView"
-        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(898, 273)
+        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(898, 248)
         Me.DensityEstimatesDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn1
@@ -1452,9 +1513,9 @@ Partial Class Form1
         Me.ResultsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn2, Me.BullCowRatioDataGridViewTextBoxColumn, Me.CalfCowRatioDataGridViewTextBoxColumn, Me.CalfAdultRatioDataGridViewTextBoxColumn, Me.ADULTDataGridViewTextBoxColumn, Me.BULL3040DataGridViewTextBoxColumn, Me.BULL3050DataGridViewTextBoxColumn, Me.BULL3060DataGridViewTextBoxColumn, Me.BULL4150DataGridViewTextBoxColumn, Me.BULLALLDataGridViewTextBoxColumn, Me.BULLGT50DataGridViewTextBoxColumn, Me.BULLGT60DataGridViewTextBoxColumn, Me.BULLGTE50DataGridViewTextBoxColumn, Me.BULLLT30DataGridViewTextBoxColumn, Me.BULLLT50DataGridViewTextBoxColumn, Me.CALFDataGridViewTextBoxColumn, Me.COWDataGridViewTextBoxColumn, Me.COWW0DataGridViewTextBoxColumn, Me.COWW1DataGridViewTextBoxColumn, Me.COWW2DataGridViewTextBoxColumn, Me.COWW3DataGridViewTextBoxColumn, Me.LGBULLDataGridViewTextBoxColumn, Me.MEDBULLDataGridViewTextBoxColumn, Me.MEDLBULLDataGridViewTextBoxColumn, Me.SMBULLDataGridViewTextBoxColumn, Me.UNKNOWNDataGridViewTextBoxColumn, Me.YBULLALLDataGridViewTextBoxColumn, Me.YBULLGTSFDataGridViewTextBoxColumn, Me.YBULLSFDataGridViewTextBoxColumn, Me.MOOSEDataGridViewTextBoxColumn, Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn, Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn, Me.MethodologyUsedDataGridViewTextBoxColumn, Me.ResultsSourceDataGridViewTextBoxColumn, Me.ResultsSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn2, Me.ValidatedDateDataGridViewTextBoxColumn2, Me.ValidatedByDataGridViewTextBoxColumn2, Me.RecordInsertedDateDataGridViewTextBoxColumn2, Me.RecordInsertedByDataGridViewTextBoxColumn2, Me.SurveyNameDataGridViewTextBoxColumn2, Me.ResultID})
         Me.ResultsDataGridView.DataSource = Me.FKGSPERatiosGSPESurveysBindingSource
         Me.ResultsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ResultsDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.ResultsDataGridView.Location = New System.Drawing.Point(0, 25)
         Me.ResultsDataGridView.Name = "ResultsDataGridView"
-        Me.ResultsDataGridView.Size = New System.Drawing.Size(898, 177)
+        Me.ResultsDataGridView.Size = New System.Drawing.Size(898, 152)
         Me.ResultsDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn2
@@ -2848,6 +2909,11 @@ Partial Class Form1
         Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(54, 22)
         Me.ExportPivotGridToolStripButton.Text = "Export..."
         '
+        'GSPE_PopulationEstimatesBindingSource
+        '
+        Me.GSPE_PopulationEstimatesBindingSource.DataMember = "FK_GSPE_PopulationEstimates_GSPE_Surveys"
+        Me.GSPE_PopulationEstimatesBindingSource.DataSource = Me.GSPE_SurveysBindingSource
+        '
         'HeaderPanel
         '
         Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
@@ -3015,10 +3081,50 @@ Partial Class Form1
         Me.SummaryTextBox2.Size = New System.Drawing.Size(193, 757)
         Me.SummaryTextBox2.TabIndex = 2
         '
-        'FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
+        'GSPE_PopulationEstimatesToolStrip
         '
-        Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource.DataMember = "FK_GSPE_PopulationEstimates_GSPE_Surveys"
-        Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
+        Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
+        Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
+        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
+        Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
+        '
+        'PopulationEstimatesToolStripLabel
+        '
+        Me.PopulationEstimatesToolStripLabel.Name = "PopulationEstimatesToolStripLabel"
+        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(199, 22)
+        Me.PopulationEstimatesToolStripLabel.Text = "Population estimates (from report(s)"
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(898, 25)
+        Me.ToolStrip1.TabIndex = 2
+        Me.ToolStrip1.Text = "Population estimates (from report(s)"
+        '
+        'DensityEstimatesToolStripLabel
+        '
+        Me.DensityEstimatesToolStripLabel.Name = "DensityEstimatesToolStripLabel"
+        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(180, 22)
+        Me.DensityEstimatesToolStripLabel.Text = "Density estimates (from report(s)"
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(898, 25)
+        Me.ToolStrip2.TabIndex = 2
+        Me.ToolStrip2.Text = "Population estimates (from report(s)"
+        '
+        'ResultsToolStripLabel
+        '
+        Me.ResultsToolStripLabel.Name = "ResultsToolStripLabel"
+        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(243, 22)
+        Me.ResultsToolStripLabel.Text = "Ratios and population counts (from report(s)"
         '
         'Form1
         '
@@ -3071,13 +3177,16 @@ Partial Class Form1
         Me.SurveyDetailsPanel.ResumeLayout(False)
         Me.ResultsXtraTabPage.ResumeLayout(False)
         Me.ResultsSplitContainer.Panel1.ResumeLayout(False)
+        Me.ResultsSplitContainer.Panel1.PerformLayout()
         Me.ResultsSplitContainer.Panel2.ResumeLayout(False)
         CType(Me.ResultsSplitContainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer.ResumeLayout(False)
         CType(Me.GSPE_PopulationEstimatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer2.Panel1.ResumeLayout(False)
+        Me.ResultsSplitContainer2.Panel1.PerformLayout()
         Me.ResultsSplitContainer2.Panel2.ResumeLayout(False)
+        Me.ResultsSplitContainer2.Panel2.PerformLayout()
         CType(Me.ResultsSplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResultsSplitContainer2.ResumeLayout(False)
         CType(Me.DensityEstimatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3097,6 +3206,7 @@ Partial Class Form1
         CType(Me.GSPEPivotGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SurveyPivotGridToolStrip.ResumeLayout(False)
         Me.SurveyPivotGridToolStrip.PerformLayout()
+        CType(Me.GSPE_PopulationEstimatesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.HeaderPanel.ResumeLayout(False)
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
@@ -3105,7 +3215,12 @@ Partial Class Form1
         Me.SummaryDockPanel2.ResumeLayout(False)
         Me.ControlContainer5.ResumeLayout(False)
         Me.ControlContainer5.PerformLayout()
-        CType(Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GSPE_PopulationEstimatesToolStrip.ResumeLayout(False)
+        Me.GSPE_PopulationEstimatesToolStrip.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3414,36 +3529,41 @@ Partial Class Form1
     Friend WithEvents ResultID As DataGridViewTextBoxColumn
     Friend WithEvents GSPE_PopulationEstimatesDataGridView As DataGridView
     Friend WithEvents GSPE_PopulationEstimatesBindingSource As BindingSource
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource As BindingSource
     Friend WithEvents ParkSubAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AnalysisColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StrataDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ConfidenceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AnalysisColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents ConfidenceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SurveyAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SampledAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents Analysis_Area As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
     Friend WithEvents PopulationEstimateSourceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RecordInsertedDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
-    Friend WithEvents PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
-    Friend WithEvents FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource As BindingSource
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents GSPE_PopulationEstimatesToolStrip As ToolStrip
+    Friend WithEvents PopulationEstimatesToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents DensityEstimatesToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents ResultsToolStripLabel As ToolStripLabel
 End Class
