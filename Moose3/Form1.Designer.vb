@@ -162,7 +162,7 @@ Partial Class Form1
         Me.ResultsXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.ResultsSplitContainer = New System.Windows.Forms.SplitContainer()
         Me.GSPE_PopulationEstimatesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.ParkSubAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ParkSubAreaTextBox_PopEst = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StrataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AnalysisColumnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -193,6 +193,8 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GSPE_PopulationEstimatesToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.PopulationEstimatesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ResultsSplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.DensityEstimatesDataGridView = New System.Windows.Forms.DataGridView()
         Me.ParkSubAreaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -212,6 +214,8 @@ Partial Class Form1
         Me.RecordInsertedByDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SurveyNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FKGSPEDensityEstimatesGSPESurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.DensityEstimatesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ResultsDataGridView = New System.Windows.Forms.DataGridView()
         Me.ParkSubAreaDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BullCowRatioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -256,6 +260,8 @@ Partial Class Form1
         Me.SurveyNameDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ResultID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FKGSPERatiosGSPESurveysBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ResultsToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GSPEDeliverableXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
@@ -331,6 +337,8 @@ Partial Class Form1
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.GSPEGridControlExportFormatToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
         Me.GSPEGridControlExportToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.GSPEDatasetCertificationToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.GSPEPivotXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.GSPEPivotGridControl = New DevExpress.XtraPivotGrid.PivotGridControl()
         Me.fieldPark = New DevExpress.XtraPivotGrid.PivotGridField()
@@ -421,12 +429,6 @@ Partial Class Form1
         Me.SummaryDockPanel2 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer5 = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SummaryTextBox2 = New System.Windows.Forms.TextBox()
-        Me.GSPE_PopulationEstimatesToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.PopulationEstimatesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.DensityEstimatesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ResultsToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GSPEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -462,14 +464,17 @@ Partial Class Form1
         Me.ResultsSplitContainer.SuspendLayout()
         CType(Me.GSPE_PopulationEstimatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GSPE_PopulationEstimatesToolStrip.SuspendLayout()
         CType(Me.ResultsSplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ResultsSplitContainer2.Panel1.SuspendLayout()
         Me.ResultsSplitContainer2.Panel2.SuspendLayout()
         Me.ResultsSplitContainer2.SuspendLayout()
         CType(Me.DensityEstimatesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FKGSPEDensityEstimatesGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         CType(Me.ResultsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FKGSPERatiosGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GSPEDeliverableXtraTabPage.SuspendLayout()
@@ -486,9 +491,6 @@ Partial Class Form1
         Me.AutoHideContainer1.SuspendLayout()
         Me.SummaryDockPanel2.SuspendLayout()
         Me.ControlContainer5.SuspendLayout()
-        Me.GSPE_PopulationEstimatesToolStrip.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
-        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MooseDataSet
@@ -800,13 +802,13 @@ Partial Class Form1
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SurveyVGridControl.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView
-        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 26)
+        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 47)
         Me.SurveyVGridControl.Name = "SurveyVGridControl"
         Me.SurveyVGridControl.RecordWidth = 148
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(898, 668)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(898, 647)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
@@ -1050,7 +1052,7 @@ Partial Class Form1
         Me.SurveyDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
         Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
-        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(898, 26)
+        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(898, 47)
         Me.SurveyDetailsPanel.TabIndex = 2
         '
         'SurveyDetailsLabel
@@ -1060,7 +1062,7 @@ Partial Class Form1
         Me.SurveyDetailsLabel.Location = New System.Drawing.Point(0, 0)
         Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
         Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(4)
-        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(898, 26)
+        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(898, 47)
         Me.SurveyDetailsLabel.TabIndex = 0
         Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
         '
@@ -1108,7 +1110,7 @@ Partial Class Form1
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GSPE_PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn, Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.ConfidenceDataGridViewTextBoxColumn, Me.SurveyAreaDataGridViewTextBoxColumn, Me.SampledAreaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn18, Me.Analysis_Area, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn1})
+        Me.GSPE_PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaTextBox_PopEst, Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.ConfidenceDataGridViewTextBoxColumn, Me.SurveyAreaDataGridViewTextBoxColumn, Me.SampledAreaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn18, Me.Analysis_Area, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn1})
         Me.GSPE_PopulationEstimatesDataGridView.DataSource = Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
         Me.GSPE_PopulationEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GSPE_PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
@@ -1116,14 +1118,15 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(898, 211)
         Me.GSPE_PopulationEstimatesDataGridView.TabIndex = 0
         '
-        'ParkSubAreaDataGridViewTextBoxColumn
+        'ParkSubAreaTextBox_PopEst
         '
-        Me.ParkSubAreaDataGridViewTextBoxColumn.DataPropertyName = "ParkSubArea"
-        Me.ParkSubAreaDataGridViewTextBoxColumn.HeaderText = "ParkSubArea"
-        Me.ParkSubAreaDataGridViewTextBoxColumn.Name = "ParkSubAreaDataGridViewTextBoxColumn"
-        Me.ParkSubAreaDataGridViewTextBoxColumn.ToolTipText = "Required. Sub-area of the park that was sampled, if applicable. Enter the park ac" &
+        Me.ParkSubAreaTextBox_PopEst.DataPropertyName = "ParkSubArea"
+        Me.ParkSubAreaTextBox_PopEst.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaTextBox_PopEst.Name = "ParkSubAreaTextBox_PopEst"
+        Me.ParkSubAreaTextBox_PopEst.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ParkSubAreaTextBox_PopEst.ToolTipText = "Required. Sub-area of the park that was sampled, if applicable. Enter the park ac" &
     "ronym if the whole park was sampled."
-        Me.ParkSubAreaDataGridViewTextBoxColumn.Width = 94
+        Me.ParkSubAreaTextBox_PopEst.Width = 94
         '
         'PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn
         '
@@ -1346,6 +1349,21 @@ Partial Class Form1
         Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource.DataMember = "FK_GSPE_PopulationEstimates_GSPE_Surveys"
         Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
         '
+        'GSPE_PopulationEstimatesToolStrip
+        '
+        Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
+        Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
+        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
+        Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
+        '
+        'PopulationEstimatesToolStripLabel
+        '
+        Me.PopulationEstimatesToolStripLabel.Name = "PopulationEstimatesToolStripLabel"
+        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(199, 22)
+        Me.PopulationEstimatesToolStripLabel.Text = "Population estimates (from report(s)"
+        '
         'ResultsSplitContainer2
         '
         Me.ResultsSplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1503,6 +1521,21 @@ Partial Class Form1
         '
         Me.FKGSPEDensityEstimatesGSPESurveysBindingSource.DataMember = "FK_GSPE_DensityEstimates_GSPE_Surveys"
         Me.FKGSPEDensityEstimatesGSPESurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(898, 25)
+        Me.ToolStrip1.TabIndex = 2
+        Me.ToolStrip1.Text = "Population estimates (from report(s)"
+        '
+        'DensityEstimatesToolStripLabel
+        '
+        Me.DensityEstimatesToolStripLabel.Name = "DensityEstimatesToolStripLabel"
+        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(180, 22)
+        Me.DensityEstimatesToolStripLabel.Text = "Density estimates (from report(s)"
         '
         'ResultsDataGridView
         '
@@ -1820,6 +1853,21 @@ Partial Class Form1
         '
         Me.FKGSPERatiosGSPESurveysBindingSource.DataMember = "FK_GSPE_Ratios_GSPE_Surveys"
         Me.FKGSPERatiosGSPESurveysBindingSource.DataSource = Me.GSPE_SurveysBindingSource
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(898, 25)
+        Me.ToolStrip2.TabIndex = 2
+        Me.ToolStrip2.Text = "Population estimates (from report(s)"
+        '
+        'ResultsToolStripLabel
+        '
+        Me.ResultsToolStripLabel.Name = "ResultsToolStripLabel"
+        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(243, 22)
+        Me.ResultsToolStripLabel.Text = "Ratios and population counts (from report(s)"
         '
         'GridControl1
         '
@@ -2326,7 +2374,7 @@ Partial Class Form1
         '
         'GSPEGridControlToolStrip
         '
-        Me.GSPEGridControlToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.GSPEGridControlExportFormatToolStripComboBox, Me.GSPEGridControlExportToolStripButton})
+        Me.GSPEGridControlToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.GSPEGridControlExportFormatToolStripComboBox, Me.GSPEGridControlExportToolStripButton, Me.ToolStripSeparator5, Me.GSPEDatasetCertificationToolStripLabel})
         Me.GSPEGridControlToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPEGridControlToolStrip.Name = "GSPEGridControlToolStrip"
         Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(898, 25)
@@ -2354,6 +2402,17 @@ Partial Class Form1
         Me.GSPEGridControlExportToolStripButton.Name = "GSPEGridControlExportToolStripButton"
         Me.GSPEGridControlExportToolStripButton.Size = New System.Drawing.Size(54, 22)
         Me.GSPEGridControlExportToolStripButton.Text = "Export..."
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        '
+        'GSPEDatasetCertificationToolStripLabel
+        '
+        Me.GSPEDatasetCertificationToolStripLabel.Name = "GSPEDatasetCertificationToolStripLabel"
+        Me.GSPEDatasetCertificationToolStripLabel.Size = New System.Drawing.Size(102, 22)
+        Me.GSPEDatasetCertificationToolStripLabel.Text = "Certification level:"
         '
         'GSPEPivotXtraTabPage
         '
@@ -3081,51 +3140,6 @@ Partial Class Form1
         Me.SummaryTextBox2.Size = New System.Drawing.Size(193, 757)
         Me.SummaryTextBox2.TabIndex = 2
         '
-        'GSPE_PopulationEstimatesToolStrip
-        '
-        Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
-        Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
-        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(898, 25)
-        Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
-        Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
-        '
-        'PopulationEstimatesToolStripLabel
-        '
-        Me.PopulationEstimatesToolStripLabel.Name = "PopulationEstimatesToolStripLabel"
-        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(199, 22)
-        Me.PopulationEstimatesToolStripLabel.Text = "Population estimates (from report(s)"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(898, 25)
-        Me.ToolStrip1.TabIndex = 2
-        Me.ToolStrip1.Text = "Population estimates (from report(s)"
-        '
-        'DensityEstimatesToolStripLabel
-        '
-        Me.DensityEstimatesToolStripLabel.Name = "DensityEstimatesToolStripLabel"
-        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(180, 22)
-        Me.DensityEstimatesToolStripLabel.Text = "Density estimates (from report(s)"
-        '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(898, 25)
-        Me.ToolStrip2.TabIndex = 2
-        Me.ToolStrip2.Text = "Population estimates (from report(s)"
-        '
-        'ResultsToolStripLabel
-        '
-        Me.ResultsToolStripLabel.Name = "ResultsToolStripLabel"
-        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(243, 22)
-        Me.ResultsToolStripLabel.Text = "Ratios and population counts (from report(s)"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3183,6 +3197,8 @@ Partial Class Form1
         Me.ResultsSplitContainer.ResumeLayout(False)
         CType(Me.GSPE_PopulationEstimatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GSPE_PopulationEstimatesToolStrip.ResumeLayout(False)
+        Me.GSPE_PopulationEstimatesToolStrip.PerformLayout()
         Me.ResultsSplitContainer2.Panel1.ResumeLayout(False)
         Me.ResultsSplitContainer2.Panel1.PerformLayout()
         Me.ResultsSplitContainer2.Panel2.ResumeLayout(False)
@@ -3191,8 +3207,12 @@ Partial Class Form1
         Me.ResultsSplitContainer2.ResumeLayout(False)
         CType(Me.DensityEstimatesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FKGSPEDensityEstimatesGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         CType(Me.ResultsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FKGSPERatiosGSPESurveysBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GSPEDeliverableXtraTabPage.ResumeLayout(False)
@@ -3215,12 +3235,6 @@ Partial Class Form1
         Me.SummaryDockPanel2.ResumeLayout(False)
         Me.ControlContainer5.ResumeLayout(False)
         Me.ControlContainer5.PerformLayout()
-        Me.GSPE_PopulationEstimatesToolStrip.ResumeLayout(False)
-        Me.GSPE_PopulationEstimatesToolStrip.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
-        Me.ToolStrip2.ResumeLayout(False)
-        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3530,7 +3544,15 @@ Partial Class Form1
     Friend WithEvents GSPE_PopulationEstimatesDataGridView As DataGridView
     Friend WithEvents GSPE_PopulationEstimatesBindingSource As BindingSource
     Friend WithEvents FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource As BindingSource
-    Friend WithEvents ParkSubAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GSPE_PopulationEstimatesToolStrip As ToolStrip
+    Friend WithEvents PopulationEstimatesToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents DensityEstimatesToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents ResultsToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents GSPEDatasetCertificationToolStripLabel As ToolStripLabel
+    Friend WithEvents ParkSubAreaTextBox_PopEst As DataGridViewTextBoxColumn
     Friend WithEvents PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StrataDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AnalysisColumnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -3560,10 +3582,4 @@ Partial Class Form1
     Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents GSPE_PopulationEstimatesToolStrip As ToolStrip
-    Friend WithEvents PopulationEstimatesToolStripLabel As ToolStripLabel
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents DensityEstimatesToolStripLabel As ToolStripLabel
-    Friend WithEvents ToolStrip2 As ToolStrip
-    Friend WithEvents ResultsToolStripLabel As ToolStripLabel
 End Class

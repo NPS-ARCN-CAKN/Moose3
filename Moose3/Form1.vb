@@ -19,7 +19,7 @@ Public Class Form1
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            'Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
+            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
             Me.HeaderLabel.Text = "Database connection error: " & ex.Message
@@ -56,6 +56,31 @@ Public Class Form1
         Me.GSPE_SurveysBindingSource.EndEdit()
     End Sub
 
+    ''' <summary>
+    ''' Determines if any GSPE data record related to SurveyName is certified, if so, returns True, otherwise False.
+    ''' </summary>
+    ''' <param name="SurveyName">Survey name. String.</param>
+    ''' <returns></returns>
+    Private Function GSPEDatasetIsCertified(SurveyName As String) As Boolean
+        Dim IsCertified As Boolean = True
+        Try
+            'Get a DataView of certified GSPE records for the Survey
+            Dim Filter As String = "SurveyName='" & SurveyName.Trim & "' And CertificationLevel='Certified'"
+            Dim DV As New DataView(MooseDataSet.Tables("GSPE"), Filter, "", DataViewRowState.CurrentRows)
+            If DV.Count > 0 Then
+                IsCertified = True
+            Else
+                IsCertified = False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+        Return IsCertified
+    End Function
+
+    ''' <summary>
+    ''' Queries the database for data table column descriptions and loads them into data grid view column toot tips
+    ''' </summary>
     Private Sub LoadGridColumnDescriptions()
         Try
             'Get the columns descriptions from the database and load them into the tooltips of the matching column in the datagridview
@@ -73,10 +98,6 @@ Public Class Form1
                         DGVColumn.ToolTipText = DR.Item("ColumnDescription")
                     End If
                 Next
-                'Dim Filter As String = "Column = '" & ColumnName & "'"
-                'Debug.Print(ColumnName & vbTab & Filter)
-                'Dim MyView As New DataView(ColumnsDescriptionsDataTable, Filter, False, DataViewRowState.CurrentRows)
-                'If V.Count = 1 Then DGVColumn.ToolTipText = V(0).Item("ColumnDescription")
             Next
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
@@ -181,9 +202,47 @@ Public Class Form1
         TextboxToEdit.Text = Comment
     End Sub
 
+    Private Sub UpdateHeaderLabel()
+        'update the header label with the survey name
+        Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
+        Me.HeaderLabel.Text = SurveyName
+
+        'load some info about the survey into the header
+        Try
+            'Convey the number of GSPE records
+            Me.SurveyDetailsLabel.Text = "Available GSPE records: " & GSPEBindingSource.Count
+
+            'Convey the number of certified records
+            Dim CertifiedRecordCount As Integer = 0
+            Dim Filter As String = "SurveyName='" & Me.SurveysListBoxControl.Text.Trim & "' And CertificationLevel='Certified'"
+            Dim DV As New DataView(MooseDataSet.Tables("GSPE"), Filter, "", DataViewRowState.CurrentRows)
+            CertifiedRecordCount = DV.Count
+            Me.SurveyDetailsLabel.Text = Me.SurveyDetailsLabel.Text & " Certified records: " & CertifiedRecordCount
+
+            'Append instructions for accessing the ContextMenu
+            Me.SurveyDetailsLabel.Text = Me.SurveyDetailsLabel.Text.Trim & vbNewLine & "Right click grid for options."
+        Catch ex As Exception
+            Me.SurveyDetailsLabel.Text = "Could not retrieve survey details: " & ex.Message
+        End Try
+
+    End Sub
 
 
+    Private Sub LoadParkSubAreasIntoDataGridViews()
+        Try
+            'ParkSubAreaComboBox_PopEst
+            'Dim ParkSubAreasDataTable As DataTable = GetDataTableFromSQLServerDatabase()
+            Dim SubAreasDataTable As DataTable = MooseDataSet.Tables("GSPE_PopulationEstimates").DefaultView.ToTable(True, "ParkSubArea")
+            For Each SubAreaDataRow As DataRow In SubAreasDataTable.Rows
+                Dim ParkSubArea As String = SubAreaDataRow.Item("ParkSubArea").trim
+                Debug.Print(ParkSubArea)
+                'Me.ParkSubAreaComboBox_PopEst.Items.Add(ParkSubArea)
+            Next
+        Catch ex As Exception
+            Debug.Print(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
 
+    End Sub
 
 
 
@@ -242,7 +301,7 @@ Public Class Form1
     End Sub
 
     Private Sub ListBoxControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SurveysListBoxControl.SelectedIndexChanged
-        Me.HeaderLabel.Text = Me.SurveysListBoxControl.Text
+        UpdateHeaderLabel
     End Sub
     Private Sub OpenReportLinkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportLinkToolStripMenuItem.Click
         Try
@@ -282,7 +341,22 @@ Public Class Form1
     End Sub
 
     Private Sub GSPE_SurveysBindingSource_PositionChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.PositionChanged
+        'End edits on binding sources
         EndEdits()
+
+        'Lock the interface on detection of certified records
+        Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
+        Dim SurveyDataIsCertified As Boolean = GSPEDatasetIsCertified(SurveyName)
+        Dim GV As GridView = TryCast(Me.GSPEGridControl.MainView, GridView)
+        GV.OptionsBehavior.ReadOnly = SurveyDataIsCertified
+
+        'Put a message in the GSPE toolstriplabel telling user they may or may not edit certified data
+        If SurveyDataIsCertified = True Then
+            Me.GSPEDatasetCertificationToolStripLabel.Text = "The current GSPE dataset may not be edited because it contains certified records."
+        Else
+            Me.GSPEDatasetCertificationToolStripLabel.Text = ""
+        End If
+
     End Sub
 
     Private Sub ExportPivotGridToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridToolStripButton.Click
@@ -472,7 +546,7 @@ Public Class Form1
         e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
         e.Row.Cells("PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn").Value = -9999
         e.Row.Cells("PopulationEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
-        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn").Value = "REQUIRED"
+        e.Row.Cells("ParkSubAreaTextBox_PopEst").Value = "REQUIRED"
         e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn").Value = "REQUIRED: "
         e.Row.Cells("StrataDataGridViewTextBoxColumn").Value = "REQUIRED: "
         e.Row.Cells("ConfidenceDataGridViewTextBoxColumn").Value = "-9999"

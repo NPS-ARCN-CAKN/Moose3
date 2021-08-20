@@ -2683,7 +2683,6 @@ Partial Public Class MooseDataSet
             Me.columnAnalysis_Column.MaxLength = 30
             Me.columnStrata.AllowDBNull = false
             Me.columnStrata.MaxLength = 50
-            Me.columnConfidence.AllowDBNull = false
             Me.columnPopulation_Estimate.AllowDBNull = false
             Me.columnStrata_Column.MaxLength = 30
             Me.columnAnalysis_Area.MaxLength = 30
@@ -6413,7 +6412,11 @@ Partial Public Class MooseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property Confidence() As Integer
             Get
-                Return CType(Me(Me.tableGSPE_PopulationEstimates.ConfidenceColumn),Integer)
+                Try 
+                    Return CType(Me(Me.tableGSPE_PopulationEstimates.ConfidenceColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Confidence' in table 'GSPE_PopulationEstimates' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableGSPE_PopulationEstimates.ConfidenceColumn) = value
@@ -6811,6 +6814,18 @@ Partial Public Class MooseDataSet
                 Me.SetParentRow(value, Me.Table.ParentRelations("FK_GSPE_PopulationEstimates_GSPE_Surveys"))
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsConfidenceNull() As Boolean
+            Return Me.IsNull(Me.tableGSPE_PopulationEstimates.ConfidenceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetConfidenceNull()
+            Me(Me.tableGSPE_PopulationEstimates.ConfidenceColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12841,7 +12856,7 @@ Namespace MooseDataSetTableAdapters
                     ByVal PopulationEstimateSourceReferenceCode As Integer,  _
                     ByVal Analysis_Column As String,  _
                     ByVal Strata As String,  _
-                    ByVal Confidence As Integer,  _
+                    ByVal Confidence As Global.System.Nullable(Of Integer),  _
                     ByVal Population_Estimate As Double,  _
                     ByVal Lower_Limit As Global.System.Nullable(Of Double),  _
                     ByVal Upper_Limit As Global.System.Nullable(Of Double),  _
@@ -12887,7 +12902,11 @@ Namespace MooseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(Strata,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(5).Value = CType(Confidence,Integer)
+            If (Confidence.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Confidence.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
             Me.Adapter.InsertCommand.Parameters(6).Value = CType(Population_Estimate,Double)
             If (Lower_Limit.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(7).Value = CType(Lower_Limit.Value,Double)
@@ -13024,7 +13043,7 @@ Namespace MooseDataSetTableAdapters
                     ByVal PopulationEstimateSourceReferenceCode As Integer,  _
                     ByVal Analysis_Column As String,  _
                     ByVal Strata As String,  _
-                    ByVal Confidence As Integer,  _
+                    ByVal Confidence As Global.System.Nullable(Of Integer),  _
                     ByVal Population_Estimate As Double,  _
                     ByVal Lower_Limit As Global.System.Nullable(Of Double),  _
                     ByVal Upper_Limit As Global.System.Nullable(Of Double),  _
@@ -13064,7 +13083,11 @@ Namespace MooseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Strata,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Confidence,Integer)
+            If (Confidence.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Confidence.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Population_Estimate,Double)
             If (Lower_Limit.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Lower_Limit.Value,Double)
