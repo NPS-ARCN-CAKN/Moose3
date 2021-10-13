@@ -86,9 +86,7 @@ Public Class DataShaperForm
         LoadQuerySelector()
     End Sub
 
-    Private Sub ExportPivotGridToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridToolStripButton.Click
-        Me.DataShaperPivotGridControl.ExportToXlsx("C:\temp\zPivotGridExport.xlsx")
-    End Sub
+
 
     Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshToolStripButton.Click
         Try
@@ -98,5 +96,9 @@ Public Class DataShaperForm
         Catch ex As Exception
             MsgBox("Failed to refresh the dataset from the database: " & ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
+    End Sub
+
+    Private Sub ExportGridControlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportGridControlToolStripButton.Click
+        ExportGridControl(Me.DataShaperGridControl, "Moose data summary", True)
     End Sub
 End Class
