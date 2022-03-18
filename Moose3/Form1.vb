@@ -214,10 +214,20 @@ Public Class Form1
 
             'Convey the number of certified records
             Dim CertifiedRecordCount As Integer = 0
-            Dim Filter As String = "SurveyName='" & Me.SurveysListBoxControl.Text.Trim & "' And CertificationLevel='Certified'"
+            Dim Filter As String = "SurveyName='" & SurveyName & "' And CertificationLevel='Certified'"
             Dim DV As New DataView(MooseDataSet.Tables("GSPE"), Filter, "", DataViewRowState.CurrentRows)
             CertifiedRecordCount = DV.Count
             Me.SurveyDetailsLabel.Text = Me.SurveyDetailsLabel.Text & " Certified records: " & CertifiedRecordCount
+
+            'Number of polygons
+            Dim Sql As String = "SELECT Count(ID) As n FROM GSPE where SurveyName='" & SurveyName & "' and SurveyUnitSet is not NULL and LTRIM(RTRIM(Surveyunitset))<> ''"
+            Dim PolygonsDataTable As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, Sql)
+
+            If PolygonsDataTable.Rows.Count = 1 Then
+                Me.SurveyDetailsLabel.Text = Me.SurveyDetailsLabel.Text.Trim & " Units: " & PolygonsDataTable.Rows(0).Item("n")
+            Else
+                Me.SurveyDetailsLabel.Text = Me.SurveyDetailsLabel.Text.Trim & " Units: 0"
+            End If
 
             'Append instructions for accessing the ContextMenu
             Me.SurveyDetailsLabel.Text = Me.SurveyDetailsLabel.Text.Trim & vbNewLine & "Right click grid for options."

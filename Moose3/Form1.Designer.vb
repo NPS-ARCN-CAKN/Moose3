@@ -797,7 +797,7 @@ Partial Class Form1
         Me.SurveyVGridControl.Appearance.FocusedRow.Options.UseBackColor = True
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
-        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
+        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.SizeWE
         Me.SurveyVGridControl.CustomizationFormBounds = New System.Drawing.Rectangle(457, 176, 214, 258)
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
@@ -3151,6 +3151,7 @@ Partial Class Form1
         Me.Controls.Add(Me.SurveySelectorDockPanel)
         Me.Controls.Add(Me.hideContainerRight)
         Me.Controls.Add(Me.AutoHideContainer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "NPS Moose Monitoring GSPE Database Application"
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
