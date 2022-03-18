@@ -66,7 +66,9 @@
     <Reference Include="SkeeterUtilities">
       <HintPath>..\..\SkeeterUtilities\SkeeterUtilities\bin\Debug\SkeeterUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />

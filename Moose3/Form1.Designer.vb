@@ -129,6 +129,7 @@ Partial Class Form1
         Me.OpenProtocolReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenDataDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbstractRepositoryItemMemoEdit = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit = New DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit()
         Me.rowSurveyName = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
         Me.rowSeason = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
         Me.rowYear = New DevExpress.XtraVerticalGrid.Rows.EditorRow()
@@ -453,6 +454,7 @@ Partial Class Form1
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SurveyContextMenuStrip.SuspendLayout()
         CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatasetProcessingStepsRepositoryItemMemoExEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainXtraTabControl.SuspendLayout()
         Me.SurveyDetailsXtraTabPage.SuspendLayout()
@@ -797,7 +799,7 @@ Partial Class Form1
         Me.SurveyVGridControl.Appearance.FocusedRow.Options.UseBackColor = True
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
-        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.SizeWE
+        Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
         Me.SurveyVGridControl.CustomizationFormBounds = New System.Drawing.Rectangle(457, 176, 214, 258)
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
@@ -805,7 +807,7 @@ Partial Class Form1
         Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 47)
         Me.SurveyVGridControl.Name = "SurveyVGridControl"
         Me.SurveyVGridControl.RecordWidth = 148
-        Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit})
+        Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit, Me.DatasetProcessingStepsRepositoryItemMemoExEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
         Me.SurveyVGridControl.Size = New System.Drawing.Size(898, 647)
@@ -850,6 +852,15 @@ Partial Class Form1
         'AbstractRepositoryItemMemoEdit
         '
         Me.AbstractRepositoryItemMemoEdit.Name = "AbstractRepositoryItemMemoEdit"
+        '
+        'DatasetProcessingStepsRepositoryItemMemoExEdit
+        '
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit.Appearance.Options.UseTextOptions = True
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit.AutoHeight = False
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit.Name = "DatasetProcessingStepsRepositoryItemMemoExEdit"
+        Me.DatasetProcessingStepsRepositoryItemMemoExEdit.ScrollBars = System.Windows.Forms.ScrollBars.Both
         '
         'rowSurveyName
         '
@@ -992,6 +1003,7 @@ Partial Class Form1
         Me.rowDatasetProcessingSteps.Name = "rowDatasetProcessingSteps"
         Me.rowDatasetProcessingSteps.Properties.Caption = "Dataset Processing Steps"
         Me.rowDatasetProcessingSteps.Properties.FieldName = "DatasetProcessingSteps"
+        Me.rowDatasetProcessingSteps.Properties.RowEdit = Me.DatasetProcessingStepsRepositoryItemMemoExEdit
         '
         'rowComments
         '
@@ -3186,6 +3198,7 @@ Partial Class Form1
         CType(Me.SurveyVGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SurveyContextMenuStrip.ResumeLayout(False)
         CType(Me.AbstractRepositoryItemMemoEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatasetProcessingStepsRepositoryItemMemoExEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MainXtraTabControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainXtraTabControl.ResumeLayout(False)
         Me.SurveyDetailsXtraTabPage.ResumeLayout(False)
@@ -3583,4 +3596,5 @@ Partial Class Form1
     Friend WithEvents RecordInsertedByDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DatasetProcessingStepsRepositoryItemMemoExEdit As DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit
 End Class
