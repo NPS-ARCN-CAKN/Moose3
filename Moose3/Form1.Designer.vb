@@ -423,7 +423,6 @@ Partial Class Form1
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DockManager1 = New DevExpress.XtraBars.Docking.DockManager(Me.components)
         Me.AutoHideContainer1 = New DevExpress.XtraBars.Docking.AutoHideContainer()
@@ -567,30 +566,33 @@ Partial Class Form1
         Me.hideContainerRight.Controls.Add(Me.CommentsDockPanel)
         Me.hideContainerRight.Controls.Add(Me.DatasetProcessingStepsDockPanel)
         Me.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.hideContainerRight.Location = New System.Drawing.Point(1142, 0)
+        Me.hideContainerRight.Location = New System.Drawing.Point(1527, 0)
+        Me.hideContainerRight.Margin = New System.Windows.Forms.Padding(4)
         Me.hideContainerRight.Name = "hideContainerRight"
-        Me.hideContainerRight.Size = New System.Drawing.Size(21, 786)
+        Me.hideContainerRight.Size = New System.Drawing.Size(26, 967)
         '
         'AbstractDockPanel
         '
         Me.AbstractDockPanel.Controls.Add(Me.ControlContainer1)
         Me.AbstractDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.AbstractDockPanel.ID = New System.Guid("c5c92d15-0acd-44a3-9b81-d86dc9f6760d")
-        Me.AbstractDockPanel.Location = New System.Drawing.Point(963, 0)
+        Me.AbstractDockPanel.Location = New System.Drawing.Point(1284, 0)
+        Me.AbstractDockPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AbstractDockPanel.Name = "AbstractDockPanel"
         Me.AbstractDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
         Me.AbstractDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.AbstractDockPanel.SavedIndex = 1
-        Me.AbstractDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.AbstractDockPanel.Size = New System.Drawing.Size(267, 967)
         Me.AbstractDockPanel.Text = "Abstract"
         Me.AbstractDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
         'ControlContainer1
         '
         Me.ControlContainer1.Controls.Add(Me.AbstractTextBox)
-        Me.ControlContainer1.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer1.Location = New System.Drawing.Point(5, 32)
+        Me.ControlContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.ControlContainer1.Name = "ControlContainer1"
-        Me.ControlContainer1.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer1.Size = New System.Drawing.Size(257, 932)
         Me.ControlContainer1.TabIndex = 0
         '
         'AbstractTextBox
@@ -599,9 +601,10 @@ Partial Class Form1
         Me.AbstractTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AbstractTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AbstractTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.AbstractTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.AbstractTextBox.Multiline = True
         Me.AbstractTextBox.Name = "AbstractTextBox"
-        Me.AbstractTextBox.Size = New System.Drawing.Size(193, 757)
+        Me.AbstractTextBox.Size = New System.Drawing.Size(257, 932)
         Me.AbstractTextBox.TabIndex = 0
         '
         'CommentsDockPanel
@@ -609,12 +612,13 @@ Partial Class Form1
         Me.CommentsDockPanel.Controls.Add(Me.ControlContainer3)
         Me.CommentsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.CommentsDockPanel.ID = New System.Guid("bc429878-ddf0-45e7-ad27-27b16bfb425f")
-        Me.CommentsDockPanel.Location = New System.Drawing.Point(963, 0)
+        Me.CommentsDockPanel.Location = New System.Drawing.Point(1284, 0)
+        Me.CommentsDockPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CommentsDockPanel.Name = "CommentsDockPanel"
         Me.CommentsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
         Me.CommentsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.CommentsDockPanel.SavedIndex = 2
-        Me.CommentsDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.CommentsDockPanel.Size = New System.Drawing.Size(267, 967)
         Me.CommentsDockPanel.Text = "Comments"
         Me.CommentsDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
@@ -622,9 +626,10 @@ Partial Class Form1
         '
         Me.ControlContainer3.Controls.Add(Me.CommentsTextBox)
         Me.ControlContainer3.Controls.Add(Me.CommentsToolStrip)
-        Me.ControlContainer3.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer3.Location = New System.Drawing.Point(5, 32)
+        Me.ControlContainer3.Margin = New System.Windows.Forms.Padding(4)
         Me.ControlContainer3.Name = "ControlContainer3"
-        Me.ControlContainer3.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer3.Size = New System.Drawing.Size(257, 932)
         Me.ControlContainer3.TabIndex = 0
         '
         'CommentsTextBox
@@ -632,18 +637,20 @@ Partial Class Form1
         Me.CommentsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "Comments", True))
         Me.CommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CommentsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CommentsTextBox.Location = New System.Drawing.Point(0, 25)
+        Me.CommentsTextBox.Location = New System.Drawing.Point(0, 27)
+        Me.CommentsTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.CommentsTextBox.Multiline = True
         Me.CommentsTextBox.Name = "CommentsTextBox"
-        Me.CommentsTextBox.Size = New System.Drawing.Size(193, 732)
+        Me.CommentsTextBox.Size = New System.Drawing.Size(257, 905)
         Me.CommentsTextBox.TabIndex = 1
         '
         'CommentsToolStrip
         '
+        Me.CommentsToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.CommentsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AppendNewCommentToolStripButton})
         Me.CommentsToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.CommentsToolStrip.Name = "CommentsToolStrip"
-        Me.CommentsToolStrip.Size = New System.Drawing.Size(193, 25)
+        Me.CommentsToolStrip.Size = New System.Drawing.Size(257, 27)
         Me.CommentsToolStrip.TabIndex = 3
         Me.CommentsToolStrip.Text = "ToolStrip1"
         '
@@ -653,7 +660,7 @@ Partial Class Form1
         Me.AppendNewCommentToolStripButton.Image = CType(resources.GetObject("AppendNewCommentToolStripButton.Image"), System.Drawing.Image)
         Me.AppendNewCommentToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AppendNewCommentToolStripButton.Name = "AppendNewCommentToolStripButton"
-        Me.AppendNewCommentToolStripButton.Size = New System.Drawing.Size(147, 22)
+        Me.AppendNewCommentToolStripButton.Size = New System.Drawing.Size(186, 24)
         Me.AppendNewCommentToolStripButton.Text = "Append a new dated note"
         '
         'DatasetProcessingStepsDockPanel
@@ -661,12 +668,13 @@ Partial Class Form1
         Me.DatasetProcessingStepsDockPanel.Controls.Add(Me.ControlContainer4)
         Me.DatasetProcessingStepsDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.DatasetProcessingStepsDockPanel.ID = New System.Guid("9bf63ea7-bed1-4d5e-9427-7d7329baba10")
-        Me.DatasetProcessingStepsDockPanel.Location = New System.Drawing.Point(963, 0)
+        Me.DatasetProcessingStepsDockPanel.Location = New System.Drawing.Point(1284, 0)
+        Me.DatasetProcessingStepsDockPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.DatasetProcessingStepsDockPanel.Name = "DatasetProcessingStepsDockPanel"
         Me.DatasetProcessingStepsDockPanel.OriginalSize = New System.Drawing.Size(200, 200)
         Me.DatasetProcessingStepsDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.DatasetProcessingStepsDockPanel.SavedIndex = 1
-        Me.DatasetProcessingStepsDockPanel.Size = New System.Drawing.Size(200, 786)
+        Me.DatasetProcessingStepsDockPanel.Size = New System.Drawing.Size(267, 967)
         Me.DatasetProcessingStepsDockPanel.Text = "Dataset processing steps"
         Me.DatasetProcessingStepsDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
@@ -674,9 +682,10 @@ Partial Class Form1
         '
         Me.ControlContainer4.Controls.Add(Me.DatasetProcessingStepsTextBox)
         Me.ControlContainer4.Controls.Add(Me.DatasetProcessingStepsToolStrip)
-        Me.ControlContainer4.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer4.Location = New System.Drawing.Point(5, 32)
+        Me.ControlContainer4.Margin = New System.Windows.Forms.Padding(4)
         Me.ControlContainer4.Name = "ControlContainer4"
-        Me.ControlContainer4.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer4.Size = New System.Drawing.Size(257, 932)
         Me.ControlContainer4.TabIndex = 0
         '
         'DatasetProcessingStepsTextBox
@@ -684,18 +693,20 @@ Partial Class Form1
         Me.DatasetProcessingStepsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "DatasetProcessingSteps", True))
         Me.DatasetProcessingStepsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DatasetProcessingStepsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 25)
+        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 27)
+        Me.DatasetProcessingStepsTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.DatasetProcessingStepsTextBox.Multiline = True
         Me.DatasetProcessingStepsTextBox.Name = "DatasetProcessingStepsTextBox"
-        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(193, 732)
+        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(257, 905)
         Me.DatasetProcessingStepsTextBox.TabIndex = 1
         '
         'DatasetProcessingStepsToolStrip
         '
+        Me.DatasetProcessingStepsToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.DatasetProcessingStepsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddProcessingNoteToolStripButton})
         Me.DatasetProcessingStepsToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DatasetProcessingStepsToolStrip.Name = "DatasetProcessingStepsToolStrip"
-        Me.DatasetProcessingStepsToolStrip.Size = New System.Drawing.Size(193, 25)
+        Me.DatasetProcessingStepsToolStrip.Size = New System.Drawing.Size(257, 27)
         Me.DatasetProcessingStepsToolStrip.TabIndex = 2
         Me.DatasetProcessingStepsToolStrip.Text = "ToolStrip1"
         '
@@ -705,7 +716,7 @@ Partial Class Form1
         Me.AddProcessingNoteToolStripButton.Image = CType(resources.GetObject("AddProcessingNoteToolStripButton.Image"), System.Drawing.Image)
         Me.AddProcessingNoteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddProcessingNoteToolStripButton.Name = "AddProcessingNoteToolStripButton"
-        Me.AddProcessingNoteToolStripButton.Size = New System.Drawing.Size(147, 22)
+        Me.AddProcessingNoteToolStripButton.Size = New System.Drawing.Size(186, 24)
         Me.AddProcessingNoteToolStripButton.Text = "Append a new dated note"
         '
         'SummaryDockPanel
@@ -749,18 +760,20 @@ Partial Class Form1
         Me.SurveySelectorDockPanel.Hint = "Survey selector"
         Me.SurveySelectorDockPanel.ID = New System.Guid("aba0a096-d031-43b4-aad9-b579af23cd0a")
         Me.SurveySelectorDockPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveySelectorDockPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveySelectorDockPanel.Name = "SurveySelectorDockPanel"
         Me.SurveySelectorDockPanel.OriginalSize = New System.Drawing.Size(242, 200)
-        Me.SurveySelectorDockPanel.Size = New System.Drawing.Size(242, 786)
-        Me.SurveySelectorDockPanel.Text = "Survey selector"
+        Me.SurveySelectorDockPanel.Size = New System.Drawing.Size(242, 967)
+        Me.SurveySelectorDockPanel.Text = "Moose surveys inventory"
         '
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.SurveysListBoxControl)
         Me.DockPanel1_Container.Controls.Add(Me.SurveysInventoryToolStrip)
-        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 26)
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(4, 32)
+        Me.DockPanel1_Container.Margin = New System.Windows.Forms.Padding(4)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
-        Me.DockPanel1_Container.Size = New System.Drawing.Size(235, 757)
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(232, 931)
         Me.DockPanel1_Container.TabIndex = 0
         '
         'SurveysListBoxControl
@@ -768,35 +781,37 @@ Partial Class Form1
         Me.SurveysListBoxControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveysListBoxControl.DisplayMember = "SurveyName"
         Me.SurveysListBoxControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 25)
+        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 27)
+        Me.SurveysListBoxControl.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveysListBoxControl.Name = "SurveysListBoxControl"
-        Me.SurveysListBoxControl.Size = New System.Drawing.Size(235, 732)
+        Me.SurveysListBoxControl.Size = New System.Drawing.Size(232, 904)
         Me.SurveysListBoxControl.SortOrder = System.Windows.Forms.SortOrder.Ascending
         Me.SurveysListBoxControl.TabIndex = 0
         Me.SurveysListBoxControl.ValueMember = "SurveyName"
         '
         'SurveysInventoryToolStrip
         '
+        Me.SurveysInventoryToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.SurveysInventoryToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddSurveyToolStripButton})
         Me.SurveysInventoryToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SurveysInventoryToolStrip.Name = "SurveysInventoryToolStrip"
-        Me.SurveysInventoryToolStrip.Size = New System.Drawing.Size(235, 25)
+        Me.SurveysInventoryToolStrip.Size = New System.Drawing.Size(232, 27)
         Me.SurveysInventoryToolStrip.TabIndex = 1
         Me.SurveysInventoryToolStrip.Text = "ToolStrip1"
         '
         'AddSurveyToolStripButton
         '
-        Me.AddSurveyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.AddSurveyToolStripButton.Image = CType(resources.GetObject("AddSurveyToolStripButton.Image"), System.Drawing.Image)
         Me.AddSurveyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddSurveyToolStripButton.Name = "AddSurveyToolStripButton"
-        Me.AddSurveyToolStripButton.Size = New System.Drawing.Size(104, 22)
+        Me.AddSurveyToolStripButton.Size = New System.Drawing.Size(146, 24)
         Me.AddSurveyToolStripButton.Text = "Add new survey..."
         '
         'SurveyVGridControl
         '
         Me.SurveyVGridControl.Appearance.FocusedRow.BackColor = System.Drawing.Color.LightSteelBlue
         Me.SurveyVGridControl.Appearance.FocusedRow.Options.UseBackColor = True
+        Me.SurveyVGridControl.BandsInterval = 3
         Me.SurveyVGridControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.SurveyVGridControl.ContextMenuStrip = Me.SurveyContextMenuStrip
         Me.SurveyVGridControl.Cursor = System.Windows.Forms.Cursors.Default
@@ -804,49 +819,53 @@ Partial Class Form1
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SurveyVGridControl.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView
-        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 47)
+        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 73)
+        Me.SurveyVGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveyVGridControl.Name = "SurveyVGridControl"
+        Me.SurveyVGridControl.OptionsView.FixedLineWidth = 3
+        Me.SurveyVGridControl.OptionsView.MinRowAutoHeight = 12
         Me.SurveyVGridControl.RecordWidth = 148
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit, Me.DatasetProcessingStepsRepositoryItemMemoExEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 52
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(898, 647)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(1604, 1005)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
         '
+        Me.SurveyContextMenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.SurveyContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenReportReferenceToolStripMenuItem, Me.OpenReportLinkToolStripMenuItem, Me.OpenDeliverablesReferenceToolStripMenuItem, Me.OpenProtocolReferenceToolStripMenuItem, Me.OpenDataDirectoryToolStripMenuItem})
         Me.SurveyContextMenuStrip.Name = "SurveyContextMenuStrip"
-        Me.SurveyContextMenuStrip.Size = New System.Drawing.Size(230, 114)
+        Me.SurveyContextMenuStrip.Size = New System.Drawing.Size(274, 124)
         '
         'OpenReportReferenceToolStripMenuItem
         '
         Me.OpenReportReferenceToolStripMenuItem.Name = "OpenReportReferenceToolStripMenuItem"
-        Me.OpenReportReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenReportReferenceToolStripMenuItem.Size = New System.Drawing.Size(273, 24)
         Me.OpenReportReferenceToolStripMenuItem.Text = "Open report reference..."
         '
         'OpenReportLinkToolStripMenuItem
         '
         Me.OpenReportLinkToolStripMenuItem.Name = "OpenReportLinkToolStripMenuItem"
-        Me.OpenReportLinkToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenReportLinkToolStripMenuItem.Size = New System.Drawing.Size(273, 24)
         Me.OpenReportLinkToolStripMenuItem.Text = "Open report link..."
         '
         'OpenDeliverablesReferenceToolStripMenuItem
         '
         Me.OpenDeliverablesReferenceToolStripMenuItem.Name = "OpenDeliverablesReferenceToolStripMenuItem"
-        Me.OpenDeliverablesReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenDeliverablesReferenceToolStripMenuItem.Size = New System.Drawing.Size(273, 24)
         Me.OpenDeliverablesReferenceToolStripMenuItem.Text = "Open deliverables reference..."
         '
         'OpenProtocolReferenceToolStripMenuItem
         '
         Me.OpenProtocolReferenceToolStripMenuItem.Name = "OpenProtocolReferenceToolStripMenuItem"
-        Me.OpenProtocolReferenceToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenProtocolReferenceToolStripMenuItem.Size = New System.Drawing.Size(273, 24)
         Me.OpenProtocolReferenceToolStripMenuItem.Text = "Open protocol reference..."
         '
         'OpenDataDirectoryToolStripMenuItem
         '
         Me.OpenDataDirectoryToolStripMenuItem.Name = "OpenDataDirectoryToolStripMenuItem"
-        Me.OpenDataDirectoryToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
+        Me.OpenDataDirectoryToolStripMenuItem.Size = New System.Drawing.Size(273, 24)
         Me.OpenDataDirectoryToolStripMenuItem.Text = "Open data directory..."
         '
         'AbstractRepositoryItemMemoEdit
@@ -897,7 +916,7 @@ Partial Class Form1
         '
         'rowMethodology
         '
-        Me.rowMethodology.Height = 16
+        Me.rowMethodology.Height = 20
         Me.rowMethodology.Name = "rowMethodology"
         Me.rowMethodology.Properties.Caption = "Methodology"
         Me.rowMethodology.Properties.FieldName = "Methodology"
@@ -981,7 +1000,7 @@ Partial Class Form1
         Me.rowAbstract.AppearanceCell.TextOptions.Trimming = DevExpress.Utils.Trimming.None
         Me.rowAbstract.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.rowAbstract.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
-        Me.rowAbstract.Height = 106
+        Me.rowAbstract.Height = 130
         Me.rowAbstract.Name = "rowAbstract"
         Me.rowAbstract.Properties.Caption = "Abstract"
         Me.rowAbstract.Properties.FieldName = "Abstract"
@@ -992,14 +1011,14 @@ Partial Class Form1
         '
         Me.rowSummary.AppearanceCell.Options.UseTextOptions = True
         Me.rowSummary.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
-        Me.rowSummary.Height = 99
+        Me.rowSummary.Height = 122
         Me.rowSummary.Name = "rowSummary"
         Me.rowSummary.Properties.Caption = "Summary"
         Me.rowSummary.Properties.FieldName = "Summary"
         '
         'rowDatasetProcessingSteps
         '
-        Me.rowDatasetProcessingSteps.Height = 118
+        Me.rowDatasetProcessingSteps.Height = 145
         Me.rowDatasetProcessingSteps.Name = "rowDatasetProcessingSteps"
         Me.rowDatasetProcessingSteps.Properties.Caption = "Dataset Processing Steps"
         Me.rowDatasetProcessingSteps.Properties.FieldName = "DatasetProcessingSteps"
@@ -1042,10 +1061,11 @@ Partial Class Form1
         'MainXtraTabControl
         '
         Me.MainXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainXtraTabControl.Location = New System.Drawing.Point(242, 64)
+        Me.MainXtraTabControl.Location = New System.Drawing.Point(242, 75)
+        Me.MainXtraTabControl.Margin = New System.Windows.Forms.Padding(4)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(900, 722)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(1285, 892)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage, Me.GSPEDeliverableXtraTabPage, Me.GSPEPivotXtraTabPage})
         '
@@ -1054,8 +1074,9 @@ Partial Class Form1
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyVGridControl)
         Me.SurveyDetailsXtraTabPage.Controls.Add(Me.SurveyDetailsPanel)
         Me.SurveyDetailsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.page_white_edit
+        Me.SurveyDetailsXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
-        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(1283, 862)
         Me.SurveyDetailsXtraTabPage.Text = "Survey details"
         '
         'SurveyDetailsPanel
@@ -1063,8 +1084,9 @@ Partial Class Form1
         Me.SurveyDetailsPanel.Controls.Add(Me.SurveyDetailsLabel)
         Me.SurveyDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyDetailsPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
-        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(898, 47)
+        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(1604, 58)
         Me.SurveyDetailsPanel.TabIndex = 2
         '
         'SurveyDetailsLabel
@@ -1072,9 +1094,10 @@ Partial Class Form1
         Me.SurveyDetailsLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SurveyDetailsLabel.Font = New System.Drawing.Font("Tahoma", 8.25!)
         Me.SurveyDetailsLabel.Location = New System.Drawing.Point(0, 0)
+        Me.SurveyDetailsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
-        Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(4)
-        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(898, 47)
+        Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(5)
+        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(1604, 58)
         Me.SurveyDetailsLabel.TabIndex = 0
         Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
         '
@@ -1083,14 +1106,16 @@ Partial Class Form1
         Me.ResultsXtraTabPage.Controls.Add(Me.ResultsSplitContainer)
         Me.ResultsXtraTabPage.Controls.Add(Me.GridControl1)
         Me.ResultsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.table_lightning
+        Me.ResultsXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsXtraTabPage.Name = "ResultsXtraTabPage"
-        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(1283, 862)
         Me.ResultsXtraTabPage.Text = "Results"
         '
         'ResultsSplitContainer
         '
         Me.ResultsSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ResultsSplitContainer.Location = New System.Drawing.Point(0, 0)
+        Me.ResultsSplitContainer.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsSplitContainer.Name = "ResultsSplitContainer"
         Me.ResultsSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -1103,8 +1128,9 @@ Partial Class Form1
         'ResultsSplitContainer.Panel2
         '
         Me.ResultsSplitContainer.Panel2.Controls.Add(Me.ResultsSplitContainer2)
-        Me.ResultsSplitContainer.Size = New System.Drawing.Size(898, 694)
-        Me.ResultsSplitContainer.SplitterDistance = 236
+        Me.ResultsSplitContainer.Size = New System.Drawing.Size(1283, 862)
+        Me.ResultsSplitContainer.SplitterDistance = 293
+        Me.ResultsSplitContainer.SplitterWidth = 5
         Me.ResultsSplitContainer.TabIndex = 1
         '
         'GSPE_PopulationEstimatesDataGridView
@@ -1115,7 +1141,7 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 7.8!)
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -1126,235 +1152,268 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.DataSource = Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
         Me.GSPE_PopulationEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GSPE_PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
+        Me.GSPE_PopulationEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPE_PopulationEstimatesDataGridView.Name = "GSPE_PopulationEstimatesDataGridView"
-        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(898, 211)
+        Me.GSPE_PopulationEstimatesDataGridView.RowHeadersWidth = 51
+        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(1283, 268)
         Me.GSPE_PopulationEstimatesDataGridView.TabIndex = 0
         '
         'ParkSubAreaTextBox_PopEst
         '
         Me.ParkSubAreaTextBox_PopEst.DataPropertyName = "ParkSubArea"
         Me.ParkSubAreaTextBox_PopEst.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaTextBox_PopEst.MinimumWidth = 6
         Me.ParkSubAreaTextBox_PopEst.Name = "ParkSubAreaTextBox_PopEst"
         Me.ParkSubAreaTextBox_PopEst.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ParkSubAreaTextBox_PopEst.ToolTipText = "Required. Sub-area of the park that was sampled, if applicable. Enter the park ac" &
     "ronym if the whole park was sampled."
-        Me.ParkSubAreaTextBox_PopEst.Width = 94
+        Me.ParkSubAreaTextBox_PopEst.Width = 115
         '
         'PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn
         '
         Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.DataPropertyName = "PopulationEstimateSourceReferenceCode"
         Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.HeaderText = "Population Estimate Source Reference Code"
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.Name = "PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn"
         Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.ToolTipText = "Required. Enter the reference code of the report from which the statistic was der" &
     "ived. Each statistic must have a supporting report."
-        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.Width = 243
+        Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn.Width = 305
         '
         'StrataDataGridViewTextBoxColumn
         '
         Me.StrataDataGridViewTextBoxColumn.DataPropertyName = "Strata"
         Me.StrataDataGridViewTextBoxColumn.HeaderText = "Stratum"
+        Me.StrataDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.StrataDataGridViewTextBoxColumn.Name = "StrataDataGridViewTextBoxColumn"
         Me.StrataDataGridViewTextBoxColumn.ToolTipText = "Stratum associated with the statistic; High, Low, etc. Use InTotSurvey if the sta" &
     "tistic applies to the survey as a whole."
-        Me.StrataDataGridViewTextBoxColumn.Width = 70
+        Me.StrataDataGridViewTextBoxColumn.Width = 87
         '
         'AnalysisColumnDataGridViewTextBoxColumn
         '
         Me.AnalysisColumnDataGridViewTextBoxColumn.DataPropertyName = "Analysis_Column"
         Me.AnalysisColumnDataGridViewTextBoxColumn.HeaderText = "Analysis Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.AnalysisColumnDataGridViewTextBoxColumn.Name = "AnalysisColumnDataGridViewTextBoxColumn"
         Me.AnalysisColumnDataGridViewTextBoxColumn.ToolTipText = "Moose, Adults, Bulls, Cows, etc."
-        Me.AnalysisColumnDataGridViewTextBoxColumn.Width = 109
+        Me.AnalysisColumnDataGridViewTextBoxColumn.Width = 135
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "Population_Estimate"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Population_Estimate"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 129
+        Me.DataGridViewTextBoxColumn6.Width = 161
         '
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "Lower_Limit"
         Me.DataGridViewTextBoxColumn8.HeaderText = "Lower_Limit"
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.Width = 88
+        Me.DataGridViewTextBoxColumn8.Width = 110
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "Upper_Limit"
         Me.DataGridViewTextBoxColumn9.HeaderText = "Upper_Limit"
+        Me.DataGridViewTextBoxColumn9.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.Width = 88
+        Me.DataGridViewTextBoxColumn9.Width = 110
         '
         'ConfidenceDataGridViewTextBoxColumn
         '
         Me.ConfidenceDataGridViewTextBoxColumn.DataPropertyName = "Confidence"
         Me.ConfidenceDataGridViewTextBoxColumn.HeaderText = "Confidence"
+        Me.ConfidenceDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ConfidenceDataGridViewTextBoxColumn.Name = "ConfidenceDataGridViewTextBoxColumn"
-        Me.ConfidenceDataGridViewTextBoxColumn.Width = 86
+        Me.ConfidenceDataGridViewTextBoxColumn.Width = 105
         '
         'SurveyAreaDataGridViewTextBoxColumn
         '
         Me.SurveyAreaDataGridViewTextBoxColumn.DataPropertyName = "SurveyArea"
         Me.SurveyAreaDataGridViewTextBoxColumn.HeaderText = "Survey Total Area"
+        Me.SurveyAreaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.SurveyAreaDataGridViewTextBoxColumn.Name = "SurveyAreaDataGridViewTextBoxColumn"
         Me.SurveyAreaDataGridViewTextBoxColumn.ToolTipText = "Total area of the park, survey area, conservation unit, etc."
-        Me.SurveyAreaDataGridViewTextBoxColumn.Width = 119
+        Me.SurveyAreaDataGridViewTextBoxColumn.Width = 146
         '
         'SampledAreaDataGridViewTextBoxColumn
         '
         Me.SampledAreaDataGridViewTextBoxColumn.DataPropertyName = "SampledArea"
         Me.SampledAreaDataGridViewTextBoxColumn.HeaderText = "SampledArea"
+        Me.SampledAreaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.SampledAreaDataGridViewTextBoxColumn.Name = "SampledAreaDataGridViewTextBoxColumn"
         Me.SampledAreaDataGridViewTextBoxColumn.ToolTipText = "Total area of the sampled units; this may be less than the total area of the surv" &
     "ey."
-        Me.SampledAreaDataGridViewTextBoxColumn.Width = 95
+        Me.SampledAreaDataGridViewTextBoxColumn.Width = 116
         '
         'DataGridViewTextBoxColumn19
         '
         Me.DataGridViewTextBoxColumn19.DataPropertyName = "SightabilityCorrectionFactor"
         Me.DataGridViewTextBoxColumn19.HeaderText = "SightabilityCorrectionFactor"
+        Me.DataGridViewTextBoxColumn19.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        Me.DataGridViewTextBoxColumn19.Width = 165
+        Me.DataGridViewTextBoxColumn19.Width = 205
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "Standard_Error"
         Me.DataGridViewTextBoxColumn7.HeaderText = "Standard_Error"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.Width = 106
+        Me.DataGridViewTextBoxColumn7.Width = 132
         '
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "Proportion_of_Mean"
         Me.DataGridViewTextBoxColumn10.HeaderText = "Proportion_of_Mean"
+        Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.Width = 130
+        Me.DataGridViewTextBoxColumn10.Width = 162
         '
         'DataGridViewTextBoxColumn17
         '
         Me.DataGridViewTextBoxColumn17.DataPropertyName = "Intensity"
         Me.DataGridViewTextBoxColumn17.HeaderText = "Intensity"
+        Me.DataGridViewTextBoxColumn17.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.Width = 75
+        Me.DataGridViewTextBoxColumn17.Width = 90
         '
         'DataGridViewTextBoxColumn11
         '
         Me.DataGridViewTextBoxColumn11.DataPropertyName = "Strata_Column"
         Me.DataGridViewTextBoxColumn11.HeaderText = "Strata_Column"
+        Me.DataGridViewTextBoxColumn11.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.Width = 103
+        Me.DataGridViewTextBoxColumn11.Width = 129
         '
         'DataGridViewTextBoxColumn13
         '
         Me.DataGridViewTextBoxColumn13.DataPropertyName = "Counted_Column"
         Me.DataGridViewTextBoxColumn13.HeaderText = "Counted_Column"
+        Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.Width = 114
+        Me.DataGridViewTextBoxColumn13.Width = 145
         '
         'DataGridViewTextBoxColumn14
         '
         Me.DataGridViewTextBoxColumn14.DataPropertyName = "Unit_Area_Column"
         Me.DataGridViewTextBoxColumn14.HeaderText = "Unit_Area_Column"
+        Me.DataGridViewTextBoxColumn14.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.Width = 121
+        Me.DataGridViewTextBoxColumn14.Width = 151
         '
         'DataGridViewTextBoxColumn18
         '
         Me.DataGridViewTextBoxColumn18.DataPropertyName = "RelativePrecision"
         Me.DataGridViewTextBoxColumn18.HeaderText = "RelativePrecision"
+        Me.DataGridViewTextBoxColumn18.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.Width = 113
+        Me.DataGridViewTextBoxColumn18.Width = 137
         '
         'Analysis_Area
         '
         Me.Analysis_Area.DataPropertyName = "Analysis_Area"
         Me.Analysis_Area.HeaderText = "Analysis_Area"
+        Me.Analysis_Area.MinimumWidth = 6
         Me.Analysis_Area.Name = "Analysis_Area"
         Me.Analysis_Area.ToolTipText = "Text description of the analysis area; not to be confused with numeric columns. S" &
     "urvey Total Area or SampledArea."
+        Me.Analysis_Area.Width = 119
         '
         'DataGridViewTextBoxColumn22
         '
         Me.DataGridViewTextBoxColumn22.DataPropertyName = "ReportDate"
         Me.DataGridViewTextBoxColumn22.HeaderText = "ReportDate"
+        Me.DataGridViewTextBoxColumn22.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        Me.DataGridViewTextBoxColumn22.Width = 88
+        Me.DataGridViewTextBoxColumn22.Width = 108
         '
         'DataGridViewTextBoxColumn23
         '
         Me.DataGridViewTextBoxColumn23.DataPropertyName = "AnalysisPerformedBy"
         Me.DataGridViewTextBoxColumn23.HeaderText = "AnalysisPerformedBy"
+        Me.DataGridViewTextBoxColumn23.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.Width = 133
+        Me.DataGridViewTextBoxColumn23.Width = 164
         '
         'PopulationEstimateSourceDataGridViewTextBoxColumn
         '
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn.DataPropertyName = "PopulationEstimateSource"
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn.HeaderText = "PopulationEstimateSource"
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PopulationEstimateSourceDataGridViewTextBoxColumn.Name = "PopulationEstimateSourceDataGridViewTextBoxColumn"
-        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.Width = 156
+        Me.PopulationEstimateSourceDataGridViewTextBoxColumn.Width = 196
         '
         'DataGridViewTextBoxColumn29
         '
         Me.DataGridViewTextBoxColumn29.DataPropertyName = "PopulationSourceLink"
         Me.DataGridViewTextBoxColumn29.HeaderText = "PopulationSourceLink"
+        Me.DataGridViewTextBoxColumn29.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
-        Me.DataGridViewTextBoxColumn29.Width = 133
+        Me.DataGridViewTextBoxColumn29.Width = 168
         '
         'DataGridViewTextBoxColumn21
         '
         Me.DataGridViewTextBoxColumn21.DataPropertyName = "Comments"
         Me.DataGridViewTextBoxColumn21.HeaderText = "Comments"
+        Me.DataGridViewTextBoxColumn21.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        Me.DataGridViewTextBoxColumn21.Width = 82
+        Me.DataGridViewTextBoxColumn21.Width = 104
         '
         'DataGridViewTextBoxColumn27
         '
         Me.DataGridViewTextBoxColumn27.DataPropertyName = "ValidatedDate"
         Me.DataGridViewTextBoxColumn27.HeaderText = "ValidatedDate"
+        Me.DataGridViewTextBoxColumn27.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        Me.DataGridViewTextBoxColumn27.Width = 99
+        Me.DataGridViewTextBoxColumn27.Width = 120
         '
         'DataGridViewTextBoxColumn28
         '
         Me.DataGridViewTextBoxColumn28.DataPropertyName = "ValidatedBy"
         Me.DataGridViewTextBoxColumn28.HeaderText = "ValidatedBy"
+        Me.DataGridViewTextBoxColumn28.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        Me.DataGridViewTextBoxColumn28.Width = 88
+        Me.DataGridViewTextBoxColumn28.Width = 107
         '
         'RecordInsertedDateDataGridViewTextBoxColumn
         '
         Me.RecordInsertedDateDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedDate"
         Me.RecordInsertedDateDataGridViewTextBoxColumn.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.RecordInsertedDateDataGridViewTextBoxColumn.Name = "RecordInsertedDateDataGridViewTextBoxColumn"
         Me.RecordInsertedDateDataGridViewTextBoxColumn.ReadOnly = True
-        Me.RecordInsertedDateDataGridViewTextBoxColumn.Width = 130
+        Me.RecordInsertedDateDataGridViewTextBoxColumn.Width = 160
         '
         'RecordInsertedByDataGridViewTextBoxColumn
         '
         Me.RecordInsertedByDataGridViewTextBoxColumn.DataPropertyName = "RecordInsertedBy"
         Me.RecordInsertedByDataGridViewTextBoxColumn.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.RecordInsertedByDataGridViewTextBoxColumn.Name = "RecordInsertedByDataGridViewTextBoxColumn"
         Me.RecordInsertedByDataGridViewTextBoxColumn.ReadOnly = True
-        Me.RecordInsertedByDataGridViewTextBoxColumn.Width = 119
+        Me.RecordInsertedByDataGridViewTextBoxColumn.Width = 147
         '
         'DataGridViewTextBoxColumn31
         '
         Me.DataGridViewTextBoxColumn31.DataPropertyName = "PopulationEstimateID"
         Me.DataGridViewTextBoxColumn31.HeaderText = "PopulationEstimateID"
+        Me.DataGridViewTextBoxColumn31.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
         Me.DataGridViewTextBoxColumn31.ReadOnly = True
-        Me.DataGridViewTextBoxColumn31.Width = 134
+        Me.DataGridViewTextBoxColumn31.Width = 167
         '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "SurveyName"
         Me.DataGridViewTextBoxColumn1.HeaderText = "SurveyName"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 93
+        Me.DataGridViewTextBoxColumn1.Width = 116
         '
         'FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
         '
@@ -1363,23 +1422,25 @@ Partial Class Form1
         '
         'GSPE_PopulationEstimatesToolStrip
         '
+        Me.GSPE_PopulationEstimatesToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
         Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
-        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(1283, 25)
         Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
         Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
         '
         'PopulationEstimatesToolStripLabel
         '
         Me.PopulationEstimatesToolStripLabel.Name = "PopulationEstimatesToolStripLabel"
-        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(199, 22)
+        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(249, 22)
         Me.PopulationEstimatesToolStripLabel.Text = "Population estimates (from report(s)"
         '
         'ResultsSplitContainer2
         '
         Me.ResultsSplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ResultsSplitContainer2.Location = New System.Drawing.Point(0, 0)
+        Me.ResultsSplitContainer2.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsSplitContainer2.Name = "ResultsSplitContainer2"
         Me.ResultsSplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -1392,8 +1453,9 @@ Partial Class Form1
         '
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsDataGridView)
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ToolStrip2)
-        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(898, 454)
-        Me.ResultsSplitContainer2.SplitterDistance = 273
+        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(1283, 564)
+        Me.ResultsSplitContainer2.SplitterDistance = 338
+        Me.ResultsSplitContainer2.SplitterWidth = 5
         Me.ResultsSplitContainer2.TabIndex = 0
         '
         'DensityEstimatesDataGridView
@@ -1406,8 +1468,10 @@ Partial Class Form1
         Me.DensityEstimatesDataGridView.DataSource = Me.FKGSPEDensityEstimatesGSPESurveysBindingSource
         Me.DensityEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DensityEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
+        Me.DensityEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.DensityEstimatesDataGridView.Name = "DensityEstimatesDataGridView"
-        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(898, 248)
+        Me.DensityEstimatesDataGridView.RowHeadersWidth = 51
+        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(1283, 313)
         Me.DensityEstimatesDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn1
@@ -1415,119 +1479,135 @@ Partial Class Form1
         Me.ParkSubAreaDataGridViewTextBoxColumn1.DataPropertyName = "ParkSubArea"
         Me.ParkSubAreaDataGridViewTextBoxColumn1.Frozen = True
         Me.ParkSubAreaDataGridViewTextBoxColumn1.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.ParkSubAreaDataGridViewTextBoxColumn1.Name = "ParkSubAreaDataGridViewTextBoxColumn1"
-        Me.ParkSubAreaDataGridViewTextBoxColumn1.Width = 94
+        Me.ParkSubAreaDataGridViewTextBoxColumn1.Width = 115
         '
         'StratumDataGridViewTextBoxColumn
         '
         Me.StratumDataGridViewTextBoxColumn.DataPropertyName = "Stratum"
         Me.StratumDataGridViewTextBoxColumn.Frozen = True
         Me.StratumDataGridViewTextBoxColumn.HeaderText = "Stratum"
+        Me.StratumDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.StratumDataGridViewTextBoxColumn.Name = "StratumDataGridViewTextBoxColumn"
-        Me.StratumDataGridViewTextBoxColumn.Width = 70
+        Me.StratumDataGridViewTextBoxColumn.Width = 87
         '
         'AnalysisColumnDataGridViewTextBoxColumn1
         '
         Me.AnalysisColumnDataGridViewTextBoxColumn1.DataPropertyName = "Analysis_Column"
         Me.AnalysisColumnDataGridViewTextBoxColumn1.Frozen = True
         Me.AnalysisColumnDataGridViewTextBoxColumn1.HeaderText = "Analysis_Column"
+        Me.AnalysisColumnDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.AnalysisColumnDataGridViewTextBoxColumn1.Name = "AnalysisColumnDataGridViewTextBoxColumn1"
-        Me.AnalysisColumnDataGridViewTextBoxColumn1.Width = 112
+        Me.AnalysisColumnDataGridViewTextBoxColumn1.Width = 139
         '
         'DensityEstimateDataGridViewTextBoxColumn
         '
         Me.DensityEstimateDataGridViewTextBoxColumn.DataPropertyName = "Density_Estimate"
         Me.DensityEstimateDataGridViewTextBoxColumn.Frozen = True
         Me.DensityEstimateDataGridViewTextBoxColumn.HeaderText = "Density_Estimate"
+        Me.DensityEstimateDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DensityEstimateDataGridViewTextBoxColumn.Name = "DensityEstimateDataGridViewTextBoxColumn"
-        Me.DensityEstimateDataGridViewTextBoxColumn.Width = 115
+        Me.DensityEstimateDataGridViewTextBoxColumn.Width = 143
         '
         'DensityAreaSurveyedSqMiDataGridViewTextBoxColumn
         '
         Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.DataPropertyName = "Density_AreaSurveyed_SqMi"
         Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.HeaderText = "Density_AreaSurveyed_SqMi"
+        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.Name = "DensityAreaSurveyedSqMiDataGridViewTextBoxColumn"
-        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.Width = 171
+        Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn.Width = 213
         '
         'DensityAverageSearchEffortDataGridViewTextBoxColumn
         '
         Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.DataPropertyName = "Density_AverageSearchEffort"
         Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.HeaderText = "Density_AverageSearchEffort"
+        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.Name = "DensityAverageSearchEffortDataGridViewTextBoxColumn"
-        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.Width = 176
+        Me.DensityAverageSearchEffortDataGridViewTextBoxColumn.Width = 217
         '
         'DensityEstimateMethodologyDataGridViewTextBoxColumn
         '
         Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.DataPropertyName = "DensityEstimateMethodology"
         Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.HeaderText = "DensityEstimateMethodology"
+        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.Name = "DensityEstimateMethodologyDataGridViewTextBoxColumn"
-        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.Width = 171
+        Me.DensityEstimateMethodologyDataGridViewTextBoxColumn.Width = 215
         '
         'ReportDateDataGridViewTextBoxColumn1
         '
         Me.ReportDateDataGridViewTextBoxColumn1.DataPropertyName = "ReportDate"
         Me.ReportDateDataGridViewTextBoxColumn1.HeaderText = "ReportDate"
+        Me.ReportDateDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.ReportDateDataGridViewTextBoxColumn1.Name = "ReportDateDataGridViewTextBoxColumn1"
-        Me.ReportDateDataGridViewTextBoxColumn1.Width = 88
+        Me.ReportDateDataGridViewTextBoxColumn1.Width = 108
         '
         'DensityEstimateSourceDataGridViewTextBoxColumn
         '
         Me.DensityEstimateSourceDataGridViewTextBoxColumn.DataPropertyName = "DensityEstimateSource"
         Me.DensityEstimateSourceDataGridViewTextBoxColumn.HeaderText = "DensityEstimateSource"
+        Me.DensityEstimateSourceDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DensityEstimateSourceDataGridViewTextBoxColumn.Name = "DensityEstimateSourceDataGridViewTextBoxColumn"
-        Me.DensityEstimateSourceDataGridViewTextBoxColumn.Width = 142
+        Me.DensityEstimateSourceDataGridViewTextBoxColumn.Width = 178
         '
         'DensityEstimateSourceLinkDataGridViewTextBoxColumn
         '
         Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.DataPropertyName = "DensityEstimateSourceLink"
         Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.HeaderText = "DensityEstimateSourceLink"
+        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.Name = "DensityEstimateSourceLinkDataGridViewTextBoxColumn"
-        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.Width = 160
+        Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn.Width = 202
         '
         'CommentsDataGridViewTextBoxColumn1
         '
         Me.CommentsDataGridViewTextBoxColumn1.DataPropertyName = "Comments"
         Me.CommentsDataGridViewTextBoxColumn1.HeaderText = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.CommentsDataGridViewTextBoxColumn1.Name = "CommentsDataGridViewTextBoxColumn1"
-        Me.CommentsDataGridViewTextBoxColumn1.Width = 82
+        Me.CommentsDataGridViewTextBoxColumn1.Width = 104
         '
         'ValidatedDateDataGridViewTextBoxColumn1
         '
         Me.ValidatedDateDataGridViewTextBoxColumn1.DataPropertyName = "ValidatedDate"
         Me.ValidatedDateDataGridViewTextBoxColumn1.HeaderText = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.ValidatedDateDataGridViewTextBoxColumn1.Name = "ValidatedDateDataGridViewTextBoxColumn1"
-        Me.ValidatedDateDataGridViewTextBoxColumn1.Width = 99
+        Me.ValidatedDateDataGridViewTextBoxColumn1.Width = 120
         '
         'ValidatedByDataGridViewTextBoxColumn1
         '
         Me.ValidatedByDataGridViewTextBoxColumn1.DataPropertyName = "ValidatedBy"
         Me.ValidatedByDataGridViewTextBoxColumn1.HeaderText = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.ValidatedByDataGridViewTextBoxColumn1.Name = "ValidatedByDataGridViewTextBoxColumn1"
-        Me.ValidatedByDataGridViewTextBoxColumn1.Width = 88
+        Me.ValidatedByDataGridViewTextBoxColumn1.Width = 107
         '
         'RecordInsertedDateDataGridViewTextBoxColumn1
         '
         Me.RecordInsertedDateDataGridViewTextBoxColumn1.DataPropertyName = "RecordInsertedDate"
         Me.RecordInsertedDateDataGridViewTextBoxColumn1.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.RecordInsertedDateDataGridViewTextBoxColumn1.Name = "RecordInsertedDateDataGridViewTextBoxColumn1"
         Me.RecordInsertedDateDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.RecordInsertedDateDataGridViewTextBoxColumn1.Width = 130
+        Me.RecordInsertedDateDataGridViewTextBoxColumn1.Width = 160
         '
         'RecordInsertedByDataGridViewTextBoxColumn1
         '
         Me.RecordInsertedByDataGridViewTextBoxColumn1.DataPropertyName = "RecordInsertedBy"
         Me.RecordInsertedByDataGridViewTextBoxColumn1.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.RecordInsertedByDataGridViewTextBoxColumn1.Name = "RecordInsertedByDataGridViewTextBoxColumn1"
         Me.RecordInsertedByDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.RecordInsertedByDataGridViewTextBoxColumn1.Width = 119
+        Me.RecordInsertedByDataGridViewTextBoxColumn1.Width = 147
         '
         'SurveyNameDataGridViewTextBoxColumn1
         '
         Me.SurveyNameDataGridViewTextBoxColumn1.DataPropertyName = "SurveyName"
         Me.SurveyNameDataGridViewTextBoxColumn1.HeaderText = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.SurveyNameDataGridViewTextBoxColumn1.Name = "SurveyNameDataGridViewTextBoxColumn1"
         Me.SurveyNameDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.SurveyNameDataGridViewTextBoxColumn1.Width = 93
+        Me.SurveyNameDataGridViewTextBoxColumn1.Width = 116
         '
         'FKGSPEDensityEstimatesGSPESurveysBindingSource
         '
@@ -1536,17 +1616,18 @@ Partial Class Form1
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(898, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1283, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "Population estimates (from report(s)"
         '
         'DensityEstimatesToolStripLabel
         '
         Me.DensityEstimatesToolStripLabel.Name = "DensityEstimatesToolStripLabel"
-        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(180, 22)
+        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(227, 22)
         Me.DensityEstimatesToolStripLabel.Text = "Density estimates (from report(s)"
         '
         'ResultsDataGridView
@@ -1559,8 +1640,10 @@ Partial Class Form1
         Me.ResultsDataGridView.DataSource = Me.FKGSPERatiosGSPESurveysBindingSource
         Me.ResultsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ResultsDataGridView.Location = New System.Drawing.Point(0, 25)
+        Me.ResultsDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsDataGridView.Name = "ResultsDataGridView"
-        Me.ResultsDataGridView.Size = New System.Drawing.Size(898, 152)
+        Me.ResultsDataGridView.RowHeadersWidth = 51
+        Me.ResultsDataGridView.Size = New System.Drawing.Size(1283, 196)
         Me.ResultsDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn2
@@ -1568,298 +1651,341 @@ Partial Class Form1
         Me.ParkSubAreaDataGridViewTextBoxColumn2.DataPropertyName = "ParkSubArea"
         Me.ParkSubAreaDataGridViewTextBoxColumn2.Frozen = True
         Me.ParkSubAreaDataGridViewTextBoxColumn2.HeaderText = "ParkSubArea"
+        Me.ParkSubAreaDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.ParkSubAreaDataGridViewTextBoxColumn2.Name = "ParkSubAreaDataGridViewTextBoxColumn2"
-        Me.ParkSubAreaDataGridViewTextBoxColumn2.Width = 94
+        Me.ParkSubAreaDataGridViewTextBoxColumn2.Width = 115
         '
         'BullCowRatioDataGridViewTextBoxColumn
         '
         Me.BullCowRatioDataGridViewTextBoxColumn.DataPropertyName = "BullCowRatio"
         Me.BullCowRatioDataGridViewTextBoxColumn.HeaderText = "BullCowRatio"
+        Me.BullCowRatioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BullCowRatioDataGridViewTextBoxColumn.Name = "BullCowRatioDataGridViewTextBoxColumn"
-        Me.BullCowRatioDataGridViewTextBoxColumn.Width = 94
+        Me.BullCowRatioDataGridViewTextBoxColumn.Width = 115
         '
         'CalfCowRatioDataGridViewTextBoxColumn
         '
         Me.CalfCowRatioDataGridViewTextBoxColumn.DataPropertyName = "CalfCowRatio"
         Me.CalfCowRatioDataGridViewTextBoxColumn.HeaderText = "CalfCowRatio"
+        Me.CalfCowRatioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CalfCowRatioDataGridViewTextBoxColumn.Name = "CalfCowRatioDataGridViewTextBoxColumn"
-        Me.CalfCowRatioDataGridViewTextBoxColumn.Width = 97
+        Me.CalfCowRatioDataGridViewTextBoxColumn.Width = 117
         '
         'CalfAdultRatioDataGridViewTextBoxColumn
         '
         Me.CalfAdultRatioDataGridViewTextBoxColumn.DataPropertyName = "CalfAdultRatio"
         Me.CalfAdultRatioDataGridViewTextBoxColumn.HeaderText = "CalfAdultRatio"
+        Me.CalfAdultRatioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CalfAdultRatioDataGridViewTextBoxColumn.Name = "CalfAdultRatioDataGridViewTextBoxColumn"
-        Me.CalfAdultRatioDataGridViewTextBoxColumn.Width = 101
+        Me.CalfAdultRatioDataGridViewTextBoxColumn.Width = 121
         '
         'ADULTDataGridViewTextBoxColumn
         '
         Me.ADULTDataGridViewTextBoxColumn.DataPropertyName = "ADULT"
         Me.ADULTDataGridViewTextBoxColumn.HeaderText = "ADULT"
+        Me.ADULTDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ADULTDataGridViewTextBoxColumn.Name = "ADULTDataGridViewTextBoxColumn"
-        Me.ADULTDataGridViewTextBoxColumn.Width = 64
+        Me.ADULTDataGridViewTextBoxColumn.Width = 79
         '
         'BULL3040DataGridViewTextBoxColumn
         '
         Me.BULL3040DataGridViewTextBoxColumn.DataPropertyName = "BULL_30_40"
         Me.BULL3040DataGridViewTextBoxColumn.HeaderText = "BULL_30_40"
+        Me.BULL3040DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULL3040DataGridViewTextBoxColumn.Name = "BULL3040DataGridViewTextBoxColumn"
-        Me.BULL3040DataGridViewTextBoxColumn.Width = 91
+        Me.BULL3040DataGridViewTextBoxColumn.Width = 116
         '
         'BULL3050DataGridViewTextBoxColumn
         '
         Me.BULL3050DataGridViewTextBoxColumn.DataPropertyName = "BULL_30_50"
         Me.BULL3050DataGridViewTextBoxColumn.HeaderText = "BULL_30_50"
+        Me.BULL3050DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULL3050DataGridViewTextBoxColumn.Name = "BULL3050DataGridViewTextBoxColumn"
-        Me.BULL3050DataGridViewTextBoxColumn.Width = 91
+        Me.BULL3050DataGridViewTextBoxColumn.Width = 116
         '
         'BULL3060DataGridViewTextBoxColumn
         '
         Me.BULL3060DataGridViewTextBoxColumn.DataPropertyName = "BULL_30_60"
         Me.BULL3060DataGridViewTextBoxColumn.HeaderText = "BULL_30_60"
+        Me.BULL3060DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULL3060DataGridViewTextBoxColumn.Name = "BULL3060DataGridViewTextBoxColumn"
-        Me.BULL3060DataGridViewTextBoxColumn.Width = 91
+        Me.BULL3060DataGridViewTextBoxColumn.Width = 116
         '
         'BULL4150DataGridViewTextBoxColumn
         '
         Me.BULL4150DataGridViewTextBoxColumn.DataPropertyName = "BULL_41_50"
         Me.BULL4150DataGridViewTextBoxColumn.HeaderText = "BULL_41_50"
+        Me.BULL4150DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULL4150DataGridViewTextBoxColumn.Name = "BULL4150DataGridViewTextBoxColumn"
-        Me.BULL4150DataGridViewTextBoxColumn.Width = 91
+        Me.BULL4150DataGridViewTextBoxColumn.Width = 116
         '
         'BULLALLDataGridViewTextBoxColumn
         '
         Me.BULLALLDataGridViewTextBoxColumn.DataPropertyName = "BULL_ALL"
         Me.BULLALLDataGridViewTextBoxColumn.HeaderText = "BULL_ALL"
+        Me.BULLALLDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULLALLDataGridViewTextBoxColumn.Name = "BULLALLDataGridViewTextBoxColumn"
-        Me.BULLALLDataGridViewTextBoxColumn.Width = 78
+        Me.BULLALLDataGridViewTextBoxColumn.Width = 98
         '
         'BULLGT50DataGridViewTextBoxColumn
         '
         Me.BULLGT50DataGridViewTextBoxColumn.DataPropertyName = "BULL_GT_50"
         Me.BULLGT50DataGridViewTextBoxColumn.HeaderText = "BULL_GT_50"
+        Me.BULLGT50DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULLGT50DataGridViewTextBoxColumn.Name = "BULLGT50DataGridViewTextBoxColumn"
-        Me.BULLGT50DataGridViewTextBoxColumn.Width = 92
+        Me.BULLGT50DataGridViewTextBoxColumn.Width = 117
         '
         'BULLGT60DataGridViewTextBoxColumn
         '
         Me.BULLGT60DataGridViewTextBoxColumn.DataPropertyName = "BULL_GT_60"
         Me.BULLGT60DataGridViewTextBoxColumn.HeaderText = "BULL_GT_60"
+        Me.BULLGT60DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULLGT60DataGridViewTextBoxColumn.Name = "BULLGT60DataGridViewTextBoxColumn"
-        Me.BULLGT60DataGridViewTextBoxColumn.Width = 92
+        Me.BULLGT60DataGridViewTextBoxColumn.Width = 117
         '
         'BULLGTE50DataGridViewTextBoxColumn
         '
         Me.BULLGTE50DataGridViewTextBoxColumn.DataPropertyName = "BULL_GTE_50"
         Me.BULLGTE50DataGridViewTextBoxColumn.HeaderText = "BULL_GTE_50"
+        Me.BULLGTE50DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULLGTE50DataGridViewTextBoxColumn.Name = "BULLGTE50DataGridViewTextBoxColumn"
-        Me.BULLGTE50DataGridViewTextBoxColumn.Width = 98
+        Me.BULLGTE50DataGridViewTextBoxColumn.Width = 125
         '
         'BULLLT30DataGridViewTextBoxColumn
         '
         Me.BULLLT30DataGridViewTextBoxColumn.DataPropertyName = "BULL_LT_30"
         Me.BULLLT30DataGridViewTextBoxColumn.HeaderText = "BULL_LT_30"
+        Me.BULLLT30DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULLLT30DataGridViewTextBoxColumn.Name = "BULLLT30DataGridViewTextBoxColumn"
-        Me.BULLLT30DataGridViewTextBoxColumn.Width = 90
+        Me.BULLLT30DataGridViewTextBoxColumn.Width = 115
         '
         'BULLLT50DataGridViewTextBoxColumn
         '
         Me.BULLLT50DataGridViewTextBoxColumn.DataPropertyName = "BULL_LT_50"
         Me.BULLLT50DataGridViewTextBoxColumn.HeaderText = "BULL_LT_50"
+        Me.BULLLT50DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.BULLLT50DataGridViewTextBoxColumn.Name = "BULLLT50DataGridViewTextBoxColumn"
-        Me.BULLLT50DataGridViewTextBoxColumn.Width = 90
+        Me.BULLLT50DataGridViewTextBoxColumn.Width = 115
         '
         'CALFDataGridViewTextBoxColumn
         '
         Me.CALFDataGridViewTextBoxColumn.DataPropertyName = "CALF"
         Me.CALFDataGridViewTextBoxColumn.HeaderText = "CALF"
+        Me.CALFDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CALFDataGridViewTextBoxColumn.Name = "CALFDataGridViewTextBoxColumn"
-        Me.CALFDataGridViewTextBoxColumn.Width = 57
+        Me.CALFDataGridViewTextBoxColumn.Width = 68
         '
         'COWDataGridViewTextBoxColumn
         '
         Me.COWDataGridViewTextBoxColumn.DataPropertyName = "COW"
         Me.COWDataGridViewTextBoxColumn.HeaderText = "COW"
+        Me.COWDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.COWDataGridViewTextBoxColumn.Name = "COWDataGridViewTextBoxColumn"
-        Me.COWDataGridViewTextBoxColumn.Width = 57
+        Me.COWDataGridViewTextBoxColumn.Width = 70
         '
         'COWW0DataGridViewTextBoxColumn
         '
         Me.COWW0DataGridViewTextBoxColumn.DataPropertyName = "COW_W_0"
         Me.COWW0DataGridViewTextBoxColumn.HeaderText = "COW_W_0"
+        Me.COWW0DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.COWW0DataGridViewTextBoxColumn.Name = "COWW0DataGridViewTextBoxColumn"
-        Me.COWW0DataGridViewTextBoxColumn.Width = 85
+        Me.COWW0DataGridViewTextBoxColumn.Width = 108
         '
         'COWW1DataGridViewTextBoxColumn
         '
         Me.COWW1DataGridViewTextBoxColumn.DataPropertyName = "COW_W_1"
         Me.COWW1DataGridViewTextBoxColumn.HeaderText = "COW_W_1"
+        Me.COWW1DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.COWW1DataGridViewTextBoxColumn.Name = "COWW1DataGridViewTextBoxColumn"
-        Me.COWW1DataGridViewTextBoxColumn.Width = 85
+        Me.COWW1DataGridViewTextBoxColumn.Width = 108
         '
         'COWW2DataGridViewTextBoxColumn
         '
         Me.COWW2DataGridViewTextBoxColumn.DataPropertyName = "COW_W_2"
         Me.COWW2DataGridViewTextBoxColumn.HeaderText = "COW_W_2"
+        Me.COWW2DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.COWW2DataGridViewTextBoxColumn.Name = "COWW2DataGridViewTextBoxColumn"
-        Me.COWW2DataGridViewTextBoxColumn.Width = 85
+        Me.COWW2DataGridViewTextBoxColumn.Width = 108
         '
         'COWW3DataGridViewTextBoxColumn
         '
         Me.COWW3DataGridViewTextBoxColumn.DataPropertyName = "COW_W_3"
         Me.COWW3DataGridViewTextBoxColumn.HeaderText = "COW_W_3"
+        Me.COWW3DataGridViewTextBoxColumn.MinimumWidth = 6
         Me.COWW3DataGridViewTextBoxColumn.Name = "COWW3DataGridViewTextBoxColumn"
-        Me.COWW3DataGridViewTextBoxColumn.Width = 85
+        Me.COWW3DataGridViewTextBoxColumn.Width = 108
         '
         'LGBULLDataGridViewTextBoxColumn
         '
         Me.LGBULLDataGridViewTextBoxColumn.DataPropertyName = "LG_BULL"
         Me.LGBULLDataGridViewTextBoxColumn.HeaderText = "LG_BULL"
+        Me.LGBULLDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.LGBULLDataGridViewTextBoxColumn.Name = "LGBULLDataGridViewTextBoxColumn"
-        Me.LGBULLDataGridViewTextBoxColumn.Width = 73
+        Me.LGBULLDataGridViewTextBoxColumn.Width = 92
         '
         'MEDBULLDataGridViewTextBoxColumn
         '
         Me.MEDBULLDataGridViewTextBoxColumn.DataPropertyName = "MED_BULL"
         Me.MEDBULLDataGridViewTextBoxColumn.HeaderText = "MED_BULL"
+        Me.MEDBULLDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.MEDBULLDataGridViewTextBoxColumn.Name = "MEDBULLDataGridViewTextBoxColumn"
-        Me.MEDBULLDataGridViewTextBoxColumn.Width = 82
+        Me.MEDBULLDataGridViewTextBoxColumn.Width = 104
         '
         'MEDLBULLDataGridViewTextBoxColumn
         '
         Me.MEDLBULLDataGridViewTextBoxColumn.DataPropertyName = "MED_L_BULL"
         Me.MEDLBULLDataGridViewTextBoxColumn.HeaderText = "MED_L_BULL"
+        Me.MEDLBULLDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.MEDLBULLDataGridViewTextBoxColumn.Name = "MEDLBULLDataGridViewTextBoxColumn"
-        Me.MEDLBULLDataGridViewTextBoxColumn.Width = 93
+        Me.MEDLBULLDataGridViewTextBoxColumn.Width = 119
         '
         'SMBULLDataGridViewTextBoxColumn
         '
         Me.SMBULLDataGridViewTextBoxColumn.DataPropertyName = "SM_BULL"
         Me.SMBULLDataGridViewTextBoxColumn.HeaderText = "SM_BULL"
+        Me.SMBULLDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.SMBULLDataGridViewTextBoxColumn.Name = "SMBULLDataGridViewTextBoxColumn"
-        Me.SMBULLDataGridViewTextBoxColumn.Width = 75
+        Me.SMBULLDataGridViewTextBoxColumn.Width = 94
         '
         'UNKNOWNDataGridViewTextBoxColumn
         '
         Me.UNKNOWNDataGridViewTextBoxColumn.DataPropertyName = "UNKNOWN"
         Me.UNKNOWNDataGridViewTextBoxColumn.HeaderText = "UNKNOWN"
+        Me.UNKNOWNDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.UNKNOWNDataGridViewTextBoxColumn.Name = "UNKNOWNDataGridViewTextBoxColumn"
-        Me.UNKNOWNDataGridViewTextBoxColumn.Width = 84
+        Me.UNKNOWNDataGridViewTextBoxColumn.Width = 105
         '
         'YBULLALLDataGridViewTextBoxColumn
         '
         Me.YBULLALLDataGridViewTextBoxColumn.DataPropertyName = "YBULL_ALL"
         Me.YBULLALLDataGridViewTextBoxColumn.HeaderText = "YBULL_ALL"
+        Me.YBULLALLDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.YBULLALLDataGridViewTextBoxColumn.Name = "YBULLALLDataGridViewTextBoxColumn"
-        Me.YBULLALLDataGridViewTextBoxColumn.Width = 84
+        Me.YBULLALLDataGridViewTextBoxColumn.Width = 106
         '
         'YBULLGTSFDataGridViewTextBoxColumn
         '
         Me.YBULLGTSFDataGridViewTextBoxColumn.DataPropertyName = "YBULL_GTSF"
         Me.YBULLGTSFDataGridViewTextBoxColumn.HeaderText = "YBULL_GTSF"
+        Me.YBULLGTSFDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.YBULLGTSFDataGridViewTextBoxColumn.Name = "YBULLGTSFDataGridViewTextBoxColumn"
-        Me.YBULLGTSFDataGridViewTextBoxColumn.Width = 92
+        Me.YBULLGTSFDataGridViewTextBoxColumn.Width = 116
         '
         'YBULLSFDataGridViewTextBoxColumn
         '
         Me.YBULLSFDataGridViewTextBoxColumn.DataPropertyName = "YBULL_SF"
         Me.YBULLSFDataGridViewTextBoxColumn.HeaderText = "YBULL_SF"
+        Me.YBULLSFDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.YBULLSFDataGridViewTextBoxColumn.Name = "YBULLSFDataGridViewTextBoxColumn"
-        Me.YBULLSFDataGridViewTextBoxColumn.Width = 79
+        Me.YBULLSFDataGridViewTextBoxColumn.Width = 99
         '
         'MOOSEDataGridViewTextBoxColumn
         '
         Me.MOOSEDataGridViewTextBoxColumn.DataPropertyName = "MOOSE"
         Me.MOOSEDataGridViewTextBoxColumn.HeaderText = "MOOSE"
+        Me.MOOSEDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.MOOSEDataGridViewTextBoxColumn.Name = "MOOSEDataGridViewTextBoxColumn"
-        Me.MOOSEDataGridViewTextBoxColumn.Width = 68
+        Me.MOOSEDataGridViewTextBoxColumn.Width = 83
         '
         'SubAreaSurveyedSqMiDataGridViewTextBoxColumn
         '
         Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.DataPropertyName = "SubAreaSurveyed_SqMi"
         Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.HeaderText = "SubAreaSurveyed_SqMi"
+        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.Name = "SubAreaSurveyedSqMiDataGridViewTextBoxColumn"
-        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.Width = 147
+        Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn.Width = 183
         '
         'SubAreaAverageSearchEffortDataGridViewTextBoxColumn
         '
         Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.DataPropertyName = "SubAreaAverageSearchEffort"
         Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.HeaderText = "SubAreaAverageSearchEffort"
+        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.Name = "SubAreaAverageSearchEffortDataGridViewTextBoxColumn"
-        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.Width = 175
+        Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn.Width = 214
         '
         'MethodologyUsedDataGridViewTextBoxColumn
         '
         Me.MethodologyUsedDataGridViewTextBoxColumn.DataPropertyName = "MethodologyUsed"
         Me.MethodologyUsedDataGridViewTextBoxColumn.HeaderText = "MethodologyUsed"
+        Me.MethodologyUsedDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.MethodologyUsedDataGridViewTextBoxColumn.Name = "MethodologyUsedDataGridViewTextBoxColumn"
-        Me.MethodologyUsedDataGridViewTextBoxColumn.Width = 118
+        Me.MethodologyUsedDataGridViewTextBoxColumn.Width = 147
         '
         'ResultsSourceDataGridViewTextBoxColumn
         '
         Me.ResultsSourceDataGridViewTextBoxColumn.DataPropertyName = "ResultsSource"
         Me.ResultsSourceDataGridViewTextBoxColumn.HeaderText = "ResultsSource"
+        Me.ResultsSourceDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ResultsSourceDataGridViewTextBoxColumn.Name = "ResultsSourceDataGridViewTextBoxColumn"
+        Me.ResultsSourceDataGridViewTextBoxColumn.Width = 123
         '
         'ResultsSourceLinkDataGridViewTextBoxColumn
         '
         Me.ResultsSourceLinkDataGridViewTextBoxColumn.DataPropertyName = "ResultsSourceLink"
         Me.ResultsSourceLinkDataGridViewTextBoxColumn.HeaderText = "ResultsSourceLink"
+        Me.ResultsSourceLinkDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ResultsSourceLinkDataGridViewTextBoxColumn.Name = "ResultsSourceLinkDataGridViewTextBoxColumn"
-        Me.ResultsSourceLinkDataGridViewTextBoxColumn.Width = 118
+        Me.ResultsSourceLinkDataGridViewTextBoxColumn.Width = 147
         '
         'CommentsDataGridViewTextBoxColumn2
         '
         Me.CommentsDataGridViewTextBoxColumn2.DataPropertyName = "Comments"
         Me.CommentsDataGridViewTextBoxColumn2.HeaderText = "Comments"
+        Me.CommentsDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.CommentsDataGridViewTextBoxColumn2.Name = "CommentsDataGridViewTextBoxColumn2"
-        Me.CommentsDataGridViewTextBoxColumn2.Width = 82
+        Me.CommentsDataGridViewTextBoxColumn2.Width = 104
         '
         'ValidatedDateDataGridViewTextBoxColumn2
         '
         Me.ValidatedDateDataGridViewTextBoxColumn2.DataPropertyName = "ValidatedDate"
         Me.ValidatedDateDataGridViewTextBoxColumn2.HeaderText = "ValidatedDate"
+        Me.ValidatedDateDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.ValidatedDateDataGridViewTextBoxColumn2.Name = "ValidatedDateDataGridViewTextBoxColumn2"
-        Me.ValidatedDateDataGridViewTextBoxColumn2.Width = 99
+        Me.ValidatedDateDataGridViewTextBoxColumn2.Width = 120
         '
         'ValidatedByDataGridViewTextBoxColumn2
         '
         Me.ValidatedByDataGridViewTextBoxColumn2.DataPropertyName = "ValidatedBy"
         Me.ValidatedByDataGridViewTextBoxColumn2.HeaderText = "ValidatedBy"
+        Me.ValidatedByDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.ValidatedByDataGridViewTextBoxColumn2.Name = "ValidatedByDataGridViewTextBoxColumn2"
-        Me.ValidatedByDataGridViewTextBoxColumn2.Width = 88
+        Me.ValidatedByDataGridViewTextBoxColumn2.Width = 107
         '
         'RecordInsertedDateDataGridViewTextBoxColumn2
         '
         Me.RecordInsertedDateDataGridViewTextBoxColumn2.DataPropertyName = "RecordInsertedDate"
         Me.RecordInsertedDateDataGridViewTextBoxColumn2.HeaderText = "RecordInsertedDate"
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.RecordInsertedDateDataGridViewTextBoxColumn2.Name = "RecordInsertedDateDataGridViewTextBoxColumn2"
         Me.RecordInsertedDateDataGridViewTextBoxColumn2.ReadOnly = True
-        Me.RecordInsertedDateDataGridViewTextBoxColumn2.Width = 130
+        Me.RecordInsertedDateDataGridViewTextBoxColumn2.Width = 160
         '
         'RecordInsertedByDataGridViewTextBoxColumn2
         '
         Me.RecordInsertedByDataGridViewTextBoxColumn2.DataPropertyName = "RecordInsertedBy"
         Me.RecordInsertedByDataGridViewTextBoxColumn2.HeaderText = "RecordInsertedBy"
+        Me.RecordInsertedByDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.RecordInsertedByDataGridViewTextBoxColumn2.Name = "RecordInsertedByDataGridViewTextBoxColumn2"
         Me.RecordInsertedByDataGridViewTextBoxColumn2.ReadOnly = True
-        Me.RecordInsertedByDataGridViewTextBoxColumn2.Width = 119
+        Me.RecordInsertedByDataGridViewTextBoxColumn2.Width = 147
         '
         'SurveyNameDataGridViewTextBoxColumn2
         '
         Me.SurveyNameDataGridViewTextBoxColumn2.DataPropertyName = "SurveyName"
         Me.SurveyNameDataGridViewTextBoxColumn2.HeaderText = "SurveyName"
+        Me.SurveyNameDataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.SurveyNameDataGridViewTextBoxColumn2.Name = "SurveyNameDataGridViewTextBoxColumn2"
         Me.SurveyNameDataGridViewTextBoxColumn2.ReadOnly = True
-        Me.SurveyNameDataGridViewTextBoxColumn2.Width = 93
+        Me.SurveyNameDataGridViewTextBoxColumn2.Width = 116
         '
         'ResultID
         '
         Me.ResultID.DataPropertyName = "ResultID"
         Me.ResultID.HeaderText = "ResultID"
+        Me.ResultID.MinimumWidth = 6
         Me.ResultID.Name = "ResultID"
         Me.ResultID.ReadOnly = True
-        Me.ResultID.Width = 73
+        Me.ResultID.Width = 88
         '
         'FKGSPERatiosGSPESurveysBindingSource
         '
@@ -1868,30 +1994,34 @@ Partial Class Form1
         '
         'ToolStrip2
         '
+        Me.ToolStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(898, 25)
+        Me.ToolStrip2.Size = New System.Drawing.Size(1283, 25)
         Me.ToolStrip2.TabIndex = 2
         Me.ToolStrip2.Text = "Population estimates (from report(s)"
         '
         'ResultsToolStripLabel
         '
         Me.ResultsToolStripLabel.Name = "ResultsToolStripLabel"
-        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(243, 22)
+        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(305, 22)
         Me.ResultsToolStripLabel.Text = "Ratios and population counts (from report(s)"
         '
         'GridControl1
         '
-        Me.GridControl1.Location = New System.Drawing.Point(78, 34)
+        Me.GridControl1.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
+        Me.GridControl1.Location = New System.Drawing.Point(21, 8)
         Me.GridControl1.MainView = Me.GridView1
+        Me.GridControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(400, 200)
+        Me.GridControl1.Size = New System.Drawing.Size(111, 52)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
+        Me.GridView1.DetailHeight = 431
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.Name = "GridView1"
         '
@@ -1900,24 +2030,28 @@ Partial Class Form1
         Me.GSPEDeliverableXtraTabPage.Controls.Add(Me.GSPEGridControl)
         Me.GSPEDeliverableXtraTabPage.Controls.Add(Me.GSPEGridControlToolStrip)
         Me.GSPEDeliverableXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.database_table
+        Me.GSPEDeliverableXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEDeliverableXtraTabPage.Name = "GSPEDeliverableXtraTabPage"
-        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(1283, 862)
         Me.GSPEDeliverableXtraTabPage.Text = "GSPE data deliverable"
         '
         'GSPEGridControl
         '
         Me.GSPEGridControl.DataSource = Me.GSPEBindingSource
         Me.GSPEGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GSPEGridControl.Location = New System.Drawing.Point(0, 25)
+        Me.GSPEGridControl.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
+        Me.GSPEGridControl.Location = New System.Drawing.Point(0, 39)
         Me.GSPEGridControl.MainView = Me.GridView2
+        Me.GSPEGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEGridControl.Name = "GSPEGridControl"
-        Me.GSPEGridControl.Size = New System.Drawing.Size(898, 669)
+        Me.GSPEGridControl.Size = New System.Drawing.Size(1604, 1039)
         Me.GSPEGridControl.TabIndex = 0
         Me.GSPEGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
         'GridView2
         '
         Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPark1, Me.colSurveyName4, Me.colSurveyYear, Me.colSeason1, Me.colSubArea, Me.colGMU, Me.colID, Me.colStartDate1, Me.colStopDate, Me.colIntID, Me.colRand, Me.colFiringOrder, Me.colSelected, Me.colCounted, Me.colExclude, Me.colStrat, Me.colStratName, Me.colStratMoose, Me.colStratTracks, Me.colStratHab, Me.colSearchMin, Me.colDateCounted, Me.colPerc_Not_Flown, Me.colX_COORD, Me.colY_COORD, Me.colArea_SqMi, Me.colADULT1, Me.colBULL_30_401, Me.colBULL_30_501, Me.colBULL_30_601, Me.colBULL_41_501, Me.colBULL_ALL1, Me.colBULL_GT_501, Me.colBULL_GT_601, Me.colBULL_GTE_501, Me.colBULL_LT_301, Me.colBULL_LT_501, Me.colCALF1, Me.colCOW1, Me.colCOW_W_01, Me.colCOW_W_11, Me.colCOW_W_21, Me.colCOW_W_31, Me.colLG_BULL1, Me.colMED_BULL1, Me.colMED_L_BULL1, Me.colSM_BULL1, Me.colUNKNOWN1, Me.colYBULL_ALL1, Me.colYBULL_GTSF1, Me.colYBULL_SF1, Me.colMOOSE1, Me.colPilot, Me.colObserver, Me.colPersonnel1, Me.colDensity1, Me.colSCF_Plot, Me.colStd, Me.colInt, Me.colComments4, Me.colSourceFilename, Me.colRecordInsertedDate4, Me.colRecordInsertedBy4, Me.colCertificationDate, Me.colCertifiedBy, Me.colCertificationLevel})
+        Me.GridView2.DetailHeight = 431
         Me.GridView2.GridControl = Me.GSPEGridControl
         Me.GridView2.Name = "GridView2"
         Me.GridView2.OptionsView.ShowFooter = True
@@ -1925,485 +2059,619 @@ Partial Class Form1
         'colPark1
         '
         Me.colPark1.FieldName = "Park"
+        Me.colPark1.MinWidth = 27
         Me.colPark1.Name = "colPark1"
         Me.colPark1.Visible = True
         Me.colPark1.VisibleIndex = 0
+        Me.colPark1.Width = 100
         '
         'colSurveyName4
         '
         Me.colSurveyName4.FieldName = "SurveyName"
+        Me.colSurveyName4.MinWidth = 27
         Me.colSurveyName4.Name = "colSurveyName4"
         Me.colSurveyName4.Visible = True
         Me.colSurveyName4.VisibleIndex = 1
+        Me.colSurveyName4.Width = 100
         '
         'colSurveyYear
         '
         Me.colSurveyYear.FieldName = "SurveyYear"
+        Me.colSurveyYear.MinWidth = 27
         Me.colSurveyYear.Name = "colSurveyYear"
         Me.colSurveyYear.Visible = True
         Me.colSurveyYear.VisibleIndex = 2
+        Me.colSurveyYear.Width = 100
         '
         'colSeason1
         '
         Me.colSeason1.FieldName = "Season"
+        Me.colSeason1.MinWidth = 27
         Me.colSeason1.Name = "colSeason1"
         Me.colSeason1.Visible = True
         Me.colSeason1.VisibleIndex = 3
+        Me.colSeason1.Width = 100
         '
         'colSubArea
         '
         Me.colSubArea.FieldName = "SubArea"
+        Me.colSubArea.MinWidth = 27
         Me.colSubArea.Name = "colSubArea"
         Me.colSubArea.Visible = True
         Me.colSubArea.VisibleIndex = 4
+        Me.colSubArea.Width = 100
         '
         'colGMU
         '
         Me.colGMU.FieldName = "GMU"
+        Me.colGMU.MinWidth = 27
         Me.colGMU.Name = "colGMU"
         Me.colGMU.Visible = True
         Me.colGMU.VisibleIndex = 5
+        Me.colGMU.Width = 100
         '
         'colID
         '
         Me.colID.FieldName = "ID"
+        Me.colID.MinWidth = 27
         Me.colID.Name = "colID"
         Me.colID.Visible = True
         Me.colID.VisibleIndex = 6
+        Me.colID.Width = 100
         '
         'colStartDate1
         '
         Me.colStartDate1.FieldName = "StartDate"
+        Me.colStartDate1.MinWidth = 27
         Me.colStartDate1.Name = "colStartDate1"
         Me.colStartDate1.Visible = True
         Me.colStartDate1.VisibleIndex = 7
+        Me.colStartDate1.Width = 100
         '
         'colStopDate
         '
         Me.colStopDate.FieldName = "StopDate"
+        Me.colStopDate.MinWidth = 27
         Me.colStopDate.Name = "colStopDate"
         Me.colStopDate.Visible = True
         Me.colStopDate.VisibleIndex = 8
+        Me.colStopDate.Width = 100
         '
         'colIntID
         '
         Me.colIntID.FieldName = "IntID"
+        Me.colIntID.MinWidth = 27
         Me.colIntID.Name = "colIntID"
         Me.colIntID.Visible = True
         Me.colIntID.VisibleIndex = 9
+        Me.colIntID.Width = 100
         '
         'colRand
         '
         Me.colRand.FieldName = "Rand"
+        Me.colRand.MinWidth = 27
         Me.colRand.Name = "colRand"
         Me.colRand.Visible = True
         Me.colRand.VisibleIndex = 10
+        Me.colRand.Width = 100
         '
         'colFiringOrder
         '
         Me.colFiringOrder.FieldName = "FiringOrder"
+        Me.colFiringOrder.MinWidth = 27
         Me.colFiringOrder.Name = "colFiringOrder"
         Me.colFiringOrder.Visible = True
         Me.colFiringOrder.VisibleIndex = 11
+        Me.colFiringOrder.Width = 100
         '
         'colSelected
         '
         Me.colSelected.FieldName = "Selected"
+        Me.colSelected.MinWidth = 27
         Me.colSelected.Name = "colSelected"
         Me.colSelected.Visible = True
         Me.colSelected.VisibleIndex = 12
+        Me.colSelected.Width = 100
         '
         'colCounted
         '
         Me.colCounted.FieldName = "Counted"
+        Me.colCounted.MinWidth = 27
         Me.colCounted.Name = "colCounted"
         Me.colCounted.Visible = True
         Me.colCounted.VisibleIndex = 13
+        Me.colCounted.Width = 100
         '
         'colExclude
         '
         Me.colExclude.FieldName = "Exclude"
+        Me.colExclude.MinWidth = 27
         Me.colExclude.Name = "colExclude"
         Me.colExclude.Visible = True
         Me.colExclude.VisibleIndex = 14
+        Me.colExclude.Width = 100
         '
         'colStrat
         '
         Me.colStrat.FieldName = "Strat"
+        Me.colStrat.MinWidth = 27
         Me.colStrat.Name = "colStrat"
         Me.colStrat.Visible = True
         Me.colStrat.VisibleIndex = 15
+        Me.colStrat.Width = 100
         '
         'colStratName
         '
         Me.colStratName.FieldName = "StratName"
+        Me.colStratName.MinWidth = 27
         Me.colStratName.Name = "colStratName"
         Me.colStratName.Visible = True
         Me.colStratName.VisibleIndex = 16
+        Me.colStratName.Width = 100
         '
         'colStratMoose
         '
         Me.colStratMoose.FieldName = "StratMoose"
+        Me.colStratMoose.MinWidth = 27
         Me.colStratMoose.Name = "colStratMoose"
         Me.colStratMoose.Visible = True
         Me.colStratMoose.VisibleIndex = 17
+        Me.colStratMoose.Width = 100
         '
         'colStratTracks
         '
         Me.colStratTracks.FieldName = "StratTracks"
+        Me.colStratTracks.MinWidth = 27
         Me.colStratTracks.Name = "colStratTracks"
         Me.colStratTracks.Visible = True
         Me.colStratTracks.VisibleIndex = 18
+        Me.colStratTracks.Width = 100
         '
         'colStratHab
         '
         Me.colStratHab.FieldName = "StratHab"
+        Me.colStratHab.MinWidth = 27
         Me.colStratHab.Name = "colStratHab"
         Me.colStratHab.Visible = True
         Me.colStratHab.VisibleIndex = 19
+        Me.colStratHab.Width = 100
         '
         'colSearchMin
         '
         Me.colSearchMin.FieldName = "SearchMin"
+        Me.colSearchMin.MinWidth = 27
         Me.colSearchMin.Name = "colSearchMin"
         Me.colSearchMin.Visible = True
         Me.colSearchMin.VisibleIndex = 20
+        Me.colSearchMin.Width = 100
         '
         'colDateCounted
         '
         Me.colDateCounted.FieldName = "DateCounted"
+        Me.colDateCounted.MinWidth = 27
         Me.colDateCounted.Name = "colDateCounted"
         Me.colDateCounted.Visible = True
         Me.colDateCounted.VisibleIndex = 21
+        Me.colDateCounted.Width = 100
         '
         'colPerc_Not_Flown
         '
         Me.colPerc_Not_Flown.FieldName = "Perc_Not_Flown"
+        Me.colPerc_Not_Flown.MinWidth = 27
         Me.colPerc_Not_Flown.Name = "colPerc_Not_Flown"
         Me.colPerc_Not_Flown.Visible = True
         Me.colPerc_Not_Flown.VisibleIndex = 22
+        Me.colPerc_Not_Flown.Width = 100
         '
         'colX_COORD
         '
         Me.colX_COORD.FieldName = "X_COORD"
+        Me.colX_COORD.MinWidth = 27
         Me.colX_COORD.Name = "colX_COORD"
         Me.colX_COORD.Visible = True
         Me.colX_COORD.VisibleIndex = 23
+        Me.colX_COORD.Width = 100
         '
         'colY_COORD
         '
         Me.colY_COORD.FieldName = "Y_COORD"
+        Me.colY_COORD.MinWidth = 27
         Me.colY_COORD.Name = "colY_COORD"
         Me.colY_COORD.Visible = True
         Me.colY_COORD.VisibleIndex = 24
+        Me.colY_COORD.Width = 100
         '
         'colArea_SqMi
         '
         Me.colArea_SqMi.FieldName = "Area_SqMi"
+        Me.colArea_SqMi.MinWidth = 27
         Me.colArea_SqMi.Name = "colArea_SqMi"
         Me.colArea_SqMi.Visible = True
         Me.colArea_SqMi.VisibleIndex = 25
+        Me.colArea_SqMi.Width = 100
         '
         'colADULT1
         '
         Me.colADULT1.FieldName = "ADULT"
+        Me.colADULT1.MinWidth = 27
         Me.colADULT1.Name = "colADULT1"
         Me.colADULT1.Visible = True
         Me.colADULT1.VisibleIndex = 26
+        Me.colADULT1.Width = 100
         '
         'colBULL_30_401
         '
         Me.colBULL_30_401.FieldName = "BULL_30_40"
+        Me.colBULL_30_401.MinWidth = 27
         Me.colBULL_30_401.Name = "colBULL_30_401"
         Me.colBULL_30_401.Visible = True
         Me.colBULL_30_401.VisibleIndex = 27
+        Me.colBULL_30_401.Width = 100
         '
         'colBULL_30_501
         '
         Me.colBULL_30_501.FieldName = "BULL_30_50"
+        Me.colBULL_30_501.MinWidth = 27
         Me.colBULL_30_501.Name = "colBULL_30_501"
         Me.colBULL_30_501.Visible = True
         Me.colBULL_30_501.VisibleIndex = 28
+        Me.colBULL_30_501.Width = 100
         '
         'colBULL_30_601
         '
         Me.colBULL_30_601.FieldName = "BULL_30_60"
+        Me.colBULL_30_601.MinWidth = 27
         Me.colBULL_30_601.Name = "colBULL_30_601"
         Me.colBULL_30_601.Visible = True
         Me.colBULL_30_601.VisibleIndex = 29
+        Me.colBULL_30_601.Width = 100
         '
         'colBULL_41_501
         '
         Me.colBULL_41_501.FieldName = "BULL_41_50"
+        Me.colBULL_41_501.MinWidth = 27
         Me.colBULL_41_501.Name = "colBULL_41_501"
         Me.colBULL_41_501.Visible = True
         Me.colBULL_41_501.VisibleIndex = 30
+        Me.colBULL_41_501.Width = 100
         '
         'colBULL_ALL1
         '
         Me.colBULL_ALL1.FieldName = "BULL_ALL"
+        Me.colBULL_ALL1.MinWidth = 27
         Me.colBULL_ALL1.Name = "colBULL_ALL1"
         Me.colBULL_ALL1.Visible = True
         Me.colBULL_ALL1.VisibleIndex = 31
+        Me.colBULL_ALL1.Width = 100
         '
         'colBULL_GT_501
         '
         Me.colBULL_GT_501.FieldName = "BULL_GT_50"
+        Me.colBULL_GT_501.MinWidth = 27
         Me.colBULL_GT_501.Name = "colBULL_GT_501"
         Me.colBULL_GT_501.Visible = True
         Me.colBULL_GT_501.VisibleIndex = 32
+        Me.colBULL_GT_501.Width = 100
         '
         'colBULL_GT_601
         '
         Me.colBULL_GT_601.FieldName = "BULL_GT_60"
+        Me.colBULL_GT_601.MinWidth = 27
         Me.colBULL_GT_601.Name = "colBULL_GT_601"
         Me.colBULL_GT_601.Visible = True
         Me.colBULL_GT_601.VisibleIndex = 33
+        Me.colBULL_GT_601.Width = 100
         '
         'colBULL_GTE_501
         '
         Me.colBULL_GTE_501.FieldName = "BULL_GTE_50"
+        Me.colBULL_GTE_501.MinWidth = 27
         Me.colBULL_GTE_501.Name = "colBULL_GTE_501"
         Me.colBULL_GTE_501.Visible = True
         Me.colBULL_GTE_501.VisibleIndex = 34
+        Me.colBULL_GTE_501.Width = 100
         '
         'colBULL_LT_301
         '
         Me.colBULL_LT_301.FieldName = "BULL_LT_30"
+        Me.colBULL_LT_301.MinWidth = 27
         Me.colBULL_LT_301.Name = "colBULL_LT_301"
         Me.colBULL_LT_301.Visible = True
         Me.colBULL_LT_301.VisibleIndex = 35
+        Me.colBULL_LT_301.Width = 100
         '
         'colBULL_LT_501
         '
         Me.colBULL_LT_501.FieldName = "BULL_LT_50"
+        Me.colBULL_LT_501.MinWidth = 27
         Me.colBULL_LT_501.Name = "colBULL_LT_501"
         Me.colBULL_LT_501.Visible = True
         Me.colBULL_LT_501.VisibleIndex = 36
+        Me.colBULL_LT_501.Width = 100
         '
         'colCALF1
         '
         Me.colCALF1.FieldName = "CALF"
+        Me.colCALF1.MinWidth = 27
         Me.colCALF1.Name = "colCALF1"
         Me.colCALF1.Visible = True
         Me.colCALF1.VisibleIndex = 37
+        Me.colCALF1.Width = 100
         '
         'colCOW1
         '
         Me.colCOW1.FieldName = "COW"
+        Me.colCOW1.MinWidth = 27
         Me.colCOW1.Name = "colCOW1"
         Me.colCOW1.Visible = True
         Me.colCOW1.VisibleIndex = 38
+        Me.colCOW1.Width = 100
         '
         'colCOW_W_01
         '
         Me.colCOW_W_01.FieldName = "COW_W_0"
+        Me.colCOW_W_01.MinWidth = 27
         Me.colCOW_W_01.Name = "colCOW_W_01"
         Me.colCOW_W_01.Visible = True
         Me.colCOW_W_01.VisibleIndex = 39
+        Me.colCOW_W_01.Width = 100
         '
         'colCOW_W_11
         '
         Me.colCOW_W_11.FieldName = "COW_W_1"
+        Me.colCOW_W_11.MinWidth = 27
         Me.colCOW_W_11.Name = "colCOW_W_11"
         Me.colCOW_W_11.Visible = True
         Me.colCOW_W_11.VisibleIndex = 40
+        Me.colCOW_W_11.Width = 100
         '
         'colCOW_W_21
         '
         Me.colCOW_W_21.FieldName = "COW_W_2"
+        Me.colCOW_W_21.MinWidth = 27
         Me.colCOW_W_21.Name = "colCOW_W_21"
         Me.colCOW_W_21.Visible = True
         Me.colCOW_W_21.VisibleIndex = 41
+        Me.colCOW_W_21.Width = 100
         '
         'colCOW_W_31
         '
         Me.colCOW_W_31.FieldName = "COW_W_3"
+        Me.colCOW_W_31.MinWidth = 27
         Me.colCOW_W_31.Name = "colCOW_W_31"
         Me.colCOW_W_31.Visible = True
         Me.colCOW_W_31.VisibleIndex = 42
+        Me.colCOW_W_31.Width = 100
         '
         'colLG_BULL1
         '
         Me.colLG_BULL1.FieldName = "LG_BULL"
+        Me.colLG_BULL1.MinWidth = 27
         Me.colLG_BULL1.Name = "colLG_BULL1"
         Me.colLG_BULL1.Visible = True
         Me.colLG_BULL1.VisibleIndex = 43
+        Me.colLG_BULL1.Width = 100
         '
         'colMED_BULL1
         '
         Me.colMED_BULL1.FieldName = "MED_BULL"
+        Me.colMED_BULL1.MinWidth = 27
         Me.colMED_BULL1.Name = "colMED_BULL1"
         Me.colMED_BULL1.Visible = True
         Me.colMED_BULL1.VisibleIndex = 44
+        Me.colMED_BULL1.Width = 100
         '
         'colMED_L_BULL1
         '
         Me.colMED_L_BULL1.FieldName = "MED_L_BULL"
+        Me.colMED_L_BULL1.MinWidth = 27
         Me.colMED_L_BULL1.Name = "colMED_L_BULL1"
         Me.colMED_L_BULL1.Visible = True
         Me.colMED_L_BULL1.VisibleIndex = 45
+        Me.colMED_L_BULL1.Width = 100
         '
         'colSM_BULL1
         '
         Me.colSM_BULL1.FieldName = "SM_BULL"
+        Me.colSM_BULL1.MinWidth = 27
         Me.colSM_BULL1.Name = "colSM_BULL1"
         Me.colSM_BULL1.Visible = True
         Me.colSM_BULL1.VisibleIndex = 46
+        Me.colSM_BULL1.Width = 100
         '
         'colUNKNOWN1
         '
         Me.colUNKNOWN1.FieldName = "UNKNOWN"
+        Me.colUNKNOWN1.MinWidth = 27
         Me.colUNKNOWN1.Name = "colUNKNOWN1"
         Me.colUNKNOWN1.Visible = True
         Me.colUNKNOWN1.VisibleIndex = 47
+        Me.colUNKNOWN1.Width = 100
         '
         'colYBULL_ALL1
         '
         Me.colYBULL_ALL1.FieldName = "YBULL_ALL"
+        Me.colYBULL_ALL1.MinWidth = 27
         Me.colYBULL_ALL1.Name = "colYBULL_ALL1"
         Me.colYBULL_ALL1.Visible = True
         Me.colYBULL_ALL1.VisibleIndex = 48
+        Me.colYBULL_ALL1.Width = 100
         '
         'colYBULL_GTSF1
         '
         Me.colYBULL_GTSF1.FieldName = "YBULL_GTSF"
+        Me.colYBULL_GTSF1.MinWidth = 27
         Me.colYBULL_GTSF1.Name = "colYBULL_GTSF1"
         Me.colYBULL_GTSF1.Visible = True
         Me.colYBULL_GTSF1.VisibleIndex = 49
+        Me.colYBULL_GTSF1.Width = 100
         '
         'colYBULL_SF1
         '
         Me.colYBULL_SF1.FieldName = "YBULL_SF"
+        Me.colYBULL_SF1.MinWidth = 27
         Me.colYBULL_SF1.Name = "colYBULL_SF1"
         Me.colYBULL_SF1.Visible = True
         Me.colYBULL_SF1.VisibleIndex = 50
+        Me.colYBULL_SF1.Width = 100
         '
         'colMOOSE1
         '
         Me.colMOOSE1.FieldName = "MOOSE"
+        Me.colMOOSE1.MinWidth = 27
         Me.colMOOSE1.Name = "colMOOSE1"
         Me.colMOOSE1.Visible = True
         Me.colMOOSE1.VisibleIndex = 51
+        Me.colMOOSE1.Width = 100
         '
         'colPilot
         '
         Me.colPilot.FieldName = "Pilot"
+        Me.colPilot.MinWidth = 27
         Me.colPilot.Name = "colPilot"
         Me.colPilot.Visible = True
         Me.colPilot.VisibleIndex = 52
+        Me.colPilot.Width = 100
         '
         'colObserver
         '
         Me.colObserver.FieldName = "Observer"
+        Me.colObserver.MinWidth = 27
         Me.colObserver.Name = "colObserver"
         Me.colObserver.Visible = True
         Me.colObserver.VisibleIndex = 53
+        Me.colObserver.Width = 100
         '
         'colPersonnel1
         '
         Me.colPersonnel1.FieldName = "Personnel"
+        Me.colPersonnel1.MinWidth = 27
         Me.colPersonnel1.Name = "colPersonnel1"
         Me.colPersonnel1.Visible = True
         Me.colPersonnel1.VisibleIndex = 54
+        Me.colPersonnel1.Width = 100
         '
         'colDensity1
         '
         Me.colDensity1.FieldName = "Density"
+        Me.colDensity1.MinWidth = 27
         Me.colDensity1.Name = "colDensity1"
         Me.colDensity1.Visible = True
         Me.colDensity1.VisibleIndex = 55
+        Me.colDensity1.Width = 100
         '
         'colSCF_Plot
         '
         Me.colSCF_Plot.FieldName = "SCF_Plot"
+        Me.colSCF_Plot.MinWidth = 27
         Me.colSCF_Plot.Name = "colSCF_Plot"
         Me.colSCF_Plot.Visible = True
         Me.colSCF_Plot.VisibleIndex = 56
+        Me.colSCF_Plot.Width = 100
         '
         'colStd
         '
         Me.colStd.FieldName = "Std"
+        Me.colStd.MinWidth = 27
         Me.colStd.Name = "colStd"
         Me.colStd.Visible = True
         Me.colStd.VisibleIndex = 57
+        Me.colStd.Width = 100
         '
         'colInt
         '
         Me.colInt.FieldName = "Int"
+        Me.colInt.MinWidth = 27
         Me.colInt.Name = "colInt"
         Me.colInt.Visible = True
         Me.colInt.VisibleIndex = 58
+        Me.colInt.Width = 100
         '
         'colComments4
         '
         Me.colComments4.FieldName = "Comments"
+        Me.colComments4.MinWidth = 27
         Me.colComments4.Name = "colComments4"
         Me.colComments4.Visible = True
         Me.colComments4.VisibleIndex = 59
+        Me.colComments4.Width = 100
         '
         'colSourceFilename
         '
         Me.colSourceFilename.FieldName = "SourceFilename"
+        Me.colSourceFilename.MinWidth = 27
         Me.colSourceFilename.Name = "colSourceFilename"
         Me.colSourceFilename.Visible = True
         Me.colSourceFilename.VisibleIndex = 60
+        Me.colSourceFilename.Width = 100
         '
         'colRecordInsertedDate4
         '
         Me.colRecordInsertedDate4.FieldName = "RecordInsertedDate"
+        Me.colRecordInsertedDate4.MinWidth = 27
         Me.colRecordInsertedDate4.Name = "colRecordInsertedDate4"
         Me.colRecordInsertedDate4.Visible = True
         Me.colRecordInsertedDate4.VisibleIndex = 61
+        Me.colRecordInsertedDate4.Width = 100
         '
         'colRecordInsertedBy4
         '
         Me.colRecordInsertedBy4.FieldName = "RecordInsertedBy"
+        Me.colRecordInsertedBy4.MinWidth = 27
         Me.colRecordInsertedBy4.Name = "colRecordInsertedBy4"
         Me.colRecordInsertedBy4.Visible = True
         Me.colRecordInsertedBy4.VisibleIndex = 62
+        Me.colRecordInsertedBy4.Width = 100
         '
         'colCertificationDate
         '
         Me.colCertificationDate.FieldName = "CertificationDate"
+        Me.colCertificationDate.MinWidth = 27
         Me.colCertificationDate.Name = "colCertificationDate"
         Me.colCertificationDate.Visible = True
         Me.colCertificationDate.VisibleIndex = 63
+        Me.colCertificationDate.Width = 100
         '
         'colCertifiedBy
         '
         Me.colCertifiedBy.FieldName = "CertifiedBy"
+        Me.colCertifiedBy.MinWidth = 27
         Me.colCertifiedBy.Name = "colCertifiedBy"
         Me.colCertifiedBy.Visible = True
         Me.colCertifiedBy.VisibleIndex = 64
+        Me.colCertifiedBy.Width = 100
         '
         'colCertificationLevel
         '
         Me.colCertificationLevel.FieldName = "CertificationLevel"
+        Me.colCertificationLevel.MinWidth = 27
         Me.colCertificationLevel.Name = "colCertificationLevel"
         Me.colCertificationLevel.Visible = True
         Me.colCertificationLevel.VisibleIndex = 65
+        Me.colCertificationLevel.Width = 100
         '
         'GSPEGridControlToolStrip
         '
+        Me.GSPEGridControlToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.GSPEGridControlToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.GSPEGridControlExportFormatToolStripComboBox, Me.GSPEGridControlExportToolStripButton, Me.ToolStripSeparator5, Me.GSPEDatasetCertificationToolStripLabel})
         Me.GSPEGridControlToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPEGridControlToolStrip.Name = "GSPEGridControlToolStrip"
-        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(1283, 31)
         Me.GSPEGridControlToolStrip.TabIndex = 2
         Me.GSPEGridControlToolStrip.Text = "Pivot grid"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(44, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(55, 28)
         Me.ToolStripLabel1.Text = "Export:"
         '
         'GSPEGridControlExportFormatToolStripComboBox
         '
+        Me.GSPEGridControlExportFormatToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GSPEGridControlExportFormatToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.GSPEGridControlExportFormatToolStripComboBox.Name = "GSPEGridControlExportFormatToolStripComboBox"
-        Me.GSPEGridControlExportFormatToolStripComboBox.Size = New System.Drawing.Size(121, 25)
+        Me.GSPEGridControlExportFormatToolStripComboBox.Size = New System.Drawing.Size(160, 31)
         Me.GSPEGridControlExportFormatToolStripComboBox.Text = "Excel"
         '
         'GSPEGridControlExportToolStripButton
@@ -2412,26 +2680,27 @@ Partial Class Form1
         Me.GSPEGridControlExportToolStripButton.Image = CType(resources.GetObject("GSPEGridControlExportToolStripButton.Image"), System.Drawing.Image)
         Me.GSPEGridControlExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.GSPEGridControlExportToolStripButton.Name = "GSPEGridControlExportToolStripButton"
-        Me.GSPEGridControlExportToolStripButton.Size = New System.Drawing.Size(54, 22)
+        Me.GSPEGridControlExportToolStripButton.Size = New System.Drawing.Size(65, 28)
         Me.GSPEGridControlExportToolStripButton.Text = "Export..."
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 31)
         '
         'GSPEDatasetCertificationToolStripLabel
         '
         Me.GSPEDatasetCertificationToolStripLabel.Name = "GSPEDatasetCertificationToolStripLabel"
-        Me.GSPEDatasetCertificationToolStripLabel.Size = New System.Drawing.Size(102, 22)
+        Me.GSPEDatasetCertificationToolStripLabel.Size = New System.Drawing.Size(128, 28)
         Me.GSPEDatasetCertificationToolStripLabel.Text = "Certification level:"
         '
         'GSPEPivotXtraTabPage
         '
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.GSPEPivotGridControl)
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.SurveyPivotGridToolStrip)
+        Me.GSPEPivotXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEPivotXtraTabPage.Name = "GSPEPivotXtraTabPage"
-        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(898, 694)
+        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(1283, 862)
         Me.GSPEPivotXtraTabPage.Text = "Summarize data deliverable"
         '
         'GSPEPivotGridControl
@@ -2439,10 +2708,14 @@ Partial Class Form1
         Me.GSPEPivotGridControl.DataSource = Me.GSPEBindingSource
         Me.GSPEPivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GSPEPivotGridControl.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldPark, Me.fieldSurveyName, Me.fieldSurveyYear, Me.fieldSeason, Me.fieldSubArea, Me.fieldGMU, Me.fieldID, Me.fieldStartDate, Me.fieldStopDate, Me.fieldIntID, Me.fieldRand, Me.fieldFiringOrder, Me.fieldSelected, Me.fieldCounted, Me.fieldExclude, Me.fieldStrat, Me.fieldStratName, Me.fieldStratMoose, Me.fieldStratTracks, Me.fieldStratHab, Me.fieldSearchMin, Me.fieldDateCounted, Me.fieldPercNotFlown, Me.fieldXCOORD, Me.fieldYCOORD, Me.fieldAreaSqMi, Me.fieldADULT, Me.fieldBULL3040, Me.fieldBULL3050, Me.fieldBULL3060, Me.fieldBULL4150, Me.fieldBULLALL, Me.fieldBULLGT50, Me.fieldBULLGT60, Me.fieldBULLGTE50, Me.fieldBULLLT30, Me.fieldBULLLT50, Me.fieldCALF, Me.fieldCOW, Me.fieldCOWW0, Me.fieldCOWW1, Me.fieldCOWW2, Me.fieldCOWW3, Me.fieldLGBULL, Me.fieldMEDBULL, Me.fieldMEDLBULL, Me.fieldSMBULL, Me.fieldUNKNOWN, Me.fieldYBULLALL, Me.fieldYBULLGTSF, Me.fieldYBULLSF, Me.fieldMOOSE, Me.fieldPilot, Me.fieldObserver, Me.fieldPersonnel, Me.fieldDensity, Me.fieldSCFPlot, Me.fieldStd, Me.fieldInt, Me.fieldComments, Me.fieldSourceFilename, Me.fieldCertificationLevel})
-        Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 25)
+        Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 39)
+        Me.GSPEPivotGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEPivotGridControl.Name = "GSPEPivotGridControl"
         Me.GSPEPivotGridControl.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized
-        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(898, 669)
+        Me.GSPEPivotGridControl.OptionsDataField.RowHeaderWidth = 133
+        Me.GSPEPivotGridControl.OptionsView.RowTreeOffset = 28
+        Me.GSPEPivotGridControl.OptionsView.RowTreeWidth = 133
+        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(1604, 1039)
         Me.GSPEPivotGridControl.TabIndex = 0
         '
         'fieldPark
@@ -2451,7 +2724,13 @@ Partial Class Form1
         Me.fieldPark.Caption = "Park"
         DataSourceColumnBinding1.ColumnName = "Park"
         Me.fieldPark.DataBinding = DataSourceColumnBinding1
+        Me.fieldPark.MinWidth = 27
         Me.fieldPark.Name = "fieldPark"
+        Me.fieldPark.Options.AllowFilterBySummary = DevExpress.Utils.DefaultBoolean.[True]
+        Me.fieldPark.Options.AllowRunTimeSummaryChange = True
+        Me.fieldPark.Options.AllowSortBySummary = DevExpress.Utils.DefaultBoolean.[True]
+        Me.fieldPark.Options.ShowSummaryTypeName = True
+        Me.fieldPark.Width = 133
         '
         'fieldSurveyName
         '
@@ -2459,7 +2738,9 @@ Partial Class Form1
         Me.fieldSurveyName.Caption = "Survey Name"
         DataSourceColumnBinding2.ColumnName = "SurveyName"
         Me.fieldSurveyName.DataBinding = DataSourceColumnBinding2
+        Me.fieldSurveyName.MinWidth = 27
         Me.fieldSurveyName.Name = "fieldSurveyName"
+        Me.fieldSurveyName.Width = 133
         '
         'fieldSurveyYear
         '
@@ -2467,6 +2748,7 @@ Partial Class Form1
         Me.fieldSurveyYear.Caption = "Survey Year"
         DataSourceColumnBinding3.ColumnName = "SurveyYear"
         Me.fieldSurveyYear.DataBinding = DataSourceColumnBinding3
+        Me.fieldSurveyYear.MinWidth = 27
         Me.fieldSurveyYear.Name = "fieldSurveyYear"
         Me.fieldSurveyYear.Options.AllowFilter = DevExpress.Utils.DefaultBoolean.[True]
         Me.fieldSurveyYear.Options.AllowFilterBySummary = DevExpress.Utils.DefaultBoolean.[True]
@@ -2476,6 +2758,7 @@ Partial Class Form1
         Me.fieldSurveyYear.Options.FieldFilterPopupMode = DevExpress.XtraPivotGrid.FieldFilterPopupMode.Excel
         Me.fieldSurveyYear.Options.ShowGroupIntervalName = True
         Me.fieldSurveyYear.Options.ShowSummaryTypeName = True
+        Me.fieldSurveyYear.Width = 133
         '
         'fieldSeason
         '
@@ -2483,7 +2766,9 @@ Partial Class Form1
         Me.fieldSeason.Caption = "Season"
         DataSourceColumnBinding4.ColumnName = "Season"
         Me.fieldSeason.DataBinding = DataSourceColumnBinding4
+        Me.fieldSeason.MinWidth = 27
         Me.fieldSeason.Name = "fieldSeason"
+        Me.fieldSeason.Width = 133
         '
         'fieldSubArea
         '
@@ -2491,7 +2776,9 @@ Partial Class Form1
         Me.fieldSubArea.Caption = "Sub Area"
         DataSourceColumnBinding5.ColumnName = "SubArea"
         Me.fieldSubArea.DataBinding = DataSourceColumnBinding5
+        Me.fieldSubArea.MinWidth = 27
         Me.fieldSubArea.Name = "fieldSubArea"
+        Me.fieldSubArea.Width = 133
         '
         'fieldGMU
         '
@@ -2499,7 +2786,9 @@ Partial Class Form1
         Me.fieldGMU.Caption = "GMU"
         DataSourceColumnBinding6.ColumnName = "GMU"
         Me.fieldGMU.DataBinding = DataSourceColumnBinding6
+        Me.fieldGMU.MinWidth = 27
         Me.fieldGMU.Name = "fieldGMU"
+        Me.fieldGMU.Width = 133
         '
         'fieldID
         '
@@ -2507,7 +2796,9 @@ Partial Class Form1
         Me.fieldID.Caption = "ID"
         DataSourceColumnBinding7.ColumnName = "ID"
         Me.fieldID.DataBinding = DataSourceColumnBinding7
+        Me.fieldID.MinWidth = 27
         Me.fieldID.Name = "fieldID"
+        Me.fieldID.Width = 133
         '
         'fieldStartDate
         '
@@ -2515,7 +2806,9 @@ Partial Class Form1
         Me.fieldStartDate.Caption = "StartDate"
         DataSourceColumnBinding8.ColumnName = "StartDate"
         Me.fieldStartDate.DataBinding = DataSourceColumnBinding8
+        Me.fieldStartDate.MinWidth = 27
         Me.fieldStartDate.Name = "fieldStartDate"
+        Me.fieldStartDate.Width = 133
         '
         'fieldStopDate
         '
@@ -2523,7 +2816,9 @@ Partial Class Form1
         Me.fieldStopDate.Caption = "StopDate"
         DataSourceColumnBinding9.ColumnName = "StopDate"
         Me.fieldStopDate.DataBinding = DataSourceColumnBinding9
+        Me.fieldStopDate.MinWidth = 27
         Me.fieldStopDate.Name = "fieldStopDate"
+        Me.fieldStopDate.Width = 133
         '
         'fieldIntID
         '
@@ -2531,7 +2826,9 @@ Partial Class Form1
         Me.fieldIntID.Caption = "Int ID"
         DataSourceColumnBinding10.ColumnName = "IntID"
         Me.fieldIntID.DataBinding = DataSourceColumnBinding10
+        Me.fieldIntID.MinWidth = 27
         Me.fieldIntID.Name = "fieldIntID"
+        Me.fieldIntID.Width = 133
         '
         'fieldRand
         '
@@ -2539,7 +2836,9 @@ Partial Class Form1
         Me.fieldRand.Caption = "Rand"
         DataSourceColumnBinding11.ColumnName = "Rand"
         Me.fieldRand.DataBinding = DataSourceColumnBinding11
+        Me.fieldRand.MinWidth = 27
         Me.fieldRand.Name = "fieldRand"
+        Me.fieldRand.Width = 133
         '
         'fieldFiringOrder
         '
@@ -2547,7 +2846,9 @@ Partial Class Form1
         Me.fieldFiringOrder.Caption = "Firing Order"
         DataSourceColumnBinding12.ColumnName = "FiringOrder"
         Me.fieldFiringOrder.DataBinding = DataSourceColumnBinding12
+        Me.fieldFiringOrder.MinWidth = 27
         Me.fieldFiringOrder.Name = "fieldFiringOrder"
+        Me.fieldFiringOrder.Width = 133
         '
         'fieldSelected
         '
@@ -2555,7 +2856,9 @@ Partial Class Form1
         Me.fieldSelected.Caption = "Selected"
         DataSourceColumnBinding13.ColumnName = "Selected"
         Me.fieldSelected.DataBinding = DataSourceColumnBinding13
+        Me.fieldSelected.MinWidth = 27
         Me.fieldSelected.Name = "fieldSelected"
+        Me.fieldSelected.Width = 133
         '
         'fieldCounted
         '
@@ -2563,7 +2866,9 @@ Partial Class Form1
         Me.fieldCounted.Caption = "Counted"
         DataSourceColumnBinding14.ColumnName = "Counted"
         Me.fieldCounted.DataBinding = DataSourceColumnBinding14
+        Me.fieldCounted.MinWidth = 27
         Me.fieldCounted.Name = "fieldCounted"
+        Me.fieldCounted.Width = 133
         '
         'fieldExclude
         '
@@ -2571,7 +2876,9 @@ Partial Class Form1
         Me.fieldExclude.Caption = "Exclude"
         DataSourceColumnBinding15.ColumnName = "Exclude"
         Me.fieldExclude.DataBinding = DataSourceColumnBinding15
+        Me.fieldExclude.MinWidth = 27
         Me.fieldExclude.Name = "fieldExclude"
+        Me.fieldExclude.Width = 133
         '
         'fieldStrat
         '
@@ -2579,7 +2886,9 @@ Partial Class Form1
         Me.fieldStrat.Caption = "Strat"
         DataSourceColumnBinding16.ColumnName = "Strat"
         Me.fieldStrat.DataBinding = DataSourceColumnBinding16
+        Me.fieldStrat.MinWidth = 27
         Me.fieldStrat.Name = "fieldStrat"
+        Me.fieldStrat.Width = 133
         '
         'fieldStratName
         '
@@ -2587,7 +2896,9 @@ Partial Class Form1
         Me.fieldStratName.Caption = "Strat Name"
         DataSourceColumnBinding17.ColumnName = "StratName"
         Me.fieldStratName.DataBinding = DataSourceColumnBinding17
+        Me.fieldStratName.MinWidth = 27
         Me.fieldStratName.Name = "fieldStratName"
+        Me.fieldStratName.Width = 133
         '
         'fieldStratMoose
         '
@@ -2595,7 +2906,9 @@ Partial Class Form1
         Me.fieldStratMoose.Caption = "Strat Moose"
         DataSourceColumnBinding18.ColumnName = "StratMoose"
         Me.fieldStratMoose.DataBinding = DataSourceColumnBinding18
+        Me.fieldStratMoose.MinWidth = 27
         Me.fieldStratMoose.Name = "fieldStratMoose"
+        Me.fieldStratMoose.Width = 133
         '
         'fieldStratTracks
         '
@@ -2603,7 +2916,9 @@ Partial Class Form1
         Me.fieldStratTracks.Caption = "Strat Tracks"
         DataSourceColumnBinding19.ColumnName = "StratTracks"
         Me.fieldStratTracks.DataBinding = DataSourceColumnBinding19
+        Me.fieldStratTracks.MinWidth = 27
         Me.fieldStratTracks.Name = "fieldStratTracks"
+        Me.fieldStratTracks.Width = 133
         '
         'fieldStratHab
         '
@@ -2611,7 +2926,9 @@ Partial Class Form1
         Me.fieldStratHab.Caption = "Strat Hab"
         DataSourceColumnBinding20.ColumnName = "StratHab"
         Me.fieldStratHab.DataBinding = DataSourceColumnBinding20
+        Me.fieldStratHab.MinWidth = 27
         Me.fieldStratHab.Name = "fieldStratHab"
+        Me.fieldStratHab.Width = 133
         '
         'fieldSearchMin
         '
@@ -2619,7 +2936,9 @@ Partial Class Form1
         Me.fieldSearchMin.Caption = "Search Min"
         DataSourceColumnBinding21.ColumnName = "SearchMin"
         Me.fieldSearchMin.DataBinding = DataSourceColumnBinding21
+        Me.fieldSearchMin.MinWidth = 27
         Me.fieldSearchMin.Name = "fieldSearchMin"
+        Me.fieldSearchMin.Width = 133
         '
         'fieldDateCounted
         '
@@ -2627,7 +2946,9 @@ Partial Class Form1
         Me.fieldDateCounted.Caption = "DateCounted"
         DataSourceColumnBinding22.ColumnName = "DateCounted"
         Me.fieldDateCounted.DataBinding = DataSourceColumnBinding22
+        Me.fieldDateCounted.MinWidth = 27
         Me.fieldDateCounted.Name = "fieldDateCounted"
+        Me.fieldDateCounted.Width = 133
         '
         'fieldPercNotFlown
         '
@@ -2635,7 +2956,9 @@ Partial Class Form1
         Me.fieldPercNotFlown.Caption = "Perc_Not_Flown"
         DataSourceColumnBinding23.ColumnName = "Perc_Not_Flown"
         Me.fieldPercNotFlown.DataBinding = DataSourceColumnBinding23
+        Me.fieldPercNotFlown.MinWidth = 27
         Me.fieldPercNotFlown.Name = "fieldPercNotFlown"
+        Me.fieldPercNotFlown.Width = 133
         '
         'fieldXCOORD
         '
@@ -2643,7 +2966,9 @@ Partial Class Form1
         Me.fieldXCOORD.Caption = "X_COORD"
         DataSourceColumnBinding24.ColumnName = "X_COORD"
         Me.fieldXCOORD.DataBinding = DataSourceColumnBinding24
+        Me.fieldXCOORD.MinWidth = 27
         Me.fieldXCOORD.Name = "fieldXCOORD"
+        Me.fieldXCOORD.Width = 133
         '
         'fieldYCOORD
         '
@@ -2651,7 +2976,9 @@ Partial Class Form1
         Me.fieldYCOORD.Caption = "Y_COORD"
         DataSourceColumnBinding25.ColumnName = "Y_COORD"
         Me.fieldYCOORD.DataBinding = DataSourceColumnBinding25
+        Me.fieldYCOORD.MinWidth = 27
         Me.fieldYCOORD.Name = "fieldYCOORD"
+        Me.fieldYCOORD.Width = 133
         '
         'fieldAreaSqMi
         '
@@ -2659,7 +2986,9 @@ Partial Class Form1
         Me.fieldAreaSqMi.Caption = "Area_Sq Mi"
         DataSourceColumnBinding26.ColumnName = "Area_SqMi"
         Me.fieldAreaSqMi.DataBinding = DataSourceColumnBinding26
+        Me.fieldAreaSqMi.MinWidth = 27
         Me.fieldAreaSqMi.Name = "fieldAreaSqMi"
+        Me.fieldAreaSqMi.Width = 133
         '
         'fieldADULT
         '
@@ -2667,7 +2996,9 @@ Partial Class Form1
         Me.fieldADULT.Caption = "ADULT"
         DataSourceColumnBinding27.ColumnName = "ADULT"
         Me.fieldADULT.DataBinding = DataSourceColumnBinding27
+        Me.fieldADULT.MinWidth = 27
         Me.fieldADULT.Name = "fieldADULT"
+        Me.fieldADULT.Width = 133
         '
         'fieldBULL3040
         '
@@ -2675,7 +3006,9 @@ Partial Class Form1
         Me.fieldBULL3040.Caption = "BULL_30_40"
         DataSourceColumnBinding28.ColumnName = "BULL_30_40"
         Me.fieldBULL3040.DataBinding = DataSourceColumnBinding28
+        Me.fieldBULL3040.MinWidth = 27
         Me.fieldBULL3040.Name = "fieldBULL3040"
+        Me.fieldBULL3040.Width = 133
         '
         'fieldBULL3050
         '
@@ -2683,7 +3016,9 @@ Partial Class Form1
         Me.fieldBULL3050.Caption = "BULL_30_50"
         DataSourceColumnBinding29.ColumnName = "BULL_30_50"
         Me.fieldBULL3050.DataBinding = DataSourceColumnBinding29
+        Me.fieldBULL3050.MinWidth = 27
         Me.fieldBULL3050.Name = "fieldBULL3050"
+        Me.fieldBULL3050.Width = 133
         '
         'fieldBULL3060
         '
@@ -2691,7 +3026,9 @@ Partial Class Form1
         Me.fieldBULL3060.Caption = "BULL_30_60"
         DataSourceColumnBinding30.ColumnName = "BULL_30_60"
         Me.fieldBULL3060.DataBinding = DataSourceColumnBinding30
+        Me.fieldBULL3060.MinWidth = 27
         Me.fieldBULL3060.Name = "fieldBULL3060"
+        Me.fieldBULL3060.Width = 133
         '
         'fieldBULL4150
         '
@@ -2699,7 +3036,9 @@ Partial Class Form1
         Me.fieldBULL4150.Caption = "BULL_41_50"
         DataSourceColumnBinding31.ColumnName = "BULL_41_50"
         Me.fieldBULL4150.DataBinding = DataSourceColumnBinding31
+        Me.fieldBULL4150.MinWidth = 27
         Me.fieldBULL4150.Name = "fieldBULL4150"
+        Me.fieldBULL4150.Width = 133
         '
         'fieldBULLALL
         '
@@ -2707,7 +3046,9 @@ Partial Class Form1
         Me.fieldBULLALL.Caption = "BULL_ALL"
         DataSourceColumnBinding32.ColumnName = "BULL_ALL"
         Me.fieldBULLALL.DataBinding = DataSourceColumnBinding32
+        Me.fieldBULLALL.MinWidth = 27
         Me.fieldBULLALL.Name = "fieldBULLALL"
+        Me.fieldBULLALL.Width = 133
         '
         'fieldBULLGT50
         '
@@ -2715,7 +3056,9 @@ Partial Class Form1
         Me.fieldBULLGT50.Caption = "BULL_GT_50"
         DataSourceColumnBinding33.ColumnName = "BULL_GT_50"
         Me.fieldBULLGT50.DataBinding = DataSourceColumnBinding33
+        Me.fieldBULLGT50.MinWidth = 27
         Me.fieldBULLGT50.Name = "fieldBULLGT50"
+        Me.fieldBULLGT50.Width = 133
         '
         'fieldBULLGT60
         '
@@ -2723,7 +3066,9 @@ Partial Class Form1
         Me.fieldBULLGT60.Caption = "BULL_GT_60"
         DataSourceColumnBinding34.ColumnName = "BULL_GT_60"
         Me.fieldBULLGT60.DataBinding = DataSourceColumnBinding34
+        Me.fieldBULLGT60.MinWidth = 27
         Me.fieldBULLGT60.Name = "fieldBULLGT60"
+        Me.fieldBULLGT60.Width = 133
         '
         'fieldBULLGTE50
         '
@@ -2731,7 +3076,9 @@ Partial Class Form1
         Me.fieldBULLGTE50.Caption = "BULL_GTE_50"
         DataSourceColumnBinding35.ColumnName = "BULL_GTE_50"
         Me.fieldBULLGTE50.DataBinding = DataSourceColumnBinding35
+        Me.fieldBULLGTE50.MinWidth = 27
         Me.fieldBULLGTE50.Name = "fieldBULLGTE50"
+        Me.fieldBULLGTE50.Width = 133
         '
         'fieldBULLLT30
         '
@@ -2739,7 +3086,9 @@ Partial Class Form1
         Me.fieldBULLLT30.Caption = "BULL_LT_30"
         DataSourceColumnBinding36.ColumnName = "BULL_LT_30"
         Me.fieldBULLLT30.DataBinding = DataSourceColumnBinding36
+        Me.fieldBULLLT30.MinWidth = 27
         Me.fieldBULLLT30.Name = "fieldBULLLT30"
+        Me.fieldBULLLT30.Width = 133
         '
         'fieldBULLLT50
         '
@@ -2747,7 +3096,9 @@ Partial Class Form1
         Me.fieldBULLLT50.Caption = "BULL_LT_50"
         DataSourceColumnBinding37.ColumnName = "BULL_LT_50"
         Me.fieldBULLLT50.DataBinding = DataSourceColumnBinding37
+        Me.fieldBULLLT50.MinWidth = 27
         Me.fieldBULLLT50.Name = "fieldBULLLT50"
+        Me.fieldBULLLT50.Width = 133
         '
         'fieldCALF
         '
@@ -2755,7 +3106,9 @@ Partial Class Form1
         Me.fieldCALF.Caption = "CALF"
         DataSourceColumnBinding38.ColumnName = "CALF"
         Me.fieldCALF.DataBinding = DataSourceColumnBinding38
+        Me.fieldCALF.MinWidth = 27
         Me.fieldCALF.Name = "fieldCALF"
+        Me.fieldCALF.Width = 133
         '
         'fieldCOW
         '
@@ -2763,7 +3116,9 @@ Partial Class Form1
         Me.fieldCOW.Caption = "COW"
         DataSourceColumnBinding39.ColumnName = "COW"
         Me.fieldCOW.DataBinding = DataSourceColumnBinding39
+        Me.fieldCOW.MinWidth = 27
         Me.fieldCOW.Name = "fieldCOW"
+        Me.fieldCOW.Width = 133
         '
         'fieldCOWW0
         '
@@ -2771,7 +3126,9 @@ Partial Class Form1
         Me.fieldCOWW0.Caption = "COW_W_0"
         DataSourceColumnBinding40.ColumnName = "COW_W_0"
         Me.fieldCOWW0.DataBinding = DataSourceColumnBinding40
+        Me.fieldCOWW0.MinWidth = 27
         Me.fieldCOWW0.Name = "fieldCOWW0"
+        Me.fieldCOWW0.Width = 133
         '
         'fieldCOWW1
         '
@@ -2779,7 +3136,9 @@ Partial Class Form1
         Me.fieldCOWW1.Caption = "COW_W_1"
         DataSourceColumnBinding41.ColumnName = "COW_W_1"
         Me.fieldCOWW1.DataBinding = DataSourceColumnBinding41
+        Me.fieldCOWW1.MinWidth = 27
         Me.fieldCOWW1.Name = "fieldCOWW1"
+        Me.fieldCOWW1.Width = 133
         '
         'fieldCOWW2
         '
@@ -2787,7 +3146,9 @@ Partial Class Form1
         Me.fieldCOWW2.Caption = "COW_W_2"
         DataSourceColumnBinding42.ColumnName = "COW_W_2"
         Me.fieldCOWW2.DataBinding = DataSourceColumnBinding42
+        Me.fieldCOWW2.MinWidth = 27
         Me.fieldCOWW2.Name = "fieldCOWW2"
+        Me.fieldCOWW2.Width = 133
         '
         'fieldCOWW3
         '
@@ -2795,7 +3156,9 @@ Partial Class Form1
         Me.fieldCOWW3.Caption = "COW_W_3"
         DataSourceColumnBinding43.ColumnName = "COW_W_3"
         Me.fieldCOWW3.DataBinding = DataSourceColumnBinding43
+        Me.fieldCOWW3.MinWidth = 27
         Me.fieldCOWW3.Name = "fieldCOWW3"
+        Me.fieldCOWW3.Width = 133
         '
         'fieldLGBULL
         '
@@ -2803,7 +3166,9 @@ Partial Class Form1
         Me.fieldLGBULL.Caption = "LG_BULL"
         DataSourceColumnBinding44.ColumnName = "LG_BULL"
         Me.fieldLGBULL.DataBinding = DataSourceColumnBinding44
+        Me.fieldLGBULL.MinWidth = 27
         Me.fieldLGBULL.Name = "fieldLGBULL"
+        Me.fieldLGBULL.Width = 133
         '
         'fieldMEDBULL
         '
@@ -2811,7 +3176,9 @@ Partial Class Form1
         Me.fieldMEDBULL.Caption = "MED_BULL"
         DataSourceColumnBinding45.ColumnName = "MED_BULL"
         Me.fieldMEDBULL.DataBinding = DataSourceColumnBinding45
+        Me.fieldMEDBULL.MinWidth = 27
         Me.fieldMEDBULL.Name = "fieldMEDBULL"
+        Me.fieldMEDBULL.Width = 133
         '
         'fieldMEDLBULL
         '
@@ -2819,7 +3186,9 @@ Partial Class Form1
         Me.fieldMEDLBULL.Caption = "MED_L_BULL"
         DataSourceColumnBinding46.ColumnName = "MED_L_BULL"
         Me.fieldMEDLBULL.DataBinding = DataSourceColumnBinding46
+        Me.fieldMEDLBULL.MinWidth = 27
         Me.fieldMEDLBULL.Name = "fieldMEDLBULL"
+        Me.fieldMEDLBULL.Width = 133
         '
         'fieldSMBULL
         '
@@ -2827,7 +3196,9 @@ Partial Class Form1
         Me.fieldSMBULL.Caption = "SM_BULL"
         DataSourceColumnBinding47.ColumnName = "SM_BULL"
         Me.fieldSMBULL.DataBinding = DataSourceColumnBinding47
+        Me.fieldSMBULL.MinWidth = 27
         Me.fieldSMBULL.Name = "fieldSMBULL"
+        Me.fieldSMBULL.Width = 133
         '
         'fieldUNKNOWN
         '
@@ -2835,7 +3206,9 @@ Partial Class Form1
         Me.fieldUNKNOWN.Caption = "UNKNOWN"
         DataSourceColumnBinding48.ColumnName = "UNKNOWN"
         Me.fieldUNKNOWN.DataBinding = DataSourceColumnBinding48
+        Me.fieldUNKNOWN.MinWidth = 27
         Me.fieldUNKNOWN.Name = "fieldUNKNOWN"
+        Me.fieldUNKNOWN.Width = 133
         '
         'fieldYBULLALL
         '
@@ -2843,7 +3216,9 @@ Partial Class Form1
         Me.fieldYBULLALL.Caption = "YBULL_ALL"
         DataSourceColumnBinding49.ColumnName = "YBULL_ALL"
         Me.fieldYBULLALL.DataBinding = DataSourceColumnBinding49
+        Me.fieldYBULLALL.MinWidth = 27
         Me.fieldYBULLALL.Name = "fieldYBULLALL"
+        Me.fieldYBULLALL.Width = 133
         '
         'fieldYBULLGTSF
         '
@@ -2851,7 +3226,9 @@ Partial Class Form1
         Me.fieldYBULLGTSF.Caption = "YBULL_GTSF"
         DataSourceColumnBinding50.ColumnName = "YBULL_GTSF"
         Me.fieldYBULLGTSF.DataBinding = DataSourceColumnBinding50
+        Me.fieldYBULLGTSF.MinWidth = 27
         Me.fieldYBULLGTSF.Name = "fieldYBULLGTSF"
+        Me.fieldYBULLGTSF.Width = 133
         '
         'fieldYBULLSF
         '
@@ -2859,7 +3236,9 @@ Partial Class Form1
         Me.fieldYBULLSF.Caption = "YBULL_SF"
         DataSourceColumnBinding51.ColumnName = "YBULL_SF"
         Me.fieldYBULLSF.DataBinding = DataSourceColumnBinding51
+        Me.fieldYBULLSF.MinWidth = 27
         Me.fieldYBULLSF.Name = "fieldYBULLSF"
+        Me.fieldYBULLSF.Width = 133
         '
         'fieldMOOSE
         '
@@ -2867,7 +3246,9 @@ Partial Class Form1
         Me.fieldMOOSE.Caption = "MOOSE"
         DataSourceColumnBinding52.ColumnName = "MOOSE"
         Me.fieldMOOSE.DataBinding = DataSourceColumnBinding52
+        Me.fieldMOOSE.MinWidth = 27
         Me.fieldMOOSE.Name = "fieldMOOSE"
+        Me.fieldMOOSE.Width = 133
         '
         'fieldPilot
         '
@@ -2875,7 +3256,9 @@ Partial Class Form1
         Me.fieldPilot.Caption = "Pilot"
         DataSourceColumnBinding53.ColumnName = "Pilot"
         Me.fieldPilot.DataBinding = DataSourceColumnBinding53
+        Me.fieldPilot.MinWidth = 27
         Me.fieldPilot.Name = "fieldPilot"
+        Me.fieldPilot.Width = 133
         '
         'fieldObserver
         '
@@ -2883,7 +3266,9 @@ Partial Class Form1
         Me.fieldObserver.Caption = "Observer"
         DataSourceColumnBinding54.ColumnName = "Observer"
         Me.fieldObserver.DataBinding = DataSourceColumnBinding54
+        Me.fieldObserver.MinWidth = 27
         Me.fieldObserver.Name = "fieldObserver"
+        Me.fieldObserver.Width = 133
         '
         'fieldPersonnel
         '
@@ -2891,7 +3276,9 @@ Partial Class Form1
         Me.fieldPersonnel.Caption = "Personnel"
         DataSourceColumnBinding55.ColumnName = "Personnel"
         Me.fieldPersonnel.DataBinding = DataSourceColumnBinding55
+        Me.fieldPersonnel.MinWidth = 27
         Me.fieldPersonnel.Name = "fieldPersonnel"
+        Me.fieldPersonnel.Width = 133
         '
         'fieldDensity
         '
@@ -2899,7 +3286,9 @@ Partial Class Form1
         Me.fieldDensity.Caption = "Density"
         DataSourceColumnBinding56.ColumnName = "Density"
         Me.fieldDensity.DataBinding = DataSourceColumnBinding56
+        Me.fieldDensity.MinWidth = 27
         Me.fieldDensity.Name = "fieldDensity"
+        Me.fieldDensity.Width = 133
         '
         'fieldSCFPlot
         '
@@ -2907,7 +3296,9 @@ Partial Class Form1
         Me.fieldSCFPlot.Caption = "SCF_Plot"
         DataSourceColumnBinding57.ColumnName = "SCF_Plot"
         Me.fieldSCFPlot.DataBinding = DataSourceColumnBinding57
+        Me.fieldSCFPlot.MinWidth = 27
         Me.fieldSCFPlot.Name = "fieldSCFPlot"
+        Me.fieldSCFPlot.Width = 133
         '
         'fieldStd
         '
@@ -2915,7 +3306,9 @@ Partial Class Form1
         Me.fieldStd.Caption = "Std"
         DataSourceColumnBinding58.ColumnName = "Std"
         Me.fieldStd.DataBinding = DataSourceColumnBinding58
+        Me.fieldStd.MinWidth = 27
         Me.fieldStd.Name = "fieldStd"
+        Me.fieldStd.Width = 133
         '
         'fieldInt
         '
@@ -2923,7 +3316,9 @@ Partial Class Form1
         Me.fieldInt.Caption = "Int"
         DataSourceColumnBinding59.ColumnName = "Int"
         Me.fieldInt.DataBinding = DataSourceColumnBinding59
+        Me.fieldInt.MinWidth = 27
         Me.fieldInt.Name = "fieldInt"
+        Me.fieldInt.Width = 133
         '
         'fieldComments
         '
@@ -2931,7 +3326,9 @@ Partial Class Form1
         Me.fieldComments.Caption = "Comments"
         DataSourceColumnBinding60.ColumnName = "Comments"
         Me.fieldComments.DataBinding = DataSourceColumnBinding60
+        Me.fieldComments.MinWidth = 27
         Me.fieldComments.Name = "fieldComments"
+        Me.fieldComments.Width = 133
         '
         'fieldSourceFilename
         '
@@ -2939,7 +3336,9 @@ Partial Class Form1
         Me.fieldSourceFilename.Caption = "Source Filename"
         DataSourceColumnBinding61.ColumnName = "SourceFilename"
         Me.fieldSourceFilename.DataBinding = DataSourceColumnBinding61
+        Me.fieldSourceFilename.MinWidth = 27
         Me.fieldSourceFilename.Name = "fieldSourceFilename"
+        Me.fieldSourceFilename.Width = 133
         '
         'fieldCertificationLevel
         '
@@ -2947,28 +3346,32 @@ Partial Class Form1
         Me.fieldCertificationLevel.Caption = "Certification Level"
         DataSourceColumnBinding62.ColumnName = "CertificationLevel"
         Me.fieldCertificationLevel.DataBinding = DataSourceColumnBinding62
+        Me.fieldCertificationLevel.MinWidth = 27
         Me.fieldCertificationLevel.Name = "fieldCertificationLevel"
+        Me.fieldCertificationLevel.Width = 133
         '
         'SurveyPivotGridToolStrip
         '
+        Me.SurveyPivotGridToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.SurveyPivotGridToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SurveyPivotGridToolStripLabel, Me.ExportPivotGridToolStripComboBox, Me.ExportPivotGridToolStripButton})
         Me.SurveyPivotGridToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SurveyPivotGridToolStrip.Name = "SurveyPivotGridToolStrip"
-        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(898, 25)
+        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(1283, 31)
         Me.SurveyPivotGridToolStrip.TabIndex = 1
         Me.SurveyPivotGridToolStrip.Text = "Pivot grid"
         '
         'SurveyPivotGridToolStripLabel
         '
         Me.SurveyPivotGridToolStripLabel.Name = "SurveyPivotGridToolStripLabel"
-        Me.SurveyPivotGridToolStripLabel.Size = New System.Drawing.Size(44, 22)
+        Me.SurveyPivotGridToolStripLabel.Size = New System.Drawing.Size(55, 28)
         Me.SurveyPivotGridToolStripLabel.Text = "Export:"
         '
         'ExportPivotGridToolStripComboBox
         '
+        Me.ExportPivotGridToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ExportPivotGridToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.ExportPivotGridToolStripComboBox.Name = "ExportPivotGridToolStripComboBox"
-        Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(121, 25)
+        Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(160, 31)
         Me.ExportPivotGridToolStripComboBox.Text = "Excel"
         '
         'ExportPivotGridToolStripButton
@@ -2977,7 +3380,7 @@ Partial Class Form1
         Me.ExportPivotGridToolStripButton.Image = CType(resources.GetObject("ExportPivotGridToolStripButton.Image"), System.Drawing.Image)
         Me.ExportPivotGridToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ExportPivotGridToolStripButton.Name = "ExportPivotGridToolStripButton"
-        Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(54, 22)
+        Me.ExportPivotGridToolStripButton.Size = New System.Drawing.Size(65, 28)
         Me.ExportPivotGridToolStripButton.Text = "Export..."
         '
         'GSPE_PopulationEstimatesBindingSource
@@ -2989,9 +3392,10 @@ Partial Class Form1
         '
         Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.HeaderPanel.Location = New System.Drawing.Point(242, 25)
+        Me.HeaderPanel.Location = New System.Drawing.Point(242, 27)
+        Me.HeaderPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(900, 39)
+        Me.HeaderPanel.Size = New System.Drawing.Size(1285, 48)
         Me.HeaderPanel.TabIndex = 2
         '
         'HeaderLabel
@@ -3001,107 +3405,103 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.HeaderLabel.AutoEllipsis = True
         Me.HeaderLabel.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HeaderLabel.Location = New System.Drawing.Point(6, 9)
+        Me.HeaderLabel.Location = New System.Drawing.Point(8, 11)
+        Me.HeaderLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.HeaderLabel.Name = "HeaderLabel"
-        Me.HeaderLabel.Size = New System.Drawing.Size(891, 23)
+        Me.HeaderLabel.Size = New System.Drawing.Size(1273, 28)
         Me.HeaderLabel.TabIndex = 0
         Me.HeaderLabel.Text = "Moose Survey"
         '
         'MainToolStrip
         '
+        Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton, Me.ToolStripSeparator3, Me.DirectoriesToolStripDropDownButton, Me.ToolStripSeparator4})
         Me.MainToolStrip.Location = New System.Drawing.Point(242, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(900, 25)
+        Me.MainToolStrip.Size = New System.Drawing.Size(1285, 27)
         Me.MainToolStrip.TabIndex = 4
         Me.MainToolStrip.Text = "ToolStrip1"
         '
         'SaveToolStripButton
         '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
         Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(35, 22)
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 24)
         Me.SaveToolStripButton.Text = "Save"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'LoadDatasetToolStripButton
         '
-        Me.LoadDatasetToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
         Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
-        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(180, 22)
-        Me.LoadDatasetToolStripButton.Text = "Load moose monitoring dataset"
+        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 24)
+        Me.LoadDatasetToolStripButton.Text = "Refresh dataset"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'DataShaperToolStripButton
         '
-        Me.DataShaperToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.DataShaperToolStripButton.Image = CType(resources.GetObject("DataShaperToolStripButton.Image"), System.Drawing.Image)
+        Me.DataShaperToolStripButton.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.DataShaperToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DataShaperToolStripButton.Name = "DataShaperToolStripButton"
-        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(82, 22)
+        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 24)
         Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
         'DirectoriesToolStripDropDownButton
         '
-        Me.DirectoriesToolStripDropDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.DirectoriesToolStripDropDownButton.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.ARCNMasterDataStoreReferenceToolStripMenuItem, Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.CAKNMasterDataStoreReferenceToolStripMenuItem, Me.OpenToolStripMenuItem})
+        Me.DirectoriesToolStripDropDownButton.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.ARCNMasterDataStoreReferenceToolStripMenuItem, Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem, Me.CAKNMasterDataStoreReferenceToolStripMenuItem})
         Me.DirectoriesToolStripDropDownButton.Image = CType(resources.GetObject("DirectoriesToolStripDropDownButton.Image"), System.Drawing.Image)
         Me.DirectoriesToolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DirectoriesToolStripDropDownButton.Name = "DirectoriesToolStripDropDownButton"
-        Me.DirectoriesToolStripDropDownButton.Size = New System.Drawing.Size(172, 22)
+        Me.DirectoriesToolStripDropDownButton.Size = New System.Drawing.Size(232, 24)
         Me.DirectoriesToolStripDropDownButton.Text = "Moose monitoring resources"
         '
         'OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem
         '
+        Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Image = CType(resources.GetObject("OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Image"), System.Drawing.Image)
         Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Name = "OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem"
-        Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(369, 26)
         Me.OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem.Text = "ARCN moose monitoring shared directory"
         '
         'ARCNMasterDataStoreReferenceToolStripMenuItem
         '
+        Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Image = Global.Moose3.My.Resources.Resources.world_link
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Name = "ARCNMasterDataStoreReferenceToolStripMenuItem"
-        Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Size = New System.Drawing.Size(369, 26)
         Me.ARCNMasterDataStoreReferenceToolStripMenuItem.Text = "ARCN master Data Store reference..."
         '
         'OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem
         '
+        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Image = Global.Moose3.My.Resources.Resources.folder
         Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Name = "OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem"
-        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Size = New System.Drawing.Size(369, 26)
         Me.OpenCAKNMooseMonitoringSharedDirectoryToolStripMenuItem.Text = "CAKN moose monitoring shared directory"
         '
         'CAKNMasterDataStoreReferenceToolStripMenuItem
         '
+        Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Image = Global.Moose3.My.Resources.Resources.world_link
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Name = "CAKNMasterDataStoreReferenceToolStripMenuItem"
-        Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
+        Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Size = New System.Drawing.Size(369, 26)
         Me.CAKNMasterDataStoreReferenceToolStripMenuItem.Text = "CAKN master Data Store reference..."
-        '
-        'OpenToolStripMenuItem
-        '
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(296, 22)
-        Me.OpenToolStripMenuItem.Text = "ARCN moose monitoring shared directory"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 27)
         '
         'DockManager1
         '
@@ -3115,30 +3515,33 @@ Partial Class Form1
         Me.AutoHideContainer1.BackColor = System.Drawing.SystemColors.Control
         Me.AutoHideContainer1.Controls.Add(Me.SummaryDockPanel2)
         Me.AutoHideContainer1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.AutoHideContainer1.Location = New System.Drawing.Point(1163, 0)
+        Me.AutoHideContainer1.Location = New System.Drawing.Point(1553, 0)
+        Me.AutoHideContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.AutoHideContainer1.Name = "AutoHideContainer1"
-        Me.AutoHideContainer1.Size = New System.Drawing.Size(21, 786)
+        Me.AutoHideContainer1.Size = New System.Drawing.Size(26, 967)
         '
         'SummaryDockPanel2
         '
         Me.SummaryDockPanel2.Controls.Add(Me.ControlContainer5)
         Me.SummaryDockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.SummaryDockPanel2.ID = New System.Guid("44b04e58-9107-4a5a-a9c1-89631044cb0c")
-        Me.SummaryDockPanel2.Location = New System.Drawing.Point(963, 0)
+        Me.SummaryDockPanel2.Location = New System.Drawing.Point(1284, 0)
+        Me.SummaryDockPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.SummaryDockPanel2.Name = "SummaryDockPanel2"
         Me.SummaryDockPanel2.OriginalSize = New System.Drawing.Size(200, 200)
         Me.SummaryDockPanel2.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.SummaryDockPanel2.SavedIndex = 0
-        Me.SummaryDockPanel2.Size = New System.Drawing.Size(200, 786)
+        Me.SummaryDockPanel2.Size = New System.Drawing.Size(267, 967)
         Me.SummaryDockPanel2.Text = "Summary"
         Me.SummaryDockPanel2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
         'ControlContainer5
         '
         Me.ControlContainer5.Controls.Add(Me.SummaryTextBox2)
-        Me.ControlContainer5.Location = New System.Drawing.Point(4, 26)
+        Me.ControlContainer5.Location = New System.Drawing.Point(5, 32)
+        Me.ControlContainer5.Margin = New System.Windows.Forms.Padding(4)
         Me.ControlContainer5.Name = "ControlContainer5"
-        Me.ControlContainer5.Size = New System.Drawing.Size(193, 757)
+        Me.ControlContainer5.Size = New System.Drawing.Size(257, 932)
         Me.ControlContainer5.TabIndex = 0
         '
         'SummaryTextBox2
@@ -3147,16 +3550,17 @@ Partial Class Form1
         Me.SummaryTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SummaryTextBox2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SummaryTextBox2.Location = New System.Drawing.Point(0, 0)
+        Me.SummaryTextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.SummaryTextBox2.Multiline = True
         Me.SummaryTextBox2.Name = "SummaryTextBox2"
-        Me.SummaryTextBox2.Size = New System.Drawing.Size(193, 757)
+        Me.SummaryTextBox2.Size = New System.Drawing.Size(257, 932)
         Me.SummaryTextBox2.TabIndex = 2
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1184, 786)
+        Me.ClientSize = New System.Drawing.Size(1579, 967)
         Me.Controls.Add(Me.MainXtraTabControl)
         Me.Controls.Add(Me.HeaderPanel)
         Me.Controls.Add(Me.MainToolStrip)
@@ -3164,6 +3568,7 @@ Partial Class Form1
         Me.Controls.Add(Me.hideContainerRight)
         Me.Controls.Add(Me.AutoHideContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "NPS Moose Monitoring GSPE Database Application"
         CType(Me.MooseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3488,7 +3893,6 @@ Partial Class Form1
     Friend WithEvents DatasetProcessingStepsToolStrip As ToolStrip
     Friend WithEvents AddProcessingNoteToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DensityEstimatesDataGridView As DataGridView
     Friend WithEvents FKGSPEDensityEstimatesGSPESurveysBindingSource As BindingSource
     Friend WithEvents ResultsDataGridView As DataGridView

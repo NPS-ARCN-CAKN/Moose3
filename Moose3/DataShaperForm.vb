@@ -1,4 +1,5 @@
 ﻿Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraPivotGrid
 Imports SkeeterUtilities.DataFileToDataTableConverters.DataFileToDataTableConverters
 
 Public Class DataShaperForm
@@ -51,11 +52,13 @@ Public Class DataShaperForm
                 .PopulateColumns()
             End With
 
-                SetUpGridControl(Me.DataShaperGridControl, True, True, True)
+            SetUpGridControl(Me.DataShaperGridControl, True, True, True)
 
             'Load the datatable into the pivot grid control
             Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
             Me.DataShaperPivotGridControl.RetrieveFields()
+            SetUpPivotGridControl(Me.DataShaperPivotGridControl)
+
         Catch ex As Exception
             MsgBox("Failed to retrieve the dataset from the database: " & ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -101,4 +104,36 @@ Public Class DataShaperForm
     Private Sub ExportGridControlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportGridControlToolStripButton.Click
         ExportGridControl(Me.DataShaperGridControl, "Moose data summary", True)
     End Sub
+
+    ''' <summary>
+    ''' Sets up a PivotGridControl
+    ''' </summary>
+    ''' <param name="PGC">PivotGridControl to set up.</param>
+    Public Sub SetUpPivotGridControl(PGC As PivotGridControl)
+        Try
+            With PGC
+                .BestFit()
+                .BestFitColumnArea()
+                .BestFitDataHeaders(True)
+                .BestFitRowArea()
+                .OptionsBehavior.BestFitMode = PivotGridBestFitMode.FieldValue
+                .OptionsMenu.EnableFieldValueMenu = True
+                .OptionsMenu.EnableFormatRulesMenu = True
+                .OptionsMenu.EnableHeaderAreaMenu = True
+                .Text = "Pivot grid text"
+
+            End With
+
+            'Allow the user to change the summary they get; sum, avg, etc.
+            For Each PGField As PivotGridField In PGC.Fields
+                With PGField
+                    .Options.AllowRunTimeSummaryChange = True
+                    .BestFit()
+                End With
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
 End Class
