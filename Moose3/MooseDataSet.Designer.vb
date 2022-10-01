@@ -575,6 +575,10 @@ Partial Public Class MooseDataSet
         
         Private columnCertificationLevel As Global.System.Data.DataColumn
         
+        Private columnSurveyUnitSet As Global.System.Data.DataColumn
+        
+        Private columnSearchMin1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -1139,6 +1143,22 @@ Partial Public Class MooseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SurveyUnitSetColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSurveyUnitSet
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SearchMin1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSearchMin1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1241,9 +1261,11 @@ Partial Public Class MooseDataSet
                     ByVal RecordInsertedBy As String,  _
                     ByVal CertificationDate As Date,  _
                     ByVal CertifiedBy As String,  _
-                    ByVal CertificationLevel As String) As GSPERow
+                    ByVal CertificationLevel As String,  _
+                    ByVal SurveyUnitSet As String,  _
+                    ByVal SearchMin1 As Double) As GSPERow
             Dim rowGSPERow As GSPERow = CType(Me.NewRow,GSPERow)
-            Dim columnValuesArray() As Object = New Object() {Park, Nothing, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel}
+            Dim columnValuesArray() As Object = New Object() {Park, Nothing, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, SurveyUnitSet, SearchMin1}
             If (Not (parentGSPE_SurveysRowByFK_GSPE_GSPE_Surveys) Is Nothing) Then
                 columnValuesArray(1) = parentGSPE_SurveysRowByFK_GSPE_GSPE_Surveys(0)
             End If
@@ -1341,6 +1363,8 @@ Partial Public Class MooseDataSet
             Me.columnCertificationDate = MyBase.Columns("CertificationDate")
             Me.columnCertifiedBy = MyBase.Columns("CertifiedBy")
             Me.columnCertificationLevel = MyBase.Columns("CertificationLevel")
+            Me.columnSurveyUnitSet = MyBase.Columns("SurveyUnitSet")
+            Me.columnSearchMin1 = MyBase.Columns("SearchMin1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1478,6 +1502,10 @@ Partial Public Class MooseDataSet
             MyBase.Columns.Add(Me.columnCertifiedBy)
             Me.columnCertificationLevel = New Global.System.Data.DataColumn("CertificationLevel", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCertificationLevel)
+            Me.columnSurveyUnitSet = New Global.System.Data.DataColumn("SurveyUnitSet", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSurveyUnitSet)
+            Me.columnSearchMin1 = New Global.System.Data.DataColumn("SearchMin1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSearchMin1)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnSurveyName, Me.columnSurveyYear, Me.columnID}, true))
             Me.columnPark.AllowDBNull = false
             Me.columnPark.MaxLength = 4
@@ -1503,6 +1531,7 @@ Partial Public Class MooseDataSet
             Me.columnCertifiedBy.MaxLength = 50
             Me.columnCertificationLevel.AllowDBNull = false
             Me.columnCertificationLevel.MaxLength = 15
+            Me.columnSearchMin1.Caption = "SearchMin"
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5296,6 +5325,36 @@ Partial Public Class MooseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SurveyUnitSet() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableGSPE.SurveyUnitSetColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SurveyUnitSet' in table 'GSPE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableGSPE.SurveyUnitSetColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SearchMin1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableGSPE.SearchMin1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SearchMin1' in table 'GSPE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableGSPE.SearchMin1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property GSPE_SurveysRow() As GSPE_SurveysRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_GSPE_GSPE_Surveys")),GSPE_SurveysRow)
@@ -6011,6 +6070,30 @@ Partial Public Class MooseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetCertifiedByNull()
             Me(Me.tableGSPE.CertifiedByColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSurveyUnitSetNull() As Boolean
+            Return Me.IsNull(Me.tableGSPE.SurveyUnitSetColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSurveyUnitSetNull()
+            Me(Me.tableGSPE.SurveyUnitSetColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSearchMin1Null() As Boolean
+            Return Me.IsNull(Me.tableGSPE.SearchMin1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSearchMin1Null()
+            Me(Me.tableGSPE.SearchMin1Column) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -9159,7 +9242,6 @@ Namespace MooseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("StratMoose", "StratMoose")
             tableMapping.ColumnMappings.Add("StratTracks", "StratTracks")
             tableMapping.ColumnMappings.Add("StratHab", "StratHab")
-            tableMapping.ColumnMappings.Add("SearchMin", "SearchMin")
             tableMapping.ColumnMappings.Add("DateCounted", "DateCounted")
             tableMapping.ColumnMappings.Add("Perc_Not_Flown", "Perc_Not_Flown")
             tableMapping.ColumnMappings.Add("X_COORD", "X_COORD")
@@ -9205,6 +9287,8 @@ Namespace MooseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("CertificationDate", "CertificationDate")
             tableMapping.ColumnMappings.Add("CertifiedBy", "CertifiedBy")
             tableMapping.ColumnMappings.Add("CertificationLevel", "CertificationLevel")
+            tableMapping.ColumnMappings.Add("SearchMin", "SearchMin1")
+            tableMapping.ColumnMappings.Add("SurveyUnitSet", "SurveyUnitSet")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -9506,38 +9590,39 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationLevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationLevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE       GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                Park = @Park, SurveyName = @SurveyName, Sur"& _ 
-                "veyYear = @SurveyYear, Season = @Season, SubArea = @SubArea, GMU = @GMU, ID = @I"& _ 
-                "D, StartDate = @StartDate, StopDate = @StopDate, IntID = @IntID, Rand = @Rand, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         FiringOrder = @FiringOrder, Selected = @Selected, Coun"& _ 
-                "ted = @Counted, Exclude = @Exclude, Strat = @Strat, StratName = @StratName, Stra"& _ 
-                "tMoose = @StratMoose, StratTracks = @StratTracks, StratHab = @StratHab, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
-                "                   SearchMin = @SearchMin, DateCounted = @DateCounted, Perc_Not_"& _ 
-                "Flown = @Perc_Not_Flown, X_COORD = @X_COORD, Y_COORD = @Y_COORD, Area_SqMi = @Ar"& _ 
-                "ea_SqMi, ADULT = @ADULT, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         BULL_30_40 = @BULL_30_40, BU"& _ 
-                "LL_30_50 = @BULL_30_50, BULL_30_60 = @BULL_30_60, BULL_41_50 = @BULL_41_50, BULL"& _ 
-                "_ALL = @BULL_ALL, BULL_GT_50 = @BULL_GT_50, BULL_GT_60 = @BULL_GT_60, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "                 BULL_GTE_50 = @BULL_GTE_50, BULL_LT_30 = @BULL_LT_30, BULL_LT_5"& _ 
-                "0 = @BULL_LT_50, CALF = @CALF, COW = @COW, COW_W_0 = @COW_W_0, COW_W_1 = @COW_W_"& _ 
-                "1, COW_W_2 = @COW_W_2, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         COW_W_3 = @COW_W_3, LG_BULL = "& _ 
-                "@LG_BULL, MED_BULL = @MED_BULL, MED_L_BULL = @MED_L_BULL, SM_BULL = @SM_BULL, UN"& _ 
-                "KNOWN = @UNKNOWN, YBULL_ALL = @YBULL_ALL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         YBULL_GTSF "& _ 
-                "= @YBULL_GTSF, YBULL_SF = @YBULL_SF, MOOSE = @MOOSE, Pilot = @Pilot, Observer = "& _ 
-                "@Observer, Personnel = @Personnel, Density = @Density, SCF_Plot = @SCF_Plot, Std"& _ 
-                " = @Std, Int = @Int, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Comments = @Comments, SourceFile"& _ 
-                "name = @SourceFilename, RecordInsertedDate = @RecordInsertedDate, RecordInserted"& _ 
-                "By = @RecordInsertedBy, CertificationDate = @CertificationDate, CertifiedBy = @C"& _ 
-                "ertifiedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CertificationLevel = @CertificationLevel"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (SurveyName = @Original_SurveyName) AND (SurveyYear = @Original_Su"& _ 
-                "rveyYear) AND (ID = @Original_ID); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, SurveyName, SurveyYear, Season"& _ 
-                ", SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Cou"& _ 
-                "nted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, D"& _ 
-                "ateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL"& _ 
-                "_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, B"& _ 
-                "ULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, M"& _ 
-                "ED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, P"& _ 
-                "ilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename"& _ 
-                ", RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, Certific"& _ 
-                "ationLevel FROM GSPE WHERE (ID = @ID) AND (SurveyName = @SurveyName) AND (Survey"& _ 
-                "Year = @SurveyYear)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          Park = @Park, SurveyName = @SurveyName, SurveyYear = @S"& _ 
+                "urveyYear, Season = @Season, SubArea = @SubArea, GMU = @GMU, ID = @ID, StartDate"& _ 
+                " = @StartDate, StopDate = @StopDate, IntID = @IntID, Rand = @Rand, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
+                "       FiringOrder = @FiringOrder, Selected = @Selected, Counted = @Counted, Exc"& _ 
+                "lude = @Exclude, Strat = @Strat, StratName = @StratName, StratMoose = @StratMoos"& _ 
+                "e, StratTracks = @StratTracks, StratHab = @StratHab, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  SearchM"& _ 
+                "in = @SearchMin, DateCounted = @DateCounted, Perc_Not_Flown = @Perc_Not_Flown, X"& _ 
+                "_COORD = @X_COORD, Y_COORD = @Y_COORD, Area_SqMi = @Area_SqMi, ADULT = @ADULT, B"& _ 
+                "ULL_30_40 = @BULL_30_40, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  BULL_30_50 = @BULL_30_50, BULL_30_6"& _ 
+                "0 = @BULL_30_60, BULL_41_50 = @BULL_41_50, BULL_ALL = @BULL_ALL, BULL_GT_50 = @B"& _ 
+                "ULL_GT_50, BULL_GT_60 = @BULL_GT_60, BULL_GTE_50 = @BULL_GTE_50, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
+                "     BULL_LT_30 = @BULL_LT_30, BULL_LT_50 = @BULL_LT_50, CALF = @CALF, COW = @CO"& _ 
+                "W, COW_W_0 = @COW_W_0, COW_W_1 = @COW_W_1, COW_W_2 = @COW_W_2, COW_W_3 = @COW_W_"& _ 
+                "3, LG_BULL = @LG_BULL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  MED_BULL = @MED_BULL, MED_L_BULL = @M"& _ 
+                "ED_L_BULL, SM_BULL = @SM_BULL, UNKNOWN = @UNKNOWN, YBULL_ALL = @YBULL_ALL, YBULL"& _ 
+                "_GTSF = @YBULL_GTSF, YBULL_SF = @YBULL_SF, MOOSE = @MOOSE, Pilot = @Pilot, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "               Observer = @Observer, Personnel = @Personnel, Density = @Density,"& _ 
+                " SCF_Plot = @SCF_Plot, Std = @Std, Int = @Int, Comments = @Comments, SourceFilen"& _ 
+                "ame = @SourceFilename, RecordInsertedDate = @RecordInsertedDate, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
+                "     RecordInsertedBy = @RecordInsertedBy, CertificationDate = @CertificationDat"& _ 
+                "e, CertifiedBy = @CertifiedBy, CertificationLevel = @CertificationLevel, SurveyU"& _ 
+                "nitSet = @SurveyUnitSet"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (SurveyName = @Original_SurveyName) AND (SurveyY"& _ 
+                "ear = @Original_SurveyYear) AND (ID = @Original_ID);  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, SurveyName,"& _ 
+                " SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringO"& _ 
+                "rder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, Str"& _ 
+                "atHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADUL"& _ 
+                "T, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT"& _ 
+                "_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, "& _ 
+                "COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF,"& _ 
+                " YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comme"& _ 
+                "nts, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, Ce"& _ 
+                "rtifiedBy, CertificationLevel FROM GSPE WHERE (ID = @ID) AND (SurveyName = @Surv"& _ 
+                "eyName) AND (SurveyYear = @SurveyYear)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Park", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9605,6 +9690,7 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertifiedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "CertifiedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationLevel", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationLevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyUnitSet", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyUnitSet", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -9625,13 +9711,14 @@ Namespace MooseDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDat"& _ 
                 "e, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, Strat"& _ 
-                "Moose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y"& _ 
-                "_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_A"& _ 
-                "LL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_"& _ 
-                "W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN,"& _ 
-                " YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SC"& _ 
-                "F_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy"& _ 
-                ", CertificationDate, CertifiedBy, CertificationLevel FROM dbo.GSPE"
+                "Moose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
+                "          X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60"& _ 
+                ", BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT"& _ 
+                "_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  LG_BULL,"& _ 
+                " MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE,"& _ 
+                " Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilena"& _ 
+                "me, RecordInsertedDate, RecordInsertedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  CertificationDate,"& _ 
+                " CertifiedBy, CertificationLevel, SurveyUnitSet"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     GSPE"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -10692,6 +10779,7 @@ Namespace MooseDataSetTableAdapters
                     ByVal CertificationDate As Global.System.Nullable(Of Date),  _
                     ByVal CertifiedBy As String,  _
                     ByVal CertificationLevel As String,  _
+                    ByVal SurveyUnitSet As String,  _
                     ByVal Original_SurveyName As String,  _
                     ByVal Original_SurveyYear As Integer,  _
                     ByVal Original_ID As String) As Integer
@@ -11017,16 +11105,21 @@ Namespace MooseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(65).Value = CType(CertificationLevel,String)
             End If
+            If (SurveyUnitSet Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(SurveyUnitSet,String)
+            End If
             If (Original_SurveyName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_SurveyName")
             Else
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_SurveyName,String)
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_SurveyName,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_SurveyYear,Integer)
+            Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_SurveyYear,Integer)
             If (Original_ID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_ID")
             Else
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_ID,String)
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_ID,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -11111,10 +11204,11 @@ Namespace MooseDataSetTableAdapters
                     ByVal CertificationDate As Global.System.Nullable(Of Date),  _
                     ByVal CertifiedBy As String,  _
                     ByVal CertificationLevel As String,  _
+                    ByVal SurveyUnitSet As String,  _
                     ByVal Original_SurveyName As String,  _
                     ByVal Original_SurveyYear As Integer,  _
                     ByVal Original_ID As String) As Integer
-            Return Me.Update(Park, Original_SurveyName, Original_SurveyYear, Season, SubArea, GMU, Original_ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, Original_SurveyName, Original_SurveyYear, Original_ID)
+            Return Me.Update(Park, Original_SurveyName, Original_SurveyYear, Season, SubArea, GMU, Original_ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, SurveyUnitSet, Original_SurveyName, Original_SurveyYear, Original_ID)
         End Function
     End Class
     

@@ -218,23 +218,26 @@ SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDa
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel FROM dbo.GSPE</CommandText>
+                    <CommandText>SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, 
+                  X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, 
+                  LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, 
+                  CertificationDate, CertifiedBy, CertificationLevel, SurveyUnitSet
+FROM     GSPE</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE       GSPE
-SET                Park = @Park, SurveyName = @SurveyName, SurveyYear = @SurveyYear, Season = @Season, SubArea = @SubArea, GMU = @GMU, ID = @ID, StartDate = @StartDate, StopDate = @StopDate, IntID = @IntID, Rand = @Rand, 
-                         FiringOrder = @FiringOrder, Selected = @Selected, Counted = @Counted, Exclude = @Exclude, Strat = @Strat, StratName = @StratName, StratMoose = @StratMoose, StratTracks = @StratTracks, StratHab = @StratHab, 
-                         SearchMin = @SearchMin, DateCounted = @DateCounted, Perc_Not_Flown = @Perc_Not_Flown, X_COORD = @X_COORD, Y_COORD = @Y_COORD, Area_SqMi = @Area_SqMi, ADULT = @ADULT, 
-                         BULL_30_40 = @BULL_30_40, BULL_30_50 = @BULL_30_50, BULL_30_60 = @BULL_30_60, BULL_41_50 = @BULL_41_50, BULL_ALL = @BULL_ALL, BULL_GT_50 = @BULL_GT_50, BULL_GT_60 = @BULL_GT_60, 
-                         BULL_GTE_50 = @BULL_GTE_50, BULL_LT_30 = @BULL_LT_30, BULL_LT_50 = @BULL_LT_50, CALF = @CALF, COW = @COW, COW_W_0 = @COW_W_0, COW_W_1 = @COW_W_1, COW_W_2 = @COW_W_2, 
-                         COW_W_3 = @COW_W_3, LG_BULL = @LG_BULL, MED_BULL = @MED_BULL, MED_L_BULL = @MED_L_BULL, SM_BULL = @SM_BULL, UNKNOWN = @UNKNOWN, YBULL_ALL = @YBULL_ALL, 
-                         YBULL_GTSF = @YBULL_GTSF, YBULL_SF = @YBULL_SF, MOOSE = @MOOSE, Pilot = @Pilot, Observer = @Observer, Personnel = @Personnel, Density = @Density, SCF_Plot = @SCF_Plot, Std = @Std, Int = @Int, 
-                         Comments = @Comments, SourceFilename = @SourceFilename, RecordInsertedDate = @RecordInsertedDate, RecordInsertedBy = @RecordInsertedBy, CertificationDate = @CertificationDate, CertifiedBy = @CertifiedBy, 
-                         CertificationLevel = @CertificationLevel
-WHERE        (SurveyName = @Original_SurveyName) AND (SurveyYear = @Original_SurveyYear) AND (ID = @Original_ID); 
+                    <CommandText>UPDATE GSPE
+SET          Park = @Park, SurveyName = @SurveyName, SurveyYear = @SurveyYear, Season = @Season, SubArea = @SubArea, GMU = @GMU, ID = @ID, StartDate = @StartDate, StopDate = @StopDate, IntID = @IntID, Rand = @Rand, 
+                  FiringOrder = @FiringOrder, Selected = @Selected, Counted = @Counted, Exclude = @Exclude, Strat = @Strat, StratName = @StratName, StratMoose = @StratMoose, StratTracks = @StratTracks, StratHab = @StratHab, 
+                  SearchMin = @SearchMin, DateCounted = @DateCounted, Perc_Not_Flown = @Perc_Not_Flown, X_COORD = @X_COORD, Y_COORD = @Y_COORD, Area_SqMi = @Area_SqMi, ADULT = @ADULT, BULL_30_40 = @BULL_30_40, 
+                  BULL_30_50 = @BULL_30_50, BULL_30_60 = @BULL_30_60, BULL_41_50 = @BULL_41_50, BULL_ALL = @BULL_ALL, BULL_GT_50 = @BULL_GT_50, BULL_GT_60 = @BULL_GT_60, BULL_GTE_50 = @BULL_GTE_50, 
+                  BULL_LT_30 = @BULL_LT_30, BULL_LT_50 = @BULL_LT_50, CALF = @CALF, COW = @COW, COW_W_0 = @COW_W_0, COW_W_1 = @COW_W_1, COW_W_2 = @COW_W_2, COW_W_3 = @COW_W_3, LG_BULL = @LG_BULL, 
+                  MED_BULL = @MED_BULL, MED_L_BULL = @MED_L_BULL, SM_BULL = @SM_BULL, UNKNOWN = @UNKNOWN, YBULL_ALL = @YBULL_ALL, YBULL_GTSF = @YBULL_GTSF, YBULL_SF = @YBULL_SF, MOOSE = @MOOSE, Pilot = @Pilot, 
+                  Observer = @Observer, Personnel = @Personnel, Density = @Density, SCF_Plot = @SCF_Plot, Std = @Std, Int = @Int, Comments = @Comments, SourceFilename = @SourceFilename, RecordInsertedDate = @RecordInsertedDate, 
+                  RecordInsertedBy = @RecordInsertedBy, CertificationDate = @CertificationDate, CertifiedBy = @CertifiedBy, CertificationLevel = @CertificationLevel, SurveyUnitSet = @SurveyUnitSet
+WHERE  (SurveyName = @Original_SurveyName) AND (SurveyYear = @Original_SurveyYear) AND (ID = @Original_ID);  
 SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel FROM GSPE WHERE (ID = @ID) AND (SurveyName = @SurveyName) AND (SurveyYear = @SurveyYear)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="Park" ColumnName="Park" DataSourceName="Moose.dbo.GSPE" DataTypeServer="varchar(4)" DbType="AnsiString" Direction="Input" ParameterName="@Park" Precision="0" ProviderType="VarChar" Scale="0" Size="4" SourceColumn="Park" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -303,6 +306,7 @@ SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDa
                       <Parameter AllowDbNull="true" AutogeneratedName="CertificationDate" ColumnName="CertificationDate" DataSourceName="Moose.dbo.GSPE" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@CertificationDate" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="CertificationDate" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="CertifiedBy" ColumnName="CertifiedBy" DataSourceName="Moose.dbo.GSPE" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@CertifiedBy" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="CertifiedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="CertificationLevel" ColumnName="CertificationLevel" DataSourceName="Moose.dbo.GSPE" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@CertificationLevel" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="CertificationLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SurveyUnitSet" ColumnName="SurveyUnitSet" DataSourceName="Moose.dbo.GSPE" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@SurveyUnitSet" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="SurveyUnitSet" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_SurveyName" ColumnName="SurveyName" DataSourceName="Moose.dbo.GSPE" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Original_SurveyName" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="SurveyName" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_SurveyYear" ColumnName="SurveyYear" DataSourceName="Moose.dbo.GSPE" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_SurveyYear" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SurveyYear" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_ID" ColumnName="ID" DataSourceName="Moose.dbo.GSPE" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -332,7 +336,6 @@ SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDa
               <Mapping SourceColumn="StratMoose" DataSetColumn="StratMoose" />
               <Mapping SourceColumn="StratTracks" DataSetColumn="StratTracks" />
               <Mapping SourceColumn="StratHab" DataSetColumn="StratHab" />
-              <Mapping SourceColumn="SearchMin" DataSetColumn="SearchMin" />
               <Mapping SourceColumn="DateCounted" DataSetColumn="DateCounted" />
               <Mapping SourceColumn="Perc_Not_Flown" DataSetColumn="Perc_Not_Flown" />
               <Mapping SourceColumn="X_COORD" DataSetColumn="X_COORD" />
@@ -378,6 +381,8 @@ SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDa
               <Mapping SourceColumn="CertificationDate" DataSetColumn="CertificationDate" />
               <Mapping SourceColumn="CertifiedBy" DataSetColumn="CertifiedBy" />
               <Mapping SourceColumn="CertificationLevel" DataSetColumn="CertificationLevel" />
+              <Mapping SourceColumn="SearchMin" DataSetColumn="SearchMin1" />
+              <Mapping SourceColumn="SurveyUnitSet" DataSetColumn="SurveyUnitSet" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -978,7 +983,7 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
   <xs:element name="MooseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MooseDataSet" msprop:Generator_UserDSName="MooseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="GSPE" msprop:Generator_TableClassName="GSPEDataTable" msprop:Generator_TableVarName="tableGSPE" msprop:Generator_TablePropName="GSPE" msprop:Generator_RowDeletingName="GSPERowDeleting" msprop:Generator_RowChangingName="GSPERowChanging" msprop:Generator_RowEvHandlerName="GSPERowChangeEventHandler" msprop:Generator_RowDeletedName="GSPERowDeleted" msprop:Generator_UserTableName="GSPE" msprop:Generator_RowChangedName="GSPERowChanged" msprop:Generator_RowEvArgName="GSPERowChangeEvent" msprop:Generator_RowClassName="GSPERow">
+        <xs:element name="GSPE" msprop:Generator_TableClassName="GSPEDataTable" msprop:Generator_TableVarName="tableGSPE" msprop:Generator_RowChangedName="GSPERowChanged" msprop:Generator_TablePropName="GSPE" msprop:Generator_RowDeletingName="GSPERowDeleting" msprop:Generator_RowChangingName="GSPERowChanging" msprop:Generator_RowEvHandlerName="GSPERowChangeEventHandler" msprop:Generator_RowDeletedName="GSPERowDeleted" msprop:Generator_RowClassName="GSPERow" msprop:Generator_UserTableName="GSPE" msprop:Generator_RowEvArgName="GSPERowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Park" msprop:Generator_ColumnVarNameInTable="columnPark" msprop:Generator_ColumnPropNameInRow="Park" msprop:Generator_ColumnPropNameInTable="ParkColumn" msprop:Generator_UserColumnName="Park">
@@ -1149,10 +1154,12 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="SurveyUnitSet" msprop:Generator_ColumnVarNameInTable="columnSurveyUnitSet" msprop:Generator_ColumnPropNameInRow="SurveyUnitSet" msprop:Generator_ColumnPropNameInTable="SurveyUnitSetColumn" msprop:Generator_UserColumnName="SurveyUnitSet" type="xs:string" minOccurs="0" />
+              <xs:element name="SearchMin1" msdata:Caption="SearchMin" msprop:Generator_ColumnVarNameInTable="columnSearchMin1" msprop:Generator_ColumnPropNameInRow="SearchMin1" msprop:Generator_ColumnPropNameInTable="SearchMin1Column" msprop:Generator_UserColumnName="SearchMin1" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GSPE_DensityEstimates" msprop:Generator_TableClassName="GSPE_DensityEstimatesDataTable" msprop:Generator_TableVarName="tableGSPE_DensityEstimates" msprop:Generator_TablePropName="GSPE_DensityEstimates" msprop:Generator_RowDeletingName="GSPE_DensityEstimatesRowDeleting" msprop:Generator_RowChangingName="GSPE_DensityEstimatesRowChanging" msprop:Generator_RowEvHandlerName="GSPE_DensityEstimatesRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_DensityEstimatesRowDeleted" msprop:Generator_UserTableName="GSPE_DensityEstimates" msprop:Generator_RowChangedName="GSPE_DensityEstimatesRowChanged" msprop:Generator_RowEvArgName="GSPE_DensityEstimatesRowChangeEvent" msprop:Generator_RowClassName="GSPE_DensityEstimatesRow">
+        <xs:element name="GSPE_DensityEstimates" msprop:Generator_TableClassName="GSPE_DensityEstimatesDataTable" msprop:Generator_TableVarName="tableGSPE_DensityEstimates" msprop:Generator_RowChangedName="GSPE_DensityEstimatesRowChanged" msprop:Generator_TablePropName="GSPE_DensityEstimates" msprop:Generator_RowDeletingName="GSPE_DensityEstimatesRowDeleting" msprop:Generator_RowChangingName="GSPE_DensityEstimatesRowChanging" msprop:Generator_RowEvHandlerName="GSPE_DensityEstimatesRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_DensityEstimatesRowDeleted" msprop:Generator_RowClassName="GSPE_DensityEstimatesRow" msprop:Generator_UserTableName="GSPE_DensityEstimates" msprop:Generator_RowEvArgName="GSPE_DensityEstimatesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SurveyName" msprop:Generator_ColumnVarNameInTable="columnSurveyName" msprop:Generator_ColumnPropNameInRow="SurveyName" msprop:Generator_ColumnPropNameInTable="SurveyNameColumn" msprop:Generator_UserColumnName="SurveyName">
@@ -1228,7 +1235,7 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GSPE_PopulationEstimates" msprop:Generator_TableClassName="GSPE_PopulationEstimatesDataTable" msprop:Generator_TableVarName="tableGSPE_PopulationEstimates" msprop:Generator_TablePropName="GSPE_PopulationEstimates" msprop:Generator_RowDeletingName="GSPE_PopulationEstimatesRowDeleting" msprop:Generator_RowChangingName="GSPE_PopulationEstimatesRowChanging" msprop:Generator_RowEvHandlerName="GSPE_PopulationEstimatesRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_PopulationEstimatesRowDeleted" msprop:Generator_UserTableName="GSPE_PopulationEstimates" msprop:Generator_RowChangedName="GSPE_PopulationEstimatesRowChanged" msprop:Generator_RowEvArgName="GSPE_PopulationEstimatesRowChangeEvent" msprop:Generator_RowClassName="GSPE_PopulationEstimatesRow">
+        <xs:element name="GSPE_PopulationEstimates" msprop:Generator_TableClassName="GSPE_PopulationEstimatesDataTable" msprop:Generator_TableVarName="tableGSPE_PopulationEstimates" msprop:Generator_RowChangedName="GSPE_PopulationEstimatesRowChanged" msprop:Generator_TablePropName="GSPE_PopulationEstimates" msprop:Generator_RowDeletingName="GSPE_PopulationEstimatesRowDeleting" msprop:Generator_RowChangingName="GSPE_PopulationEstimatesRowChanging" msprop:Generator_RowEvHandlerName="GSPE_PopulationEstimatesRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_PopulationEstimatesRowDeleted" msprop:Generator_RowClassName="GSPE_PopulationEstimatesRow" msprop:Generator_UserTableName="GSPE_PopulationEstimates" msprop:Generator_RowEvArgName="GSPE_PopulationEstimatesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SurveyName" msprop:Generator_ColumnVarNameInTable="columnSurveyName" msprop:Generator_ColumnPropNameInRow="SurveyName" msprop:Generator_ColumnPropNameInTable="SurveyNameColumn" msprop:Generator_UserColumnName="SurveyName">
@@ -1349,7 +1356,7 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GSPE_Results" msprop:Generator_TableClassName="GSPE_ResultsDataTable" msprop:Generator_TableVarName="tableGSPE_Results" msprop:Generator_TablePropName="GSPE_Results" msprop:Generator_RowDeletingName="GSPE_ResultsRowDeleting" msprop:Generator_RowChangingName="GSPE_ResultsRowChanging" msprop:Generator_RowEvHandlerName="GSPE_ResultsRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_ResultsRowDeleted" msprop:Generator_UserTableName="GSPE_Results" msprop:Generator_RowChangedName="GSPE_ResultsRowChanged" msprop:Generator_RowEvArgName="GSPE_ResultsRowChangeEvent" msprop:Generator_RowClassName="GSPE_ResultsRow">
+        <xs:element name="GSPE_Results" msprop:Generator_TableClassName="GSPE_ResultsDataTable" msprop:Generator_TableVarName="tableGSPE_Results" msprop:Generator_RowChangedName="GSPE_ResultsRowChanged" msprop:Generator_TablePropName="GSPE_Results" msprop:Generator_RowDeletingName="GSPE_ResultsRowDeleting" msprop:Generator_RowChangingName="GSPE_ResultsRowChanging" msprop:Generator_RowEvHandlerName="GSPE_ResultsRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_ResultsRowDeleted" msprop:Generator_RowClassName="GSPE_ResultsRow" msprop:Generator_UserTableName="GSPE_Results" msprop:Generator_RowEvArgName="GSPE_ResultsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SurveyName" msprop:Generator_ColumnVarNameInTable="columnSurveyName" msprop:Generator_ColumnPropNameInRow="SurveyName" msprop:Generator_ColumnPropNameInTable="SurveyNameColumn" msprop:Generator_UserColumnName="SurveyName">
@@ -1451,7 +1458,7 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GSPE_Surveys" msprop:Generator_TableClassName="GSPE_SurveysDataTable" msprop:Generator_TableVarName="tableGSPE_Surveys" msprop:Generator_TablePropName="GSPE_Surveys" msprop:Generator_RowDeletingName="GSPE_SurveysRowDeleting" msprop:Generator_RowChangingName="GSPE_SurveysRowChanging" msprop:Generator_RowEvHandlerName="GSPE_SurveysRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_SurveysRowDeleted" msprop:Generator_UserTableName="GSPE_Surveys" msprop:Generator_RowChangedName="GSPE_SurveysRowChanged" msprop:Generator_RowEvArgName="GSPE_SurveysRowChangeEvent" msprop:Generator_RowClassName="GSPE_SurveysRow">
+        <xs:element name="GSPE_Surveys" msprop:Generator_TableClassName="GSPE_SurveysDataTable" msprop:Generator_TableVarName="tableGSPE_Surveys" msprop:Generator_RowChangedName="GSPE_SurveysRowChanged" msprop:Generator_TablePropName="GSPE_Surveys" msprop:Generator_RowDeletingName="GSPE_SurveysRowDeleting" msprop:Generator_RowChangingName="GSPE_SurveysRowChanging" msprop:Generator_RowEvHandlerName="GSPE_SurveysRowChangeEventHandler" msprop:Generator_RowDeletedName="GSPE_SurveysRowDeleted" msprop:Generator_RowClassName="GSPE_SurveysRow" msprop:Generator_UserTableName="GSPE_Surveys" msprop:Generator_RowEvArgName="GSPE_SurveysRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SurveyName" msprop:Generator_ColumnVarNameInTable="columnSurveyName" msprop:Generator_ColumnPropNameInRow="SurveyName" msprop:Generator_ColumnPropNameInTable="SurveyNameColumn" msprop:Generator_UserColumnName="SurveyName">
@@ -1609,10 +1616,10 @@ SELECT SurveyName, Year, Network, Park, Season, StartDate, EndDate, AreaSurveyed
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_GSPE_Ratios_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE_Results" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE_Results" msprop:Generator_ChildPropName="GetGSPE_ResultsRows" msprop:Generator_UserRelationName="FK_GSPE_Ratios_GSPE_Surveys" msprop:Generator_RelationVarName="relationFK_GSPE_Ratios_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" />
-      <msdata:Relationship name="FK_GSPE_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE" msprop:Generator_ChildPropName="GetGSPERows" msprop:Generator_UserRelationName="FK_GSPE_GSPE_Surveys" msprop:Generator_RelationVarName="relationFK_GSPE_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" />
-      <msdata:Relationship name="FK_GSPE_DensityEstimates_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE_DensityEstimates" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE_DensityEstimates" msprop:Generator_ChildPropName="GetGSPE_DensityEstimatesRows" msprop:Generator_UserRelationName="FK_GSPE_DensityEstimates_GSPE_Surveys" msprop:Generator_RelationVarName="relationFK_GSPE_DensityEstimates_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" />
-      <msdata:Relationship name="FK_GSPE_PopulationEstimates_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE_PopulationEstimates" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE_PopulationEstimates" msprop:Generator_ChildPropName="GetGSPE_PopulationEstimatesRows" msprop:Generator_UserRelationName="FK_GSPE_PopulationEstimates_GSPE_Surveys" msprop:Generator_RelationVarName="relationFK_GSPE_PopulationEstimates_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" />
+      <msdata:Relationship name="FK_GSPE_Ratios_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE_Results" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE_Results" msprop:Generator_ChildPropName="GetGSPE_ResultsRows" msprop:Generator_UserRelationName="FK_GSPE_Ratios_GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" msprop:Generator_RelationVarName="relationFK_GSPE_Ratios_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" />
+      <msdata:Relationship name="FK_GSPE_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE" msprop:Generator_ChildPropName="GetGSPERows" msprop:Generator_UserRelationName="FK_GSPE_GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" msprop:Generator_RelationVarName="relationFK_GSPE_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" />
+      <msdata:Relationship name="FK_GSPE_DensityEstimates_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE_DensityEstimates" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE_DensityEstimates" msprop:Generator_ChildPropName="GetGSPE_DensityEstimatesRows" msprop:Generator_UserRelationName="FK_GSPE_DensityEstimates_GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" msprop:Generator_RelationVarName="relationFK_GSPE_DensityEstimates_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" />
+      <msdata:Relationship name="FK_GSPE_PopulationEstimates_GSPE_Surveys" msdata:parent="GSPE_Surveys" msdata:child="GSPE_PopulationEstimates" msdata:parentkey="SurveyName" msdata:childkey="SurveyName" msprop:Generator_UserChildTable="GSPE_PopulationEstimates" msprop:Generator_ChildPropName="GetGSPE_PopulationEstimatesRows" msprop:Generator_UserRelationName="FK_GSPE_PopulationEstimates_GSPE_Surveys" msprop:Generator_ParentPropName="GSPE_SurveysRow" msprop:Generator_RelationVarName="relationFK_GSPE_PopulationEstimates_GSPE_Surveys" msprop:Generator_UserParentTable="GSPE_Surveys" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -20,6 +20,12 @@ Public Class Form1
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
             Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
+
+            Dim SurveyUnitSetsDataTable As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, "SELECT SurveyUnitSet FROM SurveyUnitSets ORDER BY SurveyUnitSet")
+            For Each Row As DataRow In SurveyUnitSetsDataTable.Rows
+                Me.SurveyUnitSetsRepositoryItemComboBox.Items.Add(Row.Item("SurveyUnitSet").trim)
+            Next
+
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
             Me.HeaderLabel.Text = "Database connection error: " & ex.Message
@@ -238,21 +244,21 @@ Public Class Form1
     End Sub
 
 
-    Private Sub LoadParkSubAreasIntoDataGridViews()
-        Try
-            'ParkSubAreaComboBox_PopEst
-            'Dim ParkSubAreasDataTable As DataTable = GetDataTableFromSQLServerDatabase()
-            Dim SubAreasDataTable As DataTable = MooseDataSet.Tables("GSPE_PopulationEstimates").DefaultView.ToTable(True, "ParkSubArea")
-            For Each SubAreaDataRow As DataRow In SubAreasDataTable.Rows
-                Dim ParkSubArea As String = SubAreaDataRow.Item("ParkSubArea").trim
-                Debug.Print(ParkSubArea)
-                'Me.ParkSubAreaComboBox_PopEst.Items.Add(ParkSubArea)
-            Next
-        Catch ex As Exception
-            Debug.Print(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
-        End Try
+    'Private Sub LoadParkSubAreasIntoDataGridViews()
+    '    Try
+    '        'ParkSubAreaComboBox_PopEst
+    '        'Dim ParkSubAreasDataTable As DataTable = GetDataTableFromSQLServerDatabase()
+    '        Dim SubAreasDataTable As DataTable = MooseDataSet.Tables("GSPE_PopulationEstimates").DefaultView.ToTable(True, "ParkSubArea")
+    '        For Each SubAreaDataRow As DataRow In SubAreasDataTable.Rows
+    '            Dim ParkSubArea As String = SubAreaDataRow.Item("ParkSubArea").trim
+    '            Debug.Print(ParkSubArea)
+    '            'Me.ParkSubAreaComboBox_PopEst.Items.Add(ParkSubArea)
+    '        Next
+    '    Catch ex As Exception
+    '        Debug.Print(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+    '    End Try
 
-    End Sub
+    'End Sub
 
 
 
@@ -607,6 +613,7 @@ Public Class Form1
         'Append a signed, dated comment prefix to the comments box
         AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
     End Sub
+
 
 
 
