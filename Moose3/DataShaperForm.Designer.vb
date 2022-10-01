@@ -36,6 +36,8 @@ Partial Class DataShaperForm
         Me.DataShaperGridControlToolStrip = New System.Windows.Forms.ToolStrip()
         Me.ExportGridControlToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PivotXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ExportPivotGridButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataShaperPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +47,7 @@ Partial Class DataShaperForm
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DataShaperGridControlToolStrip.SuspendLayout()
         Me.PivotXtraTabPage.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -85,8 +88,8 @@ Partial Class DataShaperForm
         'DataShaperPivotGridControl
         '
         Me.DataShaperPivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataShaperPivotGridControl.Location = New System.Drawing.Point(0, 0)
-        Me.DataShaperPivotGridControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataShaperPivotGridControl.Location = New System.Drawing.Point(0, 27)
+        Me.DataShaperPivotGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.DataShaperPivotGridControl.Name = "DataShaperPivotGridControl"
         Me.DataShaperPivotGridControl.OptionsChartDataSource.ProvideColumnCustomTotals = True
         Me.DataShaperPivotGridControl.OptionsChartDataSource.ProvideColumnGrandTotals = True
@@ -101,14 +104,14 @@ Partial Class DataShaperForm
         Me.DataShaperPivotGridControl.OptionsView.ShowCustomTotalsForSingleValues = True
         Me.DataShaperPivotGridControl.OptionsView.ShowGrandTotalsForSingleValues = True
         Me.DataShaperPivotGridControl.OptionsView.ShowTotalsForSingleValues = True
-        Me.DataShaperPivotGridControl.Size = New System.Drawing.Size(1577, 879)
+        Me.DataShaperPivotGridControl.Size = New System.Drawing.Size(1577, 852)
         Me.DataShaperPivotGridControl.TabIndex = 1
         '
         'XtraTabControl1
         '
         Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.XtraTabControl1.Location = New System.Drawing.Point(0, 28)
-        Me.XtraTabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.XtraTabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.XtraTabControl1.Name = "XtraTabControl1"
         Me.XtraTabControl1.SelectedTabPage = Me.DatasetXtraTabPage
         Me.XtraTabControl1.Size = New System.Drawing.Size(1579, 909)
@@ -119,7 +122,7 @@ Partial Class DataShaperForm
         '
         Me.DatasetXtraTabPage.Controls.Add(Me.DataShaperGridControl)
         Me.DatasetXtraTabPage.Controls.Add(Me.DataShaperGridControlToolStrip)
-        Me.DatasetXtraTabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DatasetXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.DatasetXtraTabPage.Name = "DatasetXtraTabPage"
         Me.DatasetXtraTabPage.Size = New System.Drawing.Size(1577, 879)
         Me.DatasetXtraTabPage.Text = "Dataset"
@@ -127,10 +130,10 @@ Partial Class DataShaperForm
         'DataShaperGridControl
         '
         Me.DataShaperGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataShaperGridControl.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataShaperGridControl.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
         Me.DataShaperGridControl.Location = New System.Drawing.Point(0, 39)
         Me.DataShaperGridControl.MainView = Me.GridView1
-        Me.DataShaperGridControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataShaperGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.DataShaperGridControl.Name = "DataShaperGridControl"
         Me.DataShaperGridControl.Size = New System.Drawing.Size(1971, 1060)
         Me.DataShaperGridControl.TabIndex = 0
@@ -166,10 +169,29 @@ Partial Class DataShaperForm
         'PivotXtraTabPage
         '
         Me.PivotXtraTabPage.Controls.Add(Me.DataShaperPivotGridControl)
-        Me.PivotXtraTabPage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PivotXtraTabPage.Controls.Add(Me.ToolStrip2)
+        Me.PivotXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.PivotXtraTabPage.Name = "PivotXtraTabPage"
         Me.PivotXtraTabPage.Size = New System.Drawing.Size(1577, 879)
         Me.PivotXtraTabPage.Text = "Pivot grid"
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportPivotGridButton})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(1577, 31)
+        Me.ToolStrip2.TabIndex = 2
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ExportPivotGridButton
+        '
+        Me.ExportPivotGridButton.Image = CType(resources.GetObject("ExportPivotGridButton.Image"), System.Drawing.Image)
+        Me.ExportPivotGridButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportPivotGridButton.Name = "ExportPivotGridButton"
+        Me.ExportPivotGridButton.Size = New System.Drawing.Size(141, 28)
+        Me.ExportPivotGridButton.Text = "Export to Excel..."
         '
         'DataShaperForm
         '
@@ -178,7 +200,7 @@ Partial Class DataShaperForm
         Me.ClientSize = New System.Drawing.Size(1579, 937)
         Me.Controls.Add(Me.XtraTabControl1)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "DataShaperForm"
         Me.Text = "GSPE Data Shaper"
         Me.ToolStrip1.ResumeLayout(False)
@@ -193,6 +215,9 @@ Partial Class DataShaperForm
         Me.DataShaperGridControlToolStrip.ResumeLayout(False)
         Me.DataShaperGridControlToolStrip.PerformLayout()
         Me.PivotXtraTabPage.ResumeLayout(False)
+        Me.PivotXtraTabPage.PerformLayout()
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -211,4 +236,6 @@ Partial Class DataShaperForm
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents DataShaperGridControlToolStrip As ToolStrip
     Friend WithEvents ExportGridControlToolStripButton As ToolStripButton
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents ExportPivotGridButton As ToolStripButton
 End Class

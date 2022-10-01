@@ -190,25 +190,6 @@ Module Utilities
 
     Public Sub ExportGridControl(GC As GridControl, FilenameWithoutExtension As String, OpenAfterCreating As Boolean)
         Try
-            'Get the current survey name
-            'Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
-
-            'Get the requested export format and set up parameters for the savefiledialog
-            'Dim ExportFormat As String = Me.ExportPivotGridToolStripComboBox.Text.Trim
-            'Dim FileFilter As String = ""
-            'Dim FileExtension As String = ""
-
-            'Determine which export format is needed
-            'If ExportFormat = "" Then
-            '    MsgBox("Please select an export file format.")
-            '    Me.ExportPivotGridToolStripComboBox.Focus()
-            'ElseIf ExportFormat = "Excel" Then
-            '    FileFilter = "Excel files (*.xlsx)|(*.xlsx)"
-            '    FileExtension = "xlsx"
-            'ElseIf ExportFormat = "CSV" Then
-            '    FileFilter = "Comma delimited text files (*.csv)|(*.csv)"
-            '    FileExtension = "csv"
-            'End If
 
             'Open a save file dialog to allow the user to save the file someplace
             Dim SFD As New SaveFileDialog
@@ -223,6 +204,33 @@ Module Utilities
             If SFD.ShowDialog = DialogResult.OK Then
                 'Now export the summary
                 GC.ExportToXlsx(SFD.FileName)
+                If OpenAfterCreating = True Then
+                    If MsgBox("Open exported file?", MsgBoxStyle.YesNo, "Open?") = MsgBoxResult.Yes Then
+                        Process.Start(SFD.FileName)
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Public Sub ExportPivotGridControl(PGC As PivotGridControl, FilenameWithoutExtension As String, OpenAfterCreating As Boolean)
+        Try
+
+            'Open a save file dialog to allow the user to save the file someplace
+            Dim SFD As New SaveFileDialog
+            With SFD
+                .AddExtension = True
+                .DefaultExt = "xlsx"
+                .FileName = FilenameWithoutExtension.Trim & ".xlsx"
+                .Filter = "Excel files (*.xlsx)|(*.xlsx)"
+            End With
+
+            'Show the dialog
+            If SFD.ShowDialog = DialogResult.OK Then
+                'Now export the summary
+                PGC.ExportToXlsx(SFD.FileName)
                 If OpenAfterCreating = True Then
                     If MsgBox("Open exported file?", MsgBoxStyle.YesNo, "Open?") = MsgBoxResult.Yes Then
                         Process.Start(SFD.FileName)

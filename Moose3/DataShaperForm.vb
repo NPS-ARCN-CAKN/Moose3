@@ -136,4 +136,7 @@ Public Class DataShaperForm
         End Try
     End Sub
 
+    Private Sub ExportPivotGridButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridButton.Click
+        ExportPivotGridControl(Me.DataShaperPivotGridControl, Me.QuerySelectorToolStripComboBox.Text, True)
+    End Sub
 End Class
