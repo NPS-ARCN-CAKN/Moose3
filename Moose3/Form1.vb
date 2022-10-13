@@ -510,6 +510,9 @@ Public Class Form1
     Private Sub GSPE_SurveysBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.CurrentChanged
         EndEdits()
 
+
+        'Me.SaveToolStripButton.Enabled = Me.MooseDataSet.HasChanges
+
         'SetUpGridControl(Me.PopulationGridControl, False, True, False)
     End Sub
 
@@ -612,6 +615,63 @@ Public Class Form1
     Private Sub AppendNewCommentToolStripButton_Click(sender As Object, e As EventArgs) Handles AppendNewCommentToolStripButton.Click
         'Append a signed, dated comment prefix to the comments box
         AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
+    End Sub
+
+    Private Sub EnableEditsToolStripButton_Click(sender As Object, e As EventArgs) Handles EnableEditsToolStripButton.Click
+        Try
+            'Set any editable controls to read-only or editable based on the text of EnableEditsToolStripButton
+
+            Dim GSPEGridView As GridView = TryCast(Me.GSPEGridControl.MainView, GridView)
+
+            'Determine whether to make the form read-only or editable
+            If Me.EnableEditsToolStripButton.Text = "Make form read-only" Then
+                'Form is currently readonly, make it editable
+
+                'GSPE Surveys VGridControl
+                With Me.SurveyVGridControl
+                    .OptionsBehavior.Editable = False
+                    .OptionsBehavior.EndUpdate()
+                End With
+
+                'GSPE GridControl
+                With GSPEGridView
+                    .OptionsBehavior.EndUpdate()
+                    .OptionsBehavior.Editable = False
+                End With
+
+                'Population estimates and density estimates DataGridViews
+                Me.GSPE_PopulationEstimatesDataGridView.ReadOnly = True
+                Me.DensityEstimatesDataGridView.ReadOnly = True
+
+                'Change the text of EnableEditsToolStripButton 
+                Me.EnableEditsToolStripButton.Text = "Make form editable"
+                Me.EnableEditsToolStripButton.Image = My.Resources.application_form
+            Else
+                'Form is currently editable, make it read-only
+
+                'GSPE Surveys VGridControl
+                With Me.SurveyVGridControl
+                    .OptionsBehavior.EndUpdate()
+                    .OptionsBehavior.Editable = True
+                End With
+
+                'GSPE GridControl
+                With GSPEGridView
+                    .OptionsBehavior.EndUpdate()
+                    .OptionsBehavior.Editable = True
+                End With
+
+                'Population estimates and density estimates DataGridViews
+                Me.GSPE_PopulationEstimatesDataGridView.ReadOnly = False
+                Me.DensityEstimatesDataGridView.ReadOnly = False
+
+                'Change the text of EnableEditsToolStripButton 
+                Me.EnableEditsToolStripButton.Text = "Make form read-only"
+                Me.EnableEditsToolStripButton.Image = My.Resources.application_form_edit
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 
 

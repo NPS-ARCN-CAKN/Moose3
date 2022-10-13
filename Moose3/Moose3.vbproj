@@ -179,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="noun_Moose_3662395 32.ico" />
+    <None Include="Resources\application_form_edit1.png" />
+    <None Include="Resources\application_form1.png" />
     <None Include="Resources\package1.png" />
     <None Include="Resources\package.png" />
     <None Include="Resources\world_link.png" />
