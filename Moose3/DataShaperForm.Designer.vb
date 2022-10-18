@@ -56,34 +56,33 @@ Partial Class DataShaperForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox, Me.RefreshToolStripButton, Me.ToolStripSeparator1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1579, 28)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1579, 31)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(195, 25)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(195, 28)
         Me.ToolStripLabel1.Text = "Select a data table or query:"
         '
         'QuerySelectorToolStripComboBox
         '
-        Me.QuerySelectorToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.QuerySelectorToolStripComboBox.Name = "QuerySelectorToolStripComboBox"
-        Me.QuerySelectorToolStripComboBox.Size = New System.Drawing.Size(532, 28)
+        Me.QuerySelectorToolStripComboBox.Size = New System.Drawing.Size(532, 31)
         '
         'RefreshToolStripButton
         '
         Me.RefreshToolStripButton.Image = CType(resources.GetObject("RefreshToolStripButton.Image"), System.Drawing.Image)
         Me.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RefreshToolStripButton.Name = "RefreshToolStripButton"
-        Me.RefreshToolStripButton.Size = New System.Drawing.Size(105, 25)
+        Me.RefreshToolStripButton.Size = New System.Drawing.Size(105, 28)
         Me.RefreshToolStripButton.Text = "Refresh list"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'DataShaperPivotGridControl
         '
@@ -110,11 +109,11 @@ Partial Class DataShaperForm
         'XtraTabControl1
         '
         Me.XtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.XtraTabControl1.Location = New System.Drawing.Point(0, 28)
+        Me.XtraTabControl1.Location = New System.Drawing.Point(0, 31)
         Me.XtraTabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.XtraTabControl1.Name = "XtraTabControl1"
         Me.XtraTabControl1.SelectedTabPage = Me.DatasetXtraTabPage
-        Me.XtraTabControl1.Size = New System.Drawing.Size(1579, 909)
+        Me.XtraTabControl1.Size = New System.Drawing.Size(1579, 906)
         Me.XtraTabControl1.TabIndex = 2
         Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.DatasetXtraTabPage, Me.PivotXtraTabPage})
         '
@@ -124,18 +123,18 @@ Partial Class DataShaperForm
         Me.DatasetXtraTabPage.Controls.Add(Me.DataShaperGridControlToolStrip)
         Me.DatasetXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.DatasetXtraTabPage.Name = "DatasetXtraTabPage"
-        Me.DatasetXtraTabPage.Size = New System.Drawing.Size(1577, 879)
+        Me.DatasetXtraTabPage.Size = New System.Drawing.Size(1577, 876)
         Me.DatasetXtraTabPage.Text = "Dataset"
         '
         'DataShaperGridControl
         '
         Me.DataShaperGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataShaperGridControl.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataShaperGridControl.Location = New System.Drawing.Point(0, 39)
+        Me.DataShaperGridControl.Location = New System.Drawing.Point(0, 31)
         Me.DataShaperGridControl.MainView = Me.GridView1
         Me.DataShaperGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.DataShaperGridControl.Name = "DataShaperGridControl"
-        Me.DataShaperGridControl.Size = New System.Drawing.Size(1971, 1060)
+        Me.DataShaperGridControl.Size = New System.Drawing.Size(1577, 845)
         Me.DataShaperGridControl.TabIndex = 0
         Me.DataShaperGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -181,7 +180,7 @@ Partial Class DataShaperForm
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportPivotGridButton})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(1577, 31)
+        Me.ToolStrip2.Size = New System.Drawing.Size(1577, 27)
         Me.ToolStrip2.TabIndex = 2
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -190,7 +189,7 @@ Partial Class DataShaperForm
         Me.ExportPivotGridButton.Image = CType(resources.GetObject("ExportPivotGridButton.Image"), System.Drawing.Image)
         Me.ExportPivotGridButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ExportPivotGridButton.Name = "ExportPivotGridButton"
-        Me.ExportPivotGridButton.Size = New System.Drawing.Size(141, 28)
+        Me.ExportPivotGridButton.Size = New System.Drawing.Size(141, 24)
         Me.ExportPivotGridButton.Text = "Export to Excel..."
         '
         'DataShaperForm

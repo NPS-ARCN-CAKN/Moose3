@@ -1,8 +1,11 @@
 ﻿Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Repository
 Imports DevExpress.XtraGrid
+Imports DevExpress.XtraGrid.Columns
+Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
+Imports DevExpress.XtraMap
 Imports DevExpress.XtraVerticalGrid
 Imports DevExpress.XtraVerticalGrid.Rows
 Imports SkeeterUtilities.DataFileToDataTableConverters.DataFileToDataTableConverters
@@ -25,6 +28,7 @@ Public Class Form1
             For Each Row As DataRow In SurveyUnitSetsDataTable.Rows
                 Me.SurveyUnitSetsRepositoryItemComboBox.Items.Add(Row.Item("SurveyUnitSet").trim)
             Next
+
 
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
@@ -85,7 +89,7 @@ Public Class Form1
     End Function
 
     ''' <summary>
-    ''' Queries the database for data table column descriptions and loads them into data grid view column toot tips
+    ''' Queries the database for data table column descriptions and loads them into data grid view column tooltips
     ''' </summary>
     Private Sub LoadGridColumnDescriptions()
         Try
@@ -116,19 +120,23 @@ Public Class Form1
     ''' long text fields so that they are easier to see at a glance.
     ''' </summary>
     Private Sub SetUpSurveyVGridControlRowEditors()
-        'Create a RepositoryItemMemoEdit editor to handle the Summary data field
-        Dim AbstractMemoEdit As New RepositoryItemMemoEdit
-        Dim DatasetProcessingStepsMemoEdit As New RepositoryItemMemoEdit
-        Dim SummaryMemoEdit As New RepositoryItemMemoEdit
-        Dim CommentsMemoEdit As New RepositoryItemMemoEdit
-        AbstractMemoEdit.WordWrap = True
-        DatasetProcessingStepsMemoEdit.WordWrap = True
-        SummaryMemoEdit.WordWrap = True
-        CommentsMemoEdit.WordWrap = True
-        rowAbstract.Properties.RowEdit = AbstractMemoEdit
-        rowDatasetProcessingSteps.Properties.RowEdit = DatasetProcessingStepsMemoEdit
-        rowSummary.Properties.RowEdit = SummaryMemoEdit 'Set rowSummary's row editor to SummaryMemoEdit
-        rowComments.Properties.RowEdit = CommentsMemoEdit
+        Try
+            'Create a RepositoryItemMemoEdit editor to handle the Summary data field
+            Dim AbstractMemoEdit As New RepositoryItemMemoEdit
+            Dim DatasetProcessingStepsMemoEdit As New RepositoryItemMemoEdit
+            Dim SummaryMemoEdit As New RepositoryItemMemoEdit
+            Dim CommentsMemoEdit As New RepositoryItemMemoEdit
+            AbstractMemoEdit.WordWrap = True
+            DatasetProcessingStepsMemoEdit.WordWrap = True
+            SummaryMemoEdit.WordWrap = True
+            CommentsMemoEdit.WordWrap = True
+            rowAbstract.Properties.RowEdit = AbstractMemoEdit
+            rowDatasetProcessingSteps.Properties.RowEdit = DatasetProcessingStepsMemoEdit
+            rowSummary.Properties.RowEdit = SummaryMemoEdit 'Set rowSummary's row editor to SummaryMemoEdit
+            rowComments.Properties.RowEdit = CommentsMemoEdit
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 
 
@@ -144,7 +152,7 @@ Public Class Form1
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
     End Sub
 
@@ -244,22 +252,6 @@ Public Class Form1
     End Sub
 
 
-    'Private Sub LoadParkSubAreasIntoDataGridViews()
-    '    Try
-    '        'ParkSubAreaComboBox_PopEst
-    '        'Dim ParkSubAreasDataTable As DataTable = GetDataTableFromSQLServerDatabase()
-    '        Dim SubAreasDataTable As DataTable = MooseDataSet.Tables("GSPE_PopulationEstimates").DefaultView.ToTable(True, "ParkSubArea")
-    '        For Each SubAreaDataRow As DataRow In SubAreasDataTable.Rows
-    '            Dim ParkSubArea As String = SubAreaDataRow.Item("ParkSubArea").trim
-    '            Debug.Print(ParkSubArea)
-    '            'Me.ParkSubAreaComboBox_PopEst.Items.Add(ParkSubArea)
-    '        Next
-    '    Catch ex As Exception
-    '        Debug.Print(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
-    '    End Try
-
-    'End Sub
-
 
 
 
@@ -295,12 +287,124 @@ Public Class Form1
 
         LoadGridColumnDescriptions()
 
-        'Me.DensityEstimatesDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
-        'Me.ResultsDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnMode.AllCellsExceptHeader)
+        'Load a Web Map Service background map layer into the MapControl to give context to where survey units are located
+        Try
+            Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
+            ShadedReliefWMSImageLayer.Name = "National Map"
+            Me.SurveyMapControl.Layers.Add(ShadedReliefWMSImageLayer)
+        Catch ex As Exception
+            MsgBox(ex.Message & " WMS map layer load failed: " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+
+
+
+
+        'Create some spatial data
+        'Dim DT As New DataTable("Data")
+        'DT.Columns.Add(New DataColumn("Lat", GetType(Double)))
+        'DT.Columns.Add(New DataColumn("Lon", GetType(Double)))
+        'For i As Double = 50 To 70
+        '    Dim NewRow As DataRow = DT.NewRow
+        '    NewRow.Item("Lat") = i
+        '    NewRow.Item("Lon") = (i + 100) * -1
+        '    DT.Rows.Add(NewRow)
+        'Next
+        'Dim Sql As String = "SELECT [ID],Moose,X_Coord,Y_Coord FROM Dataset_GSPE_WithSurveyUnits WHERE Moose > 0 And SurveyName = '2022 GAAR Spring Moose Survey'"
+        'Dim DT As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, Sql)
+        ''Create an adapter
+        'Dim adapter As DevExpress.XtraMap.HeatmapDataSourceAdapter = New HeatmapDataSourceAdapter
+        'adapter.DataSource = DT
+        'adapter.Mappings.XCoordinate = "X_Coord" ' The data source field name that provides x-coordinates.
+        'adapter.Mappings.YCoordinate = "Y_Coord" ' The data source field name that provides y-coordinates.
+
+        ''Create a provider
+        'Dim provider As HeatmapProvider = New HeatmapProvider
+        'provider.PointSource = adapter
+
+        'Dim MyHeatMapDensityBasedAlgorithm As New HeatmapDensityBasedAlgorithm
+        'MyHeatMapDensityBasedAlgorithm.PointRadius = 10
+        'provider.Algorithm = MyHeatMapDensityBasedAlgorithm
+
+        ''Create the heat map image layer
+        'Dim heatmapLayer As ImageLayer = New ImageLayer
+        'heatmapLayer.DataProvider = provider
+
+        ''Add the heat map to the map control
+        'Me.SurveyMapControl.Layers.Add(heatmapLayer)
+        'Me.SurveyMapControl.ZoomToFitLayerItems()
+
+        'Dim legend As ColorScaleLegend = New ColorScaleLegend
+        'legend.Header = "Moose"
+        'legend.EnableGradientScale = True
+        'legend.Layer = heatmapLayer
+        'legend.HeaderStyle.Font = New Font("Tahoma", 10)
+        'Me.SurveyMapControl.Legends.Add(legend)
+
+
+
 
     End Sub
 
 
+
+    Private Sub LoadSurveyUnitsIntoMap()
+        Try
+
+            'If there are survey units available for the survey then load them into the map control
+
+            'Get the survey name
+            Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
+            If SurveyName.Length > 0 Then
+
+                Dim LC As LayerCollection = Me.SurveyMapControl.Layers()
+
+                'Get rid of any existing Units layer
+                Try
+                    Dim UnitsLayer As VectorItemsLayer = LC("Units")
+                    LC.Remove(UnitsLayer)
+                Catch ex As Exception
+                    Debug.Print(ex.Message)
+                End Try
+
+
+                'Create a DevEx SqlGeometryDataAdapter and retrieve the survey units polygons from the database
+                Dim MySqlGeometryDataAdapter As New SqlGeometryDataAdapter()
+                Dim Sql As String = "SELECT Feature,[ID]  FROM Dataset_GSPE_WithSurveyUnits where surveyname='" & SurveyName & "' And Feature is not NULL;"
+                With MySqlGeometryDataAdapter
+                    .ConnectionString = My.Settings.MooseConnectionString
+                    .SqlText = Sql
+                    .SpatialDataMember = "Feature"
+                End With
+
+                'Create a VectorItemsLayer to add to the MapControl
+                Dim UnitsVectorItemsLayer As New VectorItemsLayer
+                With UnitsVectorItemsLayer
+                    .Data = MySqlGeometryDataAdapter
+                    .ShapeTitlesPattern = "{ID}"
+                    .Name = "Units"
+                    .ItemStyle.Fill = Color.FromArgb(10, 255, 128, 0)
+                    .ItemStyle.Stroke = Color.Red
+                    .SelectedItemStyle.Fill = Color.FromArgb(10, 255, 128, 0)
+                    .SelectedItemStyle.Stroke = Color.Yellow
+                    .SelectedItemStyle.StrokeWidth = 4
+                End With
+                Me.SurveyMapControl.Layers.Add(UnitsVectorItemsLayer)
+
+                'Add a handler for when the layer's data is loaded
+                AddHandler UnitsVectorItemsLayer.DataLoaded, AddressOf UnitsVectorItemsLayer_DataLoaded
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & " " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+
+
+    End Sub
+
+
+    Private Sub UnitsVectorItemsLayer_DataLoaded(ByVal sender As Object, ByVal e As DataLoadedEventArgs)
+        Me.SurveyMapControl.ZoomToFitLayerItems(0.3)
+    End Sub
 
     Private Sub OpenReportReferenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportReferenceToolStripMenuItem.Click
         OpenSurveyIRMAReference("ReportReferenceCode")
@@ -317,7 +421,9 @@ Public Class Form1
     End Sub
 
     Private Sub ListBoxControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SurveysListBoxControl.SelectedIndexChanged
-        UpdateHeaderLabel
+        UpdateHeaderLabel()
+
+        LoadSurveyUnitsIntoMap()
     End Sub
     Private Sub OpenReportLinkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportLinkToolStripMenuItem.Click
         Try
@@ -372,6 +478,8 @@ Public Class Form1
         Else
             Me.GSPEDatasetCertificationToolStripLabel.Text = ""
         End If
+
+
 
     End Sub
 
@@ -504,7 +612,7 @@ Public Class Form1
     End Sub
 
 
-    
+
 
 
     Private Sub GSPE_SurveysBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.CurrentChanged
@@ -560,15 +668,19 @@ Public Class Form1
         End Try
     End Sub
     Private Sub PopulationEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles GSPE_PopulationEstimatesDataGridView.DefaultValuesNeeded
-        'Pre-enter metadata on new records
-        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
-        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
-        e.Row.Cells("PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn").Value = -9999
-        e.Row.Cells("PopulationEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
-        e.Row.Cells("ParkSubAreaTextBox_PopEst").Value = "REQUIRED"
-        e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn").Value = "REQUIRED: "
-        e.Row.Cells("StrataDataGridViewTextBoxColumn").Value = "REQUIRED: "
-        e.Row.Cells("ConfidenceDataGridViewTextBoxColumn").Value = "-9999"
+        Try
+            'Pre-enter metadata on new records
+            e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn").Value = Now
+            e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn").Value = My.User.Name
+            e.Row.Cells("PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn").Value = -9999
+            e.Row.Cells("PopulationEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+            e.Row.Cells("ParkSubAreaTextBox_PopEst").Value = "REQUIRED"
+            e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn").Value = "REQUIRED: "
+            e.Row.Cells("StrataDataGridViewTextBoxColumn").Value = "REQUIRED: "
+            e.Row.Cells("ConfidenceDataGridViewTextBoxColumn").Value = "-9999"
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
     Private Sub DensityEstimatesDataGridView_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles DensityEstimatesDataGridView.DataError
         Try
@@ -589,22 +701,30 @@ Public Class Form1
 
 
     Private Sub DensityEstimatesDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles DensityEstimatesDataGridView.DefaultValuesNeeded
-        'Pre-enter metadata on new records
-        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn1").Value = Now
-        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn1").Value = My.User.Name
-        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn1").Value = "REQUIRED"
-        e.Row.Cells("StratumDataGridViewTextBoxColumn").Value = "REQUIRED: "
-        e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn1").Value = "REQUIRED: "
-        e.Row.Cells("DensityEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+        Try
+            'Pre-enter metadata on new records
+            e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn1").Value = Now
+            e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn1").Value = My.User.Name
+            e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn1").Value = "REQUIRED"
+            e.Row.Cells("StratumDataGridViewTextBoxColumn").Value = "REQUIRED: "
+            e.Row.Cells("AnalysisColumnDataGridViewTextBoxColumn1").Value = "REQUIRED: "
+            e.Row.Cells("DensityEstimateSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 
     Private Sub ResultsDataGridView_DefaultValuesNeeded(sender As Object, e As DataGridViewRowEventArgs) Handles ResultsDataGridView.DefaultValuesNeeded
-        'Pre-enter metadata on new records
-        e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn2").Value = Now
-        e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn2").Value = My.User.Name
-        e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn2").Value = "REQUIRED"
-        e.Row.Cells("ResultsSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
-        e.Row.Cells("ResultID").Value = Guid.NewGuid.ToString
+        Try
+            'Pre-enter metadata on new records
+            e.Row.Cells("RecordInsertedDateDataGridViewTextBoxColumn2").Value = Now
+            e.Row.Cells("RecordInsertedByDataGridViewTextBoxColumn2").Value = My.User.Name
+            e.Row.Cells("ParkSubAreaDataGridViewTextBoxColumn2").Value = "REQUIRED"
+            e.Row.Cells("ResultsSourceDataGridViewTextBoxColumn").Value = "REQUIRED: Enter a source for the estimate."
+            e.Row.Cells("ResultID").Value = Guid.NewGuid.ToString
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 
     Private Sub AddSurveyToolStripButton_Click(sender As Object, e As EventArgs) Handles AddSurveyToolStripButton.Click
@@ -620,7 +740,6 @@ Public Class Form1
     Private Sub EnableEditsToolStripButton_Click(sender As Object, e As EventArgs) Handles EnableEditsToolStripButton.Click
         Try
             'Set any editable controls to read-only or editable based on the text of EnableEditsToolStripButton
-
             Dim GSPEGridView As GridView = TryCast(Me.GSPEGridControl.MainView, GridView)
 
             'Determine whether to make the form read-only or editable
@@ -674,52 +793,92 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub GridView2_SelectionChanged(sender As Object, e As DevExpress.Data.SelectionChangedEventArgs) Handles GridView2.SelectionChanged
+        'If the user clicks the GridControl containing the GSPE data then the application should highlight the accompanying
+        'survey unit in the MapControl so they know which unit they clicked on.
+        Try
+
+            'Get a reference to the survey units map layer
+            Dim UnitsLayer As VectorItemsLayer = Me.SurveyMapControl.Layers("Units")
+
+            'Clear any existing selected survey units from the layer
+            UnitsLayer.SelectedItems.Clear()
+
+            'Get a reference to the GSPE GridControl's GridView
+            Dim GV As GridView = sender
+
+            'If the GSPE GridControl has selected items
+            If GV.SelectedRowsCount > 0 Then
+
+                'Get the row indices of the selected rows
+                Dim SelectedRowsIndices As Integer() = GV.GetSelectedRows
+
+                'Loop through the selected rows and look for map items with ID values matching those in the GSPE grid's selected rows
+                For Each RowIndex As Integer In SelectedRowsIndices
+
+                    If RowIndex >= 0 Then
+                        'Get the selected GSPE row's ID value
+                        Dim ID As String = GV.GetRowCellValue(RowIndex, "ID").ToString.Trim
+
+                        'Look for a matching ID among the survey units map layer's MapItems
+                        For Each MI As MapItem In UnitsLayer.Data.Items
+                            'If there's a match, add the map item to the map layers selected items collection
+                            If MI.Attributes("ID").Value.ToString.Trim.ToLower = ID.ToString.Trim.ToLower Then
+                                UnitsLayer.SelectedItems.Add(MI)
+                            End If
+                        Next
+                    End If
+
+                Next
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
+
+    Private Sub SurveyMapControl_MapItemClick(sender As Object, e As MapItemClickEventArgs) Handles SurveyMapControl.MapItemClick
+        'User clicked a MapItem on the MapControl, get the MapItem's ID attribute and look up its location in the 
+        'GSPEGridControl's main view, and then set that row as the focused row
+        Try
+            'Make sure we have a clicked MapItem
+            If Not e.Item Is Nothing Then
+
+                'Get a handle on the clicked MapItem and retriev it's ID attribute
+                Dim ClickedItem As MapItem = e.Item
+                Dim ID As String = ClickedItem.Attributes("ID").Value.ToString.Trim
+
+                'Get a handle on the GSPEGridControl's main view and set it up
+                Dim GV As GridView = TryCast(GSPEGridControl.MainView, GridView)
+                With GV
+                    .OptionsSelection.MultiSelect = True
+                    .ClearSelection()
+                End With
 
 
+                ' Obtain the number of data rows in the GSPEGridControl. 
+                Dim DataRowCount As Integer = GV.DataRowCount
+
+                'Loop through the GSPEGridControl's rows and look for a match to the MapItem's ID attribute
+                For i As Integer = 0 To DataRowCount - 1
+                    'Get the current row's ID attribute
+                    Dim UnitID As String = GV.GetRowCellValue(i, "ID").ToString.Trim
+
+                    'See if the row's ID attribute matches the selected MapItem's ID attribute
+                    'If a match then set it as the focused row
+                    'Note: Though I added the row to the selected rows collection, it did not seem to get highlighted in 
+                    'any way on the grid control. Focused row seemed to function, however
+                    If UnitID = ID Then
+                        GV.SelectRow(i)
+                        GV.FocusedRowHandle = i
+                    End If
+                Next
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message & " " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+    End Sub
 
 
-
-    'Private Sub PopulationEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles PopulationEstimatesDataGridView.SelectionChanged
-    '    Me.PopulationEstimatesDataGridView.EndEdit()
-    '    Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
-    'End Sub
-
-    'Private Sub DensityEstimatesDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles DensityEstimatesDataGridView.SelectionChanged
-    '    Me.DensityEstimatesDataGridView.EndEdit()
-    '    Me.GSPE_DensityEstimatesBindingSource.EndEdit()
-    'End Sub
-
-    'Private Sub ResultsDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles ResultsDataGridView.SelectionChanged
-    '    Me.ResultsDataGridView.EndEdit()
-    '    Me.GSPE_ResultsBindingSource.EndEdit()
-    'End Sub
-
-    'Private Sub SurveyVGridControl_SelectedChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.SelectedChangedEventArgs) Handles SurveyVGridControl.SelectedChanged
-    '    Me.GSPE_SurveysBindingSource.EndEdit()
-    'End Sub
-
-
-
-    'Private Sub PopulationEstimatesDataGridView_CellValidating(sender As Object, e As DataGridViewCellValidatingEventArgs) Handles PopulationEstimatesDataGridView.CellValidating
-    '    'Validate the entered data
-    '    Dim DGV As DataGridView = sender
-    '    Dim RequiredColumns As String = "SurveyName,ParkSubArea,Analysis_Column,Strata,Confidence,PopulationEstimateSource"
-    '    Dim RequiredColumnNames As String() = RequiredColumns.Split(",")
-    '    For Each ColumnName As String In RequiredColumnNames
-    '        If DGV.Columns(e.ColumnIndex).HeaderText <> ColumnName Then
-    '            Return
-    '        Else
-    '            If String.IsNullOrEmpty(e.FormattedValue) = True Then
-    '                DGV.Rows(e.RowIndex).ErrorText = ColumnName & " is required."
-    '                e.Cancel = True
-    '            End If
-    '        End If
-    '    Next
-    'End Sub
-
-    'Private Sub PopulationEstimatesDataGridView_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles PopulationEstimatesDataGridView.CellEndEdit
-    '    'Clear any row errors 
-    '    Dim DGV As DataGridView = sender
-    '    DGV.Rows(e.RowIndex).ErrorText = String.Empty
-    'End Sub
 End Class

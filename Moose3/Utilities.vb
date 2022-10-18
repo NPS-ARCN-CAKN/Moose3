@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraMap
 Imports DevExpress.XtraPivotGrid
 Imports DevExpress.XtraPrinting
 Imports DevExpress.XtraVerticalGrid
@@ -241,5 +242,27 @@ Module Utilities
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Returns a DevExpress ImageLayer based on a Web Map Service's LayerName and URL suitable for adding to a DevExpress MapControl
+    ''' </summary>
+    ''' <param name="LayerName">Name of the WMS layer. String.</param>
+    ''' <param name="URL">URL of the WMS. String.</param>
+    ''' <returns></returns>
+    Public Function GetWMSImageLayer(LayerName As String, URL As String) As ImageLayer
+        Dim MyImageLayer As New ImageLayer
+        Dim MyWMSDataProvider As New WmsDataProvider
+        Try
+            With MyWMSDataProvider
+                .ActiveLayerName = LayerName
+                .ServerUri = URL
+            End With
+            MyImageLayer.DataProvider = MyWMSDataProvider
+        Catch ex As Exception
+            MsgBox(ex.Message & " (" & System.Reflection.MethodBase.GetCurrentMethod.Name & ").")
+        End Try
+
+        Return MyImageLayer
+    End Function
 
 End Module
