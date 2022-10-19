@@ -189,6 +189,10 @@ Public Class Form1
                             .Item("RecordInsertedBy") = My.User.Name
                         End With
                         MooseDataSet.Tables("GSPE_Surveys").Rows.Add(NewGSPE_SurveyDataRow)
+
+                        'Move to the new record
+                        MoveToSurvey(NewSurveyName)
+
                         MsgBox("Your new survey record, " & NewSurveyName & " is now available in the surveys inventory selector.")
 
                     Else
@@ -458,10 +462,22 @@ Public Class Form1
         AskToSaveDataset()
         LoadDataset()
 
-        'Find the placemark and move to it
-        Dim LastItemIndex As Integer = Me.SurveysListBoxControl.FindString(SurveyName)
-        Me.SurveysListBoxControl.SelectedIndex = LastItemIndex
+        MoveToSurvey(SurveyName)
 
+    End Sub
+
+    ''' <summary>
+    ''' Moves the main interface to the dataset referenced by SurveyName
+    ''' </summary>
+    ''' <param name="SurveyName">SurveyName to look for and move to. String</param>
+    Private Sub MoveToSurvey(SurveyName As String)
+        Try
+            'Find the placemark and move to it
+            Dim LastItemIndex As Integer = Me.SurveysListBoxControl.FindString(SurveyName)
+            Me.SurveysListBoxControl.SelectedIndex = LastItemIndex
+        Catch ex As Exception
+            Me.SurveysListBoxControl.SelectedIndex = 0
+        End Try
     End Sub
 
     Private Sub DataShaperToolStripButton_Click(sender As Object, e As EventArgs) Handles DataShaperToolStripButton.Click
