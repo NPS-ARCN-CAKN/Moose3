@@ -57,8 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=inpyugamsvm01\nuna_dev;Initial Catalog=Moose;Integrated Security=True"& _ 
-            "")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=inpyugamsvm01\nuna;Initial Catalog=Moose;Integrated Security=True")>  _
         Public ReadOnly Property MooseConnectionString() As String
             Get
                 Return CType(Me("MooseConnectionString"),String)

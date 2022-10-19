@@ -270,14 +270,11 @@ Partial Class Form1
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colPark1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.SurveyUnitSetsRepositoryItemComboBox = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
-        Me.colSurveyName4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colSurveyYear = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colSurveyName4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colSeason1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colSubArea = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colGMU = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colID = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colStartDate1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colStopDate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIntID = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRand = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colFiringOrder = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -291,36 +288,37 @@ Partial Class Form1
         Me.colStratHab = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colSearchMin = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colDateCounted = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colPerc_Not_Flown = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colX_COORD = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colY_COORD = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colArea_SqMi = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCALF1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCOW_W_01 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCOW_W_11 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCOW_W_21 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCOW_W_31 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCOW1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colYBULL_ALL1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colSM_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colMED_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colLG_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colBULL_ALL1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colADULT1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colMOOSE1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colUNKNOWN1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_30_401 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_30_501 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_30_601 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_41_501 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colBULL_ALL1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_GT_501 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_GT_601 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_GTE_501 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_LT_301 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colBULL_LT_501 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCALF1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_01 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_11 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_21 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCOW_W_31 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colLG_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colMED_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colMED_L_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colSM_BULL1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colUNKNOWN1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colYBULL_ALL1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colYBULL_GTSF1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colYBULL_SF1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colMOOSE1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colStartDate1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colStopDate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colPilot = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colObserver = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colPersonnel1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -328,6 +326,8 @@ Partial Class Form1
         Me.colSCF_Plot = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colStd = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colInt = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colGMU = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colPerc_Not_Flown = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colComments4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colSourceFilename = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRecordInsertedDate4 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -832,7 +832,7 @@ Partial Class Form1
         Me.SurveyVGridControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveyVGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SurveyVGridControl.LayoutStyle = DevExpress.XtraVerticalGrid.LayoutViewStyle.SingleRecordView
-        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 73)
+        Me.SurveyVGridControl.Location = New System.Drawing.Point(0, 91)
         Me.SurveyVGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveyVGridControl.Name = "SurveyVGridControl"
         Me.SurveyVGridControl.OptionsBehavior.Editable = False
@@ -842,7 +842,7 @@ Partial Class Form1
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit, Me.DatasetProcessingStepsRepositoryItemMemoExEdit})
         Me.SurveyVGridControl.RowHeaderWidth = 32
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(443, 778)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(554, 973)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
@@ -1075,11 +1075,11 @@ Partial Class Form1
         'MainXtraTabControl
         '
         Me.MainXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainXtraTabControl.Location = New System.Drawing.Point(303, 105)
+        Me.MainXtraTabControl.Location = New System.Drawing.Point(242, 72)
         Me.MainXtraTabControl.Margin = New System.Windows.Forms.Padding(4)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(556, 1086)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(445, 881)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage, Me.GSPEDeliverableXtraTabPage, Me.GSPEPivotXtraTabPage})
         '
@@ -1100,7 +1100,7 @@ Partial Class Form1
         Me.SurveyDetailsPanel.Location = New System.Drawing.Point(0, 0)
         Me.SurveyDetailsPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveyDetailsPanel.Name = "SurveyDetailsPanel"
-        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(443, 73)
+        Me.SurveyDetailsPanel.Size = New System.Drawing.Size(554, 73)
         Me.SurveyDetailsPanel.TabIndex = 2
         '
         'SurveyDetailsLabel
@@ -1111,7 +1111,7 @@ Partial Class Form1
         Me.SurveyDetailsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.SurveyDetailsLabel.Name = "SurveyDetailsLabel"
         Me.SurveyDetailsLabel.Padding = New System.Windows.Forms.Padding(5)
-        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(554, 90)
+        Me.SurveyDetailsLabel.Size = New System.Drawing.Size(554, 73)
         Me.SurveyDetailsLabel.TabIndex = 0
         Me.SurveyDetailsLabel.Text = "Survey details. Right click the grid for options."
         '
@@ -1122,7 +1122,7 @@ Partial Class Form1
         Me.ResultsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.table_lightning
         Me.ResultsXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsXtraTabPage.Name = "ResultsXtraTabPage"
-        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(664, 851)
+        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(443, 851)
         Me.ResultsXtraTabPage.Text = "Results"
         '
         'ResultsSplitContainer
@@ -1142,8 +1142,8 @@ Partial Class Form1
         'ResultsSplitContainer.Panel2
         '
         Me.ResultsSplitContainer.Panel2.Controls.Add(Me.ResultsSplitContainer2)
-        Me.ResultsSplitContainer.Size = New System.Drawing.Size(664, 851)
-        Me.ResultsSplitContainer.SplitterDistance = 284
+        Me.ResultsSplitContainer.Size = New System.Drawing.Size(443, 851)
+        Me.ResultsSplitContainer.SplitterDistance = 283
         Me.ResultsSplitContainer.SplitterWidth = 5
         Me.ResultsSplitContainer.TabIndex = 1
         '
@@ -1169,7 +1169,7 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPE_PopulationEstimatesDataGridView.Name = "GSPE_PopulationEstimatesDataGridView"
         Me.GSPE_PopulationEstimatesDataGridView.RowHeadersWidth = 51
-        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(664, 259)
+        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(443, 258)
         Me.GSPE_PopulationEstimatesDataGridView.TabIndex = 0
         '
         'ParkSubAreaTextBox_PopEst
@@ -1440,7 +1440,7 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
         Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
-        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(664, 25)
+        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(443, 25)
         Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
         Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
         '
@@ -1467,7 +1467,7 @@ Partial Class Form1
         '
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsDataGridView)
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ToolStrip2)
-        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(664, 562)
+        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(443, 563)
         Me.ResultsSplitContainer2.SplitterDistance = 333
         Me.ResultsSplitContainer2.SplitterWidth = 5
         Me.ResultsSplitContainer2.TabIndex = 0
@@ -1485,7 +1485,7 @@ Partial Class Form1
         Me.DensityEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.DensityEstimatesDataGridView.Name = "DensityEstimatesDataGridView"
         Me.DensityEstimatesDataGridView.RowHeadersWidth = 51
-        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(664, 308)
+        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(443, 308)
         Me.DensityEstimatesDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn1
@@ -1634,7 +1634,7 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(664, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(443, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "Population estimates (from report(s)"
         '
@@ -1657,7 +1657,7 @@ Partial Class Form1
         Me.ResultsDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsDataGridView.Name = "ResultsDataGridView"
         Me.ResultsDataGridView.RowHeadersWidth = 51
-        Me.ResultsDataGridView.Size = New System.Drawing.Size(664, 199)
+        Me.ResultsDataGridView.Size = New System.Drawing.Size(443, 200)
         Me.ResultsDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn2
@@ -2012,7 +2012,7 @@ Partial Class Form1
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(664, 25)
+        Me.ToolStrip2.Size = New System.Drawing.Size(443, 25)
         Me.ToolStrip2.TabIndex = 2
         Me.ToolStrip2.Text = "Population estimates (from report(s)"
         '
@@ -2046,7 +2046,7 @@ Partial Class Form1
         Me.GSPEDeliverableXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.GSPEDeliverableXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEDeliverableXtraTabPage.Name = "GSPEDeliverableXtraTabPage"
-        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(554, 1056)
+        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(443, 851)
         Me.GSPEDeliverableXtraTabPage.Text = "GSPE data deliverable"
         '
         'GSPEGridControl
@@ -2059,13 +2059,13 @@ Partial Class Form1
         Me.GSPEGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEGridControl.Name = "GSPEGridControl"
         Me.GSPEGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemComboBox1, Me.SurveyUnitSetsRepositoryItemComboBox})
-        Me.GSPEGridControl.Size = New System.Drawing.Size(693, 1281)
+        Me.GSPEGridControl.Size = New System.Drawing.Size(554, 1025)
         Me.GSPEGridControl.TabIndex = 0
         Me.GSPEGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
         'GridView2
         '
-        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPark1, Me.colSurveyName4, Me.colSurveyYear, Me.colSeason1, Me.colSubArea, Me.colGMU, Me.colID, Me.colStartDate1, Me.colStopDate, Me.colIntID, Me.colRand, Me.colFiringOrder, Me.colSelected, Me.colCounted, Me.colExclude, Me.colStrat, Me.colStratName, Me.colStratMoose, Me.colStratTracks, Me.colStratHab, Me.colSearchMin, Me.colDateCounted, Me.colPerc_Not_Flown, Me.colX_COORD, Me.colY_COORD, Me.colArea_SqMi, Me.colADULT1, Me.colBULL_30_401, Me.colBULL_30_501, Me.colBULL_30_601, Me.colBULL_41_501, Me.colBULL_ALL1, Me.colBULL_GT_501, Me.colBULL_GT_601, Me.colBULL_GTE_501, Me.colBULL_LT_301, Me.colBULL_LT_501, Me.colCALF1, Me.colCOW1, Me.colCOW_W_01, Me.colCOW_W_11, Me.colCOW_W_21, Me.colCOW_W_31, Me.colLG_BULL1, Me.colMED_BULL1, Me.colMED_L_BULL1, Me.colSM_BULL1, Me.colUNKNOWN1, Me.colYBULL_ALL1, Me.colYBULL_GTSF1, Me.colYBULL_SF1, Me.colMOOSE1, Me.colPilot, Me.colObserver, Me.colPersonnel1, Me.colDensity1, Me.colSCF_Plot, Me.colStd, Me.colInt, Me.colComments4, Me.colSourceFilename, Me.colRecordInsertedDate4, Me.colRecordInsertedBy4, Me.colCertificationDate, Me.colCertifiedBy, Me.colCertificationLevel, Me.SurveyUnitSetGridColumn})
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPark1, Me.colSurveyYear, Me.colSurveyName4, Me.colSeason1, Me.colSubArea, Me.colID, Me.colIntID, Me.colRand, Me.colFiringOrder, Me.colSelected, Me.colCounted, Me.colExclude, Me.colStrat, Me.colStratName, Me.colStratMoose, Me.colStratTracks, Me.colStratHab, Me.colSearchMin, Me.colDateCounted, Me.colX_COORD, Me.colY_COORD, Me.colArea_SqMi, Me.colCALF1, Me.colCOW_W_01, Me.colCOW_W_11, Me.colCOW_W_21, Me.colCOW_W_31, Me.colCOW1, Me.colYBULL_ALL1, Me.colSM_BULL1, Me.colMED_BULL1, Me.colLG_BULL1, Me.colBULL_ALL1, Me.colADULT1, Me.colMOOSE1, Me.colUNKNOWN1, Me.colBULL_30_401, Me.colBULL_30_501, Me.colBULL_30_601, Me.colBULL_41_501, Me.colBULL_GT_501, Me.colBULL_GT_601, Me.colBULL_GTE_501, Me.colBULL_LT_301, Me.colBULL_LT_501, Me.colMED_L_BULL1, Me.colYBULL_GTSF1, Me.colYBULL_SF1, Me.colStartDate1, Me.colStopDate, Me.colPilot, Me.colObserver, Me.colPersonnel1, Me.colDensity1, Me.colSCF_Plot, Me.colStd, Me.colInt, Me.colGMU, Me.colPerc_Not_Flown, Me.colComments4, Me.colSourceFilename, Me.colRecordInsertedDate4, Me.colRecordInsertedBy4, Me.colCertificationDate, Me.colCertifiedBy, Me.colCertificationLevel, Me.SurveyUnitSetGridColumn})
         Me.GridView2.DetailHeight = 431
         Me.GridView2.GridControl = Me.GSPEGridControl
         Me.GridView2.Name = "GridView2"
@@ -2079,7 +2079,7 @@ Partial Class Form1
         Me.colPark1.MinWidth = 27
         Me.colPark1.Name = "colPark1"
         Me.colPark1.Visible = True
-        Me.colPark1.VisibleIndex = 0
+        Me.colPark1.VisibleIndex = 1
         Me.colPark1.Width = 100
         '
         'SurveyUnitSetsRepositoryItemComboBox
@@ -2089,16 +2089,6 @@ Partial Class Form1
         Me.SurveyUnitSetsRepositoryItemComboBox.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SurveyUnitSetsRepositoryItemComboBox.Name = "SurveyUnitSetsRepositoryItemComboBox"
         '
-        'colSurveyName4
-        '
-        Me.colSurveyName4.FieldName = "SurveyName"
-        Me.colSurveyName4.MinWidth = 27
-        Me.colSurveyName4.Name = "colSurveyName4"
-        Me.colSurveyName4.OptionsColumn.ReadOnly = True
-        Me.colSurveyName4.Visible = True
-        Me.colSurveyName4.VisibleIndex = 1
-        Me.colSurveyName4.Width = 100
-        '
         'colSurveyYear
         '
         Me.colSurveyYear.FieldName = "SurveyYear"
@@ -2106,8 +2096,18 @@ Partial Class Form1
         Me.colSurveyYear.Name = "colSurveyYear"
         Me.colSurveyYear.OptionsColumn.ReadOnly = True
         Me.colSurveyYear.Visible = True
-        Me.colSurveyYear.VisibleIndex = 2
+        Me.colSurveyYear.VisibleIndex = 3
         Me.colSurveyYear.Width = 100
+        '
+        'colSurveyName4
+        '
+        Me.colSurveyName4.FieldName = "SurveyName"
+        Me.colSurveyName4.MinWidth = 27
+        Me.colSurveyName4.Name = "colSurveyName4"
+        Me.colSurveyName4.OptionsColumn.ReadOnly = True
+        Me.colSurveyName4.Visible = True
+        Me.colSurveyName4.VisibleIndex = 2
+        Me.colSurveyName4.Width = 100
         '
         'colSeason1
         '
@@ -2115,7 +2115,7 @@ Partial Class Form1
         Me.colSeason1.MinWidth = 27
         Me.colSeason1.Name = "colSeason1"
         Me.colSeason1.Visible = True
-        Me.colSeason1.VisibleIndex = 3
+        Me.colSeason1.VisibleIndex = 4
         Me.colSeason1.Width = 100
         '
         'colSubArea
@@ -2124,17 +2124,8 @@ Partial Class Form1
         Me.colSubArea.MinWidth = 27
         Me.colSubArea.Name = "colSubArea"
         Me.colSubArea.Visible = True
-        Me.colSubArea.VisibleIndex = 4
+        Me.colSubArea.VisibleIndex = 5
         Me.colSubArea.Width = 100
-        '
-        'colGMU
-        '
-        Me.colGMU.FieldName = "GMU"
-        Me.colGMU.MinWidth = 27
-        Me.colGMU.Name = "colGMU"
-        Me.colGMU.Visible = True
-        Me.colGMU.VisibleIndex = 5
-        Me.colGMU.Width = 100
         '
         'colID
         '
@@ -2143,26 +2134,8 @@ Partial Class Form1
         Me.colID.Name = "colID"
         Me.colID.OptionsColumn.ReadOnly = True
         Me.colID.Visible = True
-        Me.colID.VisibleIndex = 6
+        Me.colID.VisibleIndex = 0
         Me.colID.Width = 100
-        '
-        'colStartDate1
-        '
-        Me.colStartDate1.FieldName = "StartDate"
-        Me.colStartDate1.MinWidth = 27
-        Me.colStartDate1.Name = "colStartDate1"
-        Me.colStartDate1.Visible = True
-        Me.colStartDate1.VisibleIndex = 7
-        Me.colStartDate1.Width = 100
-        '
-        'colStopDate
-        '
-        Me.colStopDate.FieldName = "StopDate"
-        Me.colStopDate.MinWidth = 27
-        Me.colStopDate.Name = "colStopDate"
-        Me.colStopDate.Visible = True
-        Me.colStopDate.VisibleIndex = 8
-        Me.colStopDate.Width = 100
         '
         'colIntID
         '
@@ -2281,15 +2254,6 @@ Partial Class Form1
         Me.colDateCounted.VisibleIndex = 21
         Me.colDateCounted.Width = 100
         '
-        'colPerc_Not_Flown
-        '
-        Me.colPerc_Not_Flown.FieldName = "Perc_Not_Flown"
-        Me.colPerc_Not_Flown.MinWidth = 27
-        Me.colPerc_Not_Flown.Name = "colPerc_Not_Flown"
-        Me.colPerc_Not_Flown.Visible = True
-        Me.colPerc_Not_Flown.VisibleIndex = 22
-        Me.colPerc_Not_Flown.Width = 100
-        '
         'colX_COORD
         '
         Me.colX_COORD.FieldName = "X_COORD"
@@ -2317,6 +2281,105 @@ Partial Class Form1
         Me.colArea_SqMi.VisibleIndex = 25
         Me.colArea_SqMi.Width = 100
         '
+        'colCALF1
+        '
+        Me.colCALF1.FieldName = "CALF"
+        Me.colCALF1.MinWidth = 27
+        Me.colCALF1.Name = "colCALF1"
+        Me.colCALF1.Visible = True
+        Me.colCALF1.VisibleIndex = 37
+        Me.colCALF1.Width = 100
+        '
+        'colCOW_W_01
+        '
+        Me.colCOW_W_01.FieldName = "COW_W_0"
+        Me.colCOW_W_01.MinWidth = 27
+        Me.colCOW_W_01.Name = "colCOW_W_01"
+        Me.colCOW_W_01.Visible = True
+        Me.colCOW_W_01.VisibleIndex = 39
+        Me.colCOW_W_01.Width = 100
+        '
+        'colCOW_W_11
+        '
+        Me.colCOW_W_11.FieldName = "COW_W_1"
+        Me.colCOW_W_11.MinWidth = 27
+        Me.colCOW_W_11.Name = "colCOW_W_11"
+        Me.colCOW_W_11.Visible = True
+        Me.colCOW_W_11.VisibleIndex = 40
+        Me.colCOW_W_11.Width = 100
+        '
+        'colCOW_W_21
+        '
+        Me.colCOW_W_21.FieldName = "COW_W_2"
+        Me.colCOW_W_21.MinWidth = 27
+        Me.colCOW_W_21.Name = "colCOW_W_21"
+        Me.colCOW_W_21.Visible = True
+        Me.colCOW_W_21.VisibleIndex = 41
+        Me.colCOW_W_21.Width = 100
+        '
+        'colCOW_W_31
+        '
+        Me.colCOW_W_31.FieldName = "COW_W_3"
+        Me.colCOW_W_31.MinWidth = 27
+        Me.colCOW_W_31.Name = "colCOW_W_31"
+        Me.colCOW_W_31.Visible = True
+        Me.colCOW_W_31.VisibleIndex = 42
+        Me.colCOW_W_31.Width = 100
+        '
+        'colCOW1
+        '
+        Me.colCOW1.FieldName = "COW"
+        Me.colCOW1.MinWidth = 27
+        Me.colCOW1.Name = "colCOW1"
+        Me.colCOW1.Visible = True
+        Me.colCOW1.VisibleIndex = 38
+        Me.colCOW1.Width = 100
+        '
+        'colYBULL_ALL1
+        '
+        Me.colYBULL_ALL1.FieldName = "YBULL_ALL"
+        Me.colYBULL_ALL1.MinWidth = 27
+        Me.colYBULL_ALL1.Name = "colYBULL_ALL1"
+        Me.colYBULL_ALL1.Visible = True
+        Me.colYBULL_ALL1.VisibleIndex = 48
+        Me.colYBULL_ALL1.Width = 100
+        '
+        'colSM_BULL1
+        '
+        Me.colSM_BULL1.FieldName = "SM_BULL"
+        Me.colSM_BULL1.MinWidth = 27
+        Me.colSM_BULL1.Name = "colSM_BULL1"
+        Me.colSM_BULL1.Visible = True
+        Me.colSM_BULL1.VisibleIndex = 46
+        Me.colSM_BULL1.Width = 100
+        '
+        'colMED_BULL1
+        '
+        Me.colMED_BULL1.FieldName = "MED_BULL"
+        Me.colMED_BULL1.MinWidth = 27
+        Me.colMED_BULL1.Name = "colMED_BULL1"
+        Me.colMED_BULL1.Visible = True
+        Me.colMED_BULL1.VisibleIndex = 44
+        Me.colMED_BULL1.Width = 100
+        '
+        'colLG_BULL1
+        '
+        Me.colLG_BULL1.FieldName = "LG_BULL"
+        Me.colLG_BULL1.MinWidth = 27
+        Me.colLG_BULL1.Name = "colLG_BULL1"
+        Me.colLG_BULL1.Visible = True
+        Me.colLG_BULL1.VisibleIndex = 43
+        Me.colLG_BULL1.Width = 100
+        '
+        'colBULL_ALL1
+        '
+        Me.colBULL_ALL1.FieldName = "BULL_ALL"
+        Me.colBULL_ALL1.MinWidth = 27
+        Me.colBULL_ALL1.Name = "colBULL_ALL1"
+        Me.colBULL_ALL1.Visible = True
+        Me.colBULL_ALL1.VisibleIndex = 31
+        Me.colBULL_ALL1.Width = 100
+        '
         'colADULT1
         '
         Me.colADULT1.FieldName = "ADULT"
@@ -2325,6 +2388,24 @@ Partial Class Form1
         Me.colADULT1.Visible = True
         Me.colADULT1.VisibleIndex = 26
         Me.colADULT1.Width = 100
+        '
+        'colMOOSE1
+        '
+        Me.colMOOSE1.FieldName = "MOOSE"
+        Me.colMOOSE1.MinWidth = 27
+        Me.colMOOSE1.Name = "colMOOSE1"
+        Me.colMOOSE1.Visible = True
+        Me.colMOOSE1.VisibleIndex = 51
+        Me.colMOOSE1.Width = 100
+        '
+        'colUNKNOWN1
+        '
+        Me.colUNKNOWN1.FieldName = "UNKNOWN"
+        Me.colUNKNOWN1.MinWidth = 27
+        Me.colUNKNOWN1.Name = "colUNKNOWN1"
+        Me.colUNKNOWN1.Visible = True
+        Me.colUNKNOWN1.VisibleIndex = 47
+        Me.colUNKNOWN1.Width = 100
         '
         'colBULL_30_401
         '
@@ -2361,15 +2442,6 @@ Partial Class Form1
         Me.colBULL_41_501.Visible = True
         Me.colBULL_41_501.VisibleIndex = 30
         Me.colBULL_41_501.Width = 100
-        '
-        'colBULL_ALL1
-        '
-        Me.colBULL_ALL1.FieldName = "BULL_ALL"
-        Me.colBULL_ALL1.MinWidth = 27
-        Me.colBULL_ALL1.Name = "colBULL_ALL1"
-        Me.colBULL_ALL1.Visible = True
-        Me.colBULL_ALL1.VisibleIndex = 31
-        Me.colBULL_ALL1.Width = 100
         '
         'colBULL_GT_501
         '
@@ -2416,78 +2488,6 @@ Partial Class Form1
         Me.colBULL_LT_501.VisibleIndex = 36
         Me.colBULL_LT_501.Width = 100
         '
-        'colCALF1
-        '
-        Me.colCALF1.FieldName = "CALF"
-        Me.colCALF1.MinWidth = 27
-        Me.colCALF1.Name = "colCALF1"
-        Me.colCALF1.Visible = True
-        Me.colCALF1.VisibleIndex = 37
-        Me.colCALF1.Width = 100
-        '
-        'colCOW1
-        '
-        Me.colCOW1.FieldName = "COW"
-        Me.colCOW1.MinWidth = 27
-        Me.colCOW1.Name = "colCOW1"
-        Me.colCOW1.Visible = True
-        Me.colCOW1.VisibleIndex = 38
-        Me.colCOW1.Width = 100
-        '
-        'colCOW_W_01
-        '
-        Me.colCOW_W_01.FieldName = "COW_W_0"
-        Me.colCOW_W_01.MinWidth = 27
-        Me.colCOW_W_01.Name = "colCOW_W_01"
-        Me.colCOW_W_01.Visible = True
-        Me.colCOW_W_01.VisibleIndex = 39
-        Me.colCOW_W_01.Width = 100
-        '
-        'colCOW_W_11
-        '
-        Me.colCOW_W_11.FieldName = "COW_W_1"
-        Me.colCOW_W_11.MinWidth = 27
-        Me.colCOW_W_11.Name = "colCOW_W_11"
-        Me.colCOW_W_11.Visible = True
-        Me.colCOW_W_11.VisibleIndex = 40
-        Me.colCOW_W_11.Width = 100
-        '
-        'colCOW_W_21
-        '
-        Me.colCOW_W_21.FieldName = "COW_W_2"
-        Me.colCOW_W_21.MinWidth = 27
-        Me.colCOW_W_21.Name = "colCOW_W_21"
-        Me.colCOW_W_21.Visible = True
-        Me.colCOW_W_21.VisibleIndex = 41
-        Me.colCOW_W_21.Width = 100
-        '
-        'colCOW_W_31
-        '
-        Me.colCOW_W_31.FieldName = "COW_W_3"
-        Me.colCOW_W_31.MinWidth = 27
-        Me.colCOW_W_31.Name = "colCOW_W_31"
-        Me.colCOW_W_31.Visible = True
-        Me.colCOW_W_31.VisibleIndex = 42
-        Me.colCOW_W_31.Width = 100
-        '
-        'colLG_BULL1
-        '
-        Me.colLG_BULL1.FieldName = "LG_BULL"
-        Me.colLG_BULL1.MinWidth = 27
-        Me.colLG_BULL1.Name = "colLG_BULL1"
-        Me.colLG_BULL1.Visible = True
-        Me.colLG_BULL1.VisibleIndex = 43
-        Me.colLG_BULL1.Width = 100
-        '
-        'colMED_BULL1
-        '
-        Me.colMED_BULL1.FieldName = "MED_BULL"
-        Me.colMED_BULL1.MinWidth = 27
-        Me.colMED_BULL1.Name = "colMED_BULL1"
-        Me.colMED_BULL1.Visible = True
-        Me.colMED_BULL1.VisibleIndex = 44
-        Me.colMED_BULL1.Width = 100
-        '
         'colMED_L_BULL1
         '
         Me.colMED_L_BULL1.FieldName = "MED_L_BULL"
@@ -2496,33 +2496,6 @@ Partial Class Form1
         Me.colMED_L_BULL1.Visible = True
         Me.colMED_L_BULL1.VisibleIndex = 45
         Me.colMED_L_BULL1.Width = 100
-        '
-        'colSM_BULL1
-        '
-        Me.colSM_BULL1.FieldName = "SM_BULL"
-        Me.colSM_BULL1.MinWidth = 27
-        Me.colSM_BULL1.Name = "colSM_BULL1"
-        Me.colSM_BULL1.Visible = True
-        Me.colSM_BULL1.VisibleIndex = 46
-        Me.colSM_BULL1.Width = 100
-        '
-        'colUNKNOWN1
-        '
-        Me.colUNKNOWN1.FieldName = "UNKNOWN"
-        Me.colUNKNOWN1.MinWidth = 27
-        Me.colUNKNOWN1.Name = "colUNKNOWN1"
-        Me.colUNKNOWN1.Visible = True
-        Me.colUNKNOWN1.VisibleIndex = 47
-        Me.colUNKNOWN1.Width = 100
-        '
-        'colYBULL_ALL1
-        '
-        Me.colYBULL_ALL1.FieldName = "YBULL_ALL"
-        Me.colYBULL_ALL1.MinWidth = 27
-        Me.colYBULL_ALL1.Name = "colYBULL_ALL1"
-        Me.colYBULL_ALL1.Visible = True
-        Me.colYBULL_ALL1.VisibleIndex = 48
-        Me.colYBULL_ALL1.Width = 100
         '
         'colYBULL_GTSF1
         '
@@ -2542,14 +2515,23 @@ Partial Class Form1
         Me.colYBULL_SF1.VisibleIndex = 50
         Me.colYBULL_SF1.Width = 100
         '
-        'colMOOSE1
+        'colStartDate1
         '
-        Me.colMOOSE1.FieldName = "MOOSE"
-        Me.colMOOSE1.MinWidth = 27
-        Me.colMOOSE1.Name = "colMOOSE1"
-        Me.colMOOSE1.Visible = True
-        Me.colMOOSE1.VisibleIndex = 51
-        Me.colMOOSE1.Width = 100
+        Me.colStartDate1.FieldName = "StartDate"
+        Me.colStartDate1.MinWidth = 27
+        Me.colStartDate1.Name = "colStartDate1"
+        Me.colStartDate1.Visible = True
+        Me.colStartDate1.VisibleIndex = 7
+        Me.colStartDate1.Width = 100
+        '
+        'colStopDate
+        '
+        Me.colStopDate.FieldName = "StopDate"
+        Me.colStopDate.MinWidth = 27
+        Me.colStopDate.Name = "colStopDate"
+        Me.colStopDate.Visible = True
+        Me.colStopDate.VisibleIndex = 8
+        Me.colStopDate.Width = 100
         '
         'colPilot
         '
@@ -2613,6 +2595,24 @@ Partial Class Form1
         Me.colInt.Visible = True
         Me.colInt.VisibleIndex = 58
         Me.colInt.Width = 100
+        '
+        'colGMU
+        '
+        Me.colGMU.FieldName = "GMU"
+        Me.colGMU.MinWidth = 27
+        Me.colGMU.Name = "colGMU"
+        Me.colGMU.Visible = True
+        Me.colGMU.VisibleIndex = 6
+        Me.colGMU.Width = 100
+        '
+        'colPerc_Not_Flown
+        '
+        Me.colPerc_Not_Flown.FieldName = "Perc_Not_Flown"
+        Me.colPerc_Not_Flown.MinWidth = 27
+        Me.colPerc_Not_Flown.Name = "colPerc_Not_Flown"
+        Me.colPerc_Not_Flown.Visible = True
+        Me.colPerc_Not_Flown.VisibleIndex = 22
+        Me.colPerc_Not_Flown.Width = 100
         '
         'colComments4
         '
@@ -2699,7 +2699,7 @@ Partial Class Form1
         Me.GSPEGridControlToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.GSPEGridControlExportFormatToolStripComboBox, Me.GSPEGridControlExportToolStripButton, Me.ToolStripSeparator5, Me.GSPEDatasetCertificationToolStripLabel})
         Me.GSPEGridControlToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPEGridControlToolStrip.Name = "GSPEGridControlToolStrip"
-        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(554, 31)
+        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(443, 31)
         Me.GSPEGridControlToolStrip.TabIndex = 2
         Me.GSPEGridControlToolStrip.Text = "Pivot grid"
         '
@@ -2711,7 +2711,6 @@ Partial Class Form1
         '
         'GSPEGridControlExportFormatToolStripComboBox
         '
-        Me.GSPEGridControlExportFormatToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GSPEGridControlExportFormatToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.GSPEGridControlExportFormatToolStripComboBox.Name = "GSPEGridControlExportFormatToolStripComboBox"
         Me.GSPEGridControlExportFormatToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -2744,7 +2743,7 @@ Partial Class Form1
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.SurveyPivotGridToolStrip)
         Me.GSPEPivotXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEPivotXtraTabPage.Name = "GSPEPivotXtraTabPage"
-        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(664, 851)
+        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(443, 851)
         Me.GSPEPivotXtraTabPage.Text = "Summarize data deliverable"
         '
         'GSPEPivotGridControl
@@ -2759,7 +2758,7 @@ Partial Class Form1
         Me.GSPEPivotGridControl.OptionsDataField.RowHeaderWidth = 133
         Me.GSPEPivotGridControl.OptionsView.RowTreeOffset = 28
         Me.GSPEPivotGridControl.OptionsView.RowTreeWidth = 133
-        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(830, 1025)
+        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(554, 1025)
         Me.GSPEPivotGridControl.TabIndex = 0
         '
         'fieldPark
@@ -3400,7 +3399,7 @@ Partial Class Form1
         Me.SurveyPivotGridToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SurveyPivotGridToolStripLabel, Me.ExportPivotGridToolStripComboBox, Me.ExportPivotGridToolStripButton})
         Me.SurveyPivotGridToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SurveyPivotGridToolStrip.Name = "SurveyPivotGridToolStrip"
-        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(664, 31)
+        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(443, 31)
         Me.SurveyPivotGridToolStrip.TabIndex = 1
         Me.SurveyPivotGridToolStrip.Text = "Pivot grid"
         '
@@ -3412,7 +3411,6 @@ Partial Class Form1
         '
         'ExportPivotGridToolStripComboBox
         '
-        Me.ExportPivotGridToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ExportPivotGridToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.ExportPivotGridToolStripComboBox.Name = "ExportPivotGridToolStripComboBox"
         Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -3436,7 +3434,7 @@ Partial Class Form1
         '
         Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.HeaderPanel.Location = New System.Drawing.Point(303, 49)
+        Me.HeaderPanel.Location = New System.Drawing.Point(242, 27)
         Me.HeaderPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HeaderPanel.Name = "HeaderPanel"
         Me.HeaderPanel.Size = New System.Drawing.Size(445, 45)
@@ -3460,7 +3458,7 @@ Partial Class Form1
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.EnableEditsToolStripButton, Me.ToolStripSeparator6, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton, Me.ToolStripSeparator3, Me.DirectoriesToolStripDropDownButton, Me.ToolStripSeparator4})
         Me.MainToolStrip.Location = New System.Drawing.Point(242, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(556, 39)
+        Me.MainToolStrip.Size = New System.Drawing.Size(445, 27)
         Me.MainToolStrip.TabIndex = 4
         Me.MainToolStrip.Text = "ToolStrip1"
         '
@@ -3469,46 +3467,46 @@ Partial Class Form1
         Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
         Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 36)
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 24)
         Me.SaveToolStripButton.Text = "Save"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'EnableEditsToolStripButton
         '
         Me.EnableEditsToolStripButton.Image = Global.Moose3.My.Resources.Resources.application_form
         Me.EnableEditsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.EnableEditsToolStripButton.Name = "EnableEditsToolStripButton"
-        Me.EnableEditsToolStripButton.Size = New System.Drawing.Size(164, 36)
+        Me.EnableEditsToolStripButton.Size = New System.Drawing.Size(164, 24)
         Me.EnableEditsToolStripButton.Text = "Make form editable"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 27)
         '
         'LoadDatasetToolStripButton
         '
         Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
         Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
-        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 36)
+        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 24)
         Me.LoadDatasetToolStripButton.Text = "Refresh dataset"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'DataShaperToolStripButton
         '
         Me.DataShaperToolStripButton.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.DataShaperToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DataShaperToolStripButton.Name = "DataShaperToolStripButton"
-        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 36)
+        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 24)
         Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
         'ToolStripSeparator3

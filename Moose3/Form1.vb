@@ -452,8 +452,16 @@ Public Class Form1
     End Sub
 
     Private Sub LoadDatasetToolStripButton_Click(sender As Object, e As EventArgs) Handles LoadDatasetToolStripButton.Click
+        'Placemark the current SurveyName
+        Dim SurveyName As String = Me.SurveysListBoxControl.Text
+
         AskToSaveDataset()
         LoadDataset()
+
+        'Find the placemark and move to it
+        Dim LastItemIndex As Integer = Me.SurveysListBoxControl.FindString(SurveyName)
+        Me.SurveysListBoxControl.SelectedIndex = LastItemIndex
+
     End Sub
 
     Private Sub DataShaperToolStripButton_Click(sender As Object, e As EventArgs) Handles DataShaperToolStripButton.Click
