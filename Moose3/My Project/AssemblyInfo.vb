@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Database application to facilitate the long-term monitoring of moose populations in Alaska.")>
 <Assembly: AssemblyCompany("National Park Service, Arctic Inventory and Monitoring Network")>
 <Assembly: AssemblyProduct("Moose Monitoring Database Application")>
-<Assembly: AssemblyCopyright("Public Domain: United States Government Works")>
+<Assembly: AssemblyCopyright("United States Government Works, Public Domain Software")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.23")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>

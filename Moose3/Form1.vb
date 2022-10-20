@@ -12,6 +12,69 @@ Imports SkeeterUtilities.DataFileToDataTableConverters.DataFileToDataTableConver
 
 Public Class Form1
 
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        'Make form controls non-editable to start
+        'Change the various other, non-grid controls
+        Dim Enabled As Boolean = False
+        Me.AddSurveyToolStripButton.Enabled = Enabled
+        Me.AbstractTextBox.Enabled = Enabled
+        Me.SummaryTextBox.Enabled = Enabled
+        Me.DatasetProcessingStepsTextBox.Enabled = Enabled
+        Me.CommentsTextBox.Enabled = Enabled
+
+        'Make sure all the dock panels cannot be closed
+        Me.AbstractDockPanel.Options.ShowCloseButton = False
+        Me.SummaryDockPanel.Options.ShowCloseButton = False
+        Me.DatasetProcessingStepsDockPanel.Options.ShowCloseButton = False
+        Me.CommentsDockPanel.Options.ShowCloseButton = False
+        Me.MapDockPanel.Options.ShowCloseButton = False
+        Me.SurveySelectorDockPanel.Options.ShowCloseButton = False
+
+        'Set up the footer items
+        Me.ConnectionStringToolStripLabel.Text = My.Settings.MooseConnectionString
+        Me.ClientToolStripLabel.Text = My.User.Name
+
+        'Load the data into the form
+        LoadDataset()
+
+        'Set up the grid controls the way I like them
+        SetUpGridControl(Me.GSPEGridControl, True, True, False)
+
+        'Set up survey vertical grid control
+        SetUpVGridControl(Me.SurveyVGridControl)
+
+        'Set up the survey VGridControl's long field editors.
+        SetUpSurveyVGridControlRowEditors()
+
+        'Set up the pivot grid controls
+        SetUpPivotGridControl(Me.GSPEPivotGridControl)
+
+        'Autosize the datagridview columns
+        With Me.GSPE_PopulationEstimatesDataGridView
+            .Dock = DockStyle.Fill
+            .AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+            .AutoResizeColumnHeadersHeight()
+            .ScrollBars = ScrollBars.Both
+        End With
+
+        LoadGridColumnDescriptions()
+
+        'Load a Web Map Service background map layer into the MapControl to give context to where survey units are located
+        Try
+            Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
+            ShadedReliefWMSImageLayer.Name = "National Map"
+            Me.SurveyMapControl.Layers.Add(ShadedReliefWMSImageLayer)
+        Catch ex As Exception
+            MsgBox(ex.Message & " WMS map layer load failed: " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
+
+
+
+    End Sub
+
     ''' <summary>
     ''' Loads the data from the moose database into the local memory copy of it, MooseDataset
     ''' </summary>
@@ -274,72 +337,7 @@ Public Class Form1
     ' -----------------------------------------------------------------------------------------------------------------------
     '=================================================================================================
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim x As New Form
-        Dim p As New PropertyGrid
-        p.SelectedObject = My.Application.Info
-        p.Dock = DockStyle.Fill
-        x.Controls.Add(p)
-        x.Show()
-
-
-        'Make form controls non-editable to start
-        'Change the various other, non-grid controls
-        Dim Enabled As Boolean = False
-        Me.AddSurveyToolStripButton.Enabled = Enabled
-        Me.AbstractTextBox.Enabled = Enabled
-        Me.SummaryTextBox.Enabled = Enabled
-        Me.DatasetProcessingStepsTextBox.Enabled = Enabled
-        Me.CommentsTextBox.Enabled = Enabled
-
-        'Make sure all the dock panels cannot be closed
-        Me.AbstractDockPanel.Options.ShowCloseButton = False
-        Me.SummaryDockPanel.Options.ShowCloseButton = False
-        Me.DatasetProcessingStepsDockPanel.Options.ShowCloseButton = False
-        Me.CommentsDockPanel.Options.ShowCloseButton = False
-        Me.MapDockPanel.Options.ShowCloseButton = False
-        Me.SurveySelectorDockPanel.Options.ShowCloseButton = False
-
-        'Set up the footer items
-        Me.ConnectionStringToolStripLabel.Text = My.Settings.MooseConnectionString
-        Me.ClientToolStripLabel.Text = My.User.Name
-
-        'Load the data into the form
-        LoadDataset()
-
-        'Set up the grid controls the way I like them
-        SetUpGridControl(Me.GSPEGridControl, True, True, False)
-
-        'Set up survey vertical grid control
-        SetUpVGridControl(Me.SurveyVGridControl)
-
-        'Set up the survey VGridControl's long field editors.
-        SetUpSurveyVGridControlRowEditors()
-
-        'Set up the pivot grid controls
-        SetUpPivotGridControl(Me.GSPEPivotGridControl)
-
-        'Autosize the datagridview columns
-        With Me.GSPE_PopulationEstimatesDataGridView
-            .Dock = DockStyle.Fill
-            .AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
-            .AutoResizeColumnHeadersHeight()
-            .ScrollBars = ScrollBars.Both
-        End With
-
-        LoadGridColumnDescriptions()
-
-        'Load a Web Map Service background map layer into the MapControl to give context to where survey units are located
-        Try
-            Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
-            ShadedReliefWMSImageLayer.Name = "National Map"
-            Me.SurveyMapControl.Layers.Add(ShadedReliefWMSImageLayer)
-        Catch ex As Exception
-            MsgBox(ex.Message & " WMS map layer load failed: " & System.Reflection.MethodBase.GetCurrentMethod.Name)
-        End Try
-
-    End Sub
 
 
 
@@ -918,5 +916,12 @@ Public Class Form1
 
     Private Sub SurveyVGridControl_Validated(sender As Object, e As EventArgs) Handles SurveyVGridControl.Validated
         EndEdits()
+    End Sub
+
+    Private Sub AboutToolStripButton_Click(sender As Object, e As EventArgs) Handles AboutToolStripButton.Click
+        Dim AboutForm As New AboutForm
+        AboutForm.ShowDialog()
+
+
     End Sub
 End Class
