@@ -17,22 +17,31 @@ Public Class Form1
     ''' </summary>
     Private Sub LoadDataset()
         Try
+            'Update the header label
             Me.HeaderLabel.Text = "Connecting: " & My.Settings.MooseConnectionString
+
+            'Fill the TableAdapters with data from the database tables
             Me.GSPE_SurveysTableAdapter.Fill(Me.MooseDataSet.GSPE_Surveys)
             Me.GSPE_ResultsTableAdapter.Fill(Me.MooseDataSet.GSPE_Results)
             Me.GSPE_PopulationEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_PopulationEstimates)
             Me.GSPE_DensityEstimatesTableAdapter.Fill(Me.MooseDataSet.GSPE_DensityEstimates)
-            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE) 'GSPE data table
+            Me.GSPETableAdapter.Fill(Me.MooseDataSet.GSPE)
 
+            'Load the survey unit sets into the GSPE grid control for the SurveyUnitSet column
             Dim SurveyUnitSetsDataTable As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, "SELECT SurveyUnitSet FROM SurveyUnitSets ORDER BY SurveyUnitSet")
             For Each Row As DataRow In SurveyUnitSetsDataTable.Rows
                 Me.SurveyUnitSetsRepositoryItemComboBox.Items.Add(Row.Item("SurveyUnitSet").trim)
             Next
 
+            'Update the footer tools
+            Me.ConnectionStringToolStripLabel.Text = My.Settings.MooseConnectionString
 
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+
+            'Update the header and  footer tools
             Me.HeaderLabel.Text = "Database connection error: " & ex.Message
+            Me.ConnectionStringToolStripLabel.Text = ex.Message
         End Try
     End Sub
     ''' <summary>
@@ -266,6 +275,28 @@ Public Class Form1
     '=================================================================================================
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Make form controls non-editable to start
+        'Change the various other, non-grid controls
+        Dim Enabled As Boolean = False
+        Me.AddSurveyToolStripButton.Enabled = Enabled
+        Me.AbstractTextBox.Enabled = Enabled
+        Me.SummaryTextBox.Enabled = Enabled
+        Me.DatasetProcessingStepsTextBox.Enabled = Enabled
+        Me.CommentsTextBox.Enabled = Enabled
+
+        'Make sure all the dock panels cannot be closed
+        Me.AbstractDockPanel.Options.ShowCloseButton = False
+        Me.SummaryDockPanel.Options.ShowCloseButton = False
+        Me.DatasetProcessingStepsDockPanel.Options.ShowCloseButton = False
+        Me.CommentsDockPanel.Options.ShowCloseButton = False
+        Me.MapDockPanel.Options.ShowCloseButton = False
+        Me.SurveySelectorDockPanel.Options.ShowCloseButton = False
+
+        'Set up the footer items
+        Me.ConnectionStringToolStripLabel.Text = My.Settings.MooseConnectionString
+        Me.ClientToolStripLabel.Text = My.User.Name
+
         'Load the data into the form
         LoadDataset()
 
@@ -299,53 +330,6 @@ Public Class Form1
         Catch ex As Exception
             MsgBox(ex.Message & " WMS map layer load failed: " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
-
-
-
-
-        'Create some spatial data
-        'Dim DT As New DataTable("Data")
-        'DT.Columns.Add(New DataColumn("Lat", GetType(Double)))
-        'DT.Columns.Add(New DataColumn("Lon", GetType(Double)))
-        'For i As Double = 50 To 70
-        '    Dim NewRow As DataRow = DT.NewRow
-        '    NewRow.Item("Lat") = i
-        '    NewRow.Item("Lon") = (i + 100) * -1
-        '    DT.Rows.Add(NewRow)
-        'Next
-        'Dim Sql As String = "SELECT [ID],Moose,X_Coord,Y_Coord FROM Dataset_GSPE_WithSurveyUnits WHERE Moose > 0 And SurveyName = '2022 GAAR Spring Moose Survey'"
-        'Dim DT As DataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, Sql)
-        ''Create an adapter
-        'Dim adapter As DevExpress.XtraMap.HeatmapDataSourceAdapter = New HeatmapDataSourceAdapter
-        'adapter.DataSource = DT
-        'adapter.Mappings.XCoordinate = "X_Coord" ' The data source field name that provides x-coordinates.
-        'adapter.Mappings.YCoordinate = "Y_Coord" ' The data source field name that provides y-coordinates.
-
-        ''Create a provider
-        'Dim provider As HeatmapProvider = New HeatmapProvider
-        'provider.PointSource = adapter
-
-        'Dim MyHeatMapDensityBasedAlgorithm As New HeatmapDensityBasedAlgorithm
-        'MyHeatMapDensityBasedAlgorithm.PointRadius = 10
-        'provider.Algorithm = MyHeatMapDensityBasedAlgorithm
-
-        ''Create the heat map image layer
-        'Dim heatmapLayer As ImageLayer = New ImageLayer
-        'heatmapLayer.DataProvider = provider
-
-        ''Add the heat map to the map control
-        'Me.SurveyMapControl.Layers.Add(heatmapLayer)
-        'Me.SurveyMapControl.ZoomToFitLayerItems()
-
-        'Dim legend As ColorScaleLegend = New ColorScaleLegend
-        'legend.Header = "Moose"
-        'legend.EnableGradientScale = True
-        'legend.Layer = heatmapLayer
-        'legend.HeaderStyle.Font = New Font("Tahoma", 10)
-        'Me.SurveyMapControl.Legends.Add(legend)
-
-
-
 
     End Sub
 
@@ -761,7 +745,7 @@ Public Class Form1
         AddSignedDatedCommentToTextBox(Me.CommentsTextBox)
     End Sub
 
-    Private Sub EnableEditsToolStripButton_Click(sender As Object, e As EventArgs) Handles EnableEditsToolStripButton.Click
+    Private Sub ToggleFormEditability()
         Try
             'Set any editable controls to read-only or editable based on the text of EnableEditsToolStripButton
             Dim GSPEGridView As GridView = TryCast(Me.GSPEGridControl.MainView, GridView)
@@ -789,6 +773,14 @@ Public Class Form1
                 'Change the text of EnableEditsToolStripButton 
                 Me.EnableEditsToolStripButton.Text = "Make form editable"
                 Me.EnableEditsToolStripButton.Image = My.Resources.application_form
+
+                'Change the various other, non-grid controls
+                Dim Enabled As Boolean = False
+                Me.AddSurveyToolStripButton.Enabled = Enabled
+                Me.AbstractTextBox.Enabled = Enabled
+                Me.SummaryTextBox.Enabled = Enabled
+                Me.DatasetProcessingStepsTextBox.Enabled = Enabled
+                Me.CommentsTextBox.Enabled = Enabled
             Else
                 'Form is currently editable, make it read-only
 
@@ -811,10 +803,22 @@ Public Class Form1
                 'Change the text of EnableEditsToolStripButton 
                 Me.EnableEditsToolStripButton.Text = "Make form read-only"
                 Me.EnableEditsToolStripButton.Image = My.Resources.application_form_edit
+
+                'Change the various other, non-grid controls
+                Dim Enabled As Boolean = True
+                Me.AddSurveyToolStripButton.Enabled = Enabled
+                Me.AbstractTextBox.Enabled = Enabled
+                Me.SummaryTextBox.Enabled = Enabled
+                Me.DatasetProcessingStepsTextBox.Enabled = Enabled
+                Me.CommentsTextBox.Enabled = Enabled
             End If
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
+    End Sub
+
+    Private Sub EnableEditsToolStripButton_Click(sender As Object, e As EventArgs) Handles EnableEditsToolStripButton.Click
+        ToggleFormEditability()
     End Sub
 
     Private Sub GridView2_SelectionChanged(sender As Object, e As DevExpress.Data.SelectionChangedEventArgs) Handles GridView2.SelectionChanged
@@ -904,5 +908,7 @@ Public Class Form1
         End Try
     End Sub
 
-
+    Private Sub SurveyVGridControl_Validated(sender As Object, e As EventArgs) Handles SurveyVGridControl.Validated
+        EndEdits()
+    End Sub
 End Class

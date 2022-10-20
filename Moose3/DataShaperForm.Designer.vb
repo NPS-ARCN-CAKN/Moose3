@@ -28,6 +28,8 @@ Partial Class DataShaperForm
         Me.QuerySelectorToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
         Me.RefreshToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.RefreshDatasourceToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataShaperPivotGridControl = New DevExpress.XtraPivotGrid.PivotGridControl()
         Me.XtraTabControl1 = New DevExpress.XtraTab.XtraTabControl()
         Me.DatasetXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
@@ -38,6 +40,15 @@ Partial Class DataShaperForm
         Me.PivotXtraTabPage = New DevExpress.XtraTab.XtraTabPage()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ExportPivotGridButton = New System.Windows.Forms.ToolStripButton()
+        Me.FooterToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.QueryToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.SqlToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DatabaseToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ConnectionStringToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UsernameToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.ClientToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataShaperPivotGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,12 +59,13 @@ Partial Class DataShaperForm
         Me.DataShaperGridControlToolStrip.SuspendLayout()
         Me.PivotXtraTabPage.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
+        Me.FooterToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox, Me.RefreshToolStripButton, Me.ToolStripSeparator1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.QuerySelectorToolStripComboBox, Me.RefreshToolStripButton, Me.ToolStripSeparator1, Me.RefreshDatasourceToolStripButton, Me.ToolStripSeparator2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1579, 31)
@@ -63,13 +75,13 @@ Partial Class DataShaperForm
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(195, 28)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(195, 25)
         Me.ToolStripLabel1.Text = "Select a data table or query:"
         '
         'QuerySelectorToolStripComboBox
         '
         Me.QuerySelectorToolStripComboBox.Name = "QuerySelectorToolStripComboBox"
-        Me.QuerySelectorToolStripComboBox.Size = New System.Drawing.Size(532, 31)
+        Me.QuerySelectorToolStripComboBox.Size = New System.Drawing.Size(532, 28)
         '
         'RefreshToolStripButton
         '
@@ -82,7 +94,20 @@ Partial Class DataShaperForm
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 28)
+        '
+        'RefreshDatasourceToolStripButton
+        '
+        Me.RefreshDatasourceToolStripButton.Image = CType(resources.GetObject("RefreshDatasourceToolStripButton.Image"), System.Drawing.Image)
+        Me.RefreshDatasourceToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RefreshDatasourceToolStripButton.Name = "RefreshDatasourceToolStripButton"
+        Me.RefreshDatasourceToolStripButton.Size = New System.Drawing.Size(163, 25)
+        Me.RefreshDatasourceToolStripButton.Text = "Refresh data source"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 28)
         '
         'DataShaperPivotGridControl
         '
@@ -103,7 +128,7 @@ Partial Class DataShaperForm
         Me.DataShaperPivotGridControl.OptionsView.ShowCustomTotalsForSingleValues = True
         Me.DataShaperPivotGridControl.OptionsView.ShowGrandTotalsForSingleValues = True
         Me.DataShaperPivotGridControl.OptionsView.ShowTotalsForSingleValues = True
-        Me.DataShaperPivotGridControl.Size = New System.Drawing.Size(1577, 852)
+        Me.DataShaperPivotGridControl.Size = New System.Drawing.Size(1577, 827)
         Me.DataShaperPivotGridControl.TabIndex = 1
         '
         'XtraTabControl1
@@ -113,7 +138,7 @@ Partial Class DataShaperForm
         Me.XtraTabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.XtraTabControl1.Name = "XtraTabControl1"
         Me.XtraTabControl1.SelectedTabPage = Me.DatasetXtraTabPage
-        Me.XtraTabControl1.Size = New System.Drawing.Size(1579, 906)
+        Me.XtraTabControl1.Size = New System.Drawing.Size(1579, 875)
         Me.XtraTabControl1.TabIndex = 2
         Me.XtraTabControl1.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.DatasetXtraTabPage, Me.PivotXtraTabPage})
         '
@@ -123,7 +148,7 @@ Partial Class DataShaperForm
         Me.DatasetXtraTabPage.Controls.Add(Me.DataShaperGridControlToolStrip)
         Me.DatasetXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.DatasetXtraTabPage.Name = "DatasetXtraTabPage"
-        Me.DatasetXtraTabPage.Size = New System.Drawing.Size(1577, 876)
+        Me.DatasetXtraTabPage.Size = New System.Drawing.Size(1577, 845)
         Me.DatasetXtraTabPage.Text = "Dataset"
         '
         'DataShaperGridControl
@@ -134,7 +159,7 @@ Partial Class DataShaperForm
         Me.DataShaperGridControl.MainView = Me.GridView1
         Me.DataShaperGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.DataShaperGridControl.Name = "DataShaperGridControl"
-        Me.DataShaperGridControl.Size = New System.Drawing.Size(1577, 845)
+        Me.DataShaperGridControl.Size = New System.Drawing.Size(1577, 814)
         Me.DataShaperGridControl.TabIndex = 0
         Me.DataShaperGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -162,7 +187,7 @@ Partial Class DataShaperForm
         Me.ExportGridControlToolStripButton.Image = CType(resources.GetObject("ExportGridControlToolStripButton.Image"), System.Drawing.Image)
         Me.ExportGridControlToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ExportGridControlToolStripButton.Name = "ExportGridControlToolStripButton"
-        Me.ExportGridControlToolStripButton.Size = New System.Drawing.Size(141, 28)
+        Me.ExportGridControlToolStripButton.Size = New System.Drawing.Size(141, 24)
         Me.ExportGridControlToolStripButton.Text = "Export to Excel..."
         '
         'PivotXtraTabPage
@@ -171,7 +196,7 @@ Partial Class DataShaperForm
         Me.PivotXtraTabPage.Controls.Add(Me.ToolStrip2)
         Me.PivotXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.PivotXtraTabPage.Name = "PivotXtraTabPage"
-        Me.PivotXtraTabPage.Size = New System.Drawing.Size(1577, 879)
+        Me.PivotXtraTabPage.Size = New System.Drawing.Size(1577, 854)
         Me.PivotXtraTabPage.Text = "Pivot grid"
         '
         'ToolStrip2
@@ -192,12 +217,70 @@ Partial Class DataShaperForm
         Me.ExportPivotGridButton.Size = New System.Drawing.Size(141, 24)
         Me.ExportPivotGridButton.Text = "Export to Excel..."
         '
+        'FooterToolStrip
+        '
+        Me.FooterToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.FooterToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.FooterToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QueryToolStripLabel, Me.SqlToolStripLabel, Me.ToolStripSeparator3, Me.DatabaseToolStripLabel, Me.ConnectionStringToolStripLabel, Me.ToolStripSeparator4, Me.UsernameToolStripLabel, Me.ClientToolStripLabel})
+        Me.FooterToolStrip.Location = New System.Drawing.Point(0, 906)
+        Me.FooterToolStrip.Name = "FooterToolStrip"
+        Me.FooterToolStrip.Size = New System.Drawing.Size(1579, 31)
+        Me.FooterToolStrip.TabIndex = 2
+        Me.FooterToolStrip.Text = "ToolStrip3"
+        '
+        'QueryToolStripLabel
+        '
+        Me.QueryToolStripLabel.Name = "QueryToolStripLabel"
+        Me.QueryToolStripLabel.Size = New System.Drawing.Size(51, 22)
+        Me.QueryToolStripLabel.Text = "Query:"
+        '
+        'SqlToolStripLabel
+        '
+        Me.SqlToolStripLabel.Name = "SqlToolStripLabel"
+        Me.SqlToolStripLabel.Size = New System.Drawing.Size(35, 22)
+        Me.SqlToolStripLabel.Text = "SQL"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'DatabaseToolStripLabel
+        '
+        Me.DatabaseToolStripLabel.Name = "DatabaseToolStripLabel"
+        Me.DatabaseToolStripLabel.Size = New System.Drawing.Size(75, 22)
+        Me.DatabaseToolStripLabel.Text = "Database:"
+        '
+        'ConnectionStringToolStripLabel
+        '
+        Me.ConnectionStringToolStripLabel.Name = "ConnectionStringToolStripLabel"
+        Me.ConnectionStringToolStripLabel.Size = New System.Drawing.Size(99, 22)
+        Me.ConnectionStringToolStripLabel.Text = "Disconnected"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'UsernameToolStripLabel
+        '
+        Me.UsernameToolStripLabel.Name = "UsernameToolStripLabel"
+        Me.UsernameToolStripLabel.Size = New System.Drawing.Size(50, 22)
+        Me.UsernameToolStripLabel.Text = "Client:"
+        '
+        'ClientToolStripLabel
+        '
+        Me.ClientToolStripLabel.Name = "ClientToolStripLabel"
+        Me.ClientToolStripLabel.Size = New System.Drawing.Size(47, 22)
+        Me.ClientToolStripLabel.Text = "Client"
+        '
         'DataShaperForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1579, 937)
         Me.Controls.Add(Me.XtraTabControl1)
+        Me.Controls.Add(Me.FooterToolStrip)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "DataShaperForm"
@@ -217,6 +300,8 @@ Partial Class DataShaperForm
         Me.PivotXtraTabPage.PerformLayout()
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
+        Me.FooterToolStrip.ResumeLayout(False)
+        Me.FooterToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -237,4 +322,15 @@ Partial Class DataShaperForm
     Friend WithEvents ExportGridControlToolStripButton As ToolStripButton
     Friend WithEvents ToolStrip2 As ToolStrip
     Friend WithEvents ExportPivotGridButton As ToolStripButton
+    Friend WithEvents RefreshDatasourceToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents FooterToolStrip As ToolStrip
+    Friend WithEvents QueryToolStripLabel As ToolStripLabel
+    Friend WithEvents SqlToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents DatabaseToolStripLabel As ToolStripLabel
+    Friend WithEvents ConnectionStringToolStripLabel As ToolStripLabel
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents UsernameToolStripLabel As ToolStripLabel
+    Friend WithEvents ClientToolStripLabel As ToolStripLabel
 End Class

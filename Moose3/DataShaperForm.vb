@@ -32,33 +32,41 @@ Public Class DataShaperForm
     End Sub
 
     ''' <summary>
-    ''' Loads a dataset into the main interface for shaping
+    ''' Loads a the query selected in the query selector combo box as a data source into the main interface for shaping
     ''' </summary>
-    ''' <param name="Sql">Query to load</param>
-    Private Sub LoadDataTableIntoInterface(Sql As String)
+    Private Sub LoadDataTableIntoInterface()
         Try
-            'Get a list of tables and queries in the database
-            CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, Sql)
 
-            'Load the datatable into the grid control
-            'Me.DataShaperGridControl.DataSource = Nothing
-            With Me.DataShaperGridControl
-                .DataSource = CurrentDataTable
-                '.RefreshDataSource()
-            End With
-            Dim GV As GridView = TryCast(Me.DataShaperGridControl.MainView, GridView)
-            With GV
-                .RefreshData()
-                .PopulateColumns()
-            End With
+            'Get the query name from the selector and build a query
+            If Me.QuerySelectorToolStripComboBox.Text.Trim.Length > 0 Then
+                CurrentQuery = "SELECT * FROM " & Me.QuerySelectorToolStripComboBox.Text.Trim
+                Me.SqlToolStripLabel.Text = CurrentQuery
 
-            SetUpGridControl(Me.DataShaperGridControl, True, True, True)
+                'Get a list of tables and queries in the database
+                CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, CurrentQuery)
 
-            'Load the datatable into the pivot grid control
-            Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
-            Me.DataShaperPivotGridControl.RetrieveFields()
-            SetUpPivotGridControl(Me.DataShaperPivotGridControl)
+                'Load the datatable into the grid control
+                'Me.DataShaperGridControl.DataSource = Nothing
+                With Me.DataShaperGridControl
+                    .DataSource = CurrentDataTable
+                    '.RefreshDataSource()
+                End With
+                Dim GV As GridView = TryCast(Me.DataShaperGridControl.MainView, GridView)
+                With GV
+                    .RefreshData()
+                    .PopulateColumns()
+                End With
 
+                SetUpGridControl(Me.DataShaperGridControl, True, True, True)
+
+                'Load the datatable into the pivot grid control
+                Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
+                Me.DataShaperPivotGridControl.RetrieveFields()
+                SetUpPivotGridControl(Me.DataShaperPivotGridControl)
+
+
+
+            End If
         Catch ex As Exception
             MsgBox("Failed to retrieve the dataset from the database: " & ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -74,15 +82,15 @@ Public Class DataShaperForm
     '----------------------------------------------------------------------------------------------------------
 
     Private Sub DataShaperForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.ClientToolStripLabel.Text = My.User.Name
+        Me.DatabaseToolStripLabel.Text = My.Settings.MooseConnectionString
+
         'Load a list of tables and queries into the selector
         LoadQuerySelector()
     End Sub
 
     Private Sub QuerySelectorToolStripComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles QuerySelectorToolStripComboBox.SelectedIndexChanged
-        If Me.QuerySelectorToolStripComboBox.Text.Trim.Length > 0 Then
-            CurrentQuery = "SELECT * FROM " & Me.QuerySelectorToolStripComboBox.Text.Trim
-            LoadDataTableIntoInterface(CurrentQuery)
-        End If
+        LoadDataTableIntoInterface()
     End Sub
 
     Private Sub QuerySelectorToolStripComboBox_DropDown(sender As Object, e As EventArgs) Handles QuerySelectorToolStripComboBox.DropDown
@@ -138,5 +146,9 @@ Public Class DataShaperForm
 
     Private Sub ExportPivotGridButton_Click(sender As Object, e As EventArgs) Handles ExportPivotGridButton.Click
         ExportPivotGridControl(Me.DataShaperPivotGridControl, Me.QuerySelectorToolStripComboBox.Text, True)
+    End Sub
+
+    Private Sub RefreshDatasourceToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshDatasourceToolStripButton.Click
+        LoadDataTableIntoInterface()
     End Sub
 End Class
