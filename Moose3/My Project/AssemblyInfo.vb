@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Moose3")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Moose3")>
-<Assembly: AssemblyCopyright("Copyright ©  2021")>
+<Assembly: AssemblyTitle("Moose Monitoring Database Application")>
+<Assembly: AssemblyDescription("Database application to facilitate the long-term monitoring of moose populations in Alaska.")>
+<Assembly: AssemblyCompany("National Park Service, Arctic Inventory and Monitoring Network")>
+<Assembly: AssemblyProduct("Moose Monitoring Database Application")>
+<Assembly: AssemblyCopyright("Public Domain: United States Government Works")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

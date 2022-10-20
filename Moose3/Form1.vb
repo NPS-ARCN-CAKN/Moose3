@@ -276,6 +276,14 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Dim x As New Form
+        Dim p As New PropertyGrid
+        p.SelectedObject = My.Application.Info
+        p.Dock = DockStyle.Fill
+        x.Controls.Add(p)
+        x.Show()
+
+
         'Make form controls non-editable to start
         'Change the various other, non-grid controls
         Dim Enabled As Boolean = False
