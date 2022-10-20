@@ -539,6 +539,12 @@ Public Class Form1
                 ElseIf ExportFormat = "CSV" Then
                     Me.GSPEPivotGridControl.ExportToCsv(ExportPath)
                 End If
+
+                'Ask if the user wants to open the exported file.
+                If MsgBox("Open the exported file?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                    Process.Start(ExportPath)
+                End If
+
             End If
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
@@ -587,6 +593,12 @@ Public Class Form1
                 ElseIf ExportFormat = "CSV" Then
                     Me.GSPEGridControl.ExportToCsv(ExportPath)
                 End If
+
+                'Ask if the user wants to open the exported file.
+                If MsgBox("Open the exported file?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                    Process.Start(ExportPath)
+                End If
+
             End If
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)

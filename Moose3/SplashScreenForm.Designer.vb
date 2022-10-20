@@ -36,9 +36,9 @@ Partial Class SplashScreenForm
         'MoosePictureBox
         '
         Me.MoosePictureBox.Image = CType(resources.GetObject("MoosePictureBox.Image"), System.Drawing.Image)
-        Me.MoosePictureBox.Location = New System.Drawing.Point(232, 83)
+        Me.MoosePictureBox.Location = New System.Drawing.Point(275, 83)
         Me.MoosePictureBox.Name = "MoosePictureBox"
-        Me.MoosePictureBox.Size = New System.Drawing.Size(222, 89)
+        Me.MoosePictureBox.Size = New System.Drawing.Size(179, 158)
         Me.MoosePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.MoosePictureBox.TabIndex = 0
         Me.MoosePictureBox.TabStop = False
@@ -82,16 +82,15 @@ Partial Class SplashScreenForm
         '
         Me.VersionLabel.Location = New System.Drawing.Point(2, 83)
         Me.VersionLabel.Name = "VersionLabel"
-        Me.VersionLabel.Size = New System.Drawing.Size(224, 89)
+        Me.VersionLabel.Size = New System.Drawing.Size(224, 77)
         Me.VersionLabel.TabIndex = 3
         Me.VersionLabel.Text = "VersionLabel"
         '
         'DescriptionLabel
         '
-        Me.DescriptionLabel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DescriptionLabel.Location = New System.Drawing.Point(0, 182)
+        Me.DescriptionLabel.Location = New System.Drawing.Point(0, 160)
         Me.DescriptionLabel.Name = "DescriptionLabel"
-        Me.DescriptionLabel.Size = New System.Drawing.Size(456, 71)
+        Me.DescriptionLabel.Size = New System.Drawing.Size(269, 136)
         Me.DescriptionLabel.TabIndex = 4
         Me.DescriptionLabel.Text = "DescriptionLabel"
         '
@@ -100,7 +99,7 @@ Partial Class SplashScreenForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(456, 253)
+        Me.ClientSize = New System.Drawing.Size(456, 305)
         Me.Controls.Add(Me.DescriptionLabel)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.VersionLabel)
