@@ -9,7 +9,8 @@ Imports DevExpress.XtraMap
 Imports DevExpress.XtraVerticalGrid
 Imports DevExpress.XtraVerticalGrid.Rows
 Imports SkeeterUtilities.DataFileToDataTableConverters.DataFileToDataTableConverters
-
+Imports System.ComponentModel
+Imports DevExpress.DataAccess.Excel
 Public Class Form1
 
 
@@ -480,18 +481,18 @@ Public Class Form1
         'End edits on binding sources
         EndEdits()
 
-        'Lock the interface on detection of certified records
-        Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
-        Dim SurveyDataIsCertified As Boolean = GSPEDatasetIsCertified(SurveyName)
-        Dim GV As GridView = TryCast(Me.GSPEGridControl.MainView, GridView)
-        GV.OptionsBehavior.ReadOnly = SurveyDataIsCertified
+        ''Lock the interface on detection of certified records
+        'Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
+        'Dim SurveyDataIsCertified As Boolean = GSPEDatasetIsCertified(SurveyName)
+        'Dim GV As GridView = TryCast(Me.GSPEGridControl.MainView, GridView)
+        'GV.OptionsBehavior.ReadOnly = SurveyDataIsCertified
 
-        'Put a message in the GSPE toolstriplabel telling user they may or may not edit certified data
-        If SurveyDataIsCertified = True Then
-            Me.GSPEDatasetCertificationToolStripLabel.Text = "The current GSPE dataset may not be edited because it contains certified records."
-        Else
-            Me.GSPEDatasetCertificationToolStripLabel.Text = ""
-        End If
+        ''Put a message in the GSPE toolstriplabel telling user they may or may not edit certified data
+        'If SurveyDataIsCertified = True Then
+        '    Me.GSPEDatasetCertificationToolStripLabel.Text = "The current GSPE dataset may not be edited because it contains certified records."
+        'Else
+        '    Me.GSPEDatasetCertificationToolStripLabel.Text = ""
+        'End If
 
 
 
@@ -935,5 +936,48 @@ Public Class Form1
         AboutForm.ShowDialog()
 
 
+    End Sub
+
+    Private Sub HelpToolStripButton_Click(sender As Object, e As EventArgs)
+        MooseHelpProvider.GetHelpNavigator(Me)
+    End Sub
+
+    Private Sub Form1_HelpButtonClicked(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.HelpButtonClicked
+        MsgBox("help")
+    End Sub
+
+    Private Sub ImportGSPEDeliverableToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportGSPEDeliverableToolStripButton.Click
+        Try
+            'update the header label with the survey name
+            Dim SurveyName As String = Me.SurveysListBoxControl.Text.Trim
+            If SurveyName.Trim.Length > 0 Then
+                'Determine that the surveyname exists
+                Dim DV As New DataView(MooseDataSet.Tables("GSPE_Surveys"), "SurveyName='" & SurveyName.Trim & "'", "", DataViewRowState.CurrentRows)
+
+                If DV.Count = 1 Then
+                    'There is a survey available to add the GSPE records to
+
+                    'Get the Excel sheet to import
+                    Dim GSPEDeliverableFile As System.IO.FileInfo = SkeeterUtilities.DirectoryAndFile.DirectoryAndFileUtilities.GetFile("Excel workbook (*.xlsx)|*.xlsx", "Import GSPE deliverable", "C:\")
+                    If Not GSPEDeliverableFile Is Nothing Then
+
+
+
+
+                        ''Convert the ExcelDataSource to a DataTable using the function below
+                        'Dim MyExcelDataTable As DataTable = ExcelDatasourceToDataTable(MyExcelDataSource)
+
+                        ''Use the DataTable as a data source
+                        'Dim ImportGSPEForm As New ImportGSPEForm(MyExcelDataTable)
+                        'ImportGSPEForm.ShowDialog()
+                    End If
+
+                Else
+                    MsgBox("The survey '" & SurveyName & "' was not found.")
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message & " " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 End Class

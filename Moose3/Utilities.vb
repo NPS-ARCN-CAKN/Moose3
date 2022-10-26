@@ -1,4 +1,6 @@
-﻿Imports DevExpress.XtraGrid
+﻿Imports System.ComponentModel
+Imports DevExpress.DataAccess.Excel
+Imports DevExpress.XtraGrid
 Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraMap
 Imports DevExpress.XtraPivotGrid
@@ -265,6 +267,33 @@ Module Utilities
         Return MyImageLayer
     End Function
 
-
+    ''' <summary>
+    ''' Converts a DevExpress ExcelDataSource into a DataTable
+    ''' </summary>
+    ''' <param name="ExcelDataSource">ExcelDataSource to convert. ExcelDataSource.</param>
+    ''' <returns>DataTable</returns>
+    Public Function ExcelDatasourceToDataTable(ByVal ExcelDataSource As ExcelDataSource) As DataTable
+        Dim MyList As IList = (CType(ExcelDataSource, IListSource)).GetList()
+        Dim MyExcelDataView As DevExpress.DataAccess.Native.Excel.DataView = CType(MyList, DevExpress.DataAccess.Native.Excel.DataView)
+        Dim MyExcelDataViewColumns As List(Of DevExpress.DataAccess.Native.Excel.ViewColumn) = MyExcelDataView.Columns
+        Dim ReturnTable As New DataTable()
+        Try
+            'Loop through the columns of the Excel.DataView, create identical .NET DataColumns and add them to ReturnTable
+            For i As Integer = 0 To MyExcelDataViewColumns.Count - 1
+                Dim MyPropertyDescriptor As PropertyDescriptor = MyExcelDataViewColumns(i)
+                ReturnTable.Columns.Add(MyPropertyDescriptor.Name, MyPropertyDescriptor.PropertyType)
+            Next i
+            Dim values(MyExcelDataViewColumns.Count - 1) As Object
+            For Each item As DevExpress.DataAccess.Native.Excel.ViewRow In MyList
+                For i As Integer = 0 To values.Length - 1
+                    values(i) = MyExcelDataViewColumns(i).GetValue(item)
+                Next i
+                ReturnTable.Rows.Add(values)
+            Next item
+        Catch ex As Exception
+            MsgBox(ex.Message & " (" & System.Reflection.MethodBase.GetCurrentMethod.Name & ")")
+        End Try
+        Return ReturnTable
+    End Function
 
 End Module
