@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Database application to facilitate the long-term monitoring of moose populations in Alaska.")>
 <Assembly: AssemblyCompany("National Park Service, Arctic Inventory and Monitoring Network")>
 <Assembly: AssemblyProduct("Moose Monitoring Database Application")>
-<Assembly: AssemblyCopyright("United States Government Works, Public Domain Software")>
+<Assembly: AssemblyCopyright("United States Government Works")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
