@@ -579,6 +579,12 @@ Partial Public Class MooseDataSet
         
         Private columnSearchMin1 As Global.System.Data.DataColumn
         
+        Private columnBULL_ADULT As Global.System.Data.DataColumn
+        
+        Private columnCALF_LONE As Global.System.Data.DataColumn
+        
+        Private columnSCF As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -1159,6 +1165,30 @@ Partial Public Class MooseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property BULL_ADULTColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBULL_ADULT
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CALF_LONEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCALF_LONE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SCFColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSCF
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1263,9 +1293,12 @@ Partial Public Class MooseDataSet
                     ByVal CertifiedBy As String,  _
                     ByVal CertificationLevel As String,  _
                     ByVal SurveyUnitSet As String,  _
-                    ByVal SearchMin1 As Double) As GSPERow
+                    ByVal SearchMin1 As Double,  _
+                    ByVal BULL_ADULT As Integer,  _
+                    ByVal CALF_LONE As Integer,  _
+                    ByVal SCF As Double) As GSPERow
             Dim rowGSPERow As GSPERow = CType(Me.NewRow,GSPERow)
-            Dim columnValuesArray() As Object = New Object() {Park, Nothing, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, SurveyUnitSet, SearchMin1}
+            Dim columnValuesArray() As Object = New Object() {Park, Nothing, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, SurveyUnitSet, SearchMin1, BULL_ADULT, CALF_LONE, SCF}
             If (Not (parentGSPE_SurveysRowByFK_GSPE_GSPE_Surveys) Is Nothing) Then
                 columnValuesArray(1) = parentGSPE_SurveysRowByFK_GSPE_GSPE_Surveys(0)
             End If
@@ -1365,6 +1398,9 @@ Partial Public Class MooseDataSet
             Me.columnCertificationLevel = MyBase.Columns("CertificationLevel")
             Me.columnSurveyUnitSet = MyBase.Columns("SurveyUnitSet")
             Me.columnSearchMin1 = MyBase.Columns("SearchMin1")
+            Me.columnBULL_ADULT = MyBase.Columns("BULL_ADULT")
+            Me.columnCALF_LONE = MyBase.Columns("CALF_LONE")
+            Me.columnSCF = MyBase.Columns("SCF")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1506,6 +1542,12 @@ Partial Public Class MooseDataSet
             MyBase.Columns.Add(Me.columnSurveyUnitSet)
             Me.columnSearchMin1 = New Global.System.Data.DataColumn("SearchMin1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSearchMin1)
+            Me.columnBULL_ADULT = New Global.System.Data.DataColumn("BULL_ADULT", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBULL_ADULT)
+            Me.columnCALF_LONE = New Global.System.Data.DataColumn("CALF_LONE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCALF_LONE)
+            Me.columnSCF = New Global.System.Data.DataColumn("SCF", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSCF)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnSurveyName, Me.columnSurveyYear, Me.columnID}, true))
             Me.columnPark.AllowDBNull = false
             Me.columnPark.MaxLength = 4
@@ -5355,6 +5397,51 @@ Partial Public Class MooseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property BULL_ADULT() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableGSPE.BULL_ADULTColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BULL_ADULT' in table 'GSPE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableGSPE.BULL_ADULTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CALF_LONE() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableGSPE.CALF_LONEColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CALF_LONE' in table 'GSPE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableGSPE.CALF_LONEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SCF() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableGSPE.SCFColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SCF' in table 'GSPE' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableGSPE.SCFColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property GSPE_SurveysRow() As GSPE_SurveysRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_GSPE_GSPE_Surveys")),GSPE_SurveysRow)
@@ -6094,6 +6181,42 @@ Partial Public Class MooseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetSearchMin1Null()
             Me(Me.tableGSPE.SearchMin1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsBULL_ADULTNull() As Boolean
+            Return Me.IsNull(Me.tableGSPE.BULL_ADULTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetBULL_ADULTNull()
+            Me(Me.tableGSPE.BULL_ADULTColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCALF_LONENull() As Boolean
+            Return Me.IsNull(Me.tableGSPE.CALF_LONEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCALF_LONENull()
+            Me(Me.tableGSPE.CALF_LONEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSCFNull() As Boolean
+            Return Me.IsNull(Me.tableGSPE.SCFColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSCFNull()
+            Me(Me.tableGSPE.SCFColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -9287,350 +9410,156 @@ Namespace MooseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("CertificationDate", "CertificationDate")
             tableMapping.ColumnMappings.Add("CertifiedBy", "CertifiedBy")
             tableMapping.ColumnMappings.Add("CertificationLevel", "CertificationLevel")
-            tableMapping.ColumnMappings.Add("SearchMin", "SearchMin1")
             tableMapping.ColumnMappings.Add("SurveyUnitSet", "SurveyUnitSet")
+            tableMapping.ColumnMappings.Add("SearchMin", "SearchMin1")
+            tableMapping.ColumnMappings.Add("BULL_ADULT", "BULL_ADULT")
+            tableMapping.ColumnMappings.Add("CALF_LONE", "CALF_LONE")
+            tableMapping.ColumnMappings.Add("SCF", "SCF")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[GSPE] WHERE (([Park] = @Original_Park) AND ([SurveyName] = @Or"& _ 
-                "iginal_SurveyName) AND ([SurveyYear] = @Original_SurveyYear) AND ((@IsNull_Seaso"& _ 
-                "n = 1 AND [Season] IS NULL) OR ([Season] = @Original_Season)) AND ((@IsNull_SubA"& _ 
-                "rea = 1 AND [SubArea] IS NULL) OR ([SubArea] = @Original_SubArea)) AND ((@IsNull"& _ 
-                "_GMU = 1 AND [GMU] IS NULL) OR ([GMU] = @Original_GMU)) AND ([ID] = @Original_ID"& _ 
-                ") AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Origin"& _ 
-                "al_StartDate)) AND ((@IsNull_StopDate = 1 AND [StopDate] IS NULL) OR ([StopDate]"& _ 
-                " = @Original_StopDate)) AND ((@IsNull_IntID = 1 AND [IntID] IS NULL) OR ([IntID]"& _ 
-                " = @Original_IntID)) AND ((@IsNull_Rand = 1 AND [Rand] IS NULL) OR ([Rand] = @Or"& _ 
-                "iginal_Rand)) AND ((@IsNull_FiringOrder = 1 AND [FiringOrder] IS NULL) OR ([Firi"& _ 
-                "ngOrder] = @Original_FiringOrder)) AND ((@IsNull_Selected = 1 AND [Selected] IS "& _ 
-                "NULL) OR ([Selected] = @Original_Selected)) AND ((@IsNull_Counted = 1 AND [Count"& _ 
-                "ed] IS NULL) OR ([Counted] = @Original_Counted)) AND ((@IsNull_Exclude = 1 AND ["& _ 
-                "Exclude] IS NULL) OR ([Exclude] = @Original_Exclude)) AND ((@IsNull_Strat = 1 AN"& _ 
-                "D [Strat] IS NULL) OR ([Strat] = @Original_Strat)) AND ((@IsNull_StratName = 1 A"& _ 
-                "ND [StratName] IS NULL) OR ([StratName] = @Original_StratName)) AND ((@IsNull_St"& _ 
-                "ratMoose = 1 AND [StratMoose] IS NULL) OR ([StratMoose] = @Original_StratMoose))"& _ 
-                " AND ((@IsNull_StratTracks = 1 AND [StratTracks] IS NULL) OR ([StratTracks] = @O"& _ 
-                "riginal_StratTracks)) AND ((@IsNull_StratHab = 1 AND [StratHab] IS NULL) OR ([St"& _ 
-                "ratHab] = @Original_StratHab)) AND ((@IsNull_SearchMin = 1 AND [SearchMin] IS NU"& _ 
-                "LL) OR ([SearchMin] = @Original_SearchMin)) AND ((@IsNull_DateCounted = 1 AND [D"& _ 
-                "ateCounted] IS NULL) OR ([DateCounted] = @Original_DateCounted)) AND ((@IsNull_P"& _ 
-                "erc_Not_Flown = 1 AND [Perc_Not_Flown] IS NULL) OR ([Perc_Not_Flown] = @Original"& _ 
-                "_Perc_Not_Flown)) AND ((@IsNull_X_COORD = 1 AND [X_COORD] IS NULL) OR ([X_COORD]"& _ 
-                " = @Original_X_COORD)) AND ((@IsNull_Y_COORD = 1 AND [Y_COORD] IS NULL) OR ([Y_C"& _ 
-                "OORD] = @Original_Y_COORD)) AND ((@IsNull_Area_SqMi = 1 AND [Area_SqMi] IS NULL)"& _ 
-                " OR ([Area_SqMi] = @Original_Area_SqMi)) AND ((@IsNull_ADULT = 1 AND [ADULT] IS "& _ 
-                "NULL) OR ([ADULT] = @Original_ADULT)) AND ((@IsNull_BULL_30_40 = 1 AND [BULL_30_"& _ 
-                "40] IS NULL) OR ([BULL_30_40] = @Original_BULL_30_40)) AND ((@IsNull_BULL_30_50 "& _ 
-                "= 1 AND [BULL_30_50] IS NULL) OR ([BULL_30_50] = @Original_BULL_30_50)) AND ((@I"& _ 
-                "sNull_BULL_30_60 = 1 AND [BULL_30_60] IS NULL) OR ([BULL_30_60] = @Original_BULL"& _ 
-                "_30_60)) AND ((@IsNull_BULL_41_50 = 1 AND [BULL_41_50] IS NULL) OR ([BULL_41_50]"& _ 
-                " = @Original_BULL_41_50)) AND ((@IsNull_BULL_ALL = 1 AND [BULL_ALL] IS NULL) OR "& _ 
-                "([BULL_ALL] = @Original_BULL_ALL)) AND ((@IsNull_BULL_GT_50 = 1 AND [BULL_GT_50]"& _ 
-                " IS NULL) OR ([BULL_GT_50] = @Original_BULL_GT_50)) AND ((@IsNull_BULL_GT_60 = 1"& _ 
-                " AND [BULL_GT_60] IS NULL) OR ([BULL_GT_60] = @Original_BULL_GT_60)) AND ((@IsNu"& _ 
-                "ll_BULL_GTE_50 = 1 AND [BULL_GTE_50] IS NULL) OR ([BULL_GTE_50] = @Original_BULL"& _ 
-                "_GTE_50)) AND ((@IsNull_BULL_LT_30 = 1 AND [BULL_LT_30] IS NULL) OR ([BULL_LT_30"& _ 
-                "] = @Original_BULL_LT_30)) AND ((@IsNull_BULL_LT_50 = 1 AND [BULL_LT_50] IS NULL"& _ 
-                ") OR ([BULL_LT_50] = @Original_BULL_LT_50)) AND ((@IsNull_CALF = 1 AND [CALF] IS"& _ 
-                " NULL) OR ([CALF] = @Original_CALF)) AND ((@IsNull_COW = 1 AND [COW] IS NULL) OR"& _ 
-                " ([COW] = @Original_COW)) AND ((@IsNull_COW_W_0 = 1 AND [COW_W_0] IS NULL) OR (["& _ 
-                "COW_W_0] = @Original_COW_W_0)) AND ((@IsNull_COW_W_1 = 1 AND [COW_W_1] IS NULL) "& _ 
-                "OR ([COW_W_1] = @Original_COW_W_1)) AND ((@IsNull_COW_W_2 = 1 AND [COW_W_2] IS N"& _ 
-                "ULL) OR ([COW_W_2] = @Original_COW_W_2)) AND ((@IsNull_COW_W_3 = 1 AND [COW_W_3]"& _ 
-                " IS NULL) OR ([COW_W_3] = @Original_COW_W_3)) AND ((@IsNull_LG_BULL = 1 AND [LG_"& _ 
-                "BULL] IS NULL) OR ([LG_BULL] = @Original_LG_BULL)) AND ((@IsNull_MED_BULL = 1 AN"& _ 
-                "D [MED_BULL] IS NULL) OR ([MED_BULL] = @Original_MED_BULL)) AND ((@IsNull_MED_L_"& _ 
-                "BULL = 1 AND [MED_L_BULL] IS NULL) OR ([MED_L_BULL] = @Original_MED_L_BULL)) AND"& _ 
-                " ((@IsNull_SM_BULL = 1 AND [SM_BULL] IS NULL) OR ([SM_BULL] = @Original_SM_BULL)"& _ 
-                ") AND ((@IsNull_UNKNOWN = 1 AND [UNKNOWN] IS NULL) OR ([UNKNOWN] = @Original_UNK"& _ 
-                "NOWN)) AND ((@IsNull_YBULL_ALL = 1 AND [YBULL_ALL] IS NULL) OR ([YBULL_ALL] = @O"& _ 
-                "riginal_YBULL_ALL)) AND ((@IsNull_YBULL_GTSF = 1 AND [YBULL_GTSF] IS NULL) OR (["& _ 
-                "YBULL_GTSF] = @Original_YBULL_GTSF)) AND ((@IsNull_YBULL_SF = 1 AND [YBULL_SF] I"& _ 
-                "S NULL) OR ([YBULL_SF] = @Original_YBULL_SF)) AND ((@IsNull_MOOSE = 1 AND [MOOSE"& _ 
-                "] IS NULL) OR ([MOOSE] = @Original_MOOSE)) AND ((@IsNull_Pilot = 1 AND [Pilot] I"& _ 
-                "S NULL) OR ([Pilot] = @Original_Pilot)) AND ((@IsNull_Observer = 1 AND [Observer"& _ 
-                "] IS NULL) OR ([Observer] = @Original_Observer)) AND ((@IsNull_Personnel = 1 AND"& _ 
-                " [Personnel] IS NULL) OR ([Personnel] = @Original_Personnel)) AND ((@IsNull_Dens"& _ 
-                "ity = 1 AND [Density] IS NULL) OR ([Density] = @Original_Density)) AND ((@IsNull"& _ 
-                "_SCF_Plot = 1 AND [SCF_Plot] IS NULL) OR ([SCF_Plot] = @Original_SCF_Plot)) AND "& _ 
-                "((@IsNull_Std = 1 AND [Std] IS NULL) OR ([Std] = @Original_Std)) AND ((@IsNull_I"& _ 
-                "nt = 1 AND [Int] IS NULL) OR ([Int] = @Original_Int)) AND ((@IsNull_Comments = 1"& _ 
-                " AND [Comments] IS NULL) OR ([Comments] = @Original_Comments)) AND ((@IsNull_Sou"& _ 
-                "rceFilename = 1 AND [SourceFilename] IS NULL) OR ([SourceFilename] = @Original_S"& _ 
-                "ourceFilename)) AND ([RecordInsertedDate] = @Original_RecordInsertedDate) AND (["& _ 
-                "RecordInsertedBy] = @Original_RecordInsertedBy) AND ((@IsNull_CertificationDate "& _ 
-                "= 1 AND [CertificationDate] IS NULL) OR ([CertificationDate] = @Original_Certifi"& _ 
-                "cationDate)) AND ((@IsNull_CertifiedBy = 1 AND [CertifiedBy] IS NULL) OR ([Certi"& _ 
-                "fiedBy] = @Original_CertifiedBy)) AND ([CertificationLevel] = @Original_Certific"& _ 
-                "ationLevel))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (SurveyName = @Original_SurveyName) AND (SurveyYear = @O"& _ 
+                "riginal_SurveyYear) AND (ID = @Original_ID) AND (CertificationLevel <> 'Certifie"& _ 
+                "d')"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Park", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyYear", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Season", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Season", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SubArea", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubArea", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SubArea", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubArea", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_GMU", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GMU", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_GMU", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GMU", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_StartDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StartDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StartDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StartDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_StopDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StopDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StopDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StopDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IntID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IntID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IntID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IntID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Rand", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rand", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Rand", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rand", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FiringOrder", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FiringOrder", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FiringOrder", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FiringOrder", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Selected", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Selected", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Selected", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Selected", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Counted", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Counted", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Exclude", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Exclude", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Exclude", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Exclude", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strat", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strat", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strat", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strat", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_StratName", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratName", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StratName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_StratMoose", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratMoose", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StratMoose", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratMoose", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_StratTracks", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratTracks", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StratTracks", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratTracks", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_StratHab", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratHab", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_StratHab", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratHab", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SearchMin", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SearchMin", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SearchMin", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SearchMin", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DateCounted", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DateCounted", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DateCounted", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DateCounted", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Perc_Not_Flown", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Perc_Not_Flown", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Perc_Not_Flown", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Perc_Not_Flown", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_X_COORD", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "X_COORD", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_X_COORD", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "X_COORD", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Y_COORD", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Y_COORD", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Y_COORD", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Y_COORD", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Area_SqMi", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Area_SqMi", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Area_SqMi", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Area_SqMi", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ADULT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ADULT", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ADULT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ADULT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_30_40", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_40", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_30_40", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_40", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_30_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_50", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_30_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_50", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_30_60", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_60", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_30_60", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_60", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_41_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_41_50", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_41_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_41_50", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_ALL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_ALL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_ALL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_ALL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_GT_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_50", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_GT_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_50", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_GT_60", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_60", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_GT_60", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_60", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_GTE_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GTE_50", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_GTE_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GTE_50", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_LT_30", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_30", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_LT_30", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_30", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_BULL_LT_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_50", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BULL_LT_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_50", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CALF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CALF", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CALF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CALF", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COW", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COW", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COW_W_0", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_0", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COW_W_0", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_0", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COW_W_1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_1", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COW_W_1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_1", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COW_W_2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_2", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COW_W_2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_COW_W_3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_3", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_COW_W_3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_3", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LG_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LG_BULL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LG_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LG_BULL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MED_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_BULL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MED_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_BULL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MED_L_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_L_BULL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MED_L_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_L_BULL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SM_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SM_BULL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SM_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SM_BULL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_UNKNOWN", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UNKNOWN", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UNKNOWN", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UNKNOWN", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_YBULL_ALL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_ALL", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_YBULL_ALL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_ALL", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_YBULL_GTSF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_GTSF", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_YBULL_GTSF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_GTSF", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_YBULL_SF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_SF", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_YBULL_SF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_SF", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MOOSE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MOOSE", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MOOSE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MOOSE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Pilot", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Pilot", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Pilot", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Pilot", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Observer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Observer", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Observer", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Observer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Personnel", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Personnel", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Personnel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Personnel", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Density", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Density", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SCF_Plot", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SCF_Plot", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SCF_Plot", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SCF_Plot", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Std", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Std", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Std", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Std", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Int", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Int", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Int", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Int", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Comments", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Comments", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SourceFilename", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SourceFilename", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SourceFilename", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SourceFilename", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_RecordInsertedBy", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CertificationDate", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationDate", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CertificationDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationDate", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CertifiedBy", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertifiedBy", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CertifiedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertifiedBy", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CertificationLevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationLevel", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GSPE] ([Park], [SurveyName], [SurveyYear], [Season], [SubArea]"& _ 
-                ", [GMU], [ID], [StartDate], [StopDate], [IntID], [Rand], [FiringOrder], [Selecte"& _ 
-                "d], [Counted], [Exclude], [Strat], [StratName], [StratMoose], [StratTracks], [St"& _ 
-                "ratHab], [SearchMin], [DateCounted], [Perc_Not_Flown], [X_COORD], [Y_COORD], [Ar"& _ 
-                "ea_SqMi], [ADULT], [BULL_30_40], [BULL_30_50], [BULL_30_60], [BULL_41_50], [BULL"& _ 
-                "_ALL], [BULL_GT_50], [BULL_GT_60], [BULL_GTE_50], [BULL_LT_30], [BULL_LT_50], [C"& _ 
-                "ALF], [COW], [COW_W_0], [COW_W_1], [COW_W_2], [COW_W_3], [LG_BULL], [MED_BULL], "& _ 
-                "[MED_L_BULL], [SM_BULL], [UNKNOWN], [YBULL_ALL], [YBULL_GTSF], [YBULL_SF], [MOOS"& _ 
-                "E], [Pilot], [Observer], [Personnel], [Density], [SCF_Plot], [Std], [Int], [Comm"& _ 
-                "ents], [SourceFilename], [RecordInsertedDate], [RecordInsertedBy], [Certificatio"& _ 
-                "nDate], [CertifiedBy], [CertificationLevel]) VALUES (@Park, @SurveyName, @Survey"& _ 
-                "Year, @Season, @SubArea, @GMU, @ID, @StartDate, @StopDate, @IntID, @Rand, @Firin"& _ 
-                "gOrder, @Selected, @Counted, @Exclude, @Strat, @StratName, @StratMoose, @StratTr"& _ 
-                "acks, @StratHab, @SearchMin, @DateCounted, @Perc_Not_Flown, @X_COORD, @Y_COORD, "& _ 
-                "@Area_SqMi, @ADULT, @BULL_30_40, @BULL_30_50, @BULL_30_60, @BULL_41_50, @BULL_AL"& _ 
-                "L, @BULL_GT_50, @BULL_GT_60, @BULL_GTE_50, @BULL_LT_30, @BULL_LT_50, @CALF, @COW"& _ 
-                ", @COW_W_0, @COW_W_1, @COW_W_2, @COW_W_3, @LG_BULL, @MED_BULL, @MED_L_BULL, @SM_"& _ 
-                "BULL, @UNKNOWN, @YBULL_ALL, @YBULL_GTSF, @YBULL_SF, @MOOSE, @Pilot, @Observer, @"& _ 
-                "Personnel, @Density, @SCF_Plot, @Std, @Int, @Comments, @SourceFilename, @RecordI"& _ 
-                "nsertedDate, @RecordInsertedBy, @CertificationDate, @CertifiedBy, @Certification"& _ 
-                "Level);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDat"& _ 
-                "e, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratN"& _ 
-                "ame, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, "& _ 
-                "X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_"& _ 
-                "50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF,"& _ 
-                " COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL"& _ 
-                ", UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, D"& _ 
-                "ensity, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, Record"& _ 
-                "InsertedBy, CertificationDate, CertifiedBy, CertificationLevel FROM GSPE WHERE ("& _ 
-                "ID = @ID) AND (SurveyName = @SurveyName) AND (SurveyYear = @SurveyYear)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  (Park, SurveyName, SurveyYear, Season, SubAre"& _ 
+                "a, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Ex"& _ 
+                "clude, Strat, StratName, StratMoose, StratTracks, StratHab, DateCounted, Perc_No"& _ 
+                "t_Flown, X_COORD, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  Y_COORD, Area_SqMi, ADULT, BULL_30_40, BUL"& _ 
+                "L_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, "& _ 
+                "BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, "& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTS"& _ 
+                "F, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Com"& _ 
+                "ments, SourceFilename, SurveyUnitSet, SearchMin, BULL_ADULT, CALF_LONE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
+                "            SCF)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@Park,@SurveyName,@SurveyYear,@Season,@SubArea,@GMU,@I"& _ 
+                "D,@StartDate,@StopDate,@IntID,@Rand,@FiringOrder,@Selected,@Counted,@Exclude,@St"& _ 
+                "rat,@StratName,@StratMoose,@StratTracks,@StratHab,@DateCounted,@Perc_Not_Flown,@"& _ 
+                "X_COORD,@Y_COORD,@Area_SqMi,@ADULT,@BULL_30_40,@BULL_30_50,@BULL_30_60,@BULL_41_"& _ 
+                "50,@BULL_ALL,@BULL_GT_50,@BULL_GT_60,@BULL_GTE_50,@BULL_LT_30,@BULL_LT_50,@CALF,"& _ 
+                "@COW,@COW_W_0,@COW_W_1,@COW_W_2,@COW_W_3,@LG_BULL,@MED_BULL,@MED_L_BULL,@SM_BULL"& _ 
+                ",@UNKNOWN,@YBULL_ALL,@YBULL_GTSF,@YBULL_SF,@MOOSE,@Pilot,@Observer,@Personnel,@D"& _ 
+                "ensity,@SCF_Plot,@Std,@Int,@Comments,@SourceFilename,@SurveyUnitSet,@SearchMin,@"& _ 
+                "BULL_ADULT,@CALF_LONE,@SCF); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, SurveyName, SurveyYear, Season, SubA"& _ 
+                "rea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, "& _ 
+                "Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, DateCounted, Perc_"& _ 
+                "Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_6"& _ 
+                "0, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_L"& _ 
+                "T_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BU"& _ 
+                "LL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, P"& _ 
+                "ersonnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedD"& _ 
+                "ate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, Surve"& _ 
+                "yUnitSet, SearchMin, BULL_ADULT, CALF_LONE, SCF FROM GSPE WHERE (ID = @ID) AND ("& _ 
+                "SurveyName = @SurveyName) AND (SurveyYear = @SurveyYear)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Park", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyYear", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Season", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubArea", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GMU", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "GMU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StartDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StartDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StopDate", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StopDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IntID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IntID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Rand", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Rand", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FiringOrder", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FiringOrder", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Selected", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Selected", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Counted", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Exclude", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Exclude", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strat", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratMoose", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratMoose", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratTracks", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratTracks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratHab", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "StratHab", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SearchMin", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SearchMin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DateCounted", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DateCounted", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Perc_Not_Flown", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Perc_Not_Flown", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@X_COORD", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "X_COORD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Y_COORD", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Y_COORD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Area_SqMi", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Area_SqMi", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ADULT", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ADULT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_30_40", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_40", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_30_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_30_60", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_60", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_41_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_41_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_ALL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_ALL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_GT_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_GT_60", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_60", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_GTE_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GTE_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_LT_30", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_30", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_LT_50", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CALF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CALF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_0", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_0", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LG_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LG_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MED_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MED_L_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_L_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SM_BULL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SM_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UNKNOWN", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UNKNOWN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YBULL_ALL", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_ALL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YBULL_GTSF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_GTSF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YBULL_SF", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_SF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MOOSE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MOOSE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Pilot", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Pilot", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Observer", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Observer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Personnel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Personnel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Density", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SCF_Plot", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SCF_Plot", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Std", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Std", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Int", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Int", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SourceFilename", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SourceFilename", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedBy", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationDate", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertifiedBy", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertifiedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationLevel", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationLevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Park", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Season", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "SubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GMU", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "GMU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StartDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "StartDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StopDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "StopDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IntID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IntID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Rand", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Rand", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FiringOrder", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "FiringOrder", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Selected", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Selected", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Counted", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Counted", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Exclude", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Exclude", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strat", Global.System.Data.SqlDbType.VarChar, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Strat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratName", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "StratName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratMoose", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "StratMoose", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratTracks", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "StratTracks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratHab", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "StratHab", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DateCounted", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "DateCounted", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Perc_Not_Flown", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Perc_Not_Flown", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@X_COORD", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "X_COORD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Y_COORD", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Y_COORD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Area_SqMi", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Area_SqMi", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ADULT", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "ADULT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_30_40", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_40", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_30_50", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_30_60", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_30_60", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_41_50", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_41_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_ALL", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_ALL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_GT_50", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_GT_60", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GT_60", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_GTE_50", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_GTE_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_LT_30", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_30", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_LT_50", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_LT_50", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CALF", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "CALF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "COW", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_0", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_0", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_2", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@COW_W_3", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "COW_W_3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LG_BULL", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "LG_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MED_BULL", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MED_L_BULL", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MED_L_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SM_BULL", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SM_BULL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UNKNOWN", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "UNKNOWN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YBULL_ALL", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_ALL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YBULL_GTSF", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_GTSF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@YBULL_SF", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "YBULL_SF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MOOSE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MOOSE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Pilot", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Pilot", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Observer", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Observer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Personnel", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "Personnel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Density", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Density", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SCF_Plot", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "SCF_Plot", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Std", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Std", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Int", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Int", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SourceFilename", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "SourceFilename", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyUnitSet", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyUnitSet", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SearchMin", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SearchMin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_ADULT", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_ADULT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CALF_LONE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "CALF_LONE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SCF", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SCF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          Park = @Park, SurveyName = @SurveyName, SurveyYear = @S"& _ 
-                "urveyYear, Season = @Season, SubArea = @SubArea, GMU = @GMU, ID = @ID, StartDate"& _ 
-                " = @StartDate, StopDate = @StopDate, IntID = @IntID, Rand = @Rand, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
-                "       FiringOrder = @FiringOrder, Selected = @Selected, Counted = @Counted, Exc"& _ 
-                "lude = @Exclude, Strat = @Strat, StratName = @StratName, StratMoose = @StratMoos"& _ 
-                "e, StratTracks = @StratTracks, StratHab = @StratHab, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  SearchM"& _ 
-                "in = @SearchMin, DateCounted = @DateCounted, Perc_Not_Flown = @Perc_Not_Flown, X"& _ 
-                "_COORD = @X_COORD, Y_COORD = @Y_COORD, Area_SqMi = @Area_SqMi, ADULT = @ADULT, B"& _ 
-                "ULL_30_40 = @BULL_30_40, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  BULL_30_50 = @BULL_30_50, BULL_30_6"& _ 
-                "0 = @BULL_30_60, BULL_41_50 = @BULL_41_50, BULL_ALL = @BULL_ALL, BULL_GT_50 = @B"& _ 
-                "ULL_GT_50, BULL_GT_60 = @BULL_GT_60, BULL_GTE_50 = @BULL_GTE_50, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "     BULL_LT_30 = @BULL_LT_30, BULL_LT_50 = @BULL_LT_50, CALF = @CALF, COW = @CO"& _ 
-                "W, COW_W_0 = @COW_W_0, COW_W_1 = @COW_W_1, COW_W_2 = @COW_W_2, COW_W_3 = @COW_W_"& _ 
-                "3, LG_BULL = @LG_BULL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  MED_BULL = @MED_BULL, MED_L_BULL = @M"& _ 
-                "ED_L_BULL, SM_BULL = @SM_BULL, UNKNOWN = @UNKNOWN, YBULL_ALL = @YBULL_ALL, YBULL"& _ 
-                "_GTSF = @YBULL_GTSF, YBULL_SF = @YBULL_SF, MOOSE = @MOOSE, Pilot = @Pilot, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
-                "               Observer = @Observer, Personnel = @Personnel, Density = @Density,"& _ 
-                " SCF_Plot = @SCF_Plot, Std = @Std, Int = @Int, Comments = @Comments, SourceFilen"& _ 
-                "ame = @SourceFilename, RecordInsertedDate = @RecordInsertedDate, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "     RecordInsertedBy = @RecordInsertedBy, CertificationDate = @CertificationDat"& _ 
-                "e, CertifiedBy = @CertifiedBy, CertificationLevel = @CertificationLevel, SurveyU"& _ 
-                "nitSet = @SurveyUnitSet"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (SurveyName = @Original_SurveyName) AND (SurveyY"& _ 
-                "ear = @Original_SurveyYear) AND (ID = @Original_ID);  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, SurveyName,"& _ 
-                " SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand, FiringO"& _ 
-                "rder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, Str"& _ 
-                "atHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADUL"& _ 
-                "T, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT"& _ 
-                "_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, "& _ 
-                "COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF,"& _ 
-                " YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comme"& _ 
-                "nts, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, Ce"& _ 
-                "rtifiedBy, CertificationLevel FROM GSPE WHERE (ID = @ID) AND (SurveyName = @Surv"& _ 
-                "eyName) AND (SurveyYear = @SurveyYear)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          Park = @Park, Season = @Season, SubArea = @SubArea, GMU"& _ 
+                " = @GMU, StartDate = @StartDate, StopDate = @StopDate, IntID = @IntID, Rand = @R"& _ 
+                "and, FiringOrder = @FiringOrder, Selected = @Selected, Counted = @Counted, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "               Exclude = @Exclude, Strat = @Strat, StratName = @StratName, Strat"& _ 
+                "Moose = @StratMoose, StratTracks = @StratTracks, StratHab = @StratHab, DateCount"& _ 
+                "ed = @DateCounted, Perc_Not_Flown = @Perc_Not_Flown, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  X_COORD"& _ 
+                " = @X_COORD, Y_COORD = @Y_COORD, Area_SqMi = @Area_SqMi, ADULT = @ADULT, BULL_30"& _ 
+                "_40 = @BULL_30_40, BULL_30_50 = @BULL_30_50, BULL_30_60 = @BULL_30_60, BULL_41_5"& _ 
+                "0 = @BULL_41_50, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  BULL_ALL = @BULL_ALL, BULL_GT_50 = @BULL_GT"& _ 
+                "_50, BULL_GT_60 = @BULL_GT_60, BULL_GTE_50 = @BULL_GTE_50, BULL_LT_30 = @BULL_LT"& _ 
+                "_30, BULL_LT_50 = @BULL_LT_50, CALF = @CALF, COW = @COW, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  COW"& _ 
+                "_W_0 = @COW_W_0, COW_W_1 = @COW_W_1, COW_W_2 = @COW_W_2, COW_W_3 = @COW_W_3, LG_"& _ 
+                "BULL = @LG_BULL, MED_BULL = @MED_BULL, MED_L_BULL = @MED_L_BULL, SM_BULL = @SM_B"& _ 
+                "ULL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  UNKNOWN = @UNKNOWN, YBULL_ALL = @YBULL_ALL, YBULL_GTSF "& _ 
+                "= @YBULL_GTSF, YBULL_SF = @YBULL_SF, MOOSE = @MOOSE, Pilot = @Pilot, Observer = "& _ 
+                "@Observer, Personnel = @Personnel, Density = @Density, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  SCF_P"& _ 
+                "lot = @SCF_Plot, Std = @Std, Int = @Int, Comments = @Comments, SourceFilename = "& _ 
+                "@SourceFilename, SurveyUnitSet = @SurveyUnitSet, SearchMin = @SearchMin, BULL_AD"& _ 
+                "ULT = @BULL_ADULT, CALF_LONE = @CALF_LONE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  SCF = @SCF"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE"& _ 
+                "  (SurveyName = @Original_SurveyName) AND (SurveyYear = @Original_SurveyYear) AN"& _ 
+                "D (ID = @Original_ID) AND (CertificationLevel <> 'Certified'); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, Su"& _ 
+                "rveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand"& _ 
+                ", FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTr"& _ 
+                "acks, StratHab, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT,"& _ 
+                " BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_6"& _ 
+                "0, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, CO"& _ 
+                "W_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, Y"& _ 
+                "BULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comment"& _ 
+                "s, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, Cert"& _ 
+                "ifiedBy, CertificationLevel, SurveyUnitSet, SearchMin, BULL_ADULT, CALF_LONE, SC"& _ 
+                "F FROM GSPE WHERE (ID = @ID) AND (SurveyName = @SurveyName) AND (SurveyYear = @S"& _ 
+                "urveyYear)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Park", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Season", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubArea", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "SubArea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@GMU", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "GMU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StartDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "StartDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StopDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "StopDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IntID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IntID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9644,7 +9573,6 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratMoose", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "StratMoose", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratTracks", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "StratTracks", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@StratHab", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "StratHab", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SearchMin", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SearchMin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DateCounted", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "DateCounted", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Perc_Not_Flown", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Perc_Not_Flown", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@X_COORD", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "X_COORD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9685,15 +9613,17 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Int", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Int", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Comments", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "Comments", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SourceFilename", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "SourceFilename", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RecordInsertedBy", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "RecordInsertedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertifiedBy", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "CertifiedBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CertificationLevel", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "CertificationLevel", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyUnitSet", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyUnitSet", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SearchMin", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SearchMin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BULL_ADULT", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BULL_ADULT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CALF_LONE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "CALF_LONE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SCF", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "SCF", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9711,14 +9641,15 @@ Namespace MooseDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Park, SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDat"& _ 
                 "e, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, Strat"& _ 
-                "Moose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "          X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60"& _ 
-                ", BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT"& _ 
-                "_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  LG_BULL,"& _ 
-                " MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE,"& _ 
-                " Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilena"& _ 
-                "me, RecordInsertedDate, RecordInsertedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  CertificationDate,"& _ 
-                " CertifiedBy, CertificationLevel, SurveyUnitSet"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     GSPE"
+                "Moose, StratTracks, StratHab, DateCounted, Perc_Not_Flown, X_COORD, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "        Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_5"& _ 
+                "0, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, "& _ 
+                "COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  MED_BULL, "& _ 
+                "MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Obs"& _ 
+                "erver, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordI"& _ 
+                "nsertedDate, RecordInsertedBy, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  CertificationDate, CertifiedB"& _ 
+                "y, CertificationLevel, SurveyUnitSet, SearchMin, BULL_ADULT, CALF_LONE, SCF"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FRO"& _ 
+                "M     GSPE"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -9778,512 +9709,17 @@ Namespace MooseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete( _
-                    ByVal Original_Park As String,  _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_SurveyYear As Integer,  _
-                    ByVal Original_Season As String,  _
-                    ByVal Original_SubArea As String,  _
-                    ByVal Original_GMU As String,  _
-                    ByVal Original_ID As String,  _
-                    ByVal Original_StartDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_StopDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_IntID As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Rand As Global.System.Nullable(Of Double),  _
-                    ByVal Original_FiringOrder As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Selected As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Counted As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Exclude As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Strat As String,  _
-                    ByVal Original_StratName As String,  _
-                    ByVal Original_StratMoose As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_StratTracks As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_StratHab As String,  _
-                    ByVal Original_SearchMin As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_DateCounted As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Perc_Not_Flown As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_X_COORD As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Y_COORD As Global.System.Nullable(Of Double),  _
-                    ByVal Original_Area_SqMi As Global.System.Nullable(Of Double),  _
-                    ByVal Original_ADULT As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_30_40 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_30_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_30_60 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_41_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_ALL As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_GT_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_GT_60 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_GTE_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_LT_30 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_BULL_LT_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_CALF As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_COW As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_COW_W_0 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_COW_W_1 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_COW_W_2 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_COW_W_3 As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_LG_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_MED_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_MED_L_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_SM_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_UNKNOWN As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_YBULL_ALL As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_YBULL_GTSF As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_YBULL_SF As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_MOOSE As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Pilot As String,  _
-                    ByVal Original_Observer As String,  _
-                    ByVal Original_Personnel As String,  _
-                    ByVal Original_Density As Global.System.Nullable(Of Double),  _
-                    ByVal Original_SCF_Plot As Global.System.Nullable(Of Boolean),  _
-                    ByVal Original_Std As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Int As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_Comments As String,  _
-                    ByVal Original_SourceFilename As String,  _
-                    ByVal Original_RecordInsertedDate As Date,  _
-                    ByVal Original_RecordInsertedBy As String,  _
-                    ByVal Original_CertificationDate As Global.System.Nullable(Of Date),  _
-                    ByVal Original_CertifiedBy As String,  _
-                    ByVal Original_CertificationLevel As String) As Integer
-            If (Original_Park Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Park")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Park,String)
-            End If
+        Public Overloads Overridable Function Delete(ByVal Original_SurveyName As String, ByVal Original_SurveyYear As Integer, ByVal Original_ID As String) As Integer
             If (Original_SurveyName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_SurveyName")
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_SurveyName,String)
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_SurveyName,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_SurveyYear,Integer)
-            If (Original_Season Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Season,String)
-            End If
-            If (Original_SubArea Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_SubArea,String)
-            End If
-            If (Original_GMU Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_GMU,String)
-            End If
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_SurveyYear,Integer)
             If (Original_ID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_ID")
             Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_ID,String)
-            End If
-            If (Original_StartDate.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_StartDate.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
-            If (Original_StopDate.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_StopDate.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            If (Original_IntID.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_IntID.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Rand.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_Rand.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(17).Value = Global.System.DBNull.Value
-            End If
-            If (Original_FiringOrder.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_FiringOrder.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(19).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Selected.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_Selected.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(21).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Counted.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_Counted.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(23).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Exclude.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(Original_Exclude.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(25).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Strat Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(27).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(27).Value = CType(Original_Strat,String)
-            End If
-            If (Original_StratName Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(29).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(Original_StratName,String)
-            End If
-            If (Original_StratMoose.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(Original_StratMoose.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (Original_StratTracks.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(33).Value = CType(Original_StratTracks.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
-            If (Original_StratHab Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(35).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(35).Value = CType(Original_StratHab,String)
-            End If
-            If (Original_SearchMin.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(37).Value = CType(Original_SearchMin.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(37).Value = Global.System.DBNull.Value
-            End If
-            If (Original_DateCounted.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(39).Value = CType(Original_DateCounted.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(38).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(39).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Perc_Not_Flown.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(41).Value = CType(Original_Perc_Not_Flown.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(40).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(41).Value = Global.System.DBNull.Value
-            End If
-            If (Original_X_COORD.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(43).Value = CType(Original_X_COORD.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(42).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(43).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Y_COORD.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(45).Value = CType(Original_Y_COORD.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(44).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(45).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Area_SqMi.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(47).Value = CType(Original_Area_SqMi.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(46).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(47).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ADULT.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(49).Value = CType(Original_ADULT.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(48).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(49).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_30_40.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(50).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(51).Value = CType(Original_BULL_30_40.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(50).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(51).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_30_50.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(52).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(53).Value = CType(Original_BULL_30_50.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(52).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(53).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_30_60.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(54).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(55).Value = CType(Original_BULL_30_60.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(54).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(55).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_41_50.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(56).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(57).Value = CType(Original_BULL_41_50.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(56).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(57).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_ALL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(58).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(59).Value = CType(Original_BULL_ALL.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(58).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(59).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_GT_50.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(60).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(61).Value = CType(Original_BULL_GT_50.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(60).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(61).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_GT_60.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(63).Value = CType(Original_BULL_GT_60.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(62).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(63).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_GTE_50.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(64).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(65).Value = CType(Original_BULL_GTE_50.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(64).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(65).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_LT_30.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(66).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(67).Value = CType(Original_BULL_LT_30.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(66).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(67).Value = Global.System.DBNull.Value
-            End If
-            If (Original_BULL_LT_50.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(68).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(69).Value = CType(Original_BULL_LT_50.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(68).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(69).Value = Global.System.DBNull.Value
-            End If
-            If (Original_CALF.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(70).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(71).Value = CType(Original_CALF.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(70).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(71).Value = Global.System.DBNull.Value
-            End If
-            If (Original_COW.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(72).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(73).Value = CType(Original_COW.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(72).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(73).Value = Global.System.DBNull.Value
-            End If
-            If (Original_COW_W_0.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(74).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(75).Value = CType(Original_COW_W_0.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(74).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(75).Value = Global.System.DBNull.Value
-            End If
-            If (Original_COW_W_1.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(76).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(77).Value = CType(Original_COW_W_1.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(76).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(77).Value = Global.System.DBNull.Value
-            End If
-            If (Original_COW_W_2.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(78).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(79).Value = CType(Original_COW_W_2.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(78).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(79).Value = Global.System.DBNull.Value
-            End If
-            If (Original_COW_W_3.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(80).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(81).Value = CType(Original_COW_W_3.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(80).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(81).Value = Global.System.DBNull.Value
-            End If
-            If (Original_LG_BULL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(82).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(83).Value = CType(Original_LG_BULL.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(82).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(83).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MED_BULL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(84).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(85).Value = CType(Original_MED_BULL.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(84).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(85).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MED_L_BULL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(86).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(87).Value = CType(Original_MED_L_BULL.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(86).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(87).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SM_BULL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(88).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(89).Value = CType(Original_SM_BULL.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(88).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(89).Value = Global.System.DBNull.Value
-            End If
-            If (Original_UNKNOWN.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(90).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(91).Value = CType(Original_UNKNOWN.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(90).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(91).Value = Global.System.DBNull.Value
-            End If
-            If (Original_YBULL_ALL.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(92).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(93).Value = CType(Original_YBULL_ALL.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(92).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(93).Value = Global.System.DBNull.Value
-            End If
-            If (Original_YBULL_GTSF.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(94).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(95).Value = CType(Original_YBULL_GTSF.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(94).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(95).Value = Global.System.DBNull.Value
-            End If
-            If (Original_YBULL_SF.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(96).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(97).Value = CType(Original_YBULL_SF.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(96).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(97).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MOOSE.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(98).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(99).Value = CType(Original_MOOSE.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(98).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(99).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Pilot Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(100).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(101).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(100).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(101).Value = CType(Original_Pilot,String)
-            End If
-            If (Original_Observer Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(102).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(103).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(102).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(103).Value = CType(Original_Observer,String)
-            End If
-            If (Original_Personnel Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(104).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(105).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(104).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(105).Value = CType(Original_Personnel,String)
-            End If
-            If (Original_Density.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(106).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(107).Value = CType(Original_Density.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(106).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(107).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SCF_Plot.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(108).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(109).Value = CType(Original_SCF_Plot.Value,Boolean)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(108).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(109).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Std.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(110).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(111).Value = CType(Original_Std.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(110).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(111).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Int.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(112).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(113).Value = CType(Original_Int.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(112).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(113).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Comments Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(114).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(115).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(114).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(115).Value = CType(Original_Comments,String)
-            End If
-            If (Original_SourceFilename Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(116).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(117).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(116).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(117).Value = CType(Original_SourceFilename,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(118).Value = CType(Original_RecordInsertedDate,Date)
-            If (Original_RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_RecordInsertedBy")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(119).Value = CType(Original_RecordInsertedBy,String)
-            End If
-            If (Original_CertificationDate.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(120).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(121).Value = CType(Original_CertificationDate.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(120).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(121).Value = Global.System.DBNull.Value
-            End If
-            If (Original_CertifiedBy Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(122).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(123).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(122).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(123).Value = CType(Original_CertifiedBy,String)
-            End If
-            If (Original_CertificationLevel Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_CertificationLevel")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(124).Value = CType(Original_CertificationLevel,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_ID,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10325,8 +9761,7 @@ Namespace MooseDataSetTableAdapters
                     ByVal StratMoose As Global.System.Nullable(Of Integer),  _
                     ByVal StratTracks As Global.System.Nullable(Of Integer),  _
                     ByVal StratHab As String,  _
-                    ByVal SearchMin As Global.System.Nullable(Of Integer),  _
-                    ByVal DateCounted As Global.System.Nullable(Of Date),  _
+                    ByVal DateCounted As String,  _
                     ByVal Perc_Not_Flown As Global.System.Nullable(Of Integer),  _
                     ByVal X_COORD As Global.System.Nullable(Of Double),  _
                     ByVal Y_COORD As Global.System.Nullable(Of Double),  _
@@ -10366,11 +9801,11 @@ Namespace MooseDataSetTableAdapters
                     ByVal Int As Global.System.Nullable(Of Integer),  _
                     ByVal Comments As String,  _
                     ByVal SourceFilename As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
-                    ByVal CertificationDate As Global.System.Nullable(Of Date),  _
-                    ByVal CertifiedBy As String,  _
-                    ByVal CertificationLevel As String) As Integer
+                    ByVal SurveyUnitSet As String,  _
+                    ByVal SearchMin As Global.System.Nullable(Of Double),  _
+                    ByVal BULL_ADULT As Global.System.Nullable(Of Integer),  _
+                    ByVal CALF_LONE As Global.System.Nullable(Of Integer),  _
+                    ByVal SCF As Global.System.Nullable(Of Double)) As Integer
             If (Park Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Park")
             Else
@@ -10467,231 +9902,230 @@ Namespace MooseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(19).Value = CType(StratHab,String)
             End If
-            If (SearchMin.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(SearchMin.Value,Integer)
-            Else
+            If (DateCounted Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(20).Value = CType(DateCounted,String)
             End If
-            If (DateCounted.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(DateCounted.Value,Date)
+            If (Perc_Not_Flown.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(21).Value = CType(Perc_Not_Flown.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
-            If (Perc_Not_Flown.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(Perc_Not_Flown.Value,Integer)
+            If (X_COORD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(22).Value = CType(X_COORD.Value,Double)
             Else
                 Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
-            If (X_COORD.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(X_COORD.Value,Double)
+            If (Y_COORD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(23).Value = CType(Y_COORD.Value,Double)
             Else
                 Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
-            If (Y_COORD.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(24).Value = CType(Y_COORD.Value,Double)
+            If (Area_SqMi.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(24).Value = CType(Area_SqMi.Value,Double)
             Else
                 Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
-            If (Area_SqMi.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(25).Value = CType(Area_SqMi.Value,Double)
+            If (ADULT.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(25).Value = CType(ADULT.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
             End If
-            If (ADULT.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(26).Value = CType(ADULT.Value,Integer)
+            If (BULL_30_40.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(26).Value = CType(BULL_30_40.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
-            If (BULL_30_40.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(27).Value = CType(BULL_30_40.Value,Integer)
+            If (BULL_30_50.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(27).Value = CType(BULL_30_50.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
             End If
-            If (BULL_30_50.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(28).Value = CType(BULL_30_50.Value,Integer)
+            If (BULL_30_60.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(28).Value = CType(BULL_30_60.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
             End If
-            If (BULL_30_60.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(BULL_30_60.Value,Integer)
+            If (BULL_41_50.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(29).Value = CType(BULL_41_50.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
-            If (BULL_41_50.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(30).Value = CType(BULL_41_50.Value,Integer)
+            If (BULL_ALL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(30).Value = CType(BULL_ALL.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
             End If
-            If (BULL_ALL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(31).Value = CType(BULL_ALL.Value,Integer)
+            If (BULL_GT_50.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(31).Value = CType(BULL_GT_50.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
-            If (BULL_GT_50.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(32).Value = CType(BULL_GT_50.Value,Integer)
+            If (BULL_GT_60.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(32).Value = CType(BULL_GT_60.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
             End If
-            If (BULL_GT_60.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(33).Value = CType(BULL_GT_60.Value,Integer)
+            If (BULL_GTE_50.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(33).Value = CType(BULL_GTE_50.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
-            If (BULL_GTE_50.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(34).Value = CType(BULL_GTE_50.Value,Integer)
+            If (BULL_LT_30.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(34).Value = CType(BULL_LT_30.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(34).Value = Global.System.DBNull.Value
             End If
-            If (BULL_LT_30.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(35).Value = CType(BULL_LT_30.Value,Integer)
+            If (BULL_LT_50.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(35).Value = CType(BULL_LT_50.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(35).Value = Global.System.DBNull.Value
             End If
-            If (BULL_LT_50.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(36).Value = CType(BULL_LT_50.Value,Integer)
+            If (CALF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(36).Value = CType(CALF.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
-            If (CALF.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(37).Value = CType(CALF.Value,Integer)
+            If (COW.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(37).Value = CType(COW.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(37).Value = Global.System.DBNull.Value
             End If
-            If (COW.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(38).Value = CType(COW.Value,Integer)
+            If (COW_W_0.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(38).Value = CType(COW_W_0.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(38).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_0.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(39).Value = CType(COW_W_0.Value,Integer)
+            If (COW_W_1.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(39).Value = CType(COW_W_1.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(39).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_1.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(40).Value = CType(COW_W_1.Value,Integer)
+            If (COW_W_2.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(40).Value = CType(COW_W_2.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(40).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_2.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(41).Value = CType(COW_W_2.Value,Integer)
+            If (COW_W_3.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(41).Value = CType(COW_W_3.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(41).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_3.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(42).Value = CType(COW_W_3.Value,Integer)
+            If (LG_BULL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(42).Value = CType(LG_BULL.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(42).Value = Global.System.DBNull.Value
             End If
-            If (LG_BULL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(43).Value = CType(LG_BULL.Value,Integer)
+            If (MED_BULL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(43).Value = CType(MED_BULL.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(43).Value = Global.System.DBNull.Value
             End If
-            If (MED_BULL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(44).Value = CType(MED_BULL.Value,Integer)
+            If (MED_L_BULL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(44).Value = CType(MED_L_BULL.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(44).Value = Global.System.DBNull.Value
             End If
-            If (MED_L_BULL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(45).Value = CType(MED_L_BULL.Value,Integer)
+            If (SM_BULL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(45).Value = CType(SM_BULL.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(45).Value = Global.System.DBNull.Value
             End If
-            If (SM_BULL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(46).Value = CType(SM_BULL.Value,Integer)
+            If (UNKNOWN.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(46).Value = CType(UNKNOWN.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
-            If (UNKNOWN.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(47).Value = CType(UNKNOWN.Value,Integer)
+            If (YBULL_ALL.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(47).Value = CType(YBULL_ALL.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(47).Value = Global.System.DBNull.Value
             End If
-            If (YBULL_ALL.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(48).Value = CType(YBULL_ALL.Value,Integer)
+            If (YBULL_GTSF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(48).Value = CType(YBULL_GTSF.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(48).Value = Global.System.DBNull.Value
             End If
-            If (YBULL_GTSF.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(49).Value = CType(YBULL_GTSF.Value,Integer)
+            If (YBULL_SF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(49).Value = CType(YBULL_SF.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(49).Value = Global.System.DBNull.Value
             End If
-            If (YBULL_SF.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(50).Value = CType(YBULL_SF.Value,Integer)
+            If (MOOSE.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(50).Value = CType(MOOSE.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(50).Value = Global.System.DBNull.Value
             End If
-            If (MOOSE.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(51).Value = CType(MOOSE.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(51).Value = Global.System.DBNull.Value
-            End If
             If (Pilot Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(52).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(51).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(52).Value = CType(Pilot,String)
+                Me.Adapter.InsertCommand.Parameters(51).Value = CType(Pilot,String)
             End If
             If (Observer Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(53).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(52).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(53).Value = CType(Observer,String)
+                Me.Adapter.InsertCommand.Parameters(52).Value = CType(Observer,String)
             End If
             If (Personnel Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(54).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(53).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(54).Value = CType(Personnel,String)
+                Me.Adapter.InsertCommand.Parameters(53).Value = CType(Personnel,String)
             End If
             If (Density.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(55).Value = CType(Density.Value,Double)
+                Me.Adapter.InsertCommand.Parameters(54).Value = CType(Density.Value,Double)
+            Else
+                Me.Adapter.InsertCommand.Parameters(54).Value = Global.System.DBNull.Value
+            End If
+            If (SCF_Plot.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(55).Value = CType(SCF_Plot.Value,Boolean)
             Else
                 Me.Adapter.InsertCommand.Parameters(55).Value = Global.System.DBNull.Value
             End If
-            If (SCF_Plot.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(56).Value = CType(SCF_Plot.Value,Boolean)
+            If (Std.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(56).Value = CType(Std.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(56).Value = Global.System.DBNull.Value
             End If
-            If (Std.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(57).Value = CType(Std.Value,Integer)
+            If (Int.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(57).Value = CType(Int.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(57).Value = Global.System.DBNull.Value
             End If
-            If (Int.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(58).Value = CType(Int.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(58).Value = Global.System.DBNull.Value
-            End If
             If (Comments Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(59).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(58).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(59).Value = CType(Comments,String)
+                Me.Adapter.InsertCommand.Parameters(58).Value = CType(Comments,String)
             End If
             If (SourceFilename Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(59).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(59).Value = CType(SourceFilename,String)
+            End If
+            If (SurveyUnitSet Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(60).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(60).Value = CType(SourceFilename,String)
+                Me.Adapter.InsertCommand.Parameters(60).Value = CType(SurveyUnitSet,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(61).Value = CType(RecordInsertedDate,Date)
-            If (RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("RecordInsertedBy")
+            If (SearchMin.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(61).Value = CType(SearchMin.Value,Double)
             Else
-                Me.Adapter.InsertCommand.Parameters(62).Value = CType(RecordInsertedBy,String)
+                Me.Adapter.InsertCommand.Parameters(61).Value = Global.System.DBNull.Value
             End If
-            If (CertificationDate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(63).Value = CType(CertificationDate.Value,Date)
+            If (BULL_ADULT.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(62).Value = CType(BULL_ADULT.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(62).Value = Global.System.DBNull.Value
+            End If
+            If (CALF_LONE.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(63).Value = CType(CALF_LONE.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(63).Value = Global.System.DBNull.Value
             End If
-            If (CertifiedBy Is Nothing) Then
+            If (SCF.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(64).Value = CType(SCF.Value,Double)
+            Else
                 Me.Adapter.InsertCommand.Parameters(64).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(64).Value = CType(CertifiedBy,String)
-            End If
-            If (CertificationLevel Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("CertificationLevel")
-            Else
-                Me.Adapter.InsertCommand.Parameters(65).Value = CType(CertificationLevel,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -10714,12 +10148,9 @@ Namespace MooseDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
                     ByVal Park As String,  _
-                    ByVal SurveyName As String,  _
-                    ByVal SurveyYear As Integer,  _
                     ByVal Season As String,  _
                     ByVal SubArea As String,  _
                     ByVal GMU As String,  _
-                    ByVal ID As String,  _
                     ByVal StartDate As Global.System.Nullable(Of Date),  _
                     ByVal StopDate As Global.System.Nullable(Of Date),  _
                     ByVal IntID As Global.System.Nullable(Of Integer),  _
@@ -10733,7 +10164,6 @@ Namespace MooseDataSetTableAdapters
                     ByVal StratMoose As Global.System.Nullable(Of Integer),  _
                     ByVal StratTracks As Global.System.Nullable(Of Integer),  _
                     ByVal StratHab As String,  _
-                    ByVal SearchMin As Global.System.Nullable(Of Double),  _
                     ByVal DateCounted As String,  _
                     ByVal Perc_Not_Flown As Global.System.Nullable(Of Integer),  _
                     ByVal X_COORD As Global.System.Nullable(Of Double),  _
@@ -10774,353 +10204,349 @@ Namespace MooseDataSetTableAdapters
                     ByVal Int As Global.System.Nullable(Of Integer),  _
                     ByVal Comments As String,  _
                     ByVal SourceFilename As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
-                    ByVal CertificationDate As Global.System.Nullable(Of Date),  _
-                    ByVal CertifiedBy As String,  _
-                    ByVal CertificationLevel As String,  _
                     ByVal SurveyUnitSet As String,  _
+                    ByVal SearchMin As Global.System.Nullable(Of Double),  _
+                    ByVal BULL_ADULT As Global.System.Nullable(Of Integer),  _
+                    ByVal CALF_LONE As Global.System.Nullable(Of Integer),  _
+                    ByVal SCF As Global.System.Nullable(Of Double),  _
                     ByVal Original_SurveyName As String,  _
                     ByVal Original_SurveyYear As Integer,  _
-                    ByVal Original_ID As String) As Integer
+                    ByVal Original_ID As String,  _
+                    ByVal ID As String,  _
+                    ByVal SurveyName As String,  _
+                    ByVal SurveyYear As Integer) As Integer
             If (Park Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Park")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Park,String)
             End If
-            If (SurveyName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("SurveyName")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(SurveyName,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(SurveyYear,Integer)
             If (Season Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Season,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Season,String)
             End If
             If (SubArea Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(SubArea,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(SubArea,String)
             End If
             If (GMU Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(GMU,String)
-            End If
-            If (ID Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("ID")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(ID,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(GMU,String)
             End If
             If (StartDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(StartDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(StartDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (StopDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(StopDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (IntID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(IntID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Rand.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Rand.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (StopDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(StopDate.Value,Date)
+            If (FiringOrder.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(FiringOrder.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (IntID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(IntID.Value,Integer)
+            If (Selected.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Selected.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
-            If (Rand.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Rand.Value,Double)
+            If (Counted.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Counted.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            If (FiringOrder.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(FiringOrder.Value,Integer)
+            If (Exclude.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Exclude.Value,Boolean)
             Else
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
-            If (Selected.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Selected.Value,Boolean)
-            Else
+            If (Strat Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Counted.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Counted.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Strat,String)
             End If
-            If (Exclude.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Exclude.Value,Boolean)
+            If (StratName Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(StratName,String)
+            End If
+            If (StratMoose.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(StratMoose.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
-            If (Strat Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            If (StratTracks.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(StratTracks.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Strat,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
-            If (StratName Is Nothing) Then
+            If (StratHab Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(StratName,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(StratHab,String)
             End If
-            If (StratMoose.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(StratMoose.Value,Integer)
-            Else
+            If (DateCounted Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(DateCounted,String)
             End If
-            If (StratTracks.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(StratTracks.Value,Integer)
+            If (Perc_Not_Flown.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Perc_Not_Flown.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
-            If (StratHab Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            If (X_COORD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(X_COORD.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(StratHab,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            If (SearchMin.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(SearchMin.Value,Double)
+            If (Y_COORD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Y_COORD.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
-            If (DateCounted Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            If (Area_SqMi.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Area_SqMi.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(DateCounted,String)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
-            If (Perc_Not_Flown.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Perc_Not_Flown.Value,Integer)
+            If (ADULT.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(ADULT.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
-            If (X_COORD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(X_COORD.Value,Double)
+            If (BULL_30_40.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(BULL_30_40.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
-            If (Y_COORD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Y_COORD.Value,Double)
+            If (BULL_30_50.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(BULL_30_50.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
-            If (Area_SqMi.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Area_SqMi.Value,Double)
+            If (BULL_30_60.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(BULL_30_60.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             End If
-            If (ADULT.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(ADULT.Value,Integer)
+            If (BULL_41_50.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(BULL_41_50.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
-            If (BULL_30_40.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(BULL_30_40.Value,Integer)
+            If (BULL_ALL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(BULL_ALL.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             End If
-            If (BULL_30_50.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(BULL_30_50.Value,Integer)
+            If (BULL_GT_50.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(BULL_GT_50.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             End If
-            If (BULL_30_60.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(BULL_30_60.Value,Integer)
+            If (BULL_GT_60.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(BULL_GT_60.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             End If
-            If (BULL_41_50.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(BULL_41_50.Value,Integer)
+            If (BULL_GTE_50.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(BULL_GTE_50.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
             End If
-            If (BULL_ALL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(BULL_ALL.Value,Integer)
+            If (BULL_LT_30.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(BULL_LT_30.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
-            If (BULL_GT_50.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(BULL_GT_50.Value,Integer)
+            If (BULL_LT_50.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(BULL_LT_50.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
             End If
-            If (BULL_GT_60.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(BULL_GT_60.Value,Integer)
+            If (CALF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(CALF.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
-            If (BULL_GTE_50.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(BULL_GTE_50.Value,Integer)
+            If (COW.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(COW.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             End If
-            If (BULL_LT_30.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(BULL_LT_30.Value,Integer)
+            If (COW_W_0.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(COW_W_0.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
             End If
-            If (BULL_LT_50.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(BULL_LT_50.Value,Integer)
+            If (COW_W_1.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(COW_W_1.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
-            If (CALF.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(CALF.Value,Integer)
+            If (COW_W_2.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(COW_W_2.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
             End If
-            If (COW.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(COW.Value,Integer)
+            If (COW_W_3.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(COW_W_3.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_0.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(COW_W_0.Value,Integer)
+            If (LG_BULL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(LG_BULL.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_1.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(COW_W_1.Value,Integer)
+            If (MED_BULL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(MED_BULL.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_2.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(COW_W_2.Value,Integer)
+            If (MED_L_BULL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(MED_L_BULL.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
             End If
-            If (COW_W_3.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(COW_W_3.Value,Integer)
+            If (SM_BULL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(SM_BULL.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
             End If
-            If (LG_BULL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(LG_BULL.Value,Integer)
+            If (UNKNOWN.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(UNKNOWN.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
             End If
-            If (MED_BULL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(MED_BULL.Value,Integer)
+            If (YBULL_ALL.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(YBULL_ALL.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             End If
-            If (MED_L_BULL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(MED_L_BULL.Value,Integer)
+            If (YBULL_GTSF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(YBULL_GTSF.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
             End If
-            If (SM_BULL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(SM_BULL.Value,Integer)
+            If (YBULL_SF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(YBULL_SF.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
             End If
-            If (UNKNOWN.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(UNKNOWN.Value,Integer)
+            If (MOOSE.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(MOOSE.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
             End If
-            If (YBULL_ALL.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(YBULL_ALL.Value,Integer)
-            Else
+            If (Pilot Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
-            End If
-            If (YBULL_GTSF.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(YBULL_GTSF.Value,Integer)
             Else
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Pilot,String)
+            End If
+            If (Observer Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
-            End If
-            If (YBULL_SF.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(YBULL_SF.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(Observer,String)
             End If
-            If (MOOSE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(MOOSE.Value,Integer)
+            If (Personnel Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Personnel,String)
+            End If
+            If (Density.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(Density.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
             End If
-            If (Pilot Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Pilot,String)
-            End If
-            If (Observer Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Observer,String)
-            End If
-            If (Personnel Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Personnel,String)
-            End If
-            If (Density.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Density.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
-            End If
             If (SCF_Plot.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(SCF_Plot.Value,Boolean)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(SCF_Plot.Value,Boolean)
             Else
-                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
             End If
             If (Std.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(Std.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(Std.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
             End If
             If (Int.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Int.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Int.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
+            End If
+            If (Comments Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(Comments,String)
+            End If
+            If (SourceFilename Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(SourceFilename,String)
+            End If
+            If (SurveyUnitSet Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(SurveyUnitSet,String)
+            End If
+            If (SearchMin.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(SearchMin.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
             End If
-            If (Comments Is Nothing) Then
+            If (BULL_ADULT.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(BULL_ADULT.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(59).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(Comments,String)
             End If
-            If (SourceFilename Is Nothing) Then
+            If (CALF_LONE.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(CALF_LONE.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(SourceFilename,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(61).Value = CType(RecordInsertedDate,Date)
-            If (RecordInsertedBy Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("RecordInsertedBy")
+            If (SCF.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(SCF.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(RecordInsertedBy,String)
-            End If
-            If (CertificationDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(CertificationDate.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(63).Value = Global.System.DBNull.Value
-            End If
-            If (CertifiedBy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(CertifiedBy,String)
-            End If
-            If (CertificationLevel Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("CertificationLevel")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(CertificationLevel,String)
-            End If
-            If (SurveyUnitSet Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(SurveyUnitSet,String)
+                Me.Adapter.UpdateCommand.Parameters(61).Value = Global.System.DBNull.Value
             End If
             If (Original_SurveyName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_SurveyName")
             Else
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_SurveyName,String)
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_SurveyName,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_SurveyYear,Integer)
+            Me.Adapter.UpdateCommand.Parameters(63).Value = CType(Original_SurveyYear,Integer)
             If (Original_ID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_ID")
             Else
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_ID,String)
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_ID,String)
             End If
+            If (ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ID")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(ID,String)
+            End If
+            If (SurveyName Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("SurveyName")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(SurveyName,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(67).Value = CType(SurveyYear,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11134,81 +10560,6 @@ Namespace MooseDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal Park As String,  _
-                    ByVal Season As String,  _
-                    ByVal SubArea As String,  _
-                    ByVal GMU As String,  _
-                    ByVal StartDate As Global.System.Nullable(Of Date),  _
-                    ByVal StopDate As Global.System.Nullable(Of Date),  _
-                    ByVal IntID As Global.System.Nullable(Of Integer),  _
-                    ByVal Rand As Global.System.Nullable(Of Double),  _
-                    ByVal FiringOrder As Global.System.Nullable(Of Integer),  _
-                    ByVal Selected As Global.System.Nullable(Of Boolean),  _
-                    ByVal Counted As Global.System.Nullable(Of Boolean),  _
-                    ByVal Exclude As Global.System.Nullable(Of Boolean),  _
-                    ByVal Strat As String,  _
-                    ByVal StratName As String,  _
-                    ByVal StratMoose As Global.System.Nullable(Of Integer),  _
-                    ByVal StratTracks As Global.System.Nullable(Of Integer),  _
-                    ByVal StratHab As String,  _
-                    ByVal SearchMin As Global.System.Nullable(Of Double),  _
-                    ByVal DateCounted As String,  _
-                    ByVal Perc_Not_Flown As Global.System.Nullable(Of Integer),  _
-                    ByVal X_COORD As Global.System.Nullable(Of Double),  _
-                    ByVal Y_COORD As Global.System.Nullable(Of Double),  _
-                    ByVal Area_SqMi As Global.System.Nullable(Of Double),  _
-                    ByVal ADULT As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_30_40 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_30_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_30_60 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_41_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_ALL As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_GT_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_GT_60 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_GTE_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_LT_30 As Global.System.Nullable(Of Integer),  _
-                    ByVal BULL_LT_50 As Global.System.Nullable(Of Integer),  _
-                    ByVal CALF As Global.System.Nullable(Of Integer),  _
-                    ByVal COW As Global.System.Nullable(Of Integer),  _
-                    ByVal COW_W_0 As Global.System.Nullable(Of Integer),  _
-                    ByVal COW_W_1 As Global.System.Nullable(Of Integer),  _
-                    ByVal COW_W_2 As Global.System.Nullable(Of Integer),  _
-                    ByVal COW_W_3 As Global.System.Nullable(Of Integer),  _
-                    ByVal LG_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal MED_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal MED_L_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal SM_BULL As Global.System.Nullable(Of Integer),  _
-                    ByVal UNKNOWN As Global.System.Nullable(Of Integer),  _
-                    ByVal YBULL_ALL As Global.System.Nullable(Of Integer),  _
-                    ByVal YBULL_GTSF As Global.System.Nullable(Of Integer),  _
-                    ByVal YBULL_SF As Global.System.Nullable(Of Integer),  _
-                    ByVal MOOSE As Global.System.Nullable(Of Integer),  _
-                    ByVal Pilot As String,  _
-                    ByVal Observer As String,  _
-                    ByVal Personnel As String,  _
-                    ByVal Density As Global.System.Nullable(Of Double),  _
-                    ByVal SCF_Plot As Global.System.Nullable(Of Boolean),  _
-                    ByVal Std As Global.System.Nullable(Of Integer),  _
-                    ByVal Int As Global.System.Nullable(Of Integer),  _
-                    ByVal Comments As String,  _
-                    ByVal SourceFilename As String,  _
-                    ByVal RecordInsertedDate As Date,  _
-                    ByVal RecordInsertedBy As String,  _
-                    ByVal CertificationDate As Global.System.Nullable(Of Date),  _
-                    ByVal CertifiedBy As String,  _
-                    ByVal CertificationLevel As String,  _
-                    ByVal SurveyUnitSet As String,  _
-                    ByVal Original_SurveyName As String,  _
-                    ByVal Original_SurveyYear As Integer,  _
-                    ByVal Original_ID As String) As Integer
-            Return Me.Update(Park, Original_SurveyName, Original_SurveyYear, Season, SubArea, GMU, Original_ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTracks, StratHab, SearchMin, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, SurveyUnitSet, Original_SurveyName, Original_SurveyYear, Original_ID)
         End Function
     End Class
     

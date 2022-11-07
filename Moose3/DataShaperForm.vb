@@ -101,7 +101,7 @@ Public Class DataShaperForm
 
     Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshQueriesListToolStripButton.Click
         Try
-            Me.QuerySelectorToolStripComboBox.Text = ""
+            'Me.QuerySelectorToolStripComboBox.Text = ""
             LoadQuerySelector()
             'CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, CurrentQuery)
             'Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
