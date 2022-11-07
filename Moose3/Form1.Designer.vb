@@ -671,11 +671,11 @@ Partial Class Form1
         Me.CommentsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "Comments", True))
         Me.CommentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CommentsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CommentsTextBox.Location = New System.Drawing.Point(0, 27)
+        Me.CommentsTextBox.Location = New System.Drawing.Point(0, 31)
         Me.CommentsTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.CommentsTextBox.Multiline = True
         Me.CommentsTextBox.Name = "CommentsTextBox"
-        Me.CommentsTextBox.Size = New System.Drawing.Size(257, 905)
+        Me.CommentsTextBox.Size = New System.Drawing.Size(257, 901)
         Me.CommentsTextBox.TabIndex = 1
         '
         'CommentsToolStrip
@@ -684,7 +684,7 @@ Partial Class Form1
         Me.CommentsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AppendNewCommentToolStripButton})
         Me.CommentsToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.CommentsToolStrip.Name = "CommentsToolStrip"
-        Me.CommentsToolStrip.Size = New System.Drawing.Size(257, 27)
+        Me.CommentsToolStrip.Size = New System.Drawing.Size(257, 31)
         Me.CommentsToolStrip.TabIndex = 3
         Me.CommentsToolStrip.Text = "ToolStrip1"
         '
@@ -694,7 +694,7 @@ Partial Class Form1
         Me.AppendNewCommentToolStripButton.Image = CType(resources.GetObject("AppendNewCommentToolStripButton.Image"), System.Drawing.Image)
         Me.AppendNewCommentToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AppendNewCommentToolStripButton.Name = "AppendNewCommentToolStripButton"
-        Me.AppendNewCommentToolStripButton.Size = New System.Drawing.Size(186, 24)
+        Me.AppendNewCommentToolStripButton.Size = New System.Drawing.Size(186, 28)
         Me.AppendNewCommentToolStripButton.Text = "Append a new dated note"
         '
         'DatasetProcessingStepsDockPanel
@@ -727,11 +727,11 @@ Partial Class Form1
         Me.DatasetProcessingStepsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GSPE_SurveysBindingSource, "DatasetProcessingSteps", True))
         Me.DatasetProcessingStepsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DatasetProcessingStepsTextBox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 27)
+        Me.DatasetProcessingStepsTextBox.Location = New System.Drawing.Point(0, 31)
         Me.DatasetProcessingStepsTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.DatasetProcessingStepsTextBox.Multiline = True
         Me.DatasetProcessingStepsTextBox.Name = "DatasetProcessingStepsTextBox"
-        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(257, 710)
+        Me.DatasetProcessingStepsTextBox.Size = New System.Drawing.Size(257, 706)
         Me.DatasetProcessingStepsTextBox.TabIndex = 1
         '
         'DatasetProcessingStepsToolStrip
@@ -740,7 +740,7 @@ Partial Class Form1
         Me.DatasetProcessingStepsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddProcessingNoteToolStripButton})
         Me.DatasetProcessingStepsToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DatasetProcessingStepsToolStrip.Name = "DatasetProcessingStepsToolStrip"
-        Me.DatasetProcessingStepsToolStrip.Size = New System.Drawing.Size(257, 27)
+        Me.DatasetProcessingStepsToolStrip.Size = New System.Drawing.Size(257, 31)
         Me.DatasetProcessingStepsToolStrip.TabIndex = 2
         Me.DatasetProcessingStepsToolStrip.Text = "ToolStrip1"
         '
@@ -750,7 +750,7 @@ Partial Class Form1
         Me.AddProcessingNoteToolStripButton.Image = CType(resources.GetObject("AddProcessingNoteToolStripButton.Image"), System.Drawing.Image)
         Me.AddProcessingNoteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddProcessingNoteToolStripButton.Name = "AddProcessingNoteToolStripButton"
-        Me.AddProcessingNoteToolStripButton.Size = New System.Drawing.Size(186, 24)
+        Me.AddProcessingNoteToolStripButton.Size = New System.Drawing.Size(186, 28)
         Me.AddProcessingNoteToolStripButton.Text = "Append a new dated note"
         '
         'SummaryDockPanel
@@ -1211,11 +1211,11 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaTextBox_PopEst, Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.ConfidenceDataGridViewTextBoxColumn, Me.SurveyAreaDataGridViewTextBoxColumn, Me.SampledAreaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn18, Me.Analysis_Area, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn1})
         Me.GSPE_PopulationEstimatesDataGridView.DataSource = Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
         Me.GSPE_PopulationEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GSPE_PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
+        Me.GSPE_PopulationEstimatesDataGridView.Location = New System.Drawing.Point(0, 31)
         Me.GSPE_PopulationEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPE_PopulationEstimatesDataGridView.Name = "GSPE_PopulationEstimatesDataGridView"
         Me.GSPE_PopulationEstimatesDataGridView.RowHeadersWidth = 51
-        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(876, 220)
+        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(876, 214)
         Me.GSPE_PopulationEstimatesDataGridView.TabIndex = 0
         '
         'ParkSubAreaTextBox_PopEst
@@ -1486,14 +1486,14 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
         Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
-        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(876, 25)
+        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(876, 31)
         Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
         Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
         '
         'PopulationEstimatesToolStripLabel
         '
         Me.PopulationEstimatesToolStripLabel.Name = "PopulationEstimatesToolStripLabel"
-        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(249, 22)
+        Me.PopulationEstimatesToolStripLabel.Size = New System.Drawing.Size(249, 28)
         Me.PopulationEstimatesToolStripLabel.Text = "Population estimates (from report(s)"
         '
         'ResultsSplitContainer2
@@ -1527,11 +1527,11 @@ Partial Class Form1
         Me.DensityEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn1, Me.StratumDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn1, Me.DensityEstimateDataGridViewTextBoxColumn, Me.DensityAreaSurveyedSqMiDataGridViewTextBoxColumn, Me.DensityAverageSearchEffortDataGridViewTextBoxColumn, Me.DensityEstimateMethodologyDataGridViewTextBoxColumn, Me.ReportDateDataGridViewTextBoxColumn1, Me.DensityEstimateSourceDataGridViewTextBoxColumn, Me.DensityEstimateSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn1, Me.ValidatedDateDataGridViewTextBoxColumn1, Me.ValidatedByDataGridViewTextBoxColumn1, Me.RecordInsertedDateDataGridViewTextBoxColumn1, Me.RecordInsertedByDataGridViewTextBoxColumn1, Me.SurveyNameDataGridViewTextBoxColumn1})
         Me.DensityEstimatesDataGridView.DataSource = Me.FKGSPEDensityEstimatesGSPESurveysBindingSource
         Me.DensityEstimatesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DensityEstimatesDataGridView.Location = New System.Drawing.Point(0, 25)
+        Me.DensityEstimatesDataGridView.Location = New System.Drawing.Point(0, 31)
         Me.DensityEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.DensityEstimatesDataGridView.Name = "DensityEstimatesDataGridView"
         Me.DensityEstimatesDataGridView.RowHeadersWidth = 51
-        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(876, 266)
+        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(876, 260)
         Me.DensityEstimatesDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn1
@@ -1680,14 +1680,14 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(876, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(876, 31)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "Population estimates (from report(s)"
         '
         'DensityEstimatesToolStripLabel
         '
         Me.DensityEstimatesToolStripLabel.Name = "DensityEstimatesToolStripLabel"
-        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(227, 22)
+        Me.DensityEstimatesToolStripLabel.Size = New System.Drawing.Size(227, 28)
         Me.DensityEstimatesToolStripLabel.Text = "Density estimates (from report(s)"
         '
         'ResultsDataGridView
@@ -1699,11 +1699,11 @@ Partial Class Form1
         Me.ResultsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaDataGridViewTextBoxColumn2, Me.BullCowRatioDataGridViewTextBoxColumn, Me.CalfCowRatioDataGridViewTextBoxColumn, Me.CalfAdultRatioDataGridViewTextBoxColumn, Me.ADULTDataGridViewTextBoxColumn, Me.BULL3040DataGridViewTextBoxColumn, Me.BULL3050DataGridViewTextBoxColumn, Me.BULL3060DataGridViewTextBoxColumn, Me.BULL4150DataGridViewTextBoxColumn, Me.BULLALLDataGridViewTextBoxColumn, Me.BULLGT50DataGridViewTextBoxColumn, Me.BULLGT60DataGridViewTextBoxColumn, Me.BULLGTE50DataGridViewTextBoxColumn, Me.BULLLT30DataGridViewTextBoxColumn, Me.BULLLT50DataGridViewTextBoxColumn, Me.CALFDataGridViewTextBoxColumn, Me.COWDataGridViewTextBoxColumn, Me.COWW0DataGridViewTextBoxColumn, Me.COWW1DataGridViewTextBoxColumn, Me.COWW2DataGridViewTextBoxColumn, Me.COWW3DataGridViewTextBoxColumn, Me.LGBULLDataGridViewTextBoxColumn, Me.MEDBULLDataGridViewTextBoxColumn, Me.MEDLBULLDataGridViewTextBoxColumn, Me.SMBULLDataGridViewTextBoxColumn, Me.UNKNOWNDataGridViewTextBoxColumn, Me.YBULLALLDataGridViewTextBoxColumn, Me.YBULLGTSFDataGridViewTextBoxColumn, Me.YBULLSFDataGridViewTextBoxColumn, Me.MOOSEDataGridViewTextBoxColumn, Me.SubAreaSurveyedSqMiDataGridViewTextBoxColumn, Me.SubAreaAverageSearchEffortDataGridViewTextBoxColumn, Me.MethodologyUsedDataGridViewTextBoxColumn, Me.ResultsSourceDataGridViewTextBoxColumn, Me.ResultsSourceLinkDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn2, Me.ValidatedDateDataGridViewTextBoxColumn2, Me.ValidatedByDataGridViewTextBoxColumn2, Me.RecordInsertedDateDataGridViewTextBoxColumn2, Me.RecordInsertedByDataGridViewTextBoxColumn2, Me.SurveyNameDataGridViewTextBoxColumn2, Me.ResultID})
         Me.ResultsDataGridView.DataSource = Me.FKGSPERatiosGSPESurveysBindingSource
         Me.ResultsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ResultsDataGridView.Location = New System.Drawing.Point(0, 25)
+        Me.ResultsDataGridView.Location = New System.Drawing.Point(0, 31)
         Me.ResultsDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsDataGridView.Name = "ResultsDataGridView"
         Me.ResultsDataGridView.RowHeadersWidth = 51
-        Me.ResultsDataGridView.Size = New System.Drawing.Size(876, 179)
+        Me.ResultsDataGridView.Size = New System.Drawing.Size(876, 173)
         Me.ResultsDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn2
@@ -2058,14 +2058,14 @@ Partial Class Form1
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(876, 25)
+        Me.ToolStrip2.Size = New System.Drawing.Size(876, 31)
         Me.ToolStrip2.TabIndex = 2
         Me.ToolStrip2.Text = "Population estimates (from report(s)"
         '
         'ResultsToolStripLabel
         '
         Me.ResultsToolStripLabel.Name = "ResultsToolStripLabel"
-        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(305, 22)
+        Me.ResultsToolStripLabel.Size = New System.Drawing.Size(305, 28)
         Me.ResultsToolStripLabel.Text = "Ratios and population counts (from report(s)"
         '
         'GridControl1
@@ -2100,12 +2100,12 @@ Partial Class Form1
         Me.GSPEGridControl.DataSource = Me.GSPEBindingSource
         Me.GSPEGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GSPEGridControl.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
-        Me.GSPEGridControl.Location = New System.Drawing.Point(0, 39)
+        Me.GSPEGridControl.Location = New System.Drawing.Point(0, 31)
         Me.GSPEGridControl.MainView = Me.GridView2
         Me.GSPEGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEGridControl.Name = "GSPEGridControl"
         Me.GSPEGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.ParkRepositoryItemComboBox, Me.SurveyUnitSetsRepositoryItemComboBox})
-        Me.GSPEGridControl.Size = New System.Drawing.Size(1370, 1118)
+        Me.GSPEGridControl.Size = New System.Drawing.Size(1096, 894)
         Me.GSPEGridControl.TabIndex = 0
         Me.GSPEGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -2182,7 +2182,7 @@ Partial Class Form1
         Me.colID.MinWidth = 27
         Me.colID.Name = "colID"
         Me.colID.OptionsColumn.ReadOnly = True
-        Me.colID.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ID", "{0}"), New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, DevExpress.Data.SummaryMode.Selection, "ID", "{0}")})
+        Me.colID.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, DevExpress.Data.SummaryMode.Mixed, "ID", "{0}")})
         Me.colID.Visible = True
         Me.colID.VisibleIndex = 0
         Me.colID.Width = 100
@@ -2291,6 +2291,7 @@ Partial Class Form1
         Me.colSearchMin.FieldName = "SearchMin"
         Me.colSearchMin.MinWidth = 27
         Me.colSearchMin.Name = "colSearchMin"
+        Me.colSearchMin.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "SearchMin", "SUM={0:0.##}")})
         Me.colSearchMin.Visible = True
         Me.colSearchMin.VisibleIndex = 37
         Me.colSearchMin.Width = 100
@@ -2327,6 +2328,7 @@ Partial Class Form1
         Me.colArea_SqMi.FieldName = "Area_SqMi"
         Me.colArea_SqMi.MinWidth = 27
         Me.colArea_SqMi.Name = "colArea_SqMi"
+        Me.colArea_SqMi.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "Area_SqMi", "SUM={0:0.##}")})
         Me.colArea_SqMi.Visible = True
         Me.colArea_SqMi.VisibleIndex = 38
         Me.colArea_SqMi.Width = 100
@@ -2336,7 +2338,7 @@ Partial Class Form1
         Me.colCALF1.FieldName = "CALF"
         Me.colCALF1.MinWidth = 27
         Me.colCALF1.Name = "colCALF1"
-        Me.colCALF1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CALF", "SUM={0:0.##}"), New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "CALF", "SUM={0:0.##}")})
+        Me.colCALF1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "CALF", "SUM={0:0.##}")})
         Me.colCALF1.Visible = True
         Me.colCALF1.VisibleIndex = 9
         Me.colCALF1.Width = 100
@@ -2346,7 +2348,7 @@ Partial Class Form1
         Me.colCOW_W_01.FieldName = "COW_W_0"
         Me.colCOW_W_01.MinWidth = 27
         Me.colCOW_W_01.Name = "colCOW_W_01"
-        Me.colCOW_W_01.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "COW_W_0", "SUM={0:0.##}"), New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Selection, "COW_W_0", "SUM={0:0.##}")})
+        Me.colCOW_W_01.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "COW_W_0", "SUM={0:0.##}")})
         Me.colCOW_W_01.Visible = True
         Me.colCOW_W_01.VisibleIndex = 10
         Me.colCOW_W_01.Width = 100
@@ -2356,7 +2358,7 @@ Partial Class Form1
         Me.colCOW_W_11.FieldName = "COW_W_1"
         Me.colCOW_W_11.MinWidth = 27
         Me.colCOW_W_11.Name = "colCOW_W_11"
-        Me.colCOW_W_11.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "COW_W_1", "SUM={0:0.##}"), New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Selection, "COW_W_1", "SUM={0:0.##}")})
+        Me.colCOW_W_11.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "COW_W_1", "SUM={0:0.##}")})
         Me.colCOW_W_11.Visible = True
         Me.colCOW_W_11.VisibleIndex = 11
         Me.colCOW_W_11.Width = 100
@@ -2366,7 +2368,7 @@ Partial Class Form1
         Me.colCOW_W_21.FieldName = "COW_W_2"
         Me.colCOW_W_21.MinWidth = 27
         Me.colCOW_W_21.Name = "colCOW_W_21"
-        Me.colCOW_W_21.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "COW_W_2", "SUM={0:0.##}"), New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Selection, "COW_W_2", "SUM={0:0.##}")})
+        Me.colCOW_W_21.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "COW_W_2", "SUM={0:0.##}")})
         Me.colCOW_W_21.Visible = True
         Me.colCOW_W_21.VisibleIndex = 12
         Me.colCOW_W_21.Width = 100
@@ -2376,6 +2378,7 @@ Partial Class Form1
         Me.colCOW_W_31.FieldName = "COW_W_3"
         Me.colCOW_W_31.MinWidth = 27
         Me.colCOW_W_31.Name = "colCOW_W_31"
+        Me.colCOW_W_31.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "COW_W_3", "SUM={0:0.##}")})
         Me.colCOW_W_31.Visible = True
         Me.colCOW_W_31.VisibleIndex = 13
         Me.colCOW_W_31.Width = 100
@@ -2385,6 +2388,7 @@ Partial Class Form1
         Me.colCOW1.FieldName = "COW"
         Me.colCOW1.MinWidth = 27
         Me.colCOW1.Name = "colCOW1"
+        Me.colCOW1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "COW", "SUM={0:0.##}")})
         Me.colCOW1.Visible = True
         Me.colCOW1.VisibleIndex = 14
         Me.colCOW1.Width = 100
@@ -2394,6 +2398,7 @@ Partial Class Form1
         Me.colYBULL_ALL1.FieldName = "YBULL_ALL"
         Me.colYBULL_ALL1.MinWidth = 27
         Me.colYBULL_ALL1.Name = "colYBULL_ALL1"
+        Me.colYBULL_ALL1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "YBULL_ALL", "SUM={0:0.##}")})
         Me.colYBULL_ALL1.Visible = True
         Me.colYBULL_ALL1.VisibleIndex = 15
         Me.colYBULL_ALL1.Width = 100
@@ -2403,6 +2408,7 @@ Partial Class Form1
         Me.colSM_BULL1.FieldName = "SM_BULL"
         Me.colSM_BULL1.MinWidth = 27
         Me.colSM_BULL1.Name = "colSM_BULL1"
+        Me.colSM_BULL1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "SM_BULL", "SUM={0:0.##}")})
         Me.colSM_BULL1.Visible = True
         Me.colSM_BULL1.VisibleIndex = 17
         Me.colSM_BULL1.Width = 100
@@ -2412,6 +2418,7 @@ Partial Class Form1
         Me.colMED_BULL1.FieldName = "MED_BULL"
         Me.colMED_BULL1.MinWidth = 27
         Me.colMED_BULL1.Name = "colMED_BULL1"
+        Me.colMED_BULL1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "MED_BULL", "SUM={0:0.##}")})
         Me.colMED_BULL1.Visible = True
         Me.colMED_BULL1.VisibleIndex = 18
         Me.colMED_BULL1.Width = 100
@@ -2421,6 +2428,7 @@ Partial Class Form1
         Me.colLG_BULL1.FieldName = "LG_BULL"
         Me.colLG_BULL1.MinWidth = 27
         Me.colLG_BULL1.Name = "colLG_BULL1"
+        Me.colLG_BULL1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "LG_BULL", "SUM={0:0.##}")})
         Me.colLG_BULL1.Visible = True
         Me.colLG_BULL1.VisibleIndex = 19
         Me.colLG_BULL1.Width = 100
@@ -2430,6 +2438,7 @@ Partial Class Form1
         Me.colBULL_ALL1.FieldName = "BULL_ALL"
         Me.colBULL_ALL1.MinWidth = 27
         Me.colBULL_ALL1.Name = "colBULL_ALL1"
+        Me.colBULL_ALL1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "BULL_ALL", "SUM={0:0.##}")})
         Me.colBULL_ALL1.Visible = True
         Me.colBULL_ALL1.VisibleIndex = 20
         Me.colBULL_ALL1.Width = 100
@@ -2439,6 +2448,7 @@ Partial Class Form1
         Me.colADULT1.FieldName = "ADULT"
         Me.colADULT1.MinWidth = 27
         Me.colADULT1.Name = "colADULT1"
+        Me.colADULT1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "ADULT", "SUM={0:0.##}")})
         Me.colADULT1.Visible = True
         Me.colADULT1.VisibleIndex = 21
         Me.colADULT1.Width = 100
@@ -2448,6 +2458,7 @@ Partial Class Form1
         Me.colMOOSE1.FieldName = "MOOSE"
         Me.colMOOSE1.MinWidth = 27
         Me.colMOOSE1.Name = "colMOOSE1"
+        Me.colMOOSE1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "MOOSE", "SUM={0:0.##}")})
         Me.colMOOSE1.Visible = True
         Me.colMOOSE1.VisibleIndex = 22
         Me.colMOOSE1.Width = 100
@@ -2457,6 +2468,7 @@ Partial Class Form1
         Me.colUNKNOWN1.FieldName = "UNKNOWN"
         Me.colUNKNOWN1.MinWidth = 27
         Me.colUNKNOWN1.Name = "colUNKNOWN1"
+        Me.colUNKNOWN1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "UNKNOWN", "SUM={0:0.##}")})
         Me.colUNKNOWN1.Visible = True
         Me.colUNKNOWN1.VisibleIndex = 24
         Me.colUNKNOWN1.Width = 100
@@ -2565,6 +2577,7 @@ Partial Class Form1
         Me.colYBULL_SF1.FieldName = "YBULL_SF"
         Me.colYBULL_SF1.MinWidth = 27
         Me.colYBULL_SF1.Name = "colYBULL_SF1"
+        Me.colYBULL_SF1.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "YBULL_SF", "SUM={0:0.##}")})
         Me.colYBULL_SF1.Visible = True
         Me.colYBULL_SF1.VisibleIndex = 16
         Me.colYBULL_SF1.Width = 100
@@ -2809,14 +2822,14 @@ Partial Class Form1
         Me.GSPEPivotGridControl.DataSource = Me.GSPEBindingSource
         Me.GSPEPivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GSPEPivotGridControl.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.fieldPark, Me.fieldSurveyName, Me.fieldSurveyYear, Me.fieldSeason, Me.fieldSubArea, Me.fieldGMU, Me.fieldID, Me.fieldStartDate, Me.fieldStopDate, Me.fieldIntID, Me.fieldRand, Me.fieldFiringOrder, Me.fieldSelected, Me.fieldCounted, Me.fieldExclude, Me.fieldStrat, Me.fieldStratName, Me.fieldStratMoose, Me.fieldStratTracks, Me.fieldStratHab, Me.fieldSearchMin, Me.fieldDateCounted, Me.fieldPercNotFlown, Me.fieldXCOORD, Me.fieldYCOORD, Me.fieldAreaSqMi, Me.fieldADULT, Me.fieldBULL3040, Me.fieldBULL3050, Me.fieldBULL3060, Me.fieldBULL4150, Me.fieldBULLALL, Me.fieldBULLGT50, Me.fieldBULLGT60, Me.fieldBULLGTE50, Me.fieldBULLLT30, Me.fieldBULLLT50, Me.fieldCALF, Me.fieldCOW, Me.fieldCOWW0, Me.fieldCOWW1, Me.fieldCOWW2, Me.fieldCOWW3, Me.fieldLGBULL, Me.fieldMEDBULL, Me.fieldMEDLBULL, Me.fieldSMBULL, Me.fieldUNKNOWN, Me.fieldYBULLALL, Me.fieldYBULLGTSF, Me.fieldYBULLSF, Me.fieldMOOSE, Me.fieldPilot, Me.fieldObserver, Me.fieldPersonnel, Me.fieldDensity, Me.fieldSCFPlot, Me.fieldStd, Me.fieldInt, Me.fieldComments, Me.fieldSourceFilename, Me.fieldCertificationLevel})
-        Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 39)
+        Me.GSPEPivotGridControl.Location = New System.Drawing.Point(0, 31)
         Me.GSPEPivotGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEPivotGridControl.Name = "GSPEPivotGridControl"
         Me.GSPEPivotGridControl.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized
         Me.GSPEPivotGridControl.OptionsDataField.RowHeaderWidth = 133
         Me.GSPEPivotGridControl.OptionsView.RowTreeOffset = 28
         Me.GSPEPivotGridControl.OptionsView.RowTreeWidth = 133
-        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(1095, 911)
+        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(876, 729)
         Me.GSPEPivotGridControl.TabIndex = 0
         '
         'fieldPark
@@ -3793,7 +3806,6 @@ Partial Class Form1
         Me.Bull_AdultGridColumn.FieldName = "BULL_ADULT"
         Me.Bull_AdultGridColumn.MinWidth = 25
         Me.Bull_AdultGridColumn.Name = "Bull_AdultGridColumn"
-        Me.Bull_AdultGridColumn.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BULL_ADULT", "SUM={0:0.##}")})
         Me.Bull_AdultGridColumn.Visible = True
         Me.Bull_AdultGridColumn.VisibleIndex = 36
         Me.Bull_AdultGridColumn.Width = 94
@@ -3804,7 +3816,7 @@ Partial Class Form1
         Me.CALF_LONEGridColumn.FieldName = "CALF_LONE"
         Me.CALF_LONEGridColumn.MinWidth = 25
         Me.CALF_LONEGridColumn.Name = "CALF_LONEGridColumn"
-        Me.CALF_LONEGridColumn.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Selection, "CALF_LONE", "SUM={0:0.##}"), New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CALF_LONE", "SUM={0:0.##}")})
+        Me.CALF_LONEGridColumn.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, DevExpress.Data.SummaryMode.Mixed, "CALF_LONE", "SUM={0:0.##}")})
         Me.CALF_LONEGridColumn.Visible = True
         Me.CALF_LONEGridColumn.VisibleIndex = 23
         Me.CALF_LONEGridColumn.Width = 94
