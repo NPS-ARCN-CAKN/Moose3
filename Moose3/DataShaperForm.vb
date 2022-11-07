@@ -99,12 +99,15 @@ Public Class DataShaperForm
 
 
 
-    Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshToolStripButton.Click
+    Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshQueriesListToolStripButton.Click
         Try
-            CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, CurrentQuery)
-            Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
-            Me.DataShaperGridControl.DataSource = CurrentDataTable
+            Me.QuerySelectorToolStripComboBox.Text = ""
+            LoadQuerySelector()
+            'CurrentDataTable = GetDataTableFromSQLServerDatabase(My.Settings.MooseConnectionString, CurrentQuery)
+            'Me.DataShaperPivotGridControl.DataSource = CurrentDataTable
+            'Me.DataShaperGridControl.DataSource = CurrentDataTable
         Catch ex As Exception
+            Me.QuerySelectorToolStripComboBox.Text = ""
             MsgBox("Failed to refresh the dataset from the database: " & ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
     End Sub
