@@ -234,11 +234,30 @@ Public Class Form1
     ''' </summary>
     ''' <param name="ReferenceCodeColumnName">Name of the column containing the Data Store reference code.</param>
     Private Sub OpenSurveyIRMAReference(ReferenceCodeColumnName As String)
+        'Try to open the IRMA Data Store reference in a browser using ReferenceCodeColumnName as a Reference Code
         Try
-            Dim RefCode As Integer = CInt(Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord))
-            If RefCode > 0 Then
-                Dim URL As String = My.Settings.IRMAReferenceURLPrefix & RefCode
-                Process.Start(URL)
+            If Not Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord) Is Nothing Then
+                If Not IsDBNull(Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord)) Then
+                    Dim RefCode As Integer = 0 ' CInt(Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord))
+                    If Integer.TryParse(Me.SurveyVGridControl.GetCellValue(ReferenceCodeColumnName, Me.SurveyVGridControl.FocusedRecord), RefCode) Then
+                        If RefCode > 0 Then
+
+                            'The IRMA Reference URL Prefix is stored in the application's Settings
+                            Dim URL As String = My.Settings.IRMAReferenceURLPrefix & RefCode
+
+                            'Try to open the URL.
+                            Process.Start(URL)
+                        Else
+                            MsgBox("The Data Store reference code must be greater than zero.", MsgBoxStyle.OkOnly, "Error")
+                        End If
+                    End If
+
+
+                Else
+                    MsgBox("Data Store reference has not yet been set.", MsgBoxStyle.OkOnly, "Error")
+                End If
+            Else
+                MsgBox("Data Store reference code is Nothing.", MsgBoxStyle.OkOnly, "Error")
             End If
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
@@ -422,8 +441,14 @@ Public Class Form1
     End Sub
     Private Sub OpenReportLinkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenReportLinkToolStripMenuItem.Click
         Try
-            Dim ReportLink As String = Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord)
-            Process.Start(ReportLink)
+            If Not Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord) Is Nothing Then
+                If Not IsDBNull(Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord)) Then
+                    Dim ReportLink As String = Me.SurveyVGridControl.GetCellValue("ReportLink", Me.SurveyVGridControl.FocusedRecord).ToString.Trim
+                    Process.Start(ReportLink)
+                Else
+                    MsgBox("Report link has not been set yet.")
+                End If
+            End If
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
@@ -431,8 +456,32 @@ Public Class Form1
 
     Private Sub OpenDataDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenDataDirectoryToolStripMenuItem.Click
         Try
-            Dim DataDirectoryPath As String = Me.SurveyVGridControl.GetCellValue("DataResourcesDirectory", Me.SurveyVGridControl.FocusedRecord)
-            Process.Start(DataDirectoryPath)
+            'Determine the DataResourcesDirectory and try to open it in the default application.
+            If Not Me.SurveyVGridControl.GetCellValue("DataResourcesDirectory", Me.SurveyVGridControl.FocusedRecord) Is Nothing Then
+                If Not IsDBNull(Me.SurveyVGridControl.GetCellValue("DataResourcesDirectory", Me.SurveyVGridControl.FocusedRecord)) Then
+                    Dim DataDirectoryPath As String = Me.SurveyVGridControl.GetCellValue("DataResourcesDirectory", Me.SurveyVGridControl.FocusedRecord).ToString.Trim
+                    If DataDirectoryPath.Trim.Length > 0 Then
+                        If My.Computer.FileSystem.DirectoryExists(DataDirectoryPath) = True Then
+
+                            'Open the directory with the default application
+                            Process.Start(DataDirectoryPath)
+
+                        Else
+
+                            'Directory couldn't be found
+                            MsgBox("Directory " & DataDirectoryPath.Trim & " does not exist at the path you submitted.", MsgBoxStyle.OkOnly, "Directory not found.")
+
+                        End If
+                    Else
+                        MsgBox("The data directory for this survey has not been set. (Zero length).", MsgBoxStyle.OkOnly, "Directory not found.")
+                        'Me.SurveyVGridControl.SetCellValue("DataResourcesDirectory", Me.SurveyVGridControl.FocusedRecord,"set the path here")
+                    End If
+                Else
+                    MsgBox("The data directory for this survey has not been set yet (NULL).", MsgBoxStyle.OkOnly, "Error")
+                End If
+            Else
+                MsgBox("Directory is Nothing.", MsgBoxStyle.OkOnly, "Error")
+            End If
         Catch ex As Exception
             MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
