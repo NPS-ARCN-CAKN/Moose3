@@ -9543,18 +9543,18 @@ Namespace MooseDataSetTableAdapters
                 "@SourceFilename, SurveyUnitSet = @SurveyUnitSet, SearchMin = @SearchMin, BULL_AD"& _ 
                 "ULT = @BULL_ADULT, CALF_LONE = @CALF_LONE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  SCF = @SCF"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE"& _ 
                 "  (SurveyName = @Original_SurveyName) AND (SurveyYear = @Original_SurveyYear) AN"& _ 
-                "D (ID = @Original_ID) AND (CertificationLevel <> 'Certified'); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, Su"& _ 
-                "rveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Rand"& _ 
-                ", FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, StratTr"& _ 
-                "acks, StratHab, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT,"& _ 
-                " BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_6"& _ 
-                "0, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, CO"& _ 
-                "W_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, Y"& _ 
-                "BULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comment"& _ 
-                "s, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, Cert"& _ 
-                "ifiedBy, CertificationLevel, SurveyUnitSet, SearchMin, BULL_ADULT, CALF_LONE, SC"& _ 
-                "F FROM GSPE WHERE (ID = @ID) AND (SurveyName = @SurveyName) AND (SurveyYear = @S"& _ 
-                "urveyYear)"
+                "D (ID = @Original_ID) AND (CertificationLevel <> 'Certified');   "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, "& _ 
+                "SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Ra"& _ 
+                "nd, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, Strat"& _ 
+                "Tracks, StratHab, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADUL"& _ 
+                "T, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT"& _ 
+                "_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, "& _ 
+                "COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF,"& _ 
+                " YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comme"& _ 
+                "nts, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, Ce"& _ 
+                "rtifiedBy, CertificationLevel, SurveyUnitSet, SearchMin, BULL_ADULT, CALF_LONE, "& _ 
+                "SCF FROM GSPE WHERE (ID = @ID) AND (SurveyName = @SurveyName) AND (SurveyYear = "& _ 
+                "@SurveyYear)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Park", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Season", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
