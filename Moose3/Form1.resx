@@ -226,6 +226,9 @@
   <data name="FormatConditionRuleExpression1.Expression" xml:space="preserve">
     <value>([BULL_ALL] = 0 Or ([BULL_ALL] Is Null) = True) And ([BULL_30_40] &gt; 0 Or [BULL_30_50] &gt; 0 Or [BULL_30_60] &gt; 0 Or [BULL_41_50] &gt; 0 Or [BULL_ADULT] &gt; 0 Or [BULL_ALL] &gt; 0 Or [BULL_GT_50] &gt; 0 Or [BULL_GT_60] &gt; 0 Or [BULL_GTE_50] &gt; 0 Or [BULL_LT_30] &gt; 0 Or [BULL_LT_50] &gt; 0 Or [LG_BULL] &gt; 0 Or [MED_BULL] &gt; 0 Or [MED_L_BULL] &gt; 0 Or [SM_BULL] &gt; 0 Or [YBULL_ALL] &gt; 0 Or [YBULL_GTSF] &gt; 0 Or [YBULL_SF] &gt; 0)</value>
   </data>
+  <data name="FormatConditionRuleExpression4.Expression" xml:space="preserve">
+    <value>Iif(([CALF] Is Null) = True, 0, [CALF])  &lt;&gt; Iif(([COW_W_1] Is Null) = True, 0, [COW_W_1]) + Iif(([COW_W_2] Is Null) = True, 0, [COW_W_2] * 2) + Iif(([COW_W_3] Is Null) = True, 0, [COW_W_3] * 3) + Iif(([CALF_LONE] Is Null) = True, 0, [CALF_LONE])</value>
+  </data>
   <metadata name="GSPEGridControlToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 141</value>
   </metadata>
