@@ -224,7 +224,7 @@
     <value>1170, 184</value>
   </metadata>
   <data name="FormatConditionRuleExpression1.Expression" xml:space="preserve">
-    <value>([BULL_ALL] = 0 Or ([BULL_ALL] Is Null) = True) And ([BULL_30_40] &gt; 0 Or [BULL_30_50] &gt; 0 Or [BULL_30_60] &gt; 0 Or [BULL_41_50] &gt; 0 Or [BULL_ADULT] &gt; 0 Or [BULL_ALL] &gt; 0 Or [BULL_GT_50] &gt; 0 Or [BULL_GT_60] &gt; 0 Or [BULL_GTE_50] &gt; 0 Or [BULL_LT_30] &gt; 0 Or [BULL_LT_50] &gt; 0 Or [LG_BULL] &gt; 0 Or [MED_BULL] &gt; 0 Or [MED_L_BULL] &gt; 0 Or [SM_BULL] &gt; 0 Or [YBULL_ALL] &gt; 0 Or [YBULL_GTSF] &gt; 0 Or [YBULL_SF] &gt; 0)</value>
+    <value>Iif([BULL_ALL] Is Null, 0, [BULL_ALL]) &lt;&gt; Iif([BULL_30_40] Is Null, 0, [BULL_30_40]) + Iif([BULL_30_50] Is Null, 0, [BULL_30_50]) + Iif([BULL_30_60] Is Null, 0, [BULL_30_60]) + Iif([BULL_41_50] Is Null, 0, [BULL_41_50]) + Iif([BULL_GT_50] Is Null, 0, [BULL_GT_50]) + Iif([BULL_GT_60] Is Null, 0, [BULL_GT_60]) + Iif([SM_BULL] Is Null, 0, [SM_BULL]) + Iif([YBULL_GTSF] Is Null, 0, [YBULL_GTSF]) + Iif([YBULL_SF] Is Null, 0, [YBULL_SF]) + Iif([BULL_GTE_50] Is Null, 0, [BULL_GTE_50]) + Iif([BULL_LT_30] Is Null, 0, [BULL_LT_30]) + Iif([BULL_LT_50] Is Null, 0, [BULL_LT_50]) + Iif([LG_BULL] Is Null, 0, [LG_BULL]) + Iif([MED_BULL] Is Null, 0, [MED_BULL]) + Iif([MED_L_BULL] Is Null, 0, [MED_L_BULL]) + + Iif([YBULL_ALL] Is Null, 0, [YBULL_ALL])</value>
   </data>
   <data name="FormatConditionRuleExpression4.Expression" xml:space="preserve">
     <value>Iif(([CALF] Is Null) = True, 0, [CALF])  &lt;&gt; Iif(([COW_W_1] Is Null) = True, 0, [COW_W_1]) + Iif(([COW_W_2] Is Null) = True, 0, [COW_W_2] * 2) + Iif(([COW_W_3] Is Null) = True, 0, [COW_W_3] * 3) + Iif(([CALF_LONE] Is Null) = True, 0, [CALF_LONE])</value>
