@@ -9419,8 +9419,7 @@ Namespace MooseDataSetTableAdapters
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM GSPE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (SurveyName = @Original_SurveyName) AND (SurveyYear = @O"& _ 
-                "riginal_SurveyYear) AND (ID = @Original_ID) AND (CertificationLevel <> 'Certifie"& _ 
-                "d')"
+                "riginal_SurveyYear) AND (ID = @Original_ID)"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyName", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SurveyYear", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "SurveyYear", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -9543,18 +9542,17 @@ Namespace MooseDataSetTableAdapters
                 "@SourceFilename, SurveyUnitSet = @SurveyUnitSet, SearchMin = @SearchMin, BULL_AD"& _ 
                 "ULT = @BULL_ADULT, CALF_LONE = @CALF_LONE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  SCF = @SCF"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE"& _ 
                 "  (SurveyName = @Original_SurveyName) AND (SurveyYear = @Original_SurveyYear) AN"& _ 
-                "D (ID = @Original_ID) AND (CertificationLevel <> 'Certified');   "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, "& _ 
-                "SurveyName, SurveyYear, Season, SubArea, GMU, ID, StartDate, StopDate, IntID, Ra"& _ 
-                "nd, FiringOrder, Selected, Counted, Exclude, Strat, StratName, StratMoose, Strat"& _ 
-                "Tracks, StratHab, DateCounted, Perc_Not_Flown, X_COORD, Y_COORD, Area_SqMi, ADUL"& _ 
-                "T, BULL_30_40, BULL_30_50, BULL_30_60, BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT"& _ 
-                "_60, BULL_GTE_50, BULL_LT_30, BULL_LT_50, CALF, COW, COW_W_0, COW_W_1, COW_W_2, "& _ 
-                "COW_W_3, LG_BULL, MED_BULL, MED_L_BULL, SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF,"& _ 
-                " YBULL_SF, MOOSE, Pilot, Observer, Personnel, Density, SCF_Plot, Std, Int, Comme"& _ 
-                "nts, SourceFilename, RecordInsertedDate, RecordInsertedBy, CertificationDate, Ce"& _ 
-                "rtifiedBy, CertificationLevel, SurveyUnitSet, SearchMin, BULL_ADULT, CALF_LONE, "& _ 
-                "SCF FROM GSPE WHERE (ID = @ID) AND (SurveyName = @SurveyName) AND (SurveyYear = "& _ 
-                "@SurveyYear)"
+                "D (ID = @Original_ID);    "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Park, SurveyName, SurveyYear, Season, SubArea"& _ 
+                ", GMU, ID, StartDate, StopDate, IntID, Rand, FiringOrder, Selected, Counted, Exc"& _ 
+                "lude, Strat, StratName, StratMoose, StratTracks, StratHab, DateCounted, Perc_Not"& _ 
+                "_Flown, X_COORD, Y_COORD, Area_SqMi, ADULT, BULL_30_40, BULL_30_50, BULL_30_60, "& _ 
+                "BULL_41_50, BULL_ALL, BULL_GT_50, BULL_GT_60, BULL_GTE_50, BULL_LT_30, BULL_LT_5"& _ 
+                "0, CALF, COW, COW_W_0, COW_W_1, COW_W_2, COW_W_3, LG_BULL, MED_BULL, MED_L_BULL,"& _ 
+                " SM_BULL, UNKNOWN, YBULL_ALL, YBULL_GTSF, YBULL_SF, MOOSE, Pilot, Observer, Pers"& _ 
+                "onnel, Density, SCF_Plot, Std, Int, Comments, SourceFilename, RecordInsertedDate"& _ 
+                ", RecordInsertedBy, CertificationDate, CertifiedBy, CertificationLevel, SurveyUn"& _ 
+                "itSet, SearchMin, BULL_ADULT, CALF_LONE, SCF FROM GSPE WHERE (ID = @ID) AND (Sur"& _ 
+                "veyName = @SurveyName) AND (SurveyYear = @SurveyYear)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Park", Global.System.Data.SqlDbType.VarChar, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Park", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Season", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Season", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
