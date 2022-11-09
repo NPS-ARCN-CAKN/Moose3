@@ -2166,6 +2166,7 @@ Partial Class Form1
         Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPark1, Me.colSurveyYear, Me.colSurveyName4, Me.colSeason1, Me.colSubArea, Me.colID, Me.colCALF1, Me.colIntID, Me.colRand, Me.colFiringOrder, Me.colSelected, Me.colCounted, Me.colExclude, Me.colStrat, Me.colStratName, Me.colStratMoose, Me.colStratTracks, Me.colStratHab, Me.colSearchMin, Me.colDateCounted, Me.colX_COORD, Me.colY_COORD, Me.colArea_SqMi, Me.colCOW_W_01, Me.colCOW_W_11, Me.colCOW_W_21, Me.colCOW_W_31, Me.colCOW1, Me.GridColumn1, Me.colYBULL_ALL1, Me.colSM_BULL1, Me.colMED_BULL1, Me.colLG_BULL1, Me.colBULL_ALL1, Me.colADULT1, Me.colMOOSE1, Me.colUNKNOWN1, Me.CALF_LONEGridColumn, Me.colBULL_30_401, Me.colBULL_30_501, Me.colBULL_30_601, Me.colBULL_41_501, Me.colBULL_GT_501, Me.colBULL_GT_601, Me.colBULL_GTE_501, Me.colBULL_LT_301, Me.colBULL_LT_501, Me.colMED_L_BULL1, Me.colYBULL_GTSF1, Me.colYBULL_SF1, Me.Bull_AdultGridColumn, Me.colStartDate1, Me.colStopDate, Me.colPilot, Me.colObserver, Me.colPersonnel1, Me.colDensity1, Me.colSCF_Plot, Me.colStd, Me.colInt, Me.colGMU, Me.colPerc_Not_Flown, Me.colComments4, Me.colSourceFilename, Me.colRecordInsertedDate4, Me.colRecordInsertedBy4, Me.colCertificationDate, Me.colCertifiedBy, Me.colCertificationLevel, Me.SurveyUnitSetGridColumn, Me.GridColumn2})
         Me.GridView2.DetailHeight = 431
         GridFormatRule1.Column = Me.colBULL_ALL1
+        GridFormatRule1.Enabled = False
         GridFormatRule1.Name = "FormatBullALL"
         FormatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.LemonChiffon
         FormatConditionRuleExpression1.Appearance.Options.UseBackColor = True
@@ -2173,6 +2174,7 @@ Partial Class Form1
         GridFormatRule1.Rule = FormatConditionRuleExpression1
         GridFormatRule2.Column = Me.colCOW1
         GridFormatRule2.ColumnApplyTo = Me.colCOW1
+        GridFormatRule2.Enabled = False
         GridFormatRule2.Name = "FormatCow"
         FormatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.LemonChiffon
         FormatConditionRuleExpression2.Appearance.Options.UseBackColor = True
@@ -2182,6 +2184,7 @@ Partial Class Form1
         GridFormatRule2.Rule = FormatConditionRuleExpression2
         GridFormatRule3.Column = Me.colADULT1
         GridFormatRule3.ColumnApplyTo = Me.colADULT1
+        GridFormatRule3.Enabled = False
         GridFormatRule3.Name = "FormatAdult"
         FormatConditionRuleExpression3.Appearance.BackColor = System.Drawing.Color.LemonChiffon
         FormatConditionRuleExpression3.Appearance.Options.UseBackColor = True
@@ -2189,15 +2192,19 @@ Partial Class Form1
         GridFormatRule3.Rule = FormatConditionRuleExpression3
         GridFormatRule4.Column = Me.colCALF1
         GridFormatRule4.ColumnApplyTo = Me.colCALF1
+        GridFormatRule4.Enabled = False
         GridFormatRule4.Name = "FormatCalf"
         FormatConditionRuleExpression4.Appearance.BackColor = System.Drawing.Color.LemonChiffon
         FormatConditionRuleExpression4.Appearance.Options.UseBackColor = True
         FormatConditionRuleExpression4.Expression = resources.GetString("FormatConditionRuleExpression4.Expression")
         GridFormatRule4.Rule = FormatConditionRuleExpression4
+        GridFormatRule5.Enabled = False
         GridFormatRule5.Name = "FormatMoose"
         FormatConditionRuleExpression5.Appearance.BackColor = System.Drawing.Color.LemonChiffon
         FormatConditionRuleExpression5.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression5.Expression = "([MOOSE] = 0 Or ([MOOSE] Is Null) = True) And ([Adult] > 0 Or [Calf] > 0)"
+        FormatConditionRuleExpression5.Expression = "Iif(([MOOSE] Is Null) = True, 0, [MOOSE]) <> Iif(([CALF] Is Null) = True, 0, [CAL" &
+    "F]) + Iif(([COW] Is Null) = True, 0, [COW])  + Iif(([BULL_ALL] Is Null) = True, " &
+    "0, [BULL_ALL]) "
         GridFormatRule5.Rule = FormatConditionRuleExpression5
         Me.GridView2.FormatRules.Add(GridFormatRule1)
         Me.GridView2.FormatRules.Add(GridFormatRule2)
@@ -2851,6 +2858,7 @@ Partial Class Form1
         '
         'GSPEGridControlExportFormatToolStripComboBox
         '
+        Me.GSPEGridControlExportFormatToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GSPEGridControlExportFormatToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.GSPEGridControlExportFormatToolStripComboBox.Name = "GSPEGridControlExportFormatToolStripComboBox"
         Me.GSPEGridControlExportFormatToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -3571,6 +3579,7 @@ Partial Class Form1
         '
         'ExportPivotGridToolStripComboBox
         '
+        Me.ExportPivotGridToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ExportPivotGridToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.ExportPivotGridToolStripComboBox.Name = "ExportPivotGridToolStripComboBox"
         Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(160, 31)
