@@ -991,9 +991,7 @@ Public Class Form1
         MooseHelpProvider.GetHelpNavigator(Me)
     End Sub
 
-    Private Sub Form1_HelpButtonClicked(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.HelpButtonClicked
-        MsgBox("help")
-    End Sub
+
 
     Private Sub ImportGSPEDeliverableToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportGSPEDeliverableToolStripButton.Click
         Try
