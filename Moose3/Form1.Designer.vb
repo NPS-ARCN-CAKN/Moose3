@@ -868,10 +868,10 @@ Partial Class Form1
         Me.SurveysListBoxControl.DataSource = Me.GSPE_SurveysBindingSource
         Me.SurveysListBoxControl.DisplayMember = "SurveyName"
         Me.SurveysListBoxControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 27)
+        Me.SurveysListBoxControl.Location = New System.Drawing.Point(0, 31)
         Me.SurveysListBoxControl.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveysListBoxControl.Name = "SurveysListBoxControl"
-        Me.SurveysListBoxControl.Size = New System.Drawing.Size(232, 890)
+        Me.SurveysListBoxControl.Size = New System.Drawing.Size(232, 886)
         Me.SurveysListBoxControl.SortOrder = System.Windows.Forms.SortOrder.Ascending
         Me.SurveysListBoxControl.TabIndex = 0
         Me.SurveysListBoxControl.ValueMember = "SurveyName"
@@ -882,7 +882,7 @@ Partial Class Form1
         Me.SurveysInventoryToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddSurveyToolStripButton})
         Me.SurveysInventoryToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SurveysInventoryToolStrip.Name = "SurveysInventoryToolStrip"
-        Me.SurveysInventoryToolStrip.Size = New System.Drawing.Size(232, 27)
+        Me.SurveysInventoryToolStrip.Size = New System.Drawing.Size(232, 31)
         Me.SurveysInventoryToolStrip.TabIndex = 1
         Me.SurveysInventoryToolStrip.Text = "ToolStrip1"
         '
@@ -891,7 +891,7 @@ Partial Class Form1
         Me.AddSurveyToolStripButton.Image = CType(resources.GetObject("AddSurveyToolStripButton.Image"), System.Drawing.Image)
         Me.AddSurveyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddSurveyToolStripButton.Name = "AddSurveyToolStripButton"
-        Me.AddSurveyToolStripButton.Size = New System.Drawing.Size(146, 24)
+        Me.AddSurveyToolStripButton.Size = New System.Drawing.Size(146, 28)
         Me.AddSurveyToolStripButton.Text = "Add new survey..."
         '
         'SurveyVGridControl
@@ -916,7 +916,7 @@ Partial Class Form1
         Me.SurveyVGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.AbstractRepositoryItemMemoEdit, Me.DatasetProcessingStepsRepositoryItemMemoExEdit, Me.SurveyParkRepositoryItemComboBox, Me.SurveyNetworkRepositoryItemComboBox, Me.SurveyMethodologyRepositoryItemComboBox})
         Me.SurveyVGridControl.RowHeaderWidth = 32
         Me.SurveyVGridControl.Rows.AddRange(New DevExpress.XtraVerticalGrid.Rows.BaseRow() {Me.rowSurveyName, Me.rowSeason, Me.rowYear, Me.rowNetwork, Me.rowPark, Me.rowMethodology, Me.rowStartDate, Me.rowEndDate, Me.rowAreaSurveyed_mi, Me.rowAverageSearchEffort, Me.rowPersonnel, Me.rowProtocolVersion, Me.rowProtocolReferenceCode, Me.rowReportReferenceCode, Me.rowReportLink, Me.rowDeliverablesDatasetReferenceCode, Me.rowDataSource, Me.rowDataResourcesDirectory, Me.rowAbstract, Me.rowSummary, Me.rowDatasetProcessingSteps, Me.rowComments, Me.rowRecordInsertedDate, Me.rowRecordInsertedBy, Me.rowValidatedDate, Me.rowValidatedBy})
-        Me.SurveyVGridControl.Size = New System.Drawing.Size(1095, 960)
+        Me.SurveyVGridControl.Size = New System.Drawing.Size(1095, 948)
         Me.SurveyVGridControl.TabIndex = 1
         '
         'SurveyContextMenuStrip
@@ -995,7 +995,7 @@ Partial Class Form1
         Me.rowSurveyName.Name = "rowSurveyName"
         Me.rowSurveyName.Properties.Caption = "Survey Name"
         Me.rowSurveyName.Properties.FieldName = "SurveyName"
-        Me.rowSurveyName.Properties.ReadOnly = True
+        Me.rowSurveyName.Properties.ReadOnly = False
         '
         'rowSeason
         '
@@ -1174,11 +1174,11 @@ Partial Class Form1
         'MainXtraTabControl
         '
         Me.MainXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainXtraTabControl.Location = New System.Drawing.Point(242, 69)
+        Me.MainXtraTabControl.Location = New System.Drawing.Point(242, 73)
         Me.MainXtraTabControl.Margin = New System.Windows.Forms.Padding(4)
         Me.MainXtraTabControl.Name = "MainXtraTabControl"
         Me.MainXtraTabControl.SelectedTabPage = Me.SurveyDetailsXtraTabPage
-        Me.MainXtraTabControl.Size = New System.Drawing.Size(878, 859)
+        Me.MainXtraTabControl.Size = New System.Drawing.Size(878, 849)
         Me.MainXtraTabControl.TabIndex = 2
         Me.MainXtraTabControl.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.SurveyDetailsXtraTabPage, Me.ResultsXtraTabPage, Me.GSPEDeliverableXtraTabPage, Me.GSPEPivotXtraTabPage})
         '
@@ -1189,7 +1189,7 @@ Partial Class Form1
         Me.SurveyDetailsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.page_white_edit
         Me.SurveyDetailsXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.SurveyDetailsXtraTabPage.Name = "SurveyDetailsXtraTabPage"
-        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(876, 829)
+        Me.SurveyDetailsXtraTabPage.Size = New System.Drawing.Size(876, 819)
         Me.SurveyDetailsXtraTabPage.Text = "Survey details"
         '
         'SurveyDetailsPanel
@@ -2869,7 +2869,6 @@ Partial Class Form1
         '
         'GSPEGridControlExportFormatToolStripComboBox
         '
-        Me.GSPEGridControlExportFormatToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GSPEGridControlExportFormatToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.GSPEGridControlExportFormatToolStripComboBox.Name = "GSPEGridControlExportFormatToolStripComboBox"
         Me.GSPEGridControlExportFormatToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -3590,7 +3589,6 @@ Partial Class Form1
         '
         'ExportPivotGridToolStripComboBox
         '
-        Me.ExportPivotGridToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ExportPivotGridToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.ExportPivotGridToolStripComboBox.Name = "ExportPivotGridToolStripComboBox"
         Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -3614,7 +3612,7 @@ Partial Class Form1
         '
         Me.HeaderPanel.Controls.Add(Me.HeaderLabel)
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.HeaderPanel.Location = New System.Drawing.Point(242, 27)
+        Me.HeaderPanel.Location = New System.Drawing.Point(242, 31)
         Me.HeaderPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HeaderPanel.Name = "HeaderPanel"
         Me.HeaderPanel.Size = New System.Drawing.Size(878, 42)
@@ -3637,7 +3635,7 @@ Partial Class Form1
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.EnableEditsToolStripButton, Me.ToolStripSeparator6, Me.LoadDatasetToolStripButton, Me.ToolStripSeparator2, Me.DataShaperToolStripButton, Me.ToolStripSeparator3, Me.DirectoriesToolStripDropDownButton, Me.ToolStripSeparator4, Me.AboutToolStripButton, Me.ToolStripSeparator9, Me.HelpToolStripLabel})
         Me.MainToolStrip.Location = New System.Drawing.Point(242, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(878, 27)
+        Me.MainToolStrip.Size = New System.Drawing.Size(878, 31)
         Me.MainToolStrip.TabIndex = 4
         Me.MainToolStrip.Text = "ToolStrip1"
         '
@@ -3646,52 +3644,52 @@ Partial Class Form1
         Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
         Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 24)
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 28)
         Me.SaveToolStripButton.Text = "Save"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'EnableEditsToolStripButton
         '
         Me.EnableEditsToolStripButton.Image = Global.Moose3.My.Resources.Resources.application_form
         Me.EnableEditsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.EnableEditsToolStripButton.Name = "EnableEditsToolStripButton"
-        Me.EnableEditsToolStripButton.Size = New System.Drawing.Size(164, 24)
+        Me.EnableEditsToolStripButton.Size = New System.Drawing.Size(164, 28)
         Me.EnableEditsToolStripButton.Text = "Make form editable"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 31)
         '
         'LoadDatasetToolStripButton
         '
         Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
         Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
-        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 24)
+        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 28)
         Me.LoadDatasetToolStripButton.Text = "Refresh dataset"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
         '
         'DataShaperToolStripButton
         '
         Me.DataShaperToolStripButton.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.DataShaperToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DataShaperToolStripButton.Name = "DataShaperToolStripButton"
-        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 24)
+        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 28)
         Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
         '
         'DirectoriesToolStripDropDownButton
         '
@@ -3699,7 +3697,7 @@ Partial Class Form1
         Me.DirectoriesToolStripDropDownButton.Image = CType(resources.GetObject("DirectoriesToolStripDropDownButton.Image"), System.Drawing.Image)
         Me.DirectoriesToolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DirectoriesToolStripDropDownButton.Name = "DirectoriesToolStripDropDownButton"
-        Me.DirectoriesToolStripDropDownButton.Size = New System.Drawing.Size(232, 24)
+        Me.DirectoriesToolStripDropDownButton.Size = New System.Drawing.Size(232, 28)
         Me.DirectoriesToolStripDropDownButton.Text = "Moose monitoring resources"
         '
         'OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem
@@ -3733,7 +3731,7 @@ Partial Class Form1
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 31)
         '
         'AboutToolStripButton
         '
@@ -3741,19 +3739,19 @@ Partial Class Form1
         Me.AboutToolStripButton.Image = CType(resources.GetObject("AboutToolStripButton.Image"), System.Drawing.Image)
         Me.AboutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AboutToolStripButton.Name = "AboutToolStripButton"
-        Me.AboutToolStripButton.Size = New System.Drawing.Size(54, 24)
+        Me.AboutToolStripButton.Size = New System.Drawing.Size(54, 28)
         Me.AboutToolStripButton.Text = "About"
         '
         'ToolStripSeparator9
         '
         Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 31)
         '
         'HelpToolStripLabel
         '
         Me.HelpToolStripLabel.Image = CType(resources.GetObject("HelpToolStripLabel.Image"), System.Drawing.Image)
         Me.HelpToolStripLabel.Name = "HelpToolStripLabel"
-        Me.HelpToolStripLabel.Size = New System.Drawing.Size(100, 24)
+        Me.HelpToolStripLabel.Size = New System.Drawing.Size(100, 36)
         Me.HelpToolStripLabel.Text = "F1 for help"
         '
         'DockManager1
@@ -3848,44 +3846,44 @@ Partial Class Form1
         Me.FooterToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FooterToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.FooterToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator7, Me.DatabaseToolStripLabel, Me.ConnectionStringToolStripLabel, Me.ToolStripSeparator8, Me.UsernameToolStripLabel, Me.ClientToolStripLabel})
-        Me.FooterToolStrip.Location = New System.Drawing.Point(242, 928)
+        Me.FooterToolStrip.Location = New System.Drawing.Point(242, 922)
         Me.FooterToolStrip.Name = "FooterToolStrip"
-        Me.FooterToolStrip.Size = New System.Drawing.Size(878, 25)
+        Me.FooterToolStrip.Size = New System.Drawing.Size(878, 31)
         Me.FooterToolStrip.TabIndex = 9
         Me.FooterToolStrip.Text = "ToolStrip3"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 31)
         '
         'DatabaseToolStripLabel
         '
         Me.DatabaseToolStripLabel.Name = "DatabaseToolStripLabel"
-        Me.DatabaseToolStripLabel.Size = New System.Drawing.Size(75, 22)
+        Me.DatabaseToolStripLabel.Size = New System.Drawing.Size(75, 28)
         Me.DatabaseToolStripLabel.Text = "Database:"
         '
         'ConnectionStringToolStripLabel
         '
         Me.ConnectionStringToolStripLabel.Name = "ConnectionStringToolStripLabel"
-        Me.ConnectionStringToolStripLabel.Size = New System.Drawing.Size(99, 22)
+        Me.ConnectionStringToolStripLabel.Size = New System.Drawing.Size(99, 28)
         Me.ConnectionStringToolStripLabel.Text = "Disconnected"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 31)
         '
         'UsernameToolStripLabel
         '
         Me.UsernameToolStripLabel.Name = "UsernameToolStripLabel"
-        Me.UsernameToolStripLabel.Size = New System.Drawing.Size(50, 22)
+        Me.UsernameToolStripLabel.Size = New System.Drawing.Size(50, 28)
         Me.UsernameToolStripLabel.Text = "Client:"
         '
         'ClientToolStripLabel
         '
         Me.ClientToolStripLabel.Name = "ClientToolStripLabel"
-        Me.ClientToolStripLabel.Size = New System.Drawing.Size(47, 22)
+        Me.ClientToolStripLabel.Size = New System.Drawing.Size(47, 28)
         Me.ClientToolStripLabel.Text = "Client"
         '
         'MooseHelpProvider
