@@ -383,7 +383,7 @@ Public Class Form1
 
                 'Create a DevEx SqlGeometryDataAdapter and retrieve the survey units polygons from the database
                 Dim MySqlGeometryDataAdapter As New SqlGeometryDataAdapter()
-                Dim Sql As String = "SELECT Feature,[ID]  FROM Dataset_GSPE where surveyname='" & SurveyName & "' And Feature is not NULL;"
+                Dim Sql As String = "SELECT GSPE.ID, SurveyUnits.Feature FROM GSPE INNER JOIN SurveyUnits ON GSPE.ID = SurveyUnits.ID AND GSPE.SurveyUnitSet = SurveyUnits.SurveyUnitSet WHERE (GSPE.SurveyName = '" & SurveyName & "') And (Feature is not NULL);"
                 With MySqlGeometryDataAdapter
                     .ConnectionString = My.Settings.MooseConnectionString
                     .SqlText = Sql
