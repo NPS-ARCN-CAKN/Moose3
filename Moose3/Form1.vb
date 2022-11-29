@@ -307,9 +307,11 @@ Public Class Form1
     ''' </summary>
     ''' <param name="TextboxToEdit">The TextBox to append the comment to. TextBox.</param>
     Private Sub AddSignedDatedCommentToTextBox(TextboxToEdit As TextBox)
+        Dim CurrentDateTime As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
         Dim Comment As String = TextboxToEdit.Text.Trim
-        Comment = Comment & vbNewLine & Now & " " & My.User.Name & ":"
+        Comment = Comment & vbNewLine & CurrentDateTime & " " & My.User.Name & ":"
         TextboxToEdit.Text = Comment
+        TextboxToEdit.SelectionStart = TextboxToEdit.Text.Length + 1
     End Sub
 
     Private Sub UpdateHeaderLabel()
@@ -1022,4 +1024,6 @@ Public Class Form1
             MsgBox(ex.Message & " " & System.Reflection.MethodBase.GetCurrentMethod.Name)
         End Try
     End Sub
+
+
 End Class
