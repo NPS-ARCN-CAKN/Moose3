@@ -383,7 +383,7 @@ Public Class Form1
 
                 'Create a DevEx SqlGeometryDataAdapter and retrieve the survey units polygons from the database
                 Dim MySqlGeometryDataAdapter As New SqlGeometryDataAdapter()
-                Dim Sql As String = "SELECT Feature,[ID]  FROM Dataset_GSPE_WithSurveyUnits where surveyname='" & SurveyName & "' And Feature is not NULL;"
+                Dim Sql As String = "SELECT Feature,[ID]  FROM Dataset_GSPE where surveyname='" & SurveyName & "' And Feature is not NULL;"
                 With MySqlGeometryDataAdapter
                     .ConnectionString = My.Settings.MooseConnectionString
                     .SqlText = Sql
@@ -693,11 +693,6 @@ Public Class Form1
 
     Private Sub GSPE_SurveysBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles GSPE_SurveysBindingSource.CurrentChanged
         EndEdits()
-
-
-        'Me.SaveToolStripButton.Enabled = Me.MooseDataSet.HasChanges
-
-        'SetUpGridControl(Me.PopulationGridControl, False, True, False)
     End Sub
 
     Private Sub PopulationGridControl_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs)
