@@ -23,80 +23,80 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim GridFormatRule6 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleExpression6 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim GridFormatRule7 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleExpression7 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
-        Dim GridFormatRule8 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleExpression8 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
-        Dim GridFormatRule9 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleExpression9 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
-        Dim GridFormatRule10 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
-        Dim FormatConditionRuleExpression10 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
-        Dim DataSourceColumnBinding63 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding64 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding65 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding66 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding67 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding68 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding69 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding70 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding71 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding72 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding73 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding74 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding75 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding76 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding77 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding78 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding79 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding80 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding81 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding82 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding83 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding84 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding85 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding86 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding87 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding88 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding89 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding90 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding91 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding92 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding93 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding94 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding95 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding96 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding97 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding98 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding99 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding100 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding101 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding102 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding103 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding104 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding105 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding106 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding107 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding108 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding109 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding110 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding111 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding112 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding113 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding114 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding115 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding116 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding117 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding118 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding119 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding120 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding121 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding122 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding123 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
-        Dim DataSourceColumnBinding124 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleExpression1 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
+        Dim GridFormatRule2 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleExpression2 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
+        Dim GridFormatRule3 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleExpression3 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
+        Dim GridFormatRule4 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleExpression4 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
+        Dim GridFormatRule5 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
+        Dim FormatConditionRuleExpression5 As DevExpress.XtraEditors.FormatConditionRuleExpression = New DevExpress.XtraEditors.FormatConditionRuleExpression()
+        Dim DataSourceColumnBinding1 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding2 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding3 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding4 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding5 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding6 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding7 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding8 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding9 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding10 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding11 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding12 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding13 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding14 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding15 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding16 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding17 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding18 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding19 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding20 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding21 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding22 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding23 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding24 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding25 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding26 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding27 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding28 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding29 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding30 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding31 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding32 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding33 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding34 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding35 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding36 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding37 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding38 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding39 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding40 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding41 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding42 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding43 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding44 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding45 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding46 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding47 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding48 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding49 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding50 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding51 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding52 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding53 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding54 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding55 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding56 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding57 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding58 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding59 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding60 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding61 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
+        Dim DataSourceColumnBinding62 As DevExpress.XtraPivotGrid.DataSourceColumnBinding = New DevExpress.XtraPivotGrid.DataSourceColumnBinding()
         Me.colBULL_ALL1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCOW1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colADULT1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -1220,7 +1220,7 @@ Partial Class Form1
         Me.ResultsXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.table_lightning
         Me.ResultsXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsXtraTabPage.Name = "ResultsXtraTabPage"
-        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(1096, 1011)
+        Me.ResultsXtraTabPage.Size = New System.Drawing.Size(876, 829)
         Me.ResultsXtraTabPage.Text = "Results"
         '
         'ResultsSplitContainer
@@ -1240,8 +1240,8 @@ Partial Class Form1
         'ResultsSplitContainer.Panel2
         '
         Me.ResultsSplitContainer.Panel2.Controls.Add(Me.ResultsSplitContainer2)
-        Me.ResultsSplitContainer.Size = New System.Drawing.Size(1096, 1011)
-        Me.ResultsSplitContainer.SplitterDistance = 323
+        Me.ResultsSplitContainer.Size = New System.Drawing.Size(876, 829)
+        Me.ResultsSplitContainer.SplitterDistance = 264
         Me.ResultsSplitContainer.SplitterWidth = 5
         Me.ResultsSplitContainer.TabIndex = 1
         '
@@ -1251,14 +1251,14 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.AutoGenerateColumns = False
         Me.GSPE_PopulationEstimatesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.GSPE_PopulationEstimatesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 7.8!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 7.8!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.GSPE_PopulationEstimatesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GSPE_PopulationEstimatesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ParkSubAreaTextBox_PopEst, Me.PopulationEstimateSourceReferenceCodeDataGridViewTextBoxColumn, Me.StrataDataGridViewTextBoxColumn, Me.AnalysisColumnDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.ConfidenceDataGridViewTextBoxColumn, Me.SurveyAreaDataGridViewTextBoxColumn, Me.SampledAreaDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn18, Me.Analysis_Area, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.PopulationEstimateSourceDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.RecordInsertedDateDataGridViewTextBoxColumn, Me.RecordInsertedByDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn1})
         Me.GSPE_PopulationEstimatesDataGridView.DataSource = Me.FK_GSPE_PopulationEstimates_GSPE_SurveysBindingSource
@@ -1267,7 +1267,7 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPE_PopulationEstimatesDataGridView.Name = "GSPE_PopulationEstimatesDataGridView"
         Me.GSPE_PopulationEstimatesDataGridView.RowHeadersWidth = 51
-        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(1096, 298)
+        Me.GSPE_PopulationEstimatesDataGridView.Size = New System.Drawing.Size(876, 239)
         Me.GSPE_PopulationEstimatesDataGridView.TabIndex = 0
         '
         'ParkSubAreaTextBox_PopEst
@@ -1538,7 +1538,7 @@ Partial Class Form1
         Me.GSPE_PopulationEstimatesToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PopulationEstimatesToolStripLabel})
         Me.GSPE_PopulationEstimatesToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPE_PopulationEstimatesToolStrip.Name = "GSPE_PopulationEstimatesToolStrip"
-        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(1096, 25)
+        Me.GSPE_PopulationEstimatesToolStrip.Size = New System.Drawing.Size(876, 25)
         Me.GSPE_PopulationEstimatesToolStrip.TabIndex = 1
         Me.GSPE_PopulationEstimatesToolStrip.Text = "Population estimates (from report(s)"
         '
@@ -1565,8 +1565,8 @@ Partial Class Form1
         '
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ResultsDataGridView)
         Me.ResultsSplitContainer2.Panel2.Controls.Add(Me.ToolStrip2)
-        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(1096, 683)
-        Me.ResultsSplitContainer2.SplitterDistance = 392
+        Me.ResultsSplitContainer2.Size = New System.Drawing.Size(876, 560)
+        Me.ResultsSplitContainer2.SplitterDistance = 321
         Me.ResultsSplitContainer2.SplitterWidth = 5
         Me.ResultsSplitContainer2.TabIndex = 0
         '
@@ -1583,7 +1583,7 @@ Partial Class Form1
         Me.DensityEstimatesDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.DensityEstimatesDataGridView.Name = "DensityEstimatesDataGridView"
         Me.DensityEstimatesDataGridView.RowHeadersWidth = 51
-        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(1096, 367)
+        Me.DensityEstimatesDataGridView.Size = New System.Drawing.Size(876, 296)
         Me.DensityEstimatesDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn1
@@ -1732,7 +1732,7 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DensityEstimatesToolStripLabel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1096, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(876, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "Population estimates (from report(s)"
         '
@@ -1755,7 +1755,7 @@ Partial Class Form1
         Me.ResultsDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.ResultsDataGridView.Name = "ResultsDataGridView"
         Me.ResultsDataGridView.RowHeadersWidth = 51
-        Me.ResultsDataGridView.Size = New System.Drawing.Size(1096, 261)
+        Me.ResultsDataGridView.Size = New System.Drawing.Size(876, 209)
         Me.ResultsDataGridView.TabIndex = 1
         '
         'ParkSubAreaDataGridViewTextBoxColumn2
@@ -2110,7 +2110,7 @@ Partial Class Form1
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResultsToolStripLabel})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(1096, 25)
+        Me.ToolStrip2.Size = New System.Drawing.Size(876, 25)
         Me.ToolStrip2.TabIndex = 2
         Me.ToolStrip2.Text = "Population estimates (from report(s)"
         '
@@ -2144,7 +2144,7 @@ Partial Class Form1
         Me.GSPEDeliverableXtraTabPage.ImageOptions.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.GSPEDeliverableXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEDeliverableXtraTabPage.Name = "GSPEDeliverableXtraTabPage"
-        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(1096, 1011)
+        Me.GSPEDeliverableXtraTabPage.Size = New System.Drawing.Size(876, 829)
         Me.GSPEDeliverableXtraTabPage.Text = "GSPE data deliverable"
         '
         'GSPEGridControl
@@ -2157,7 +2157,7 @@ Partial Class Form1
         Me.GSPEGridControl.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEGridControl.Name = "GSPEGridControl"
         Me.GSPEGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.ParkRepositoryItemComboBox, Me.SurveyUnitSetsRepositoryItemComboBox})
-        Me.GSPEGridControl.Size = New System.Drawing.Size(1370, 1225)
+        Me.GSPEGridControl.Size = New System.Drawing.Size(1095, 998)
         Me.GSPEGridControl.TabIndex = 0
         Me.GSPEGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -2165,47 +2165,47 @@ Partial Class Form1
         '
         Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colPark1, Me.colSurveyYear, Me.colSurveyName4, Me.colSeason1, Me.colSubArea, Me.colID, Me.colCALF1, Me.colIntID, Me.colRand, Me.colFiringOrder, Me.colSelected, Me.colCounted, Me.colExclude, Me.colStrat, Me.colStratName, Me.colStratMoose, Me.colStratTracks, Me.colStratHab, Me.colSearchMin, Me.colDateCounted, Me.colX_COORD, Me.colY_COORD, Me.colArea_SqMi, Me.colCOW_W_01, Me.colCOW_W_11, Me.colCOW_W_21, Me.colCOW_W_31, Me.colCOW1, Me.colYBULL_ALL1, Me.colSM_BULL1, Me.colMED_BULL1, Me.colLG_BULL1, Me.colBULL_ALL1, Me.colADULT1, Me.colMOOSE1, Me.colUNKNOWN1, Me.CALF_LONEGridColumn, Me.colBULL_30_401, Me.colBULL_30_501, Me.colBULL_30_601, Me.colBULL_41_501, Me.colBULL_GT_501, Me.colBULL_GT_601, Me.colBULL_GTE_501, Me.colBULL_LT_301, Me.colBULL_LT_501, Me.colMED_L_BULL1, Me.colYBULL_GTSF1, Me.colYBULL_SF1, Me.Bull_AdultGridColumn, Me.colStartDate1, Me.colStopDate, Me.colPilot, Me.colObserver, Me.colPersonnel1, Me.colDensity1, Me.colSCF_Plot, Me.colStd, Me.colInt, Me.colGMU, Me.colPerc_Not_Flown, Me.colComments4, Me.colSourceFilename, Me.colRecordInsertedDate4, Me.colRecordInsertedBy4, Me.colCertificationDate, Me.colCertifiedBy, Me.colCertificationLevel, Me.SurveyUnitSetGridColumn})
         Me.GridView2.DetailHeight = 431
-        GridFormatRule6.Column = Me.colBULL_ALL1
-        GridFormatRule6.Name = "FormatBullALL"
-        FormatConditionRuleExpression6.Appearance.BackColor = System.Drawing.Color.LemonChiffon
-        FormatConditionRuleExpression6.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression6.Expression = resources.GetString("FormatConditionRuleExpression6.Expression")
-        GridFormatRule6.Rule = FormatConditionRuleExpression6
-        GridFormatRule7.Column = Me.colCOW1
-        GridFormatRule7.ColumnApplyTo = Me.colCOW1
-        GridFormatRule7.Name = "FormatCow"
-        FormatConditionRuleExpression7.Appearance.BackColor = System.Drawing.Color.LemonChiffon
-        FormatConditionRuleExpression7.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression7.Expression = "Iif(([COW] Is Null) , 0, [COW]) <> Iif(([COW_W_0] Is Null) , 0, [COW_W_0]) +  Iif" &
+        GridFormatRule1.Column = Me.colBULL_ALL1
+        GridFormatRule1.Name = "FormatBullALL"
+        FormatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.LemonChiffon
+        FormatConditionRuleExpression1.Appearance.Options.UseBackColor = True
+        FormatConditionRuleExpression1.Expression = resources.GetString("FormatConditionRuleExpression1.Expression")
+        GridFormatRule1.Rule = FormatConditionRuleExpression1
+        GridFormatRule2.Column = Me.colCOW1
+        GridFormatRule2.ColumnApplyTo = Me.colCOW1
+        GridFormatRule2.Name = "FormatCow"
+        FormatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.LemonChiffon
+        FormatConditionRuleExpression2.Appearance.Options.UseBackColor = True
+        FormatConditionRuleExpression2.Expression = "Iif(([COW] Is Null) , 0, [COW]) <> Iif(([COW_W_0] Is Null) , 0, [COW_W_0]) +  Iif" &
     "(([COW_W_1] Is Null) , 0, [COW_W_1]) + Iif(([COW_W_2] Is Null), 0, [COW_W_2]) + " &
     "Iif(([COW_W_3] Is Null), 0, [COW_W_3])"
-        GridFormatRule7.Rule = FormatConditionRuleExpression7
-        GridFormatRule8.Column = Me.colADULT1
-        GridFormatRule8.ColumnApplyTo = Me.colADULT1
-        GridFormatRule8.Name = "FormatAdult"
-        FormatConditionRuleExpression8.Appearance.BackColor = System.Drawing.Color.LemonChiffon
-        FormatConditionRuleExpression8.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression8.Expression = "([ADULT] Is Null) = True And ([BULL_ALL] > 0 Or [COW] > 0)"
-        GridFormatRule8.Rule = FormatConditionRuleExpression8
-        GridFormatRule9.Column = Me.colCALF1
-        GridFormatRule9.ColumnApplyTo = Me.colCALF1
-        GridFormatRule9.Name = "FormatCalf"
-        FormatConditionRuleExpression9.Appearance.BackColor = System.Drawing.Color.LemonChiffon
-        FormatConditionRuleExpression9.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression9.Expression = resources.GetString("FormatConditionRuleExpression9.Expression")
-        GridFormatRule9.Rule = FormatConditionRuleExpression9
-        GridFormatRule10.Name = "FormatMoose"
-        FormatConditionRuleExpression10.Appearance.BackColor = System.Drawing.Color.LemonChiffon
-        FormatConditionRuleExpression10.Appearance.Options.UseBackColor = True
-        FormatConditionRuleExpression10.Expression = "Iif(([MOOSE] Is Null) = True, 0, [MOOSE]) <> Iif(([CALF] Is Null) = True, 0, [CAL" &
+        GridFormatRule2.Rule = FormatConditionRuleExpression2
+        GridFormatRule3.Column = Me.colADULT1
+        GridFormatRule3.ColumnApplyTo = Me.colADULT1
+        GridFormatRule3.Name = "FormatAdult"
+        FormatConditionRuleExpression3.Appearance.BackColor = System.Drawing.Color.LemonChiffon
+        FormatConditionRuleExpression3.Appearance.Options.UseBackColor = True
+        FormatConditionRuleExpression3.Expression = "([ADULT] Is Null) = True And ([BULL_ALL] > 0 Or [COW] > 0)"
+        GridFormatRule3.Rule = FormatConditionRuleExpression3
+        GridFormatRule4.Column = Me.colCALF1
+        GridFormatRule4.ColumnApplyTo = Me.colCALF1
+        GridFormatRule4.Name = "FormatCalf"
+        FormatConditionRuleExpression4.Appearance.BackColor = System.Drawing.Color.LemonChiffon
+        FormatConditionRuleExpression4.Appearance.Options.UseBackColor = True
+        FormatConditionRuleExpression4.Expression = resources.GetString("FormatConditionRuleExpression4.Expression")
+        GridFormatRule4.Rule = FormatConditionRuleExpression4
+        GridFormatRule5.Name = "FormatMoose"
+        FormatConditionRuleExpression5.Appearance.BackColor = System.Drawing.Color.LemonChiffon
+        FormatConditionRuleExpression5.Appearance.Options.UseBackColor = True
+        FormatConditionRuleExpression5.Expression = "Iif(([MOOSE] Is Null) = True, 0, [MOOSE]) <> Iif(([CALF] Is Null) = True, 0, [CAL" &
     "F]) + Iif(([COW] Is Null) = True, 0, [COW])  + Iif(([BULL_ALL] Is Null) = True, " &
     "0, [BULL_ALL]) "
-        GridFormatRule10.Rule = FormatConditionRuleExpression10
-        Me.GridView2.FormatRules.Add(GridFormatRule6)
-        Me.GridView2.FormatRules.Add(GridFormatRule7)
-        Me.GridView2.FormatRules.Add(GridFormatRule8)
-        Me.GridView2.FormatRules.Add(GridFormatRule9)
-        Me.GridView2.FormatRules.Add(GridFormatRule10)
+        GridFormatRule5.Rule = FormatConditionRuleExpression5
+        Me.GridView2.FormatRules.Add(GridFormatRule1)
+        Me.GridView2.FormatRules.Add(GridFormatRule2)
+        Me.GridView2.FormatRules.Add(GridFormatRule3)
+        Me.GridView2.FormatRules.Add(GridFormatRule4)
+        Me.GridView2.FormatRules.Add(GridFormatRule5)
         Me.GridView2.GridControl = Me.GSPEGridControl
         Me.GridView2.Name = "GridView2"
         Me.GridView2.OptionsSelection.MultiSelect = True
@@ -2846,7 +2846,7 @@ Partial Class Form1
         Me.GSPEGridControlToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.GSPEGridControlExportFormatToolStripComboBox, Me.GSPEGridControlExportToolStripButton, Me.ToolStripSeparator5, Me.ImportGSPEDeliverableToolStripButton})
         Me.GSPEGridControlToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GSPEGridControlToolStrip.Name = "GSPEGridControlToolStrip"
-        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(1096, 31)
+        Me.GSPEGridControlToolStrip.Size = New System.Drawing.Size(876, 31)
         Me.GSPEGridControlToolStrip.TabIndex = 2
         Me.GSPEGridControlToolStrip.Text = "Pivot grid"
         '
@@ -2858,6 +2858,7 @@ Partial Class Form1
         '
         'GSPEGridControlExportFormatToolStripComboBox
         '
+        Me.GSPEGridControlExportFormatToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GSPEGridControlExportFormatToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.GSPEGridControlExportFormatToolStripComboBox.Name = "GSPEGridControlExportFormatToolStripComboBox"
         Me.GSPEGridControlExportFormatToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -2893,7 +2894,7 @@ Partial Class Form1
         Me.GSPEPivotXtraTabPage.Controls.Add(Me.SurveyPivotGridToolStrip)
         Me.GSPEPivotXtraTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.GSPEPivotXtraTabPage.Name = "GSPEPivotXtraTabPage"
-        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(1096, 1011)
+        Me.GSPEPivotXtraTabPage.Size = New System.Drawing.Size(876, 829)
         Me.GSPEPivotXtraTabPage.Text = "Summarize data deliverable"
         '
         'GSPEPivotGridControl
@@ -2908,15 +2909,15 @@ Partial Class Form1
         Me.GSPEPivotGridControl.OptionsDataField.RowHeaderWidth = 133
         Me.GSPEPivotGridControl.OptionsView.RowTreeOffset = 28
         Me.GSPEPivotGridControl.OptionsView.RowTreeWidth = 133
-        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(1370, 1225)
+        Me.GSPEPivotGridControl.Size = New System.Drawing.Size(1095, 998)
         Me.GSPEPivotGridControl.TabIndex = 0
         '
         'fieldPark
         '
         Me.fieldPark.AreaIndex = 0
         Me.fieldPark.Caption = "Park"
-        DataSourceColumnBinding63.ColumnName = "Park"
-        Me.fieldPark.DataBinding = DataSourceColumnBinding63
+        DataSourceColumnBinding1.ColumnName = "Park"
+        Me.fieldPark.DataBinding = DataSourceColumnBinding1
         Me.fieldPark.MinWidth = 27
         Me.fieldPark.Name = "fieldPark"
         Me.fieldPark.Options.AllowFilterBySummary = DevExpress.Utils.DefaultBoolean.[True]
@@ -2930,8 +2931,8 @@ Partial Class Form1
         Me.fieldSurveyName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.fieldSurveyName.AreaIndex = 0
         Me.fieldSurveyName.Caption = "Survey Name"
-        DataSourceColumnBinding64.ColumnName = "SurveyName"
-        Me.fieldSurveyName.DataBinding = DataSourceColumnBinding64
+        DataSourceColumnBinding2.ColumnName = "SurveyName"
+        Me.fieldSurveyName.DataBinding = DataSourceColumnBinding2
         Me.fieldSurveyName.MinWidth = 27
         Me.fieldSurveyName.Name = "fieldSurveyName"
         Me.fieldSurveyName.Width = 282
@@ -2940,8 +2941,8 @@ Partial Class Form1
         '
         Me.fieldSurveyYear.AreaIndex = 1
         Me.fieldSurveyYear.Caption = "Survey Year"
-        DataSourceColumnBinding65.ColumnName = "SurveyYear"
-        Me.fieldSurveyYear.DataBinding = DataSourceColumnBinding65
+        DataSourceColumnBinding3.ColumnName = "SurveyYear"
+        Me.fieldSurveyYear.DataBinding = DataSourceColumnBinding3
         Me.fieldSurveyYear.MinWidth = 27
         Me.fieldSurveyYear.Name = "fieldSurveyYear"
         Me.fieldSurveyYear.Options.AllowFilter = DevExpress.Utils.DefaultBoolean.[True]
@@ -2958,8 +2959,8 @@ Partial Class Form1
         '
         Me.fieldSeason.AreaIndex = 2
         Me.fieldSeason.Caption = "Season"
-        DataSourceColumnBinding66.ColumnName = "Season"
-        Me.fieldSeason.DataBinding = DataSourceColumnBinding66
+        DataSourceColumnBinding4.ColumnName = "Season"
+        Me.fieldSeason.DataBinding = DataSourceColumnBinding4
         Me.fieldSeason.MinWidth = 27
         Me.fieldSeason.Name = "fieldSeason"
         Me.fieldSeason.Width = 133
@@ -2968,8 +2969,8 @@ Partial Class Form1
         '
         Me.fieldSubArea.AreaIndex = 3
         Me.fieldSubArea.Caption = "Sub Area"
-        DataSourceColumnBinding67.ColumnName = "SubArea"
-        Me.fieldSubArea.DataBinding = DataSourceColumnBinding67
+        DataSourceColumnBinding5.ColumnName = "SubArea"
+        Me.fieldSubArea.DataBinding = DataSourceColumnBinding5
         Me.fieldSubArea.MinWidth = 27
         Me.fieldSubArea.Name = "fieldSubArea"
         Me.fieldSubArea.Width = 133
@@ -2978,8 +2979,8 @@ Partial Class Form1
         '
         Me.fieldGMU.AreaIndex = 4
         Me.fieldGMU.Caption = "GMU"
-        DataSourceColumnBinding68.ColumnName = "GMU"
-        Me.fieldGMU.DataBinding = DataSourceColumnBinding68
+        DataSourceColumnBinding6.ColumnName = "GMU"
+        Me.fieldGMU.DataBinding = DataSourceColumnBinding6
         Me.fieldGMU.MinWidth = 27
         Me.fieldGMU.Name = "fieldGMU"
         Me.fieldGMU.Width = 133
@@ -2989,8 +2990,8 @@ Partial Class Form1
         Me.fieldID.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldID.AreaIndex = 13
         Me.fieldID.Caption = "ID"
-        DataSourceColumnBinding69.ColumnName = "ID"
-        Me.fieldID.DataBinding = DataSourceColumnBinding69
+        DataSourceColumnBinding7.ColumnName = "ID"
+        Me.fieldID.DataBinding = DataSourceColumnBinding7
         Me.fieldID.MinWidth = 27
         Me.fieldID.Name = "fieldID"
         Me.fieldID.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count
@@ -3000,8 +3001,8 @@ Partial Class Form1
         '
         Me.fieldStartDate.AreaIndex = 5
         Me.fieldStartDate.Caption = "StartDate"
-        DataSourceColumnBinding70.ColumnName = "StartDate"
-        Me.fieldStartDate.DataBinding = DataSourceColumnBinding70
+        DataSourceColumnBinding8.ColumnName = "StartDate"
+        Me.fieldStartDate.DataBinding = DataSourceColumnBinding8
         Me.fieldStartDate.MinWidth = 27
         Me.fieldStartDate.Name = "fieldStartDate"
         Me.fieldStartDate.Width = 133
@@ -3010,8 +3011,8 @@ Partial Class Form1
         '
         Me.fieldStopDate.AreaIndex = 6
         Me.fieldStopDate.Caption = "StopDate"
-        DataSourceColumnBinding71.ColumnName = "StopDate"
-        Me.fieldStopDate.DataBinding = DataSourceColumnBinding71
+        DataSourceColumnBinding9.ColumnName = "StopDate"
+        Me.fieldStopDate.DataBinding = DataSourceColumnBinding9
         Me.fieldStopDate.MinWidth = 27
         Me.fieldStopDate.Name = "fieldStopDate"
         Me.fieldStopDate.Width = 133
@@ -3020,8 +3021,8 @@ Partial Class Form1
         '
         Me.fieldIntID.AreaIndex = 7
         Me.fieldIntID.Caption = "Int ID"
-        DataSourceColumnBinding72.ColumnName = "IntID"
-        Me.fieldIntID.DataBinding = DataSourceColumnBinding72
+        DataSourceColumnBinding10.ColumnName = "IntID"
+        Me.fieldIntID.DataBinding = DataSourceColumnBinding10
         Me.fieldIntID.MinWidth = 27
         Me.fieldIntID.Name = "fieldIntID"
         Me.fieldIntID.Width = 133
@@ -3030,8 +3031,8 @@ Partial Class Form1
         '
         Me.fieldRand.AreaIndex = 8
         Me.fieldRand.Caption = "Rand"
-        DataSourceColumnBinding73.ColumnName = "Rand"
-        Me.fieldRand.DataBinding = DataSourceColumnBinding73
+        DataSourceColumnBinding11.ColumnName = "Rand"
+        Me.fieldRand.DataBinding = DataSourceColumnBinding11
         Me.fieldRand.MinWidth = 27
         Me.fieldRand.Name = "fieldRand"
         Me.fieldRand.Width = 133
@@ -3040,8 +3041,8 @@ Partial Class Form1
         '
         Me.fieldFiringOrder.AreaIndex = 9
         Me.fieldFiringOrder.Caption = "Firing Order"
-        DataSourceColumnBinding74.ColumnName = "FiringOrder"
-        Me.fieldFiringOrder.DataBinding = DataSourceColumnBinding74
+        DataSourceColumnBinding12.ColumnName = "FiringOrder"
+        Me.fieldFiringOrder.DataBinding = DataSourceColumnBinding12
         Me.fieldFiringOrder.MinWidth = 27
         Me.fieldFiringOrder.Name = "fieldFiringOrder"
         Me.fieldFiringOrder.Width = 133
@@ -3050,8 +3051,8 @@ Partial Class Form1
         '
         Me.fieldSelected.AreaIndex = 10
         Me.fieldSelected.Caption = "Selected"
-        DataSourceColumnBinding75.ColumnName = "Selected"
-        Me.fieldSelected.DataBinding = DataSourceColumnBinding75
+        DataSourceColumnBinding13.ColumnName = "Selected"
+        Me.fieldSelected.DataBinding = DataSourceColumnBinding13
         Me.fieldSelected.MinWidth = 27
         Me.fieldSelected.Name = "fieldSelected"
         Me.fieldSelected.Width = 133
@@ -3060,8 +3061,8 @@ Partial Class Form1
         '
         Me.fieldCounted.AreaIndex = 11
         Me.fieldCounted.Caption = "Counted"
-        DataSourceColumnBinding76.ColumnName = "Counted"
-        Me.fieldCounted.DataBinding = DataSourceColumnBinding76
+        DataSourceColumnBinding14.ColumnName = "Counted"
+        Me.fieldCounted.DataBinding = DataSourceColumnBinding14
         Me.fieldCounted.MinWidth = 27
         Me.fieldCounted.Name = "fieldCounted"
         Me.fieldCounted.Width = 133
@@ -3070,8 +3071,8 @@ Partial Class Form1
         '
         Me.fieldExclude.AreaIndex = 12
         Me.fieldExclude.Caption = "Exclude"
-        DataSourceColumnBinding77.ColumnName = "Exclude"
-        Me.fieldExclude.DataBinding = DataSourceColumnBinding77
+        DataSourceColumnBinding15.ColumnName = "Exclude"
+        Me.fieldExclude.DataBinding = DataSourceColumnBinding15
         Me.fieldExclude.MinWidth = 27
         Me.fieldExclude.Name = "fieldExclude"
         Me.fieldExclude.Width = 133
@@ -3081,8 +3082,8 @@ Partial Class Form1
         Me.fieldStrat.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
         Me.fieldStrat.AreaIndex = 1
         Me.fieldStrat.Caption = "Strat"
-        DataSourceColumnBinding78.ColumnName = "Strat"
-        Me.fieldStrat.DataBinding = DataSourceColumnBinding78
+        DataSourceColumnBinding16.ColumnName = "Strat"
+        Me.fieldStrat.DataBinding = DataSourceColumnBinding16
         Me.fieldStrat.MinWidth = 27
         Me.fieldStrat.Name = "fieldStrat"
         Me.fieldStrat.Width = 133
@@ -3091,8 +3092,8 @@ Partial Class Form1
         '
         Me.fieldStratName.AreaIndex = 13
         Me.fieldStratName.Caption = "Strat Name"
-        DataSourceColumnBinding79.ColumnName = "StratName"
-        Me.fieldStratName.DataBinding = DataSourceColumnBinding79
+        DataSourceColumnBinding17.ColumnName = "StratName"
+        Me.fieldStratName.DataBinding = DataSourceColumnBinding17
         Me.fieldStratName.MinWidth = 27
         Me.fieldStratName.Name = "fieldStratName"
         Me.fieldStratName.Width = 133
@@ -3101,8 +3102,8 @@ Partial Class Form1
         '
         Me.fieldStratMoose.AreaIndex = 14
         Me.fieldStratMoose.Caption = "Strat Moose"
-        DataSourceColumnBinding80.ColumnName = "StratMoose"
-        Me.fieldStratMoose.DataBinding = DataSourceColumnBinding80
+        DataSourceColumnBinding18.ColumnName = "StratMoose"
+        Me.fieldStratMoose.DataBinding = DataSourceColumnBinding18
         Me.fieldStratMoose.MinWidth = 27
         Me.fieldStratMoose.Name = "fieldStratMoose"
         Me.fieldStratMoose.Width = 133
@@ -3111,8 +3112,8 @@ Partial Class Form1
         '
         Me.fieldStratTracks.AreaIndex = 15
         Me.fieldStratTracks.Caption = "Strat Tracks"
-        DataSourceColumnBinding81.ColumnName = "StratTracks"
-        Me.fieldStratTracks.DataBinding = DataSourceColumnBinding81
+        DataSourceColumnBinding19.ColumnName = "StratTracks"
+        Me.fieldStratTracks.DataBinding = DataSourceColumnBinding19
         Me.fieldStratTracks.MinWidth = 27
         Me.fieldStratTracks.Name = "fieldStratTracks"
         Me.fieldStratTracks.Width = 133
@@ -3121,8 +3122,8 @@ Partial Class Form1
         '
         Me.fieldStratHab.AreaIndex = 16
         Me.fieldStratHab.Caption = "Strat Hab"
-        DataSourceColumnBinding82.ColumnName = "StratHab"
-        Me.fieldStratHab.DataBinding = DataSourceColumnBinding82
+        DataSourceColumnBinding20.ColumnName = "StratHab"
+        Me.fieldStratHab.DataBinding = DataSourceColumnBinding20
         Me.fieldStratHab.MinWidth = 27
         Me.fieldStratHab.Name = "fieldStratHab"
         Me.fieldStratHab.Width = 133
@@ -3131,8 +3132,8 @@ Partial Class Form1
         '
         Me.fieldSearchMin.AreaIndex = 17
         Me.fieldSearchMin.Caption = "Search Min"
-        DataSourceColumnBinding83.ColumnName = "SearchMin"
-        Me.fieldSearchMin.DataBinding = DataSourceColumnBinding83
+        DataSourceColumnBinding21.ColumnName = "SearchMin"
+        Me.fieldSearchMin.DataBinding = DataSourceColumnBinding21
         Me.fieldSearchMin.MinWidth = 27
         Me.fieldSearchMin.Name = "fieldSearchMin"
         Me.fieldSearchMin.Width = 133
@@ -3141,8 +3142,8 @@ Partial Class Form1
         '
         Me.fieldDateCounted.AreaIndex = 18
         Me.fieldDateCounted.Caption = "DateCounted"
-        DataSourceColumnBinding84.ColumnName = "DateCounted"
-        Me.fieldDateCounted.DataBinding = DataSourceColumnBinding84
+        DataSourceColumnBinding22.ColumnName = "DateCounted"
+        Me.fieldDateCounted.DataBinding = DataSourceColumnBinding22
         Me.fieldDateCounted.MinWidth = 27
         Me.fieldDateCounted.Name = "fieldDateCounted"
         Me.fieldDateCounted.Width = 133
@@ -3151,8 +3152,8 @@ Partial Class Form1
         '
         Me.fieldPercNotFlown.AreaIndex = 19
         Me.fieldPercNotFlown.Caption = "Perc_Not_Flown"
-        DataSourceColumnBinding85.ColumnName = "Perc_Not_Flown"
-        Me.fieldPercNotFlown.DataBinding = DataSourceColumnBinding85
+        DataSourceColumnBinding23.ColumnName = "Perc_Not_Flown"
+        Me.fieldPercNotFlown.DataBinding = DataSourceColumnBinding23
         Me.fieldPercNotFlown.MinWidth = 27
         Me.fieldPercNotFlown.Name = "fieldPercNotFlown"
         Me.fieldPercNotFlown.Width = 133
@@ -3161,8 +3162,8 @@ Partial Class Form1
         '
         Me.fieldXCOORD.AreaIndex = 20
         Me.fieldXCOORD.Caption = "X_COORD"
-        DataSourceColumnBinding86.ColumnName = "X_COORD"
-        Me.fieldXCOORD.DataBinding = DataSourceColumnBinding86
+        DataSourceColumnBinding24.ColumnName = "X_COORD"
+        Me.fieldXCOORD.DataBinding = DataSourceColumnBinding24
         Me.fieldXCOORD.MinWidth = 27
         Me.fieldXCOORD.Name = "fieldXCOORD"
         Me.fieldXCOORD.Width = 133
@@ -3171,8 +3172,8 @@ Partial Class Form1
         '
         Me.fieldYCOORD.AreaIndex = 21
         Me.fieldYCOORD.Caption = "Y_COORD"
-        DataSourceColumnBinding87.ColumnName = "Y_COORD"
-        Me.fieldYCOORD.DataBinding = DataSourceColumnBinding87
+        DataSourceColumnBinding25.ColumnName = "Y_COORD"
+        Me.fieldYCOORD.DataBinding = DataSourceColumnBinding25
         Me.fieldYCOORD.MinWidth = 27
         Me.fieldYCOORD.Name = "fieldYCOORD"
         Me.fieldYCOORD.Width = 133
@@ -3181,8 +3182,8 @@ Partial Class Form1
         '
         Me.fieldAreaSqMi.AreaIndex = 22
         Me.fieldAreaSqMi.Caption = "Area_Sq Mi"
-        DataSourceColumnBinding88.ColumnName = "Area_SqMi"
-        Me.fieldAreaSqMi.DataBinding = DataSourceColumnBinding88
+        DataSourceColumnBinding26.ColumnName = "Area_SqMi"
+        Me.fieldAreaSqMi.DataBinding = DataSourceColumnBinding26
         Me.fieldAreaSqMi.MinWidth = 27
         Me.fieldAreaSqMi.Name = "fieldAreaSqMi"
         Me.fieldAreaSqMi.Width = 133
@@ -3192,8 +3193,8 @@ Partial Class Form1
         Me.fieldADULT.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldADULT.AreaIndex = 11
         Me.fieldADULT.Caption = "ADULT"
-        DataSourceColumnBinding89.ColumnName = "ADULT"
-        Me.fieldADULT.DataBinding = DataSourceColumnBinding89
+        DataSourceColumnBinding27.ColumnName = "ADULT"
+        Me.fieldADULT.DataBinding = DataSourceColumnBinding27
         Me.fieldADULT.MinWidth = 27
         Me.fieldADULT.Name = "fieldADULT"
         Me.fieldADULT.Width = 133
@@ -3202,8 +3203,8 @@ Partial Class Form1
         '
         Me.fieldBULL3040.AreaIndex = 23
         Me.fieldBULL3040.Caption = "BULL_30_40"
-        DataSourceColumnBinding90.ColumnName = "BULL_30_40"
-        Me.fieldBULL3040.DataBinding = DataSourceColumnBinding90
+        DataSourceColumnBinding28.ColumnName = "BULL_30_40"
+        Me.fieldBULL3040.DataBinding = DataSourceColumnBinding28
         Me.fieldBULL3040.MinWidth = 27
         Me.fieldBULL3040.Name = "fieldBULL3040"
         Me.fieldBULL3040.Width = 133
@@ -3212,8 +3213,8 @@ Partial Class Form1
         '
         Me.fieldBULL3050.AreaIndex = 24
         Me.fieldBULL3050.Caption = "BULL_30_50"
-        DataSourceColumnBinding91.ColumnName = "BULL_30_50"
-        Me.fieldBULL3050.DataBinding = DataSourceColumnBinding91
+        DataSourceColumnBinding29.ColumnName = "BULL_30_50"
+        Me.fieldBULL3050.DataBinding = DataSourceColumnBinding29
         Me.fieldBULL3050.MinWidth = 27
         Me.fieldBULL3050.Name = "fieldBULL3050"
         Me.fieldBULL3050.Width = 133
@@ -3222,8 +3223,8 @@ Partial Class Form1
         '
         Me.fieldBULL3060.AreaIndex = 25
         Me.fieldBULL3060.Caption = "BULL_30_60"
-        DataSourceColumnBinding92.ColumnName = "BULL_30_60"
-        Me.fieldBULL3060.DataBinding = DataSourceColumnBinding92
+        DataSourceColumnBinding30.ColumnName = "BULL_30_60"
+        Me.fieldBULL3060.DataBinding = DataSourceColumnBinding30
         Me.fieldBULL3060.MinWidth = 27
         Me.fieldBULL3060.Name = "fieldBULL3060"
         Me.fieldBULL3060.Width = 133
@@ -3232,8 +3233,8 @@ Partial Class Form1
         '
         Me.fieldBULL4150.AreaIndex = 26
         Me.fieldBULL4150.Caption = "BULL_41_50"
-        DataSourceColumnBinding93.ColumnName = "BULL_41_50"
-        Me.fieldBULL4150.DataBinding = DataSourceColumnBinding93
+        DataSourceColumnBinding31.ColumnName = "BULL_41_50"
+        Me.fieldBULL4150.DataBinding = DataSourceColumnBinding31
         Me.fieldBULL4150.MinWidth = 27
         Me.fieldBULL4150.Name = "fieldBULL4150"
         Me.fieldBULL4150.Width = 133
@@ -3243,8 +3244,8 @@ Partial Class Form1
         Me.fieldBULLALL.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldBULLALL.AreaIndex = 10
         Me.fieldBULLALL.Caption = "BULL_ALL"
-        DataSourceColumnBinding94.ColumnName = "BULL_ALL"
-        Me.fieldBULLALL.DataBinding = DataSourceColumnBinding94
+        DataSourceColumnBinding32.ColumnName = "BULL_ALL"
+        Me.fieldBULLALL.DataBinding = DataSourceColumnBinding32
         Me.fieldBULLALL.MinWidth = 27
         Me.fieldBULLALL.Name = "fieldBULLALL"
         Me.fieldBULLALL.Width = 133
@@ -3253,8 +3254,8 @@ Partial Class Form1
         '
         Me.fieldBULLGT50.AreaIndex = 27
         Me.fieldBULLGT50.Caption = "BULL_GT_50"
-        DataSourceColumnBinding95.ColumnName = "BULL_GT_50"
-        Me.fieldBULLGT50.DataBinding = DataSourceColumnBinding95
+        DataSourceColumnBinding33.ColumnName = "BULL_GT_50"
+        Me.fieldBULLGT50.DataBinding = DataSourceColumnBinding33
         Me.fieldBULLGT50.MinWidth = 27
         Me.fieldBULLGT50.Name = "fieldBULLGT50"
         Me.fieldBULLGT50.Width = 133
@@ -3263,8 +3264,8 @@ Partial Class Form1
         '
         Me.fieldBULLGT60.AreaIndex = 28
         Me.fieldBULLGT60.Caption = "BULL_GT_60"
-        DataSourceColumnBinding96.ColumnName = "BULL_GT_60"
-        Me.fieldBULLGT60.DataBinding = DataSourceColumnBinding96
+        DataSourceColumnBinding34.ColumnName = "BULL_GT_60"
+        Me.fieldBULLGT60.DataBinding = DataSourceColumnBinding34
         Me.fieldBULLGT60.MinWidth = 27
         Me.fieldBULLGT60.Name = "fieldBULLGT60"
         Me.fieldBULLGT60.Width = 133
@@ -3273,8 +3274,8 @@ Partial Class Form1
         '
         Me.fieldBULLGTE50.AreaIndex = 29
         Me.fieldBULLGTE50.Caption = "BULL_GTE_50"
-        DataSourceColumnBinding97.ColumnName = "BULL_GTE_50"
-        Me.fieldBULLGTE50.DataBinding = DataSourceColumnBinding97
+        DataSourceColumnBinding35.ColumnName = "BULL_GTE_50"
+        Me.fieldBULLGTE50.DataBinding = DataSourceColumnBinding35
         Me.fieldBULLGTE50.MinWidth = 27
         Me.fieldBULLGTE50.Name = "fieldBULLGTE50"
         Me.fieldBULLGTE50.Width = 133
@@ -3283,8 +3284,8 @@ Partial Class Form1
         '
         Me.fieldBULLLT30.AreaIndex = 30
         Me.fieldBULLLT30.Caption = "BULL_LT_30"
-        DataSourceColumnBinding98.ColumnName = "BULL_LT_30"
-        Me.fieldBULLLT30.DataBinding = DataSourceColumnBinding98
+        DataSourceColumnBinding36.ColumnName = "BULL_LT_30"
+        Me.fieldBULLLT30.DataBinding = DataSourceColumnBinding36
         Me.fieldBULLLT30.MinWidth = 27
         Me.fieldBULLLT30.Name = "fieldBULLLT30"
         Me.fieldBULLLT30.Width = 133
@@ -3293,8 +3294,8 @@ Partial Class Form1
         '
         Me.fieldBULLLT50.AreaIndex = 31
         Me.fieldBULLLT50.Caption = "BULL_LT_50"
-        DataSourceColumnBinding99.ColumnName = "BULL_LT_50"
-        Me.fieldBULLLT50.DataBinding = DataSourceColumnBinding99
+        DataSourceColumnBinding37.ColumnName = "BULL_LT_50"
+        Me.fieldBULLLT50.DataBinding = DataSourceColumnBinding37
         Me.fieldBULLLT50.MinWidth = 27
         Me.fieldBULLLT50.Name = "fieldBULLLT50"
         Me.fieldBULLLT50.Width = 133
@@ -3304,8 +3305,8 @@ Partial Class Form1
         Me.fieldCALF.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldCALF.AreaIndex = 0
         Me.fieldCALF.Caption = "CALF"
-        DataSourceColumnBinding100.ColumnName = "CALF"
-        Me.fieldCALF.DataBinding = DataSourceColumnBinding100
+        DataSourceColumnBinding38.ColumnName = "CALF"
+        Me.fieldCALF.DataBinding = DataSourceColumnBinding38
         Me.fieldCALF.MinWidth = 27
         Me.fieldCALF.Name = "fieldCALF"
         Me.fieldCALF.Width = 133
@@ -3315,8 +3316,8 @@ Partial Class Form1
         Me.fieldCOW.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldCOW.AreaIndex = 5
         Me.fieldCOW.Caption = "COW"
-        DataSourceColumnBinding101.ColumnName = "COW"
-        Me.fieldCOW.DataBinding = DataSourceColumnBinding101
+        DataSourceColumnBinding39.ColumnName = "COW"
+        Me.fieldCOW.DataBinding = DataSourceColumnBinding39
         Me.fieldCOW.MinWidth = 27
         Me.fieldCOW.Name = "fieldCOW"
         Me.fieldCOW.Width = 133
@@ -3326,8 +3327,8 @@ Partial Class Form1
         Me.fieldCOWW0.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldCOWW0.AreaIndex = 1
         Me.fieldCOWW0.Caption = "COW_W_0"
-        DataSourceColumnBinding102.ColumnName = "COW_W_0"
-        Me.fieldCOWW0.DataBinding = DataSourceColumnBinding102
+        DataSourceColumnBinding40.ColumnName = "COW_W_0"
+        Me.fieldCOWW0.DataBinding = DataSourceColumnBinding40
         Me.fieldCOWW0.MinWidth = 27
         Me.fieldCOWW0.Name = "fieldCOWW0"
         Me.fieldCOWW0.Width = 133
@@ -3337,8 +3338,8 @@ Partial Class Form1
         Me.fieldCOWW1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldCOWW1.AreaIndex = 2
         Me.fieldCOWW1.Caption = "COW_W_1"
-        DataSourceColumnBinding103.ColumnName = "COW_W_1"
-        Me.fieldCOWW1.DataBinding = DataSourceColumnBinding103
+        DataSourceColumnBinding41.ColumnName = "COW_W_1"
+        Me.fieldCOWW1.DataBinding = DataSourceColumnBinding41
         Me.fieldCOWW1.MinWidth = 27
         Me.fieldCOWW1.Name = "fieldCOWW1"
         Me.fieldCOWW1.Width = 133
@@ -3348,8 +3349,8 @@ Partial Class Form1
         Me.fieldCOWW2.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldCOWW2.AreaIndex = 3
         Me.fieldCOWW2.Caption = "COW_W_2"
-        DataSourceColumnBinding104.ColumnName = "COW_W_2"
-        Me.fieldCOWW2.DataBinding = DataSourceColumnBinding104
+        DataSourceColumnBinding42.ColumnName = "COW_W_2"
+        Me.fieldCOWW2.DataBinding = DataSourceColumnBinding42
         Me.fieldCOWW2.MinWidth = 27
         Me.fieldCOWW2.Name = "fieldCOWW2"
         Me.fieldCOWW2.Width = 133
@@ -3359,8 +3360,8 @@ Partial Class Form1
         Me.fieldCOWW3.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldCOWW3.AreaIndex = 4
         Me.fieldCOWW3.Caption = "COW_W_3"
-        DataSourceColumnBinding105.ColumnName = "COW_W_3"
-        Me.fieldCOWW3.DataBinding = DataSourceColumnBinding105
+        DataSourceColumnBinding43.ColumnName = "COW_W_3"
+        Me.fieldCOWW3.DataBinding = DataSourceColumnBinding43
         Me.fieldCOWW3.MinWidth = 27
         Me.fieldCOWW3.Name = "fieldCOWW3"
         Me.fieldCOWW3.Width = 133
@@ -3370,8 +3371,8 @@ Partial Class Form1
         Me.fieldLGBULL.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldLGBULL.AreaIndex = 9
         Me.fieldLGBULL.Caption = "LG_BULL"
-        DataSourceColumnBinding106.ColumnName = "LG_BULL"
-        Me.fieldLGBULL.DataBinding = DataSourceColumnBinding106
+        DataSourceColumnBinding44.ColumnName = "LG_BULL"
+        Me.fieldLGBULL.DataBinding = DataSourceColumnBinding44
         Me.fieldLGBULL.MinWidth = 27
         Me.fieldLGBULL.Name = "fieldLGBULL"
         Me.fieldLGBULL.Width = 133
@@ -3381,8 +3382,8 @@ Partial Class Form1
         Me.fieldMEDBULL.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldMEDBULL.AreaIndex = 8
         Me.fieldMEDBULL.Caption = "MED_BULL"
-        DataSourceColumnBinding107.ColumnName = "MED_BULL"
-        Me.fieldMEDBULL.DataBinding = DataSourceColumnBinding107
+        DataSourceColumnBinding45.ColumnName = "MED_BULL"
+        Me.fieldMEDBULL.DataBinding = DataSourceColumnBinding45
         Me.fieldMEDBULL.MinWidth = 27
         Me.fieldMEDBULL.Name = "fieldMEDBULL"
         Me.fieldMEDBULL.Width = 133
@@ -3391,8 +3392,8 @@ Partial Class Form1
         '
         Me.fieldMEDLBULL.AreaIndex = 32
         Me.fieldMEDLBULL.Caption = "MED_L_BULL"
-        DataSourceColumnBinding108.ColumnName = "MED_L_BULL"
-        Me.fieldMEDLBULL.DataBinding = DataSourceColumnBinding108
+        DataSourceColumnBinding46.ColumnName = "MED_L_BULL"
+        Me.fieldMEDLBULL.DataBinding = DataSourceColumnBinding46
         Me.fieldMEDLBULL.MinWidth = 27
         Me.fieldMEDLBULL.Name = "fieldMEDLBULL"
         Me.fieldMEDLBULL.Width = 133
@@ -3402,8 +3403,8 @@ Partial Class Form1
         Me.fieldSMBULL.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldSMBULL.AreaIndex = 7
         Me.fieldSMBULL.Caption = "SM_BULL"
-        DataSourceColumnBinding109.ColumnName = "SM_BULL"
-        Me.fieldSMBULL.DataBinding = DataSourceColumnBinding109
+        DataSourceColumnBinding47.ColumnName = "SM_BULL"
+        Me.fieldSMBULL.DataBinding = DataSourceColumnBinding47
         Me.fieldSMBULL.MinWidth = 27
         Me.fieldSMBULL.Name = "fieldSMBULL"
         Me.fieldSMBULL.Width = 133
@@ -3412,8 +3413,8 @@ Partial Class Form1
         '
         Me.fieldUNKNOWN.AreaIndex = 33
         Me.fieldUNKNOWN.Caption = "UNKNOWN"
-        DataSourceColumnBinding110.ColumnName = "UNKNOWN"
-        Me.fieldUNKNOWN.DataBinding = DataSourceColumnBinding110
+        DataSourceColumnBinding48.ColumnName = "UNKNOWN"
+        Me.fieldUNKNOWN.DataBinding = DataSourceColumnBinding48
         Me.fieldUNKNOWN.MinWidth = 27
         Me.fieldUNKNOWN.Name = "fieldUNKNOWN"
         Me.fieldUNKNOWN.Width = 133
@@ -3423,8 +3424,8 @@ Partial Class Form1
         Me.fieldYBULLALL.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldYBULLALL.AreaIndex = 6
         Me.fieldYBULLALL.Caption = "YBULL_ALL"
-        DataSourceColumnBinding111.ColumnName = "YBULL_ALL"
-        Me.fieldYBULLALL.DataBinding = DataSourceColumnBinding111
+        DataSourceColumnBinding49.ColumnName = "YBULL_ALL"
+        Me.fieldYBULLALL.DataBinding = DataSourceColumnBinding49
         Me.fieldYBULLALL.MinWidth = 27
         Me.fieldYBULLALL.Name = "fieldYBULLALL"
         Me.fieldYBULLALL.Width = 133
@@ -3433,8 +3434,8 @@ Partial Class Form1
         '
         Me.fieldYBULLGTSF.AreaIndex = 34
         Me.fieldYBULLGTSF.Caption = "YBULL_GTSF"
-        DataSourceColumnBinding112.ColumnName = "YBULL_GTSF"
-        Me.fieldYBULLGTSF.DataBinding = DataSourceColumnBinding112
+        DataSourceColumnBinding50.ColumnName = "YBULL_GTSF"
+        Me.fieldYBULLGTSF.DataBinding = DataSourceColumnBinding50
         Me.fieldYBULLGTSF.MinWidth = 27
         Me.fieldYBULLGTSF.Name = "fieldYBULLGTSF"
         Me.fieldYBULLGTSF.Width = 133
@@ -3443,8 +3444,8 @@ Partial Class Form1
         '
         Me.fieldYBULLSF.AreaIndex = 35
         Me.fieldYBULLSF.Caption = "YBULL_SF"
-        DataSourceColumnBinding113.ColumnName = "YBULL_SF"
-        Me.fieldYBULLSF.DataBinding = DataSourceColumnBinding113
+        DataSourceColumnBinding51.ColumnName = "YBULL_SF"
+        Me.fieldYBULLSF.DataBinding = DataSourceColumnBinding51
         Me.fieldYBULLSF.MinWidth = 27
         Me.fieldYBULLSF.Name = "fieldYBULLSF"
         Me.fieldYBULLSF.Width = 133
@@ -3454,8 +3455,8 @@ Partial Class Form1
         Me.fieldMOOSE.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
         Me.fieldMOOSE.AreaIndex = 12
         Me.fieldMOOSE.Caption = "MOOSE"
-        DataSourceColumnBinding114.ColumnName = "MOOSE"
-        Me.fieldMOOSE.DataBinding = DataSourceColumnBinding114
+        DataSourceColumnBinding52.ColumnName = "MOOSE"
+        Me.fieldMOOSE.DataBinding = DataSourceColumnBinding52
         Me.fieldMOOSE.MinWidth = 27
         Me.fieldMOOSE.Name = "fieldMOOSE"
         Me.fieldMOOSE.Width = 133
@@ -3464,8 +3465,8 @@ Partial Class Form1
         '
         Me.fieldPilot.AreaIndex = 36
         Me.fieldPilot.Caption = "Pilot"
-        DataSourceColumnBinding115.ColumnName = "Pilot"
-        Me.fieldPilot.DataBinding = DataSourceColumnBinding115
+        DataSourceColumnBinding53.ColumnName = "Pilot"
+        Me.fieldPilot.DataBinding = DataSourceColumnBinding53
         Me.fieldPilot.MinWidth = 27
         Me.fieldPilot.Name = "fieldPilot"
         Me.fieldPilot.Width = 133
@@ -3474,8 +3475,8 @@ Partial Class Form1
         '
         Me.fieldObserver.AreaIndex = 37
         Me.fieldObserver.Caption = "Observer"
-        DataSourceColumnBinding116.ColumnName = "Observer"
-        Me.fieldObserver.DataBinding = DataSourceColumnBinding116
+        DataSourceColumnBinding54.ColumnName = "Observer"
+        Me.fieldObserver.DataBinding = DataSourceColumnBinding54
         Me.fieldObserver.MinWidth = 27
         Me.fieldObserver.Name = "fieldObserver"
         Me.fieldObserver.Width = 133
@@ -3484,8 +3485,8 @@ Partial Class Form1
         '
         Me.fieldPersonnel.AreaIndex = 38
         Me.fieldPersonnel.Caption = "Personnel"
-        DataSourceColumnBinding117.ColumnName = "Personnel"
-        Me.fieldPersonnel.DataBinding = DataSourceColumnBinding117
+        DataSourceColumnBinding55.ColumnName = "Personnel"
+        Me.fieldPersonnel.DataBinding = DataSourceColumnBinding55
         Me.fieldPersonnel.MinWidth = 27
         Me.fieldPersonnel.Name = "fieldPersonnel"
         Me.fieldPersonnel.Width = 133
@@ -3494,8 +3495,8 @@ Partial Class Form1
         '
         Me.fieldDensity.AreaIndex = 39
         Me.fieldDensity.Caption = "Density"
-        DataSourceColumnBinding118.ColumnName = "Density"
-        Me.fieldDensity.DataBinding = DataSourceColumnBinding118
+        DataSourceColumnBinding56.ColumnName = "Density"
+        Me.fieldDensity.DataBinding = DataSourceColumnBinding56
         Me.fieldDensity.MinWidth = 27
         Me.fieldDensity.Name = "fieldDensity"
         Me.fieldDensity.Width = 133
@@ -3504,8 +3505,8 @@ Partial Class Form1
         '
         Me.fieldSCFPlot.AreaIndex = 40
         Me.fieldSCFPlot.Caption = "SCF_Plot"
-        DataSourceColumnBinding119.ColumnName = "SCF_Plot"
-        Me.fieldSCFPlot.DataBinding = DataSourceColumnBinding119
+        DataSourceColumnBinding57.ColumnName = "SCF_Plot"
+        Me.fieldSCFPlot.DataBinding = DataSourceColumnBinding57
         Me.fieldSCFPlot.MinWidth = 27
         Me.fieldSCFPlot.Name = "fieldSCFPlot"
         Me.fieldSCFPlot.Width = 133
@@ -3514,8 +3515,8 @@ Partial Class Form1
         '
         Me.fieldStd.AreaIndex = 41
         Me.fieldStd.Caption = "Std"
-        DataSourceColumnBinding120.ColumnName = "Std"
-        Me.fieldStd.DataBinding = DataSourceColumnBinding120
+        DataSourceColumnBinding58.ColumnName = "Std"
+        Me.fieldStd.DataBinding = DataSourceColumnBinding58
         Me.fieldStd.MinWidth = 27
         Me.fieldStd.Name = "fieldStd"
         Me.fieldStd.Width = 133
@@ -3524,8 +3525,8 @@ Partial Class Form1
         '
         Me.fieldInt.AreaIndex = 42
         Me.fieldInt.Caption = "Int"
-        DataSourceColumnBinding121.ColumnName = "Int"
-        Me.fieldInt.DataBinding = DataSourceColumnBinding121
+        DataSourceColumnBinding59.ColumnName = "Int"
+        Me.fieldInt.DataBinding = DataSourceColumnBinding59
         Me.fieldInt.MinWidth = 27
         Me.fieldInt.Name = "fieldInt"
         Me.fieldInt.Width = 133
@@ -3534,8 +3535,8 @@ Partial Class Form1
         '
         Me.fieldComments.AreaIndex = 43
         Me.fieldComments.Caption = "Comments"
-        DataSourceColumnBinding122.ColumnName = "Comments"
-        Me.fieldComments.DataBinding = DataSourceColumnBinding122
+        DataSourceColumnBinding60.ColumnName = "Comments"
+        Me.fieldComments.DataBinding = DataSourceColumnBinding60
         Me.fieldComments.MinWidth = 27
         Me.fieldComments.Name = "fieldComments"
         Me.fieldComments.Width = 133
@@ -3544,8 +3545,8 @@ Partial Class Form1
         '
         Me.fieldSourceFilename.AreaIndex = 44
         Me.fieldSourceFilename.Caption = "Source Filename"
-        DataSourceColumnBinding123.ColumnName = "SourceFilename"
-        Me.fieldSourceFilename.DataBinding = DataSourceColumnBinding123
+        DataSourceColumnBinding61.ColumnName = "SourceFilename"
+        Me.fieldSourceFilename.DataBinding = DataSourceColumnBinding61
         Me.fieldSourceFilename.MinWidth = 27
         Me.fieldSourceFilename.Name = "fieldSourceFilename"
         Me.fieldSourceFilename.Width = 133
@@ -3554,8 +3555,8 @@ Partial Class Form1
         '
         Me.fieldCertificationLevel.AreaIndex = 45
         Me.fieldCertificationLevel.Caption = "Certification Level"
-        DataSourceColumnBinding124.ColumnName = "CertificationLevel"
-        Me.fieldCertificationLevel.DataBinding = DataSourceColumnBinding124
+        DataSourceColumnBinding62.ColumnName = "CertificationLevel"
+        Me.fieldCertificationLevel.DataBinding = DataSourceColumnBinding62
         Me.fieldCertificationLevel.MinWidth = 27
         Me.fieldCertificationLevel.Name = "fieldCertificationLevel"
         Me.fieldCertificationLevel.Width = 133
@@ -3566,7 +3567,7 @@ Partial Class Form1
         Me.SurveyPivotGridToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SurveyPivotGridToolStripLabel, Me.ExportPivotGridToolStripComboBox, Me.ExportPivotGridToolStripButton})
         Me.SurveyPivotGridToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SurveyPivotGridToolStrip.Name = "SurveyPivotGridToolStrip"
-        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(1096, 31)
+        Me.SurveyPivotGridToolStrip.Size = New System.Drawing.Size(876, 31)
         Me.SurveyPivotGridToolStrip.TabIndex = 1
         Me.SurveyPivotGridToolStrip.Text = "Pivot grid"
         '
@@ -3578,6 +3579,7 @@ Partial Class Form1
         '
         'ExportPivotGridToolStripComboBox
         '
+        Me.ExportPivotGridToolStripComboBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ExportPivotGridToolStripComboBox.Items.AddRange(New Object() {"Excel", "CSV"})
         Me.ExportPivotGridToolStripComboBox.Name = "ExportPivotGridToolStripComboBox"
         Me.ExportPivotGridToolStripComboBox.Size = New System.Drawing.Size(160, 31)
@@ -3633,52 +3635,52 @@ Partial Class Form1
         Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
         Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 36)
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(64, 24)
         Me.SaveToolStripButton.Text = "Save"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'EnableEditsToolStripButton
         '
         Me.EnableEditsToolStripButton.Image = Global.Moose3.My.Resources.Resources.application_form
         Me.EnableEditsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.EnableEditsToolStripButton.Name = "EnableEditsToolStripButton"
-        Me.EnableEditsToolStripButton.Size = New System.Drawing.Size(164, 36)
+        Me.EnableEditsToolStripButton.Size = New System.Drawing.Size(164, 24)
         Me.EnableEditsToolStripButton.Text = "Make form editable"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 27)
         '
         'LoadDatasetToolStripButton
         '
         Me.LoadDatasetToolStripButton.Image = CType(resources.GetObject("LoadDatasetToolStripButton.Image"), System.Drawing.Image)
         Me.LoadDatasetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.LoadDatasetToolStripButton.Name = "LoadDatasetToolStripButton"
-        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 36)
+        Me.LoadDatasetToolStripButton.Size = New System.Drawing.Size(135, 24)
         Me.LoadDatasetToolStripButton.Text = "Refresh dataset"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'DataShaperToolStripButton
         '
         Me.DataShaperToolStripButton.Image = Global.Moose3.My.Resources.Resources.database_table
         Me.DataShaperToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DataShaperToolStripButton.Name = "DataShaperToolStripButton"
-        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 36)
+        Me.DataShaperToolStripButton.Size = New System.Drawing.Size(122, 24)
         Me.DataShaperToolStripButton.Text = "Data shaper..."
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
         'DirectoriesToolStripDropDownButton
         '
@@ -3686,7 +3688,7 @@ Partial Class Form1
         Me.DirectoriesToolStripDropDownButton.Image = CType(resources.GetObject("DirectoriesToolStripDropDownButton.Image"), System.Drawing.Image)
         Me.DirectoriesToolStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DirectoriesToolStripDropDownButton.Name = "DirectoriesToolStripDropDownButton"
-        Me.DirectoriesToolStripDropDownButton.Size = New System.Drawing.Size(232, 36)
+        Me.DirectoriesToolStripDropDownButton.Size = New System.Drawing.Size(232, 24)
         Me.DirectoriesToolStripDropDownButton.Text = "Moose monitoring resources"
         '
         'OpenARCNMooseMonitoringSharedDirectoryToolStripMenuItem
@@ -3720,7 +3722,7 @@ Partial Class Form1
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 27)
         '
         'AboutToolStripButton
         '
@@ -3728,19 +3730,19 @@ Partial Class Form1
         Me.AboutToolStripButton.Image = CType(resources.GetObject("AboutToolStripButton.Image"), System.Drawing.Image)
         Me.AboutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AboutToolStripButton.Name = "AboutToolStripButton"
-        Me.AboutToolStripButton.Size = New System.Drawing.Size(54, 36)
+        Me.AboutToolStripButton.Size = New System.Drawing.Size(54, 24)
         Me.AboutToolStripButton.Text = "About"
         '
         'ToolStripSeparator9
         '
         Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 27)
         '
         'HelpToolStripLabel
         '
         Me.HelpToolStripLabel.Image = CType(resources.GetObject("HelpToolStripLabel.Image"), System.Drawing.Image)
         Me.HelpToolStripLabel.Name = "HelpToolStripLabel"
-        Me.HelpToolStripLabel.Size = New System.Drawing.Size(100, 36)
+        Me.HelpToolStripLabel.Size = New System.Drawing.Size(100, 24)
         Me.HelpToolStripLabel.Text = "F1 for help"
         '
         'DockManager1
@@ -3844,35 +3846,35 @@ Partial Class Form1
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 25)
         '
         'DatabaseToolStripLabel
         '
         Me.DatabaseToolStripLabel.Name = "DatabaseToolStripLabel"
-        Me.DatabaseToolStripLabel.Size = New System.Drawing.Size(75, 36)
+        Me.DatabaseToolStripLabel.Size = New System.Drawing.Size(75, 22)
         Me.DatabaseToolStripLabel.Text = "Database:"
         '
         'ConnectionStringToolStripLabel
         '
         Me.ConnectionStringToolStripLabel.Name = "ConnectionStringToolStripLabel"
-        Me.ConnectionStringToolStripLabel.Size = New System.Drawing.Size(99, 36)
+        Me.ConnectionStringToolStripLabel.Size = New System.Drawing.Size(99, 22)
         Me.ConnectionStringToolStripLabel.Text = "Disconnected"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 25)
         '
         'UsernameToolStripLabel
         '
         Me.UsernameToolStripLabel.Name = "UsernameToolStripLabel"
-        Me.UsernameToolStripLabel.Size = New System.Drawing.Size(50, 36)
+        Me.UsernameToolStripLabel.Size = New System.Drawing.Size(50, 22)
         Me.UsernameToolStripLabel.Text = "Client:"
         '
         'ClientToolStripLabel
         '
         Me.ClientToolStripLabel.Name = "ClientToolStripLabel"
-        Me.ClientToolStripLabel.Size = New System.Drawing.Size(47, 36)
+        Me.ClientToolStripLabel.Size = New System.Drawing.Size(47, 22)
         Me.ClientToolStripLabel.Text = "Client"
         '
         'MooseHelpProvider

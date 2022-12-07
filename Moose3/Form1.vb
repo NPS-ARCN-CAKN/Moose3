@@ -7,52 +7,57 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Try
 
-        'Make form controls non-editable to start
-        'Change the various other, non-grid controls
-        Dim Enabled As Boolean = False
-        Me.AddSurveyToolStripButton.Enabled = Enabled
-        Me.AbstractTextBox.Enabled = Enabled
-        Me.SummaryTextBox.Enabled = Enabled
-        Me.DatasetProcessingStepsTextBox.Enabled = Enabled
-        Me.CommentsTextBox.Enabled = Enabled
+            'Make form controls non-editable to start
+            'Change the various other, non-grid controls
+            Dim Enabled As Boolean = False
+            Me.AddSurveyToolStripButton.Enabled = Enabled
+            Me.AbstractTextBox.Enabled = Enabled
+            Me.SummaryTextBox.Enabled = Enabled
+            Me.DatasetProcessingStepsTextBox.Enabled = Enabled
+            Me.CommentsTextBox.Enabled = Enabled
 
-        'Make sure all the dock panels cannot be closed
-        Me.AbstractDockPanel.Options.ShowCloseButton = False
-        Me.SummaryDockPanel.Options.ShowCloseButton = False
-        Me.DatasetProcessingStepsDockPanel.Options.ShowCloseButton = False
-        Me.CommentsDockPanel.Options.ShowCloseButton = False
-        Me.MapDockPanel.Options.ShowCloseButton = False
-        Me.SurveySelectorDockPanel.Options.ShowCloseButton = False
+            'Make sure all the dock panels cannot be closed
+            Me.AbstractDockPanel.Options.ShowCloseButton = False
+            Me.SummaryDockPanel.Options.ShowCloseButton = False
+            Me.DatasetProcessingStepsDockPanel.Options.ShowCloseButton = False
+            Me.CommentsDockPanel.Options.ShowCloseButton = False
+            Me.MapDockPanel.Options.ShowCloseButton = False
+            Me.SurveySelectorDockPanel.Options.ShowCloseButton = False
 
-        'Set up the footer items
-        Me.ConnectionStringToolStripLabel.Text = My.Settings.MooseConnectionString
-        Me.ClientToolStripLabel.Text = My.User.Name
+            'Set up the footer items
+            Me.ConnectionStringToolStripLabel.Text = My.Settings.MooseConnectionString
+            Me.ClientToolStripLabel.Text = My.User.Name
 
-        'Load the data into the form
-        LoadDataset()
+            'Load the data into the form
+            LoadDataset()
 
-        'Set up the grid controls the way I like them
-        SetUpGridControl(Me.GSPEGridControl, True, True, False)
+            'Set up the grid controls the way I like them
+            SetUpGridControl(Me.GSPEGridControl, True, True, False)
 
-        'Set up survey vertical grid control
-        SetUpVGridControl(Me.SurveyVGridControl)
+            'Set up survey vertical grid control
+            SetUpVGridControl(Me.SurveyVGridControl)
 
-        'Set up the survey VGridControl's long field editors.
-        SetUpSurveyVGridControlRowEditors()
+            'Set up the survey VGridControl's long field editors.
+            SetUpSurveyVGridControlRowEditors()
 
-        'Set up the pivot grid controls
-        SetUpPivotGridControl(Me.GSPEPivotGridControl)
+            'Set up the pivot grid controls
+            SetUpPivotGridControl(Me.GSPEPivotGridControl)
 
-        'Autosize the datagridview columns
-        With Me.GSPE_PopulationEstimatesDataGridView
-            .Dock = DockStyle.Fill
-            .AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
-            .AutoResizeColumnHeadersHeight()
-            .ScrollBars = ScrollBars.Both
-        End With
+            'Autosize the datagridview columns
+            With Me.GSPE_PopulationEstimatesDataGridView
+                .Dock = DockStyle.Fill
+                .AutoResizeColumns(DataGridViewAutoSizeColumnMode.DisplayedCells)
+                .AutoResizeColumnHeadersHeight()
+                .ScrollBars = ScrollBars.Both
+            End With
 
-        LoadGridColumnDescriptions()
+            LoadGridColumnDescriptions()
+
+        Catch ex As Exception
+            MsgBox(ex.Message & " WMS map layer load failed: " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
 
         'Load a Web Map Service background map layer into the MapControl to give context to where survey units are located
         Try
@@ -99,6 +104,7 @@ Public Class Form1
             Me.ConnectionStringToolStripLabel.Text = ex.Message
         End Try
     End Sub
+
     ''' <summary>
     ''' Saves all the changes from the local in memory dataset back to the database
     ''' </summary>
@@ -1016,5 +1022,7 @@ Public Class Form1
         End Try
     End Sub
 
-
+    Private Sub SurveyVGridControl_CellValueChanged(sender As Object, e As DevExpress.XtraVerticalGrid.Events.CellValueChangedEventArgs) Handles SurveyVGridControl.CellValueChanged
+        EndEdits()
+    End Sub
 End Class
