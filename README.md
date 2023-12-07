@@ -4,7 +4,7 @@ Database application for monitoring moose populations in Alaska's National Parks
 
 [Moose monitoring in the Arctic Inventory and Monitoring Network](https://www.nps.gov/im/arcn/moose.htm) (BELA, CAKR, KOVA, NOAT, GAAR).
 
-[Moose monitoring in the Central Alaska Inventory and Monitoring Network](https://www.nps.gov/im/arcn/moose.htm) (DENA, WRST, YUCH).
+[Moose monitoring in the Central Alaska Inventory and Monitoring Network](https://www.nps.gov/im/cakn/moose.htm) (DENA, WRST, YUCH).
 
 [Protocols, standard operating procedures, reports, articles and other products](https://irma.nps.gov/DataStore/Reference/Profile/2222140) (ARCN)
 
