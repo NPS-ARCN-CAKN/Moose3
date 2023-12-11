@@ -1,6 +1,10 @@
 # NPS Alaska Moose Monitoring Database Application
 
-Database application for monitoring moose populations in Alaska's National Parks. Information on moose monitoring can be found at the links below.
+Database application for monitoring moose populations in Alaska's National Parks. 
+
+Please read the application's [https://github.com/NPS-ARCN-CAKN/Moose3/blob/main/Moose3/Help/Moose%20Monitoring%20Database%20Application.pdf](help file) for more information about the application.
+
+Information on moose monitoring can be found at the links below.
 
 [Moose monitoring in the Arctic Inventory and Monitoring Network](https://www.nps.gov/im/arcn/moose.htm) (BELA, CAKR, KOVA, NOAT, GAAR).
 
