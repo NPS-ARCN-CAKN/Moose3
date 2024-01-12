@@ -53,7 +53,8 @@ Public Class Form1
                 .ScrollBars = ScrollBars.Both
             End With
 
-            LoadGridColumnDescriptions()
+            'Load tool tips into the grid columns
+            LoadGridColumnToolTips()
 
         Catch ex As Exception
             MsgBox(ex.Message & " WMS map layer load failed: " & System.Reflection.MethodBase.GetCurrentMethod.Name)
@@ -61,7 +62,7 @@ Public Class Form1
 
         'Load a Web Map Service background map layer into the MapControl to give context to where survey units are located
         Try
-            Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
+            'Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
             ShadedReliefWMSImageLayer.Name = "National Map"
             Me.SurveyMapControl.Layers.Add(ShadedReliefWMSImageLayer)
         Catch ex As Exception
@@ -165,7 +166,7 @@ Public Class Form1
     ''' <summary>
     ''' Queries the database for data table column descriptions and loads them into data grid view column tooltips
     ''' </summary>
-    Private Sub LoadGridColumnDescriptions()
+    Private Sub LoadGridColumnToolTips()
         Try
             'Get the columns descriptions from the database and load them into the tooltips of the matching column in the datagridview
             Dim TableName As String = "GSPE_PopulationEstimates"
