@@ -128,12 +128,16 @@ Public Class Form1
     ''' Ends all pending edits on the various binding sources
     ''' </summary>
     Private Sub EndEdits()
-        'End all pending edits
-        Me.GSPEBindingSource.EndEdit()
-        Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
-        Me.GSPE_DensityEstimatesBindingSource.EndEdit()
-        Me.GSPE_ResultsBindingSource.EndEdit()
-        Me.GSPE_SurveysBindingSource.EndEdit()
+        Try
+            'End all pending edits
+            Me.GSPEBindingSource.EndEdit()
+            Me.GSPE_PopulationEstimatesBindingSource.EndEdit()
+            Me.GSPE_DensityEstimatesBindingSource.EndEdit()
+            Me.GSPE_ResultsBindingSource.EndEdit()
+            Me.GSPE_SurveysBindingSource.EndEdit()
+        Catch ex As Exception
+            MsgBox(ex.Message & "  " & System.Reflection.MethodBase.GetCurrentMethod.Name)
+        End Try
     End Sub
 
     ''' <summary>
