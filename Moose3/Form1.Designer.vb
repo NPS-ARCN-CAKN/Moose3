@@ -3432,7 +3432,7 @@ Partial Class Form1
         Me.AboutToolStripButton.Image = CType(resources.GetObject("AboutToolStripButton.Image"), System.Drawing.Image)
         Me.AboutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AboutToolStripButton.Name = "AboutToolStripButton"
-        Me.AboutToolStripButton.Size = New System.Drawing.Size(44, 19)
+        Me.AboutToolStripButton.Size = New System.Drawing.Size(44, 24)
         Me.AboutToolStripButton.Text = "About"
         '
         'ToolStripSeparator9
@@ -3444,7 +3444,7 @@ Partial Class Form1
         '
         Me.HelpToolStripLabel.Image = CType(resources.GetObject("HelpToolStripLabel.Image"), System.Drawing.Image)
         Me.HelpToolStripLabel.Name = "HelpToolStripLabel"
-        Me.HelpToolStripLabel.Size = New System.Drawing.Size(83, 20)
+        Me.HelpToolStripLabel.Size = New System.Drawing.Size(83, 24)
         Me.HelpToolStripLabel.Text = "F1 for help"
         '
         'DockManager1
