@@ -62,7 +62,7 @@ Public Class Form1
 
         'Load a Web Map Service background map layer into the MapControl to give context to where survey units are located
         Try
-            'Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
+            Dim ShadedReliefWMSImageLayer As ImageLayer = GetWMSImageLayer("0", "https://basemap.nationalmap.gov:443/arcgis/services/USGSTopo/MapServer/WmsServer?")
             ShadedReliefWMSImageLayer.Name = "National Map"
             Me.SurveyMapControl.Layers.Add(ShadedReliefWMSImageLayer)
         Catch ex As Exception
