@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Moose3.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <connectionStrings>
+        <add name="Moose3.My.MySettings.MooseConnectionString" connectionString="Data Source=inpyugamsvm01\nuna;Initial Catalog=Moose;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+    </startup>
+    <userSettings>
+        <Moose3.My.MySettings>
+            <setting name="CAKNSharedMooseDirectory" serializeAs="String">
+                <value>J:\Monitoring\Moose</value>
+            </setting>
+            <setting name="ARCNSharedMooseDirectory" serializeAs="String">
+                <value>O:\Monitoring\Vital Signs\Moose</value>
+            </setting>
+            <setting name="ARCNProjectReferenceCode" serializeAs="String">
+                <value>2222140</value>
+            </setting>
+            <setting name="CAKNProjectReferenceCode" serializeAs="String">
+                <value>2220369</value>
+            </setting>
+            <setting name="IRMAReferenceURLPrefix" serializeAs="String">
+                <value>https://irma.nps.gov/DataStore/Reference/Profile/</value>
+            </setting>
+        </Moose3.My.MySettings>
+    </userSettings>
+</configuration>
