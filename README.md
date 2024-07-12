@@ -1,5 +1,7 @@
 # NPS Alaska Moose Monitoring Database Application
 
+[DEFUNCT, July, 2024. The administrative burden of maintaining this application within DOI became too much.]
+
 Database application for monitoring moose populations in Alaska's National Parks. 
 
 Please read the application's [help file](https://github.com/NPS-ARCN-CAKN/Moose3/blob/main/Moose3/Help/Moose%20Monitoring%20Database%20Application.pdf) for more information about the application.
